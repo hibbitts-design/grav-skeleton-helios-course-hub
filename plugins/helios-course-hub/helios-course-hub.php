@@ -8,7 +8,7 @@ use Grav\Common\Plugin;
 
 class HeliosCourseHubPlugin extends Plugin
 {
-    /** @var bool Whether the configured theme is missing */
+    /** @var bool Whether the Helios theme is missing or inactive */
     protected $themeMissing = false;
 
     /** @var string The name of the missing theme */
@@ -23,20 +23,24 @@ class HeliosCourseHubPlugin extends Plugin
 
     public function onPluginsInitialized()
     {
-        // If the configured theme is missing, fall back to Quark so
-        // Grav can still render pages and the Admin panel remains accessible
-        $themeName = $this->config->get('system.pages.theme');
+        // Always check for the Helios theme folder and active status directly,
+        // as the admin UI may have already switched the active theme to Quark
+        $themeName = 'helios';
         $themePath = GRAV_ROOT . '/user/themes/' . $themeName;
+        $themeActive = $this->config->get('system.pages.theme') === $themeName;
 
-        if (!is_dir($themePath)) {
+        if (!is_dir($themePath) || !$themeActive) {
             $this->config->set('system.pages.theme', 'quark');
             $this->themeMissing = true;
             $this->missingThemeName = $themeName;
 
-            // Redirect frontend requests to the Admin Themes page
+            // No license → License Manager, license present → Themes to install/activate
+            $heliosLicense = \Grav\Common\GPM\Licenses::get('helios');
+            $missingThemeRedirect = $heliosLicense ? '/admin/themes' : '/admin/license-manager';
+
+            // Redirect frontend requests immediately
             if (!$this->isAdmin()) {
-                $adminRoute = $this->config->get('plugins.admin.route', '/admin');
-                $this->grav->redirect($adminRoute . '/themes');
+                $this->grav->redirect($missingThemeRedirect);
                 return;
             }
         }
@@ -65,12 +69,22 @@ class HeliosCourseHubPlugin extends Plugin
         $assets->addCss("$path/admin.css");
         $assets->addJs("$path/admin.js");
 
-        // Show a banner prompting the user to install the missing theme
         if ($this->themeMissing) {
+            $heliosLicense = \Grav\Common\GPM\Licenses::get('helios');
+            $targetRoute = $heliosLicense ? '/admin/themes' : '/admin/license-manager';
+            $currentRoute = $this->grav['uri']->path();
+            $isLoggedIn = $this->grav['user']->authenticated ?? false;
+
+            // Show banner on all admin pages; redirect to target only from /admin
             $this->grav['messages']->add(
                 "The Helios Grav Premium theme is required. Please enter your Helios (and included SVG Icons) licenses and then install and activate Helios.",
                 'warning'
             );
+
+            if ($isLoggedIn && $currentRoute === '/admin') {
+                $this->grav->redirect($targetRoute);
+                return;
+            }
         }
     }
 
@@ -82,9 +96,7 @@ class HeliosCourseHubPlugin extends Plugin
 
     public function onThemeInitialized()
     {
-        // Override version switcher labels for course hub context,
-        // using the active language's translated values so additional
-        // languages are supported by adding entries to languages.yaml
+        // Override version switcher labels using active language translations
         $lang       = $this->grav['language'];
         $activeLang = $lang->getLanguage() ?: 'en';
         $courseLabel = $lang->translate('PLUGIN_HELIOS_COURSE_HUB.COURSE_LABEL');
@@ -110,8 +122,7 @@ class HeliosCourseHubPlugin extends Plugin
         $shortcodes = $this->grav['shortcode'];
         $dir = __DIR__ . '/shortcodes';
 
-        // Register only .php files to avoid processing .DS_Store
-        // or other non-PHP files that macOS may create
+        // Register only .php files to avoid processing .DS_Store and similar
         foreach (new \DirectoryIterator($dir) as $file) {
             if ($file->isDot() || $file->isDir() || $file->getExtension() !== 'php') {
                 continue;
