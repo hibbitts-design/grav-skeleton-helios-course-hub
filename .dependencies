@@ -1,0 +1,61 @@
+git:
+    admin:
+        url: https://github.com/getgrav/grav-plugin-admin
+        path: user/plugins/admin
+        branch: master
+    email:
+        url: https://github.com/getgrav/grav-plugin-email
+        path: user/plugins/email
+        branch: master
+    error:
+        url: https://github.com/getgrav/grav-plugin-error
+        path: user/plugins/error
+        branch: master
+    external_links:
+        url: https://github.com/hibbitts-design/grav-plugin-external-links
+        path: user/plugins/external_links
+        branch: master
+    flex-objects:
+        url: https://github.com/trilbymedia/grav-plugin-flex-objects
+        path: user/plugins/flex-objects
+        branch: master
+    form:
+        url: https://github.com/getgrav/grav-plugin-form
+        path: user/plugins/form
+        branch: master
+    git-sync:
+        url: https://github.com/trilbymedia/grav-plugin-git-sync
+        path: user/plugins/git-sync
+        branch: main
+    license-manager:
+        url: https://github.com/getgrav/grav-plugin-license-manager
+        path: user/plugins/license-manager
+        branch: master
+    login:
+        url: https://github.com/getgrav/grav-plugin-login
+        path: user/plugins/login
+        branch: master
+    page-inject:
+        url: https://github.com/getgrav/grav-plugin-page-inject
+        path: user/plugins/page-inject
+        branch: master
+    pagination:
+        url: https://github.com/getgrav/grav-plugin-pagination
+        path: user/plugins/pagination
+        branch: master
+    problems:
+        url: https://github.com/getgrav/grav-plugin-problems
+        path: user/plugins/problems
+        branch: master
+    shortcode-core:
+        url: https://github.com/getgrav/grav-plugin-shortcode-core
+        path: user/plugins/shortcode-core
+        branch: master
+    youtube:
+        url: https://github.com/getgrav/grav-plugin-youtube
+        path: user/plugins/youtube
+        branch: master
+    quark:
+        url: https://github.com/getgrav/grav-theme-quark
+        path: user/themes/quark
+        branch: master

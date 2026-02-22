@@ -1,0 +1,9 @@
+from: Helios <hello@helios.com>
+to: Helios <hello@helios.com>
+mailer:
+  engine: smtp
+  smtp:
+    server: localhost
+    port: 1025
+    encryption: none
+    user: helios

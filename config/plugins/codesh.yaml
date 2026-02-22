@@ -1,0 +1,6 @@
+enabled: true
+active: true
+theme_dark: helios-dark
+theme_light: helios-light
+show_line_numbers: false
+process_markdown: true

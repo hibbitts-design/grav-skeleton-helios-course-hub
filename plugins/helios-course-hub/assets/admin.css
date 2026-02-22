@@ -1,0 +1,34 @@
+/* Admin panel CSS customizations */
+
+/* CSS to increase the default font size of the Admin Panel */
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+form input, form select, form textarea, form button, form .selectize-input {
+    font-size: 1rem;
+}
+
+/* CSS to increase default font size of Admin Panel toolbar */
+
+.grav-editor-toolbar ul {
+    font-size: 1.1rem!important;
+}
+
+/* CSS to increase Editor Pro toolbar icon and text size */
+
+.editor-pro-toolbar button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.editor-pro-dropdown-menu .dropdown-item-text {
+    font-size: 1rem;
+}
+
+.editor-pro-dropdown-menu .dropdown-item-icon svg {
+    width: 20px;
+    height: 20px;
+}

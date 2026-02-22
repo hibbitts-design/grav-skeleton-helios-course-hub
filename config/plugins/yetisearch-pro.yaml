@@ -1,0 +1,23 @@
+# Helios-specific yetisearch configuration
+# Adds versioning field support (version added via onYetisearchBuildDocument event)
+
+indexes:
+  pages:
+    options:
+      indexer:
+        fields:
+          # Inherit all defaults, add version field for Helios versioning
+          title: { boost: 3.0, store: true }
+          content: { boost: 1.0, store: true }
+          excerpt: { boost: 2.0, store: true }
+          tags: { boost: 2.5, store: true }
+          category: { boost: 2.0, store: true }
+          headers: { boost: 1.5, store: true }
+          headers_h1: { boost: 2.0, store: true }
+          headers_h2: { boost: 1.5, store: true }
+          headers_h3: { boost: 1.2, store: true }
+          headers_h4: { boost: 1.0, store: true }
+          url: { store: true, index: false }
+          route: { store: true, index: false }
+          # Helios versioning support
+          version: { store: true, index: false }

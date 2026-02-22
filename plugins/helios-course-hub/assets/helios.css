@@ -1,0 +1,183 @@
+/* Helios CSS customizations */
+
+/* Left-align content area without altering margins */
+/*
+#main-content > div {
+    min-width: 90%;
+}
+*/
+
+.prose blockquote.announcement {
+    font-style: normal
+}
+
+.prose blockquote.announcement :is(h1, h2, h3) {
+    margin: 0;
+    line-height: 1.3
+}
+
+.prose blockquote.announcement h1 {
+    margin-bottom: 0.25rem
+}
+
+.prose blockquote.announcement h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem
+}
+
+.prose blockquote.announcement h3 {
+    margin: 0.75rem 0 0.25rem
+}
+
+.prose blockquote.announcement h2+h3 {
+    margin-top: 0.25rem
+}
+
+.prose blockquote.announcement h1 {
+    font-size: calc(2.25em * 0.8)
+}
+
+.prose blockquote.announcement h2 {
+    font-size: calc(1.5em * 0.8)
+}
+
+.prose blockquote.announcement h3 {
+    font-size: calc(1.25em * 0.8)
+}
+
+.prose blockquote.announcement h4 {
+    font-size: calc(1em * 0.8)
+}
+
+.prose blockquote.announcement h5 {
+    font-size: calc(0.875em * 0.8)
+}
+
+.prose blockquote.announcement h6 {
+    font-size: calc(0.75em * 0.8)
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) {
+    margin: 0;
+    line-height: 1.3
+}
+
+.prose h1 {
+    margin-bottom: 0.5rem
+}
+
+.prose h2 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 1rem
+}
+
+.prose :is(h3, h4, h5, h6) {
+    margin: 1.5rem 0 0.5rem
+}
+
+.prose :is(h2, h3, h4, h5)+:is(h3, h4, h5, h6) {
+    margin-top: 1rem
+}
+
+/* Font Awesome icon spacing */
+.prose i[class^="fa"] {
+    margin-right: 0.20em;
+}
+
+/* Responsive iframe/video containers */
+.responsive-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden
+}
+
+.responsive-container--4x3 {
+    aspect-ratio: 4 / 3;
+}
+
+.responsive-container--portrait {
+    aspect-ratio: 8.5 / 11;
+}
+
+.responsive-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none
+}
+
+/* SVG Icons adjustment */
+.prose p svg {
+  position: relative;
+  top: -1px;
+  margin-right: 0.10em;
+}
+
+/* Heading icons need a larger offset due to bigger font size */
+.prose :is(h1, h2, h3, h4, h5, h6) svg {
+  position: relative;
+  top: -2px;
+  margin-right: 0.10em;
+}
+
+/* Keep filled doc-button text color on hover */
+.prose a.doc-button:not(.doc-button-bordered):hover {
+    color: var(--color-primary-text);
+}
+
+/* Topics shortcode - alphabetical index */
+.topics-index {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.topics-index a {
+    color: var(--color-primary);
+    padding: 0 2px;
+}
+
+.topics-index-inactive {
+    opacity: 0.35;
+    padding: 0 2px;
+}
+
+/* Topics shortcode - letter section labels */
+.topics-letter {
+    display: block;
+    width: 2em;
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    padding: 0.1em 0.25em;
+    background: color-mix(in srgb, currentColor 10%, transparent);
+    scroll-margin-top: 4rem;
+}
+
+/* Hide logo icon container - uncomment to use */
+/*
+.flex.items-center.justify-center.w-8.h-8.rounded-lg.bg-primary,
+.flex.items-center.justify-center.w-8.h-8.rounded-lg.bg-primary-dark {
+    display: none;
+}
+*/
+
+/* Increase body font size by 10% */
+:root {
+    font-size: 102%!important;
+}
+
+/* Increase body font size by 10% */
+.doc-card p,
+.doc-card span {
+    font-size: 102%!important;
+}

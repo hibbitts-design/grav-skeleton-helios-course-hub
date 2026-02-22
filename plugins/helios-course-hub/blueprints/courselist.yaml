@@ -1,0 +1,25 @@
+title: Course List
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+          fields:
+            content:
+              ordering@: 100
+            header.media_order:
+              ordering@: 101
+            header.description:
+              type: textarea
+              label: Description
+              toggleable: true
+              rows: 3
+              placeholder: A short description shown below the page title

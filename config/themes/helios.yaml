@@ -1,0 +1,90 @@
+enabled: true
+appearance:
+  theme: system
+  selector: true
+colors:
+  primary: '#3B82F6'
+  primary_hover: '#2563EB'
+  primary_text: '#FFFFFF'
+  accent: '#8B5CF6'
+  primary_dark: '#60A5FA'
+  primary_dark_hover: '#93C5FD'
+  primary_dark_text: '#18181B'
+  accent_dark: '#A78BFA'
+  gray_preset: zinc
+  gray_custom: null
+fonts:
+  body: open-sans
+  body_size: large
+  code: jetbrains-mono
+  code_size: medium
+logo:
+  image: {  }
+  image_dark: {  }
+  text: 'Helios Course Hub'
+  height: h-8
+header:
+  menu:
+    -
+      route: /privacy
+      label: Privacy
+      external: '0'
+    -
+      route: /contact
+      label: Contact
+      external: '0'
+    -
+      route: /copyright
+      label: Copyright
+      external: '0'
+    -
+      route: /readme
+      label: ReadMe
+      external: '0'
+custom_favicon: {  }
+sidebar:
+  powered_by: '0'
+navigation:
+  sidebar_width: 280
+  toc_width: 240
+  content_width: 768
+  toc_start: 2
+  toc_depth: 3
+  toc_position: right
+  breadcrumbs: false
+  prev_next: true
+  scroll_spy: true
+versioning:
+  enabled: true
+  mode: explicit
+  auto_detect: true
+  root: null
+  versions: null
+  default_version: null
+  current_version: null
+  version_pattern: '/^[a-zA-Z]+-?\d+([.-]\d+)*$/i'
+  redirect_unversioned: false
+  show_badge: true
+  show_dropdown: false
+  labels:
+    cpt-363-1: CPT-363-1
+    cpt-363-2: CPT-363-2
+    cpt-363-3: CPT-363-3
+search:
+  enabled: true
+  provider: simplesearch
+  keyboard_shortcut: true
+  shortcut_key: k
+  placeholder: 'Search course...'
+  min_chars: 2
+github:
+  enabled: false
+  repo: null
+  branch: main
+  edit_link: true
+  edit_text: 'Edit this page'
+  path_prefix: null
+htmx:
+  enabled: false
+body_classes: null
+append_site_title: true
