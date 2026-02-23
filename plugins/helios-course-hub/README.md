@@ -12,12 +12,12 @@ Figure 2. Example Grav Helios Course Hub website, with multiple courses.
 
 The Helios Course Hub is a **course companion site** – a place to organise and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrolment, grade tracking, or student progress features.
 
-It is well suited for tech-curious or tech-savvy educators and teams, including:
+It is well suited for educators and teams who want full control over their content, structure, and hosting, including:
 - Individual educators wanting a clean, open companion site for one or more courses
 - Teams hosting shared course content, reference guides, or topic indexes
 - Anyone who wants full control over their content, structure, and hosting
 
-## Why the Helios Course Hub?
+## Why the Helios Course Hub
 The Helios Course Hub gives you a modern, open, and fully controlled companion site that works alone or alongside any LMS – a dedicated home for your course content, resources, and schedules that you control completely.
 
 - Ready in minutes – a complete, pre-configured package with demo content included
