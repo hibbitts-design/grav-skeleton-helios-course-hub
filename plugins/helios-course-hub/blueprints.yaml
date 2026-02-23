@@ -31,7 +31,7 @@ form:
 
     github_server:
       type: radio
-      label: 'Git Server'
+      label: 'Git Server for Helios GitHub Integration'
       default: 'github.com'
       help: 'Only required when GitHub Integration is enabled in the Helios theme settings.'
       options:
