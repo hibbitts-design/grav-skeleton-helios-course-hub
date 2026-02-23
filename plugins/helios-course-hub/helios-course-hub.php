@@ -77,7 +77,7 @@ class HeliosCourseHubPlugin extends Plugin
 
             // Show banner on all admin pages; redirect to target only from /admin
             $this->grav['messages']->add(
-                "The Helios Grav Premium theme is required. Please enter your Helios (and included SVG Icons) licenses and then install and activate Helios.",
+                "Helios Grav Premium theme required. Enter your Helios and SVG Icons license keys, then install and activate the theme.",
                 'warning'
             );
 
