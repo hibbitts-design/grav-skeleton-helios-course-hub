@@ -17,6 +17,16 @@ It is well suited for tech-curious or tech-savvy educators and teams, including:
 - Teams hosting shared course content, reference guides, or topic indexes
 - Anyone who wants full control over their content, structure, and hosting
 
+## Why the Helios Course Hub?
+The Helios Course Hub gives you a modern, open, and fully controlled companion site that works alone or alongside any LMS – a dedicated home for your course content, resources, and schedules that you control completely.
+
+- Ready in minutes – a complete, pre-configured package with demo content included
+- Flexible – host one course or many from a single installation
+- Yours – host it anywhere PHP runs, customise freely, and keep every word you write
+- Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
+- Flat-file simplicity – your content is just Markdown files you own and control
+- Support open source – your Grav Premium Helios theme purchase directly supports ongoing development of the open-source Grav CMS
+
 ## Quick Start
 
 The recommended starting point is the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/paulhibbitts/grav-skeleton-helios-course-hub/releases/latest), which includes this plugin, demo content, and all required configuration out of the box.
