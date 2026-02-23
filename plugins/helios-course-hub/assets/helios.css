@@ -183,15 +183,18 @@
 }
 
 /* Increase "Edit this page" link size */
-footer a[href*="github"] {
+footer a[href*="github"],
+footer a[href*="codeberg"] {
     font-size: 1rem;
 }
 
-footer a[href*="github"]:hover {
+footer a[href*="github"]:hover,
+footer a[href*="codeberg"]:hover {
     text-decoration: underline;
 }
 
-footer a[href*="github"] svg {
+footer a[href*="github"] svg,
+footer a[href*="codeberg"] svg {
     width: 1.25rem;
     height: 1.25rem;
 }
