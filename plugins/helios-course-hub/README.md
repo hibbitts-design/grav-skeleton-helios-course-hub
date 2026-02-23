@@ -168,7 +168,7 @@ To customize the label or add a language, update the relevant block in `language
 
 - PHP >= 7.3.6
 - Grav CMS >= 1.7.0
-- [Grav Premium Helios Theme](https://getgrav.org/premium/helios) – one license per site ([Standard or Team](https://getgrav.org/premium/license)); your purchase directly supports ongoing development of the open-source Grav CMS
+- [Grav Premium Helios Theme](https://getgrav.org/premium/helios) – one license per site ([Standard or Team](https://getgrav.org/premium/license))
 - Shortcode Core plugin >= 5.0.0
 
 ## License
