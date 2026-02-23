@@ -182,7 +182,7 @@
     font-size: 102%!important;
 }
 
-/* Increase "Suggest an edit" link size */
+/* Increase "Edit this page" link size */
 footer a[href*="github"] {
     font-size: 1rem;
 }
