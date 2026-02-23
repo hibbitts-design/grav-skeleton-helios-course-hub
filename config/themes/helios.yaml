@@ -55,7 +55,7 @@ navigation:
   prev_next: true
   scroll_spy: true
 versioning:
-  enabled: true
+  enabled: false
   mode: explicit
   auto_detect: true
   root: null
