@@ -77,6 +77,19 @@ search:
   placeholder: 'Search course...'
 ```
 
+If disabling the plugin, manually restore the following Helios theme defaults in `u`ser/config/themes/helios.yaml`:
+
+```yaml
+versioning:
+  version_pattern: '/^v?\d+(\.\d+)*$/'
+  labels:
+    v1: "v1 (Legacy)"
+    v2: "v2 (Stable)"
+    v3: "v3 (Latest)"
+search:
+  placeholder: 'Search documentation...'
+```
+
 ## Installation
 
 1. Copy the `helios-course-hub` folder into `user/plugins/`
