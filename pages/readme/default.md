@@ -45,7 +45,7 @@ For a multi-course setup, see the [Multi-Course Setup](#multi-course-setup) sect
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
 - Alphabetical topics index with auto-generated A–Z navigation
-- Git Sync plugin included for syncing site content with a GitHub or GitLab repository
+- Git Sync plugin included for syncing site content with a GitHub or Codeberg repository
 - Automatic "Edit this Page" link option provided by the Helios Theme
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)

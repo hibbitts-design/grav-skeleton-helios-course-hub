@@ -1,0 +1,25 @@
+<footer class="mt-16 py-8 border-t border-gray-200 dark:border-gray-700">
+
+    {# Edit on GitHub/Codeberg link #}
+        {% if theme_config.github.enabled and theme_config.github.edit_link %}
+        {% set file_path = page.filePathClean %}
+        {% set prefix = theme_config.github.path_prefix %}
+        {% if prefix and file_path starts with prefix %}
+            {% set file_path = file_path[prefix|length:] %}
+        {% endif %}
+        {% set git_path_prefix = (github_server == 'github.com') ? 'edit' : 'src/branch' %}
+        <div class="mb-4 border-gray-200 dark:border-gray-700 text-center">
+            <a href="https://{{ github_server }}/{{ theme_config.github.repo }}/{{ git_path_prefix }}/{{ theme_config.github.branch }}/{{ file_path }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary">
+                {{ svg_icon('tabler/pencil.svg', 'w-4 h-4')|raw }}
+                {{ theme_config.github.edit_text ?: 'THEME_HELIOS.EDIT_PAGE'|t }}
+            </a>
+        </div>
+        {% endif %}
+
+    <p class="text-center text-sm text-gray-500 dark:text-gray-400">
+        {{ 'THEME_HELIOS.COPYRIGHT'|t|replace({'{{year}}': 'now'|date('Y'), '{{name}}': site.title})|raw }}
+    </p>
+</footer>

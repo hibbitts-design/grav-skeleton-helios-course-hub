@@ -90,7 +90,7 @@ search:
 - Enhanced Admin Panel readability (increased font sizes and toolbar icon scaling)
 - Automatic theme detection with fallback to Quark if Helios is not installed
 - Overrides the Helios "Version" label to "Course" for multi-course setups — customizable via `languages.yaml`
-- Git Sync plugin included in the skeleton for syncing site content with a GitHub or GitLab repository
+- Git Sync plugin included in the skeleton for syncing site content with a GitHub or Codeberg repository
 - Automatic "Edit this Page" link option provided by the Helios Theme
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.

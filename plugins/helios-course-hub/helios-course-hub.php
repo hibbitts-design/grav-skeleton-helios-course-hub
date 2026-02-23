@@ -114,7 +114,7 @@ class HeliosCourseHubPlugin extends Plugin
 
     public function onTwigTemplatePaths()
     {
-        $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
+        array_unshift($this->grav['twig']->twig_paths, __DIR__ . '/templates');
     }
 
     public function onShortcodeHandlers()
@@ -138,5 +138,8 @@ class HeliosCourseHubPlugin extends Plugin
 
         $assets->addCss("$path/helios.css");
         $assets->addJs("$path/helios.js", ['group' => 'bottom', 'loading' => 'defer']);
+
+        $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
+        $this->grav['twig']->twig_vars['github_server'] = $githubServer;
     }
 }
