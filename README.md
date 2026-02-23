@@ -148,7 +148,7 @@ Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admi
 
 ### Theme Detection
 
-If the Helios theme is not installed, the plugin automatically falls back to the Quark theme, redirects visitors to the Admin Themes page, and displays a warning banner prompting you to install Helios.
+If the Helios theme is not installed, the plugin automatically falls back to the Quark theme, redirects visitors to the License Manager page, and displays a warning banner prompting you to enter your Helios License key and install Helios.
 
 ### Course Label Customization
 
