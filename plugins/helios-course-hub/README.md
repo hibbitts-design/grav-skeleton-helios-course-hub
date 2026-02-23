@@ -77,7 +77,7 @@ search:
   placeholder: 'Search course...'
 ```
 
-If disabling the plugin, manually restore the following Helios theme defaults in `u`ser/config/themes/helios.yaml`:
+If disabling the plugin, manually restore the following Helios theme defaults in `user/config/themes/helios.yaml`:
 
 ```yaml
 versioning:
