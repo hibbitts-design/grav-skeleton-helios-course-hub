@@ -38,9 +38,8 @@ class HeliosCourseHubPlugin extends Plugin
             $heliosLicense = \Grav\Common\GPM\Licenses::get('helios');
             $missingThemeRedirect = $heliosLicense ? '/admin/themes' : '/admin/license-manager';
 
-            // Redirect frontend requests immediately
+            // Allow frontend to load with Quark fallback; skip Helios-specific events
             if (!$this->isAdmin()) {
-                $this->grav->redirect($missingThemeRedirect);
                 return;
             }
         }
