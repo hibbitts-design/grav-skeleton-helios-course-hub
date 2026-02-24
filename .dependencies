@@ -23,6 +23,10 @@ git:
         url: https://github.com/getgrav/grav-plugin-form
         path: user/plugins/form
         branch: master
+    github-markdown-alerts:
+        url: https://github.com/trilbymedia/grav-plugin-github-markdown-alerts
+        path: user/plugins/github-markdown-alerts
+        branch: main
     git-sync:
         url: https://github.com/trilbymedia/grav-plugin-git-sync
         path: user/plugins/git-sync
@@ -39,21 +43,9 @@ git:
         url: https://github.com/getgrav/grav-plugin-page-inject
         path: user/plugins/page-inject
         branch: master
-    pagination:
-        url: https://github.com/getgrav/grav-plugin-pagination
-        path: user/plugins/pagination
-        branch: master
     problems:
         url: https://github.com/getgrav/grav-plugin-problems
         path: user/plugins/problems
-        branch: master
-    shortcode-core:
-        url: https://github.com/getgrav/grav-plugin-shortcode-core
-        path: user/plugins/shortcode-core
-        branch: master
-    youtube:
-        url: https://github.com/getgrav/grav-plugin-youtube
-        path: user/plugins/youtube
         branch: master
     quark:
         url: https://github.com/getgrav/grav-theme-quark
