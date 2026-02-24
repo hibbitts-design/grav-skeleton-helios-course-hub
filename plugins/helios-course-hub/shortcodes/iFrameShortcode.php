@@ -17,7 +17,7 @@ class iFrameShortcode extends Shortcode
             $ratioClass = ($ratio === '4:3') ? ' responsive-container--4x3' : '';
 
             if ($iframeurl) {
-                $output = '<div class="responsive-container' . $ratioClass . '"><iframe src="' . $iframeurl . '" allowfullscreen></iframe></div>';
+                $output = '<div class="responsive-container' . $ratioClass . '"><iframe src="' . htmlspecialchars($iframeurl, ENT_QUOTES, 'UTF-8') . '" allowfullscreen></iframe></div>';
 
                 return $output;
             }

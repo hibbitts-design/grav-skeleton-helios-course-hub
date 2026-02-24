@@ -1,4 +1,4 @@
-// Admin panel JS customizations
+// Frontend JS customizations
 
 (function () {
   var theme = localStorage.getItem("helios-theme") || "system";

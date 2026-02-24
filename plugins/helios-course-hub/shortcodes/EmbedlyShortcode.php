@@ -13,7 +13,7 @@ class EmbedlyShortcode extends Shortcode
             $embedlycardurl = $sc->getParameter('url', $sc->getBbCode()) ?: $sc->getContent();
 
             if ($embedlycardurl) {
-                return '<a class="embedly-card" data-card-controls="0" data-card-align="left" href="' . $embedlycardurl . '"></a><script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>';
+                return '<a class="embedly-card" data-card-controls="0" data-card-align="left" href="' . htmlspecialchars($embedlycardurl, ENT_QUOTES, 'UTF-8') . '"></a>';
             }
 
         });

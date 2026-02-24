@@ -25,10 +25,10 @@ class H5PShortcode extends Shortcode
                     ? $h5proot . $h5pid . '/embed'
                     : $h5proot . $h5pid;
 
-                return '<p><iframe src="' . $embedurl . '" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>' . $resizer . '</p>';
+                return '<p><iframe src="' . htmlspecialchars($embedurl, ENT_QUOTES, 'UTF-8') . '" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>' . $resizer . '</p>';
 
             } elseif ($h5purl) {
-                return '<p><iframe src="' . $h5purl . '" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>' . $resizer . '</p>';
+                return '<p><iframe src="' . htmlspecialchars($h5purl, ENT_QUOTES, 'UTF-8') . '" width="400" height="300" frameborder="0" allowfullscreen="allowfullscreen"></iframe>' . $resizer . '</p>';
             }
 
         });

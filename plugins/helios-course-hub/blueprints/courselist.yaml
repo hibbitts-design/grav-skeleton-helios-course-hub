@@ -23,3 +23,19 @@ form:
               toggleable: true
               rows: 3
               placeholder: A short description shown below the page title
+            header.cards_per_row:
+              type: select
+              label: Cards Per Row
+              default: 1
+              options:
+                1: '1'
+                2: '2'
+                3: '3'
+                4: '4'
+              help: Number of course cards displayed per row.
+            header.card_icon:
+              type: text
+              label: Default Card Icon
+              default: 'tabler/layout-list.svg'
+              help: 'Fallback icon for course cards that do not specify their own icon (e.g. tabler/layout-list.svg).'
+              placeholder: 'tabler/layout-list.svg'

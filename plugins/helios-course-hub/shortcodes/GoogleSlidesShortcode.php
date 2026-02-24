@@ -17,7 +17,7 @@ class GoogleSlidesShortcode extends Shortcode
             $ratioClass = ($ratio === '4:3') ? ' responsive-container--4x3' : '';
 
             if ($googleslidesurl) {
-                $output = '<div class="responsive-container' . $ratioClass . '"><iframe src="' . $googleslidesurl . '" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>';
+                $output = '<div class="responsive-container' . $ratioClass . '"><iframe src="' . htmlspecialchars($googleslidesurl, ENT_QUOTES, 'UTF-8') . '" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>';
 
                 return $output;
             }

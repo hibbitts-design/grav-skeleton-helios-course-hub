@@ -23,7 +23,7 @@ class PDFShortcode extends Shortcode
             }
 
             if ($pdfurl) {
-                $output = '<div class="responsive-container' . $ratioClass . '"><iframe src="https://docs.google.com/gview?url=' . $pdfurl . '&embedded=true"></iframe></div>';
+                $output = '<div class="responsive-container' . $ratioClass . '"><iframe src="https://docs.google.com/gview?url=' . htmlspecialchars($pdfurl, ENT_QUOTES, 'UTF-8') . '&amp;embedded=true"></iframe></div>';
 
                 return $output;
             }
