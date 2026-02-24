@@ -71,10 +71,6 @@ class HeliosCourseHubPlugin extends Plugin
                 'warning'
             );
 
-            // Signal to admin.js that the theme is missing so it can auto-reload
-            // the page once a successful admin action (e.g. theme activation) is detected
-            $assets->addInlineJs('window.heliosThemeMissing = true;');
-
             if ($isLoggedIn && $currentRoute === '/admin') {
                 $this->grav->redirect($targetRoute);
                 return;
