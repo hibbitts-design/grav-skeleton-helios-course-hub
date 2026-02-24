@@ -97,14 +97,16 @@ search:
 
 ## Features
 
-- Course List page template with auto-generated course cards
+- Ready-to-use course companion website with the modern Helios theme
+- Support for single or multiple courses from one site
 - Built-in shortcodes for embedding content (iFrames, Google Slides, PDFs, H5P, Embedly)
+- Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
-- Enhanced Admin Panel readability (increased font sizes and toolbar icon scaling)
-- Automatic theme detection with fallback to Quark if Helios is not installed
-- Overrides the Helios "Version" label to "Course" for multi-course setups — customizable via `languages.yaml`
-- Git Sync plugin included in the skeleton for syncing site content with a GitHub or Codeberg repository
-- Automatic "Edit this Page" link option provided by the Helios Theme
+- Alphabetical topics index with auto-generated A–Z navigation
+- Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
+- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
+- Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
+- Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
