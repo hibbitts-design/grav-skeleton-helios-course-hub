@@ -26,18 +26,6 @@ logo:
 header:
   menu:
     -
-      route: /privacy
-      label: Privacy
-      external: '0'
-    -
-      route: /contact
-      label: Contact
-      external: '0'
-    -
-      route: /copyright
-      label: Copyright
-      external: '0'
-    -
       route: /readme
       label: ReadMe
       external: '0'
