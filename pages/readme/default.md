@@ -45,8 +45,8 @@ For a multi-course setup, see the [Multi-Course Setup](#multi-course-setup) sect
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
 - Alphabetical topics index with auto-generated A–Z navigation
-- Git Sync plugin included for syncing site content with a GitHub or Codeberg repository
-- Automatic "Edit this Page" link option provided by the Helios Theme
+- Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
+- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 
@@ -54,7 +54,7 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 
 ## Git Sync & Open Editing
 
-The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-plugin-git-sync), which keeps your site content automatically in sync with a GitHub or GitLab repository. This enables a full open-authoring workflow:
+The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-plugin-git-sync), which keeps your site content automatically in sync with a GitHub or Codeberg repository. This enables a full open-authoring workflow:
 
 - Content editors can work directly in the Grav Admin or commit changes via Git
 - The Helios Theme's **"Edit this Page"** option adds a link on each page that takes readers directly to the corresponding source file in your repository for quick edits or contributions
