@@ -3,10 +3,22 @@
 (function () {
     if (!window.heliosThemeMissing) { return; }
 
-    // When the Helios theme is missing, auto-reload the page after any successful
-    // admin AJAX action (e.g. theme activation) so the warning banner is cleared
-    function scheduleReload() {
-        setTimeout(function () { window.location.reload(); }, 800);
+    // Auto-reload after a successful admin action, but only once any open modal has closed
+    var successPending = false;
+
+    function tryReload() {
+        if (!successPending) { return; }
+        if (document.body.classList.contains('remodal-is-opened')) { return; }
+        window.location.reload();
+    }
+
+    // Watch for Remodal's remodal-is-opened class being removed from <body>
+    var observer = new MutationObserver(function () { tryReload(); });
+    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+
+    function onSuccess() {
+        successPending = true;
+        tryReload();
     }
 
     // Intercept XMLHttpRequest responses
@@ -16,7 +28,7 @@
             if (this.status === 200) {
                 try {
                     var data = JSON.parse(this.responseText);
-                    if (data.status === 'success') { scheduleReload(); }
+                    if (data.status === 'success') { onSuccess(); }
                 } catch (e) {}
             }
         });
@@ -30,7 +42,7 @@
             return origFetch.apply(this, arguments).then(function (response) {
                 if (response.ok) {
                     response.clone().json().then(function (data) {
-                        if (data.status === 'success') { scheduleReload(); }
+                        if (data.status === 'success') { onSuccess(); }
                     }).catch(function () {});
                 }
                 return response;
