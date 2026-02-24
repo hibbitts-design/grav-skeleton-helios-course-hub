@@ -33,16 +33,6 @@ class HeliosCourseHubPlugin extends Plugin
             $this->config->set('system.pages.theme', 'quark');
             $this->themeMissing = true;
             $this->missingThemeName = $themeName;
-
-            // No license → License Manager, license present → Themes to install/activate
-            $heliosLicense = \Grav\Common\GPM\Licenses::get('helios');
-            $missingThemeRedirect = $heliosLicense ? '/admin/themes' : '/admin/license-manager';
-
-            // Redirect frontend requests immediately
-            if (!$this->isAdmin()) {
-                $this->grav->redirect($missingThemeRedirect);
-                return;
-            }
         }
 
         if ($this->isAdmin()) {

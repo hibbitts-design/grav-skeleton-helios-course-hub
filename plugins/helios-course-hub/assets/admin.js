@@ -3,22 +3,22 @@
 (function () {
     if (!window.heliosThemeMissing) { return; }
 
-    // Auto-reload after a successful theme/license/GPM action, but only once any open modal has closed
-    var successPending = false;
-
-    function tryReload() {
-        if (!successPending) { return; }
-        if (document.body.classList.contains('remodal-is-opened')) { return; }
-        window.location.reload();
-    }
-
-    // Watch for Remodal's remodal-is-opened class being removed from <body>
-    var observer = new MutationObserver(function () { tryReload(); });
-    observer.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-
+    // After a successful theme/license/GPM action, reload once any open dialog has closed
     function onSuccess() {
-        successPending = true;
-        tryReload();
+        var startTime = Date.now();
+        function poll() {
+            var elapsed = Date.now() - startTime;
+            var modalOpen = document.body.classList.contains('remodal-is-opened') ||
+                            document.body.classList.contains('modal-open') ||
+                            !!document.querySelector('[role="dialog"]:not([aria-hidden="true"])');
+            // Wait at least 2s and until no modal is open (30s maximum)
+            if ((modalOpen || elapsed < 2000) && elapsed < 30000) {
+                setTimeout(poll, 500);
+            } else {
+                window.location.reload();
+            }
+        }
+        poll();
     }
 
     // Only trigger for theme, license, or GPM admin endpoints
