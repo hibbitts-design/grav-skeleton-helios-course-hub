@@ -38,8 +38,9 @@ class HeliosCourseHubPlugin extends Plugin
             $heliosLicense = \Grav\Common\GPM\Licenses::get('helios');
             $missingThemeRedirect = $heliosLicense ? '/admin/themes' : '/admin/license-manager';
 
-            // Allow frontend to load with Quark fallback; skip Helios-specific events
+            // Redirect frontend requests immediately
             if (!$this->isAdmin()) {
+                $this->grav->redirect($missingThemeRedirect);
                 return;
             }
         }
@@ -79,6 +80,10 @@ class HeliosCourseHubPlugin extends Plugin
                 "Helios Grav Premium theme required. Enter your Helios and SVG Icons license keys, then install and activate the theme.",
                 'warning'
             );
+
+            // Signal to admin.js that the theme is missing so it can auto-reload
+            // the page once a successful admin action (e.g. theme activation) is detected
+            $assets->addInlineJs('window.heliosThemeMissing = true;');
 
             if ($isLoggedIn && $currentRoute === '/admin') {
                 $this->grav->redirect($targetRoute);
