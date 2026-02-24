@@ -39,7 +39,7 @@ For a multi-course setup, see the [Multi-Course Setup](#multi-course-setup) sect
 
 ## Features
 
-- Ready-to-use course companion website with the clean Helios theme
+- Ready-to-use course companion website with the clean and modern Helios theme
 - Support for single or multiple courses from one site
 - Built-in shortcodes for embedding content (iFrames, Google Slides, PDFs, H5P, Embedly)
 - Responsive iframe/video containers with 16:9 aspect ratio
