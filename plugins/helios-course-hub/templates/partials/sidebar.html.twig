@@ -1,0 +1,229 @@
+{% set theme_config = config.themes.helios %}
+{% set logo = theme_config.logo %}
+{% set mobile = mobile|default(false) %}
+
+<div class="flex flex-col h-full">
+    {# Sidebar header with logo #}
+    <div class="flex items-center h-16 px-4 border-b border-gray-200 dark:border-gray-800 shrink-0">
+        <a href="{{ base_url ?: '/' }}" class="flex items-center gap-3" @click="mobileNavOpen = false">
+            {% if logo.image %}
+                {% set logo_file = logo.image|first %}
+                {% set logo_dark_file = logo.image_dark|first %}
+                {# Light mode logo #}
+                <img src="{{ url('user://assets/helios/' ~ logo_file.name) }}"
+                     alt="{{ site.title }}"
+                     class="{{ logo.height ?: 'h-8' }} w-auto {{ logo_dark_file ? 'dark:hidden' : '' }}">
+                {# Dark mode logo (if provided) #}
+                {% if logo_dark_file %}
+                <img src="{{ url('user://assets/helios/' ~ logo_dark_file.name) }}"
+                     alt="{{ site.title }}"
+                     class="{{ logo.height ?: 'h-8' }} w-auto hidden dark:block">
+                {% endif %}
+            {% else %}
+                {# Default logo icon #}
+                <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary dark:bg-primary-dark text-white">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+                <span class="text-lg font-semibold text-gray-900 dark:text-white">
+                    {{ logo.text ?: site.title }}
+                </span>
+            {% endif %}
+        </a>
+
+        {# Close button for mobile #}
+        {% if mobile %}
+        <button @click="mobileNavOpen = false"
+                class="ml-auto p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800 lg:hidden"
+                aria-label="Close navigation">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+        {% endif %}
+    </div>
+
+    {# Version switcher #}
+    {% if theme_config.versioning.enabled and theme_config.versioning.show_dropdown and helios_version_info is defined and helios_version_info.count > 1 %}
+    <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
+        <div x-data="{ open: false }" class="relative">
+            <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1.5">
+                {{ 'THEME_HELIOS.VERSION'|t }}
+            </label>
+            <button @click="open = !open"
+                    @click.outside="open = false"
+                    class="flex items-center justify-between w-full px-3 py-2 text-sm rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                <span class="font-medium text-gray-900 dark:text-white">
+                    {% set current_version_data = helios_version_info.versions|filter(v => v.is_current)|first %}
+                    {{ current_version_data.label ?: helios_version }}
+                    {% if current_version_data.is_default %}
+                        <span class="ml-1 text-xs text-green-600 dark:text-green-400">({{ 'THEME_HELIOS.VERSION_LATEST'|t }})</span>
+                    {% endif %}
+                </span>
+                <svg class="w-4 h-4 text-gray-500 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+            </button>
+
+            <div x-show="open"
+                 x-transition:enter="transition ease-out duration-100"
+                 x-transition:enter-start="opacity-0 scale-95"
+                 x-transition:enter-end="opacity-100 scale-100"
+                 x-transition:leave="transition ease-in duration-75"
+                 x-transition:leave-start="opacity-100 scale-100"
+                 x-transition:leave-end="opacity-0 scale-95"
+                 class="absolute left-0 right-0 mt-1 rounded-lg bg-white dark:bg-gray-800 shadow-lg ring-1 ring-black/5 dark:ring-white/10 z-10 max-h-64 overflow-y-auto"
+                 x-cloak>
+                <div class="py-1">
+                    {% for version in helios_version_info.versions %}
+                    <a href="{{ version.url }}"
+                       @click="mobileNavOpen = false"
+                       class="flex items-center justify-between px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors
+                              {{ version.is_current ? 'text-primary font-medium bg-gray-50 dark:bg-gray-700/50' : 'text-gray-700 dark:text-gray-300' }}">
+                        <span>{{ version.label }}</span>
+                        <span class="flex items-center gap-2">
+                            {% if version.is_default %}
+                                <span class="text-xs px-1.5 py-0.5 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">{{ 'THEME_HELIOS.VERSION_LATEST'|t }}</span>
+                            {% endif %}
+                            {% if version.is_current %}
+                                <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            {% endif %}
+                        </span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {# Navigation #}
+    {% set htmx_enabled = theme_config.htmx.enabled|default(false) %}
+    <nav class="flex-1 overflow-y-auto px-3 py-4" aria-label="Main navigation"
+         {% if htmx_enabled %}
+         hx-boost="true"
+         hx-target="#htmx-swap-target"
+         hx-swap="innerHTML show:window:top"
+         hx-indicator="#htmx-loading"
+         {% endif %}
+         @click="if ($event.target.closest('a')) mobileNavOpen = false"
+         x-data="{
+             init() {
+                 // Give Alpine time to expand parent items, then scroll to active
+                 this.$nextTick(() => {
+                     const active = this.$el.querySelector('.nav-link.active, .nav-link-container.active');
+                     if (active) {
+                         active.scrollIntoView({ block: 'center', behavior: 'instant' });
+                     } else {
+                         const saved = sessionStorage.getItem('sidebar_scroll');
+                         if (saved) this.$el.scrollTop = parseInt(saved);
+                     }
+                 });
+             }
+         }"
+         @scroll.debounce.100ms="sessionStorage.setItem('sidebar_scroll', $el.scrollTop)">
+        <div class="sidebar-nav">
+            {% if helios_nav is defined %}
+                {{ _self.nav_items(helios_nav, 0) }}
+            {% endif %}
+        </div>
+
+        {# Header menu links (mobile only - hidden on desktop where titlebar shows them) #}
+        {% if theme_config.header.menu %}
+        <div class="lg:hidden mt-6 pt-6 border-t border-gray-200 dark:border-gray-800">
+            {% for item in theme_config.header.menu %}
+            <a href="{{ item.external ? item.route : url(item.route) }}"
+               class="flex items-center px-3 py-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+               {{ item.external ? 'target="_blank" rel="noopener noreferrer"' : '' }}>
+                {{ item.label }}
+                {% if item.external %}
+                <svg class="w-3 h-3 ml-auto opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                </svg>
+                {% endif %}
+            </a>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </nav>
+
+    {# Sidebar footer #}
+    {% if helios.sidebar.powered_by ?? true %}
+    <div class="shrink-0 px-4 py-3 border-t border-gray-200 dark:border-gray-800">
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+            {{ 'THEME_HELIOS.POWERED_BY_GRAV'|t|raw }}
+        </p>
+    </div>
+    {% endif %}
+</div>
+
+{# Recursive navigation macro #}
+{% macro nav_items(items, level) %}
+    {% for item in items %}
+        {% set nav_key = 'nav_' ~ item.url|replace({'/': '_'}) %}
+        {% set is_active_branch = item.active or item.parent_active %}
+        {% set default_expanded = is_active_branch ? 'true' : 'false' %}
+        <div class="nav-item" x-data="{
+                key: '{{ nav_key }}',
+                isActiveBranch: {{ is_active_branch ? 'true' : 'false' }},
+                expanded: {{ is_active_branch ? 'true' : 'false' }},
+                init() {
+                    // Active branches always expand, others use localStorage
+                    if (this.isActiveBranch) {
+                        this.expanded = true;
+                        localStorage.setItem(this.key, 'true');
+                    } else {
+                        const saved = localStorage.getItem(this.key);
+                        if (saved !== null) {
+                            this.expanded = saved === 'true';
+                        }
+                    }
+                },
+                toggle() {
+                    this.expanded = !this.expanded;
+                    localStorage.setItem(this.key, this.expanded);
+                }
+            }">
+            {% if item.children|length > 0 %}
+                {# Item with children - link navigates, chevron expands #}
+                <div class="nav-link-container {{ item.active ? 'active' : '' }}" data-nav-route="{{ item.route }}">
+                    <a href="{{ item.url }}" class="nav-link nav-link-parent" data-nav-route="{{ item.route }}">
+                        {# Icon if set #}
+                        {% if item.icon %}
+                            <span class="nav-icon">{{ svg_icon(item.icon)|raw }}</span>
+                        {% endif %}
+                        {# API method badge if applicable #}
+                        {% if item.api.method is defined %}
+                            <span class="api-method method-{{ item.api.method|lower }}">{{ item.api.method }}</span>
+                        {% endif %}
+                        {{ item.title }}
+                    </a>
+                    <button @click="toggle()" class="nav-toggle-btn" aria-label="Toggle submenu">
+                        <svg class="nav-toggle" :class="{ 'expanded': expanded }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+                <div x-show="expanded" x-collapse class="nav-children">
+                    {{ _self.nav_items(item.children, level + 1) }}
+                </div>
+            {% else %}
+                {# Simple link #}
+                <a href="{{ item.url }}" class="nav-link {{ item.active ? 'active' : '' }}" data-nav-route="{{ item.route }}">
+                    {# Icon if set #}
+                    {% if item.icon %}
+                        <span class="nav-icon">{{ svg_icon(item.icon)|raw }}</span>
+                    {% endif %}
+                    {# API method badge if applicable #}
+                    {% if item.api.method is defined %}
+                        <span class="api-method method-{{ item.api.method|lower }}">{{ item.api.method }}</span>
+                    {% endif %}
+                    {{ item.title }}
+                </a>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endmacro %}
