@@ -1,5 +1,5 @@
 ---
-title: CPT-363 Course Hub
+title: CPT-363 Course Hub Demo
 cards_per_row: 1
 card_icon: tabler/layout-list.svg
 published: true
