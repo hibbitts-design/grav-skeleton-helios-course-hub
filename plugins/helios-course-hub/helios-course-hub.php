@@ -11,9 +11,6 @@ class HeliosCourseHubPlugin extends Plugin
     /** @var bool Whether the Helios theme is missing or inactive */
     protected $themeMissing = false;
 
-    /** @var string The name of the missing theme */
-    protected $missingThemeName = '';
-
     public static function getSubscribedEvents()
     {
         return [
@@ -23,8 +20,7 @@ class HeliosCourseHubPlugin extends Plugin
 
     public function onPluginsInitialized()
     {
-        // Always check for the Helios theme folder and active status directly,
-        // as the admin UI may have already switched the active theme to Quark
+        // Check theme folder and active status directly, as admin may have switched to Quark
         $themeName = 'helios';
         $themePath = GRAV_ROOT . '/user/themes/' . $themeName;
         $themeActive = $this->config->get('system.pages.theme') === $themeName;
@@ -32,7 +28,6 @@ class HeliosCourseHubPlugin extends Plugin
         if (!is_dir($themePath) || !$themeActive) {
             $this->config->set('system.pages.theme', 'quark');
             $this->themeMissing = true;
-            $this->missingThemeName = $themeName;
         }
 
         if ($this->isAdmin()) {
