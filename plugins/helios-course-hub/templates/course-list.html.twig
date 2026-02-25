@@ -30,14 +30,17 @@
     } %}
     <div class="grid gap-4 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }}">
         {% for version in helios_version_info.versions %}
-            {# Find the version's root page for icon/description #}
-            {% set version_page = pages.find('/' ~ version.id) %}
-            {% include 'partials/doc-card.html.twig' with {
-                title: version.label,
-                link: version.url,
-                icon: version_page.header.icon|default(page.header.card_icon|default('tabler/layout-list.svg')),
-                description: version_page.header.description|default(null)
-            } only %}
+            {# Find the version's root page for icon/description; skip non-visible courses #}
+            {% set version_page = pages.find('/' ~ version.id, true) %}
+            {% set version_home = version_page ? version_page.children.first() : null %}
+            {% if version_page and version_page.header.visible is not same as(false) %}
+                {% include 'partials/doc-card.html.twig' with {
+                    title: version.label,
+                    link: version_home ? version_home.url : version.url,
+                    icon: version_page.header.icon|default(page.header.card_icon|default('tabler/layout-list.svg')),
+                    description: version_page.header.description|default(null)
+                } only %}
+            {% endif %}
         {% endfor %}
     </div>
     {% endif %}
