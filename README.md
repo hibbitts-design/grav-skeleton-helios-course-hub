@@ -104,6 +104,9 @@ user/pages/
     └── ...
 ```
 
+> [!TIP]
+> The Course Dropdown is useful while building and testing content, but students may find the Course Hub homepage is sufficient. Once content is finalised, you can hide this dropdown menu by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+
 ## Multi-Course Folder Naming
 
 Course version folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
@@ -158,7 +161,7 @@ Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admi
 
 ### Theme Detection
 
-If the Helios theme is not installed, the plugin automatically falls back to the Quark theme, redirects visitors to the License Manager page, and displays a warning banner prompting you to enter your Helios License key and install Helios.
+If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable. In the Admin panel, it redirects to the License Manager page and displays a warning banner prompting you to enter your Helios and SVG-Icons license key and install Helios.
 
 ### Course Label Customization
 
