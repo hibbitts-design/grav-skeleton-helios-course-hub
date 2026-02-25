@@ -80,12 +80,11 @@ user/pages/
 └── readme/
 ```
 
-By default, only `cpt-363-1/` is visible, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Visible** to `true` in each course folder's `default.md`. The Course Dropdown appears automatically once more than one course is visible, and hides automatically when only one course is active.
+By default, only `cpt-363-1/` is visible, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Visible** to `Yes` in each course folder's root page. The Course Dropdown appears automatically once more than one course is visible, and hides automatically when only one course is active.
 
 ### Showing and Hiding Courses
 
-- To **show** a course: set **Visible** to `true` in the course folder's `default.md` (e.g. `cpt-363-2/default.md`)
-- To **hide** a course: set **Visible** to `false` in the course folder's `default.md`
+In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`), go to the **Advanced** tab in the Page Editor, and under **Overrides** set **Visible** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
 > When multiple courses are active, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalised, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
