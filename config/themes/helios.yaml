@@ -43,7 +43,7 @@ navigation:
   prev_next: true
   scroll_spy: true
 versioning:
-  enabled: false
+  enabled: true
   mode: explicit
   auto_detect: true
   root: null
@@ -53,7 +53,7 @@ versioning:
   version_pattern: '/^[a-zA-Z]+-?\d+([.-]\d+)*$/i'
   redirect_unversioned: false
   show_badge: true
-  show_dropdown: false
+  show_dropdown: true
   labels:
     cpt-363-1: CPT-363-1
     cpt-363-2: CPT-363-2
