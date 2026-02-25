@@ -27,7 +27,7 @@ languages:
   pages_fallback_only: false
   debug: false
 home:
-  alias: /home
+  alias: /courses
   hide_in_urls: false
 pages:
   type: regular
