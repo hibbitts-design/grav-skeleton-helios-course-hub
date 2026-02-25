@@ -99,7 +99,8 @@ class HeliosCourseHubPlugin extends Plugin
 
     public function onTwigTemplatePaths()
     {
-        array_unshift($this->grav['twig']->twig_paths, __DIR__ . '/templates');
+        $twig = $this->grav['twig'];
+        array_unshift($twig->twig_paths, __DIR__ . '/templates');
     }
 
     public function onShortcodeHandlers()
@@ -127,6 +128,9 @@ class HeliosCourseHubPlugin extends Plugin
         $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
         $twig = $this->grav['twig'];
         $twig->twig_vars['github_server'] = $githubServer;
+        $twig->twig_vars['helios_base_simple'] = $this->themeMissing
+            ? 'partials/base.html.twig'
+            : 'partials/base-simple.html.twig';
 
         // Filter helios_version_info to respect 'visible: false' in course frontmatter.
         // Runs at priority -100 to ensure the theme has already populated this variable.
