@@ -34,7 +34,7 @@ The recommended starting point is the pre-configured [Grav Helios Course Hub Ske
 1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/paulhibbitts/grav-skeleton-helios-course-hub/releases/latest) package
 2. **Enter your licenses** – enter your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
 
-The skeleton defaults to a **single-course setup** – the top-level folders in `user/pages/` are pre-configured and ready to use.
+The skeleton comes pre-configured with demo content in `user/pages/cpt-363-1/` and is ready to run immediately.
 
 To install the plugin manually, see the [Installation](#installation) and [Demo Content](#demo-content) sections below.
 
@@ -55,7 +55,7 @@ The `_demo` folder contains a default Helios Course Hub site that can be used as
 - `copyright/` – Copyright notice
 
 **Multi-course site** (`_demo/pages/`):
-- `00.home-multicourse/` – Course list home page using the `courselist` template
+- `00.courses/` – Courses homepage using the `course-list` template
 - `cpt-363-1/` – First course with the same section structure as the single-course layout
 - `cpt-363-2/` – Second course with the same section structure as the single-course layout
 - `cpt-363-3/` – Third course with the same section structure as the single-course layout
@@ -140,9 +140,9 @@ The `[topics]` shortcode wraps alphabetically organised content and auto-generat
 [/topics]
 ```
 
-## Course List Page
+## Courses Homepage
 
-The `courselist` page template automatically generates course cards from detected version folders. Each card displays a title, icon and description sourced from the course root folder's markdown file (e.g. `cpt-363-1/default.md`):
+The `course-list` page template automatically generates course cards from detected version folders. Each card displays a title, icon and description sourced from the course root folder's markdown file (e.g. `cpt-363-1/default.md`):
 
 ```yaml
 ---
@@ -154,7 +154,7 @@ description: A basic introduction to UI/UX design.
 
 The number of cards per row can be set via `cards_per_row` (1–4) in the course list page frontmatter.
 
-## Multi-Course Folder Naming
+## Course Folder Naming
 
 Course folders must start with one or more letters followed by a number. An optional hyphen can separate letters from the number, and additional version segments (separated by dots or hyphens) are supported.
 
