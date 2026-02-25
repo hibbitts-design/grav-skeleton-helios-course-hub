@@ -147,7 +147,7 @@ class HeliosCourseHubPlugin extends Plugin
                 if (!$page) {
                     return true;
                 }
-                return ($page->header()->visible ?? null) !== false;
+                return $page->published();
             }));
 
             $versionInfo['versions'] = $filteredVersions;

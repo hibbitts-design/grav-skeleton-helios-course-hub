@@ -31,9 +31,9 @@
     <div class="grid gap-4 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }}">
         {% for version in helios_version_info.versions %}
             {# Find the version's root page for icon/description; skip non-visible courses #}
-            {% set version_page = pages.find('/' ~ version.id, true) %}
+            {% set version_page = pages.find('/' ~ version.id) %}
             {% set version_home = version_page ? version_page.children.first() : null %}
-            {% if version_page and version_page.header.visible is not same as(false) %}
+            {% if version_page %}
                 {% include 'partials/doc-card.html.twig' with {
                     title: version.label,
                     link: version_home ? version_home.url : version.url,
