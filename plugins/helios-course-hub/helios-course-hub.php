@@ -41,7 +41,7 @@ class HeliosCourseHubPlugin extends Plugin
         $this->enable([
             'onThemeInitialized' => ['onThemeInitialized', -1000],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
-            'onTwigSiteVariables' => ['onTwigSiteVariables', 0],
+            'onTwigSiteVariables' => ['onTwigSiteVariables', -100],
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
         ]);
     }
@@ -125,6 +125,30 @@ class HeliosCourseHubPlugin extends Plugin
         $assets->addJs("$path/helios.js", ['group' => 'bottom', 'loading' => 'defer']);
 
         $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
-        $this->grav['twig']->twig_vars['github_server'] = $githubServer;
+        $twig = $this->grav['twig'];
+        $twig->twig_vars['github_server'] = $githubServer;
+
+        // Filter helios_version_info to respect 'visible: false' in course frontmatter.
+        // Runs at priority -100 to ensure the theme has already populated this variable.
+        if (isset($twig->twig_vars['helios_version_info'])) {
+            $pages = $this->grav['pages'];
+            $versionInfo = $twig->twig_vars['helios_version_info'];
+
+            $filteredVersions = array_values(array_filter($versionInfo['versions'], function ($version) use ($pages) {
+                $versionId = is_array($version) ? ($version['id'] ?? null) : ($version->id ?? null);
+                if (!$versionId) {
+                    return true;
+                }
+                $page = $pages->find('/' . $versionId);
+                if (!$page) {
+                    return true;
+                }
+                return ($page->header()->visible ?? null) !== false;
+            }));
+
+            $versionInfo['versions'] = $filteredVersions;
+            $versionInfo['count'] = count($filteredVersions);
+            $twig->twig_vars['helios_version_info'] = $versionInfo;
+        }
     }
 }
