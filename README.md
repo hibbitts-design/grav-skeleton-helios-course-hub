@@ -2,11 +2,16 @@
 
 Give your course a clean, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a ready-to-run companion site for one or more courses, with content you fully control. It includes [Grav CMS](https://getgrav.org), an open-source, flat-file CMS with no database required and a built-in browser-based Admin panel.
 
-![](screenshot-1.png)
-Figure 1. Example Grav Helios Course Hub website, with a single course.
+## Screenshots
 
-![](screenshot-2.png)
-Figure 2. Example Grav Helios Course Hub website, with multiple courses.
+<p float="left">
+  <a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/">
+    <img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%">
+  </a>
+  <a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/cpt-363-1/home">
+    <img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%">
+  </a>
+</p>
 
 ## Who This Is For
 
