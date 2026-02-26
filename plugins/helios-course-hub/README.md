@@ -10,7 +10,7 @@ Figure 2. Example Grav Helios Course Hub website, with multiple courses.
 
 ## Who This Is For
 
-The Helios Course Hub is a **course companion site** – a place to organise and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrolment, grade tracking, or student progress features.
+The Helios Course Hub is a **course companion site** – a place to organize and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrollment, grade tracking, or student progress features.
 
 It is well suited for educators and teams who want full control over their content, structure, and hosting, including:
 - Individual educators wanting a clean, open companion site for one or more courses
@@ -22,7 +22,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 - Ready in minutes – a complete, pre-configured package with demo content included
 - Flexible – host one course or many from a single installation
-- Yours – host it anywhere PHP runs, customise freely, and keep every word you write
+- Yours – host it anywhere PHP runs, customize freely, and keep every word you write
 - Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
 - Flat-file simplicity – your content is just Markdown files you own and control
 - Support open source – your Grav Premium Helios theme purchase directly supports ongoing development of the open-source Grav CMS
@@ -126,7 +126,7 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 
 ### Topics Shortcode
 
-The `[topics]` shortcode wraps alphabetically organised content and auto-generates a full A–Z index at the top of the page. Letters with entries are rendered as anchor links; letters without entries are shown as dimmed plain text.
+The `[topics]` shortcode wraps alphabetically organized content and auto-generates a full A–Z index at the top of the page. Letters with entries are rendered as anchor links; letters without entries are shown as dimmed plain text.
 
 ```markdown
 # Topics

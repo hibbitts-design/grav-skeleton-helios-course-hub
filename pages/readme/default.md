@@ -9,7 +9,7 @@ Give your course a clean, open home on the web – without building from scratch
 
 ## Who This Is For
 
-The Helios Course Hub is a **course companion site** – a place to organise and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrolment, grade tracking, or student progress features.
+The Helios Course Hub is a **course companion site** – a place to organize and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrollment, grade tracking, or student progress features.
 
 It is well suited for educators and teams who want full control over their content, structure, and hosting, including:
 - Individual educators wanting a clean, open companion site for one or more courses
@@ -21,7 +21,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 - Ready in minutes – a complete, pre-configured package with demo content included
 - Flexible – host one course or many from a single installation
-- Yours – host it anywhere PHP runs, customise freely, and keep every word you write
+- Yours – host it anywhere PHP runs, customize freely, and keep every word you write
 - Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
 - Flat-file simplicity – your content is just Markdown files you own and control
 - Support open source – your Grav Premium Helios theme purchase directly supports ongoing development of the open-source Grav CMS
@@ -86,7 +86,7 @@ By default, only `cpt-363-1/` is published, so the Courses homepage shows a sing
 In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
-> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalised, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
 ## Course Folder Naming
 
@@ -159,7 +159,5 @@ The Course dropdown label can be customized in the plugin's `languages.yaml` —
 
 MIT – Hibbitts Design
 
-<hr>
-
-Want to no longer display this page on your site?
-Go to **Helios Theme Settings > Appearance**, scroll down to the bottom of the page and delete the **Header Menu** item **ReadMe**.
+> [!TIP]
+> Want to no longer display this page on your site? Go to **Helios Theme Settings > Appearance**, scroll down to the bottom of the page and delete the **Header Menu** item **ReadMe**.
