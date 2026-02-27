@@ -33,7 +33,7 @@ custom_favicon: {  }
 sidebar:
   powered_by: '0'
 navigation:
-  sidebar_width: 280
+  sidebar_width: 285
   toc_width: 240
   content_width: 768
   toc_start: 2
