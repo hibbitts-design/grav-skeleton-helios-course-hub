@@ -8,4 +8,4 @@ sitemap:
     lastmod: '16-02-2026 15:10'
 ---
 
-This is a Helios Course Hub that can contain one or more courses within a single Grav install.
+This Helios Course Hub can contain one or more courses within a single Grav install.
