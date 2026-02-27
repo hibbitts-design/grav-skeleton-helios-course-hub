@@ -12,12 +12,12 @@
             <a href="https://{{ github_server }}/{{ theme_config.github.repo }}/{{ git_path_prefix }}/{{ theme_config.github.branch }}/{{ file_path }}"
                target="_blank"
                rel="noopener noreferrer"
-               class="inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary">
+               class="edit-page-link inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary">
                 {{ svg_icon('tabler/pencil.svg', 'w-4 h-4')|raw }}
                 {{ theme_config.github.edit_text ?: 'THEME_HELIOS.EDIT_PAGE'|t }}
             </a>
         </div>
         {% endif %}
 
-        <p class="text-center text-sm text-gray-500 dark:text-gray-400">Built with <a href="https://getgrav.org" target="_blank" rel="nofollow noopener noreferrer" class="text-sm">Grav</a> · <a href="https://getgrav.org/premium/helios" target="_blank" rel="nofollow noopener noreferrer" class="text-sm">Grav Premium Helios</a> theme · <a href="https://github.com/hibbitts-design/grav-skeleton-helios-course-hub" target="_blank" rel="nofollow noopener noreferrer" class="text-sm">Helios Course Hub</a> by <a href="https://hibbittsdesign.org" target="_blank" rel="nofollow noopener noreferrer" class="text-sm">hibbittsdesign.org</a></p>
+    <p class="text-center text-sm text-gray-500 dark:text-gray-400">Built with <a href="https://getgrav.org" target="_blank" rel="nofollow noopener noreferrer">Grav</a> · <a href="https://getgrav.org/premium/helios" target="_blank" rel="nofollow noopener noreferrer">Grav Premium Helios</a> theme · <a href="https://github.com/hibbitts-design/grav-skeleton-helios-course-hub" target="_blank" rel="nofollow noopener noreferrer">Helios Course Hub</a> by <a href="https://hibbittsdesign.org" target="_blank" rel="nofollow noopener noreferrer">hibbittsdesign.org</a></p>
 </footer>
