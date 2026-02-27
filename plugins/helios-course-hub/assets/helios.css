@@ -171,17 +171,6 @@
 }
 */
 
-/* Increase body font size by 10% */
-:root {
-    font-size: 102%!important;
-}
-
-/* Increase body font size by 10% */
-.doc-card p,
-.doc-card span {
-    font-size: 102%!important;
-}
-
 /* Increase "Edit this page" link size */
 footer .edit-page-link {
     font-size: 1rem;
