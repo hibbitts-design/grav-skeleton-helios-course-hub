@@ -173,7 +173,7 @@ class HeliosCourseHubPlugin extends Plugin
             }
 
             if ($courseLabel && $pageTitle && $siteTitle) {
-                $this->browserTitle = $courseLabel . ' | ' . $pageTitle . ' | ' . $siteTitle;
+                $this->browserTitle = $pageTitle . ' | ' . $courseLabel . ' | ' . $siteTitle;
             }
         }
     }
