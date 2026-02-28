@@ -8,8 +8,8 @@ sitemap:
     lastmod: '16-02-2026 15:10'
 ---
 
-The **Grav Helios Course Hub** gives your course a modern, clean, and organized home on the web – a place to share content, resources, and schedules that you fully own and control. It sits alongside your existing learning management system (Canvas, Moodle, Brightspace, etc.) and runs on nearly any web hosting service. It requires the [Grav Premium Helios theme](https://getgrav.org/premium/helios), which directly funds [Grav](https://getgrav.org), the free website platform it's built on.
+The **Grav Helios Course Hub** is a ready-to-use companion site that gives your course a modern, clean, and organized home on the web – a place to openly share course materials and resources that you keep and control, independent of your institution's learning platform. Content is stored as simple text files you can keep locally, and it runs on nearly any web hosting service.
 
-Want to learn more? Read the full [ReadMe](../readme) for setup instructions, features, and more.
+Made possible by the [Grav Premium Helios theme](https://getgrav.org/premium/helios), which directly funds [Grav](https://getgrav.org), the open-source platform it's built on. Want to learn more? Read the full [ReadMe](../readme) for setup instructions, features, and more.
 
 Explore the available example course below:
