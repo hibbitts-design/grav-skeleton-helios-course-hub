@@ -11,6 +11,9 @@ class HeliosCourseHubPlugin extends Plugin
     /** @var bool Whether the Helios theme is missing or inactive */
     protected $themeMissing = false;
 
+    /** @var string|null Computed "Course | Page Title | Site Title" browser title */
+    protected $browserTitle = null;
+
     public static function getSubscribedEvents()
     {
         return [
@@ -42,6 +45,7 @@ class HeliosCourseHubPlugin extends Plugin
             'onThemeInitialized' => ['onThemeInitialized', -1000],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
             'onTwigSiteVariables' => ['onTwigSiteVariables', -100],
+            'onOutputGenerated'   => ['onOutputGenerated', 0],
             'onShortcodeHandlers' => ['onShortcodeHandlers', 0],
         ]);
     }
@@ -153,6 +157,38 @@ class HeliosCourseHubPlugin extends Plugin
             $versionInfo['versions'] = $filteredVersions;
             $versionInfo['count'] = count($filteredVersions);
             $twig->twig_vars['helios_version_info'] = $versionInfo;
+
+            // Build "Course | Page Title | Site Title" browser title when a current version exists
+            $page = $this->grav['page'];
+            $pageTitle = $page ? $page->title() : '';
+            $siteTitle = $this->grav['config']->get('site.title', '');
+
+            $courseLabel = null;
+            foreach ($filteredVersions as $version) {
+                $isCurrent = is_array($version) ? ($version['is_current'] ?? false) : ($version->is_current ?? false);
+                if ($isCurrent) {
+                    $courseLabel = is_array($version) ? ($version['label'] ?? null) : ($version->label ?? null);
+                    break;
+                }
+            }
+
+            if ($courseLabel && $pageTitle && $siteTitle) {
+                $this->browserTitle = $courseLabel . ' | ' . $pageTitle . ' | ' . $siteTitle;
+            }
         }
+    }
+
+    public function onOutputGenerated($event)
+    {
+        if ($this->browserTitle === null) {
+            return;
+        }
+
+        $event['output'] = preg_replace(
+            '~<title>[^<]*</title>~',
+            '<title>' . htmlspecialchars($this->browserTitle, ENT_QUOTES, 'UTF-8') . '</title>',
+            $event['output'],
+            1
+        );
     }
 }
