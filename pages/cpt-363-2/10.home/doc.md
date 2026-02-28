@@ -1,5 +1,5 @@
 ---
-title: 'Home CPT-363-2'
+title: 'Home'
 navigation:
     prev_next: false
     toc_position: hidden
