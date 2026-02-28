@@ -21,7 +21,7 @@ fonts:
 logo:
   image: {  }
   image_dark: {  }
-  text: 'Helios Course Hub'
+  text: 'Course Hub'
   height: h-8
 header:
   menu:
