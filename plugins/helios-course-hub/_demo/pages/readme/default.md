@@ -9,7 +9,7 @@ Give your course a clean, open home on the web – without building from scratch
 
 ## Who This Is For
 
-The Helios Course Hub is a **course companion site** – a place to organise and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrolment, grade tracking, or student progress features.
+The Helios Course Hub is a **course companion site** – a place to organize and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrollment, grade tracking, or student progress features.
 
 It is well suited for educators and teams who want full control over their content, structure, and hosting, including:
 - Individual educators wanting a clean, open companion site for one or more courses
@@ -21,7 +21,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 - Ready in minutes – a complete, pre-configured package with demo content included
 - Flexible – host one course or many from a single installation
-- Yours – host it anywhere PHP runs, customise freely, and keep every word you write
+- Yours – host it anywhere PHP runs, customize freely, and keep every word you write
 - Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
 - Flat-file simplicity – your content is just Markdown files you own and control
 - Support open source – your Grav Premium Helios theme purchase directly supports ongoing development of the open-source Grav CMS
@@ -30,7 +30,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included. The home page is a **Courses** listing that shows all active courses – by default, just `cpt-363-1/`.
 
-1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/paulhibbitts/grav-skeleton-helios-course-hub/releases/latest) package
+1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
 2. **Enter your licenses** – enter your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
 3. **Edit your pages** in `user/pages/cpt-363-1/` – start with `10.home/` and work through the pre-built course sections
 4. **Publish** – works on almost any Web Server, with PHP 7.3.6+, or run locally; no database required
@@ -86,7 +86,7 @@ By default, only `cpt-363-1/` is published, so the Courses homepage shows a sing
 In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
-> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalised, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
 ## Course Folder Naming
 
@@ -117,6 +117,18 @@ description: A basic introduction to UI/UX design.
 ```
 
 The number of cards per row can be set via `cards_per_row` (1–4) in the course list page frontmatter.
+
+Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
+
+```markdown
+This text appears above the course cards.
+
+===
+
+This text appears below the course cards.
+```
+
+If no `===` delimiter is present, all content renders above the cards as normal.
 
 ## Included Plugin: Helios Course Hub
 
@@ -153,13 +165,22 @@ The Course dropdown label can be customized in the plugin's `languages.yaml` —
 - PHP >= 7.3.6
 - Grav CMS >= 1.7.0
 - [Grav Premium Helios Theme](https://getgrav.org/premium/helios) – one license per site ([Standard or Team](https://getgrav.org/premium/license))
-- Shortcode Core plugin >= 5.0.0
+
+## Support
+
+### Contact and Support
+- Follow [@hibbittsdesign@mastodon.social](https://mastodon.social/@hibbittsdesign) on Mastodon for updates
+- 👩🏻‍💻🧑🏻‍💻 Join the [Grav Discord](https://chat.getgrav.org) and often find me there
+- Add a ⭐️ [star on GitHub](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub) to the Helios Course Hub project repository
+- For bugs or feature requests, [open an issue](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/issues) on GitHub
+
+### Professional Services
+
+By leveraging his extensive UX design expertise and systems-oriented approach, Paul helps teams and individuals utilize open content in education and publication settings. Professional services include user experience and workflow consulting, premium support subscriptions, workshops, and custom development. Interested? Send a note to [paul@hibbittsdesign.org](mailto:paul@hibbittsdesign.org).
 
 ## License
 
 MIT – Hibbitts Design
 
-<hr>
-
-Want to no longer display this page on your site?
-Go to **Helios Theme Settings > Appearance**, scroll down to the bottom of the page and delete the **Header Menu** item **ReadMe**.
+> [!TIP]
+> Want to no longer display this page on your site? Go to **Helios Theme Settings > Appearance**, scroll down to the bottom of the page and delete the **Header Menu** item **ReadMe**.

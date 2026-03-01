@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: Instructor design reviews in TBD, no regular class.
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: hidden
 ---

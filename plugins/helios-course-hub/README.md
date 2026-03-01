@@ -1,12 +1,12 @@
 # Grav Helios Course Hub Plugin
 
-Give your course a clean, open home on the web – without building from scratch. Designed for use with the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/paulhibbitts/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability.
+Give your course a clean, open home on the web – without building from scratch. Designed for use with the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability.
 
-![](screenshot-1.png)
-Figure 1. Example Grav Helios Course Hub website, with a single course.
+## Screenshots
 
-![](screenshot-2.png)
-Figure 2. Example Grav Helios Course Hub website, with multiple courses.
+<p float="left">
+  <a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/"><img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%"></a>&nbsp;<a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/cpt-363-1/home"><img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%"></a>
+</p>
 
 ## Who This Is For
 
@@ -29,9 +29,9 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 ## Quick Start
 
-The recommended starting point is the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/paulhibbitts/grav-skeleton-helios-course-hub/releases/latest), which includes this plugin, demo content, and all required configuration out of the box.
+The recommended starting point is the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest), which includes this plugin, demo content, and all required configuration out of the box.
 
-1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/paulhibbitts/grav-skeleton-helios-course-hub/releases/latest) package
+1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
 2. **Enter your licenses** – enter your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
 
 The skeleton comes pre-configured with demo content in `user/pages/cpt-363-1/` and is ready to run immediately.
@@ -64,7 +64,7 @@ To use the demo content, copy the contents of `_demo/pages/` into your Grav `use
 
 ## Helios Theme Configuration
 
-If you are not using the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/paulhibbitts/grav-skeleton-helios-course-hub), add the following to `user/config/themes/helios.yaml` to configure course versioning and search:
+If you are not using the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), add the following to `user/config/themes/helios.yaml` to configure course versioning and search:
 
 ```yaml
 versioning:
@@ -196,7 +196,18 @@ To customize the label or add a language, update the relevant block in `language
 - PHP >= 7.3.6
 - Grav CMS >= 1.7.0
 - [Grav Premium Helios Theme](https://getgrav.org/premium/helios) – one license per site ([Standard or Team](https://getgrav.org/premium/license))
-- Shortcode Core plugin >= 5.0.0
+
+## Support
+
+### Contact and Support
+- Follow [@hibbittsdesign@mastodon.social](https://mastodon.social/@hibbittsdesign) on Mastodon for updates
+- 👩🏻‍💻🧑🏻‍💻 Join the [Grav Discord](https://chat.getgrav.org) and often find me there
+- Add a ⭐️ [star on GitHub](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub) to the Helios Course Hub project repository
+- For bugs or feature requests, [open an issue](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/issues) on GitHub
+
+### Professional Services
+
+By leveraging his extensive UX design expertise and systems-oriented approach, Paul helps teams and individuals utilize open content in education and publication settings. Professional services include user experience and workflow consulting, premium support subscriptions, workshops, and custom development. Interested? Send a note to [paul@hibbittsdesign.org](mailto:paul@hibbittsdesign.org).
 
 ## License
 

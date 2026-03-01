@@ -3,8 +3,7 @@ title: 'Week 1 (May 9 - 15)'
 published: true
 icon: tabler/hexagons.svg
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---

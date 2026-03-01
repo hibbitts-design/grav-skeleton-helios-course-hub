@@ -88,18 +88,6 @@ In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and se
 > [!TIP]
 > When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
-Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
-
-```markdown
-This text appears above the course cards.
-
-===
-
-This text appears below the course cards.
-```
-
-If no `===` delimiter is present, all content renders above the cards as normal.
-
 ## Course Folder Naming
 
 Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.

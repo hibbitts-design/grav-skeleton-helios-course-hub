@@ -4,8 +4,9 @@ published: true
 icon: tabler/hexagons.svg
 description: What does a holistic user experience design process look like?
 taxonomy:
-    category:
-        - docs
+    category: docs
+navigation:
+    toc_position: right
 ---
 
 ![4853380320_492f9dce63_b](4853380320_492f9dce63_b.jpg?cropZoom=800,300 "4853380320_492f9dce63_b")
