@@ -154,6 +154,18 @@ description: A basic introduction to UI/UX design.
 
 The number of cards per row can be set via `cards_per_row` (1–4) in the course list page frontmatter.
 
+Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
+
+```markdown
+This text appears above the course cards.
+
+===
+
+This text appears below the course cards.
+```
+
+If no `===` delimiter is present, all content renders above the cards as normal.
+
 ## Course Folder Naming
 
 Course folders must start with one or more letters followed by a number. An optional hyphen can separate letters from the number, and additional version segments (separated by dots or hyphens) are supported.

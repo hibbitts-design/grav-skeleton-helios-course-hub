@@ -99,6 +99,18 @@ Course folders must start with one or more letters, followed by a number. An opt
 
 The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
+Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
+
+```markdown
+This text appears above the course cards.
+
+===
+
+This text appears below the course cards.
+```
+
+If no `===` delimiter is present, all content renders above the cards as normal.
+
 ## Courses Homepage
 
 The **Courses** homepage uses the `course-list` template to automatically generate course cards from detected course folders. Each card displays:
