@@ -5,6 +5,8 @@ icon: tabler/hexagons.svg
 description: How to plan, conduct, and summarize usability tests?
 taxonomy:
     category: docs
+navigation:
+    toc_position: right
 ---
 
 ![4642289926_7964e733d1_b](4642289926_7964e733d1_b.jpg?cropZoom=800,300 "4642289926_7964e733d1_b")
