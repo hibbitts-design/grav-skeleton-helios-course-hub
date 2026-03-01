@@ -45,16 +45,14 @@
       newEmbeds[i].setAttribute("data-card-theme", cardTheme);
     }
 
-    if (window.embedly) {
-      // platform.js already loaded — process new cards
-      window.embedly("card", newEmbeds);
-    } else {
-      // platform.js not yet loaded — load it (auto-scans all cards on load)
-      var s = document.createElement("script");
-      s.src = "https://cdn.embedly.com/widgets/platform.js";
-      s.async = true;
-      document.body.appendChild(s);
-    }
+    // Remove existing Embedly script(s) then re-append to force re-execution in all browsers
+    document.querySelectorAll('script[src*="cdn.embedly.com/widgets/platform.js"]').forEach(function(el) {
+      el.parentNode.removeChild(el);
+    });
+    var s = document.createElement("script");
+    s.src = "https://cdn.embedly.com/widgets/platform.js";
+    s.async = true;
+    document.body.appendChild(s);
   });
   // --- END: HTMX Embedly fix ---
 })();
