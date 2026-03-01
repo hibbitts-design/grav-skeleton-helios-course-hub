@@ -13,10 +13,21 @@
         {% endif %}
     </header>
 
-    {# Page content if any #}
-    {% if page.content|trim %}
-        <article class="prose prose-lg dark:prose-invert max-w-none mb-12">
-            {{ page.content|raw }}
+    {# Split page content above/below course list using === delimiter #}
+    {% set raw = page.rawMarkdown() %}
+    {% if '===' in raw %}
+        {% set parts = raw|split('===') %}
+        {% set content_above = parts[0]|markdown %}
+        {% set content_below = parts[1]|markdown %}
+    {% else %}
+        {% set content_above = page.content %}
+        {% set content_below = null %}
+    {% endif %}
+
+    {# Page content above course list #}
+    {% if content_above|trim %}
+        <article class="prose prose-lg dark:prose-invert max-w-none mb-8">
+            {{ content_above|raw }}
         </article>
     {% endif %}
 
@@ -28,7 +39,7 @@
         3: 'sm:grid-cols-2 lg:grid-cols-3',
         4: 'sm:grid-cols-2 lg:grid-cols-4'
     } %}
-    <div class="grid gap-4 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }}">
+    <div class="grid gap-4 mb-8 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }}">
         {% for version in helios_version_info.versions %}
             {# Find the version's root page for icon/description; skip non-visible courses #}
             {% set version_page = pages.find('/' ~ version.id) %}
@@ -43,5 +54,12 @@
             {% endif %}
         {% endfor %}
     </div>
+    {% endif %}
+
+    {# Page content below course list #}
+    {% if content_below and content_below|trim %}
+        <article class="prose prose-lg dark:prose-invert max-w-none mt-8">
+            {{ content_below|raw }}
+        </article>
     {% endif %}
 {% endblock %}
