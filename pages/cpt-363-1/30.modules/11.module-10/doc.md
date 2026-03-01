@@ -6,6 +6,8 @@ description: How to design products for how people think, learn and feel?
 taxonomy:
     category:
         - docs
+navigation:
+    toc_position: right
 ---
 
 ![6192507935_3c435c6d94_b](6192507935_3c435c6d94_b.jpg?cropZoom=800,300 "6192507935_3c435c6d94_b")

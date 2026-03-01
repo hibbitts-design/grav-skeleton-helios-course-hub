@@ -6,6 +6,8 @@ description: How to conduct a usability inspection?
 taxonomy:
     category:
         - docs
+navigation:
+    toc_position: right
 ---
 
 ![2760207306_21ac555261_b](2760207306_21ac555261_b.jpg?cropZoom=800,300 "2760207306_21ac555261_b")

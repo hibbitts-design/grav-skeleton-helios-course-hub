@@ -6,6 +6,8 @@ description: How to understand and communicate people's needs and behaviours?
 taxonomy:
     category:
         - docs
+navigation:
+    toc_position: right
 ---
 
 ![13966760787_2d0975e6bc_k](13966760787_2d0975e6bc_k.jpg?cropZoom=800,300 "13966760787_2d0975e6bc_k")

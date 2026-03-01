@@ -6,6 +6,8 @@ description: How to design for mobile and multi-device usage?
 taxonomy:
     category:
         - docs
+navigation:
+    toc_position: right
 ---
 
 ![16230041026_d438eb2482_k](16230041026_d438eb2482_k.jpg?cropZoom=800,300 "16230041026_d438eb2482_k")

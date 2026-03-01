@@ -5,8 +5,6 @@ icon: tabler/hexagons.svg
 taxonomy:
     category:
         - docs
-navigation:
-    toc_position: right
 ---
 
 ![10610701655_c57e2dc536_o](10610701655_c57e2dc536_o.jpg?cropZoom=800,300 "10610701655_c57e2dc536_o")
