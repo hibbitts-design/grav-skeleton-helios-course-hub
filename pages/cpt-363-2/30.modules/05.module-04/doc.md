@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: How to explore and communicate possible design solutions?
 taxonomy:
-    category:
-        - docs
+    category: docs
 ---
 
 ![6968244538_4c0f7c7e64_k](6968244538_4c0f7c7e64_k.jpg?cropZoom=800,300 "6968244538_4c0f7c7e64_k")

@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: Welcome to CPT-363 User Interface Design 👋🏼
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: hidden
 ---

@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: What are the essentials of effective visual communication?
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---

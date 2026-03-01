@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: How to design products for how people think, learn and feel?
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---

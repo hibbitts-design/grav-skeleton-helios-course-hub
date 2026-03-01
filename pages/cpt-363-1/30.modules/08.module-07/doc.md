@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: How to design for mobile and multi-device usage?
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---

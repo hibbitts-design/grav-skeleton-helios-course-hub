@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: How to make more strategic design decisions?
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---

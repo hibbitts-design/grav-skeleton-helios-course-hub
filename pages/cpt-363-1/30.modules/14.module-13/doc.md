@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: Guest Speaker
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: hidden
 ---

@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: How to understand and communicate people's needs and behaviours?
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---

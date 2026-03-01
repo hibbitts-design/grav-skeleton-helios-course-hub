@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: How to explore and communicate possible design solutions?
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---

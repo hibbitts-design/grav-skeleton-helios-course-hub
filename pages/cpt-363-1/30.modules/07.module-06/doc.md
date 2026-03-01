@@ -4,8 +4,7 @@ published: true
 icon: tabler/hexagons.svg
 description: How to conduct a usability inspection?
 taxonomy:
-    category:
-        - docs
+    category: docs
 navigation:
     toc_position: right
 ---
