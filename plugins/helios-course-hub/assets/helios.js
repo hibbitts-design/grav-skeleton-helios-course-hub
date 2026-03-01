@@ -20,12 +20,7 @@
     script.async = true;
     document.body.appendChild(script);
 
-    // Watch for dark class changes on <html> via MutationObserver,
-    // since the Helios theme toggle buttons directly manipulate the
-    // class list without dispatching the helios-theme-change event.
-    // Only start observing after page has fully loaded, so we skip
-    // the initial class mutations during page setup and only react
-    // to user-initiated theme toggles.
+    // Reload on theme class change so Embedly cards re-render with the correct theme
     window.addEventListener("load", function () {
       var observer = new MutationObserver(function () {
         observer.disconnect();
@@ -37,4 +32,29 @@
       });
     });
   }
+
+  // --- BEGIN: HTMX Embedly fix --- (remove this block if it causes issues)
+  window.addEventListener("helios:content-loaded", function (evt) {
+    var container = evt.detail && evt.detail.container;
+    if (!container) return;
+
+    var newEmbeds = container.querySelectorAll(".embedly-card");
+    if (newEmbeds.length === 0) return;
+
+    for (var i = 0; i < newEmbeds.length; i++) {
+      newEmbeds[i].setAttribute("data-card-theme", cardTheme);
+    }
+
+    if (window.embedly) {
+      // platform.js already loaded — process new cards
+      window.embedly("card", newEmbeds);
+    } else {
+      // platform.js not yet loaded — load it (auto-scans all cards on load)
+      var s = document.createElement("script");
+      s.src = "https://cdn.embedly.com/widgets/platform.js";
+      s.async = true;
+      document.body.appendChild(s);
+    }
+  });
+  // --- END: HTMX Embedly fix ---
 })();
