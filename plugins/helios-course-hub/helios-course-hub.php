@@ -132,6 +132,7 @@ class HeliosCourseHubPlugin extends Plugin
         $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
         $showCourseLabel = $this->config->get('plugins.helios-course-hub.show_course_label', true);
         $showSiteIcon = $this->config->get('plugins.helios-course-hub.show_site_icon', true);
+        $siteIcon = $this->config->get('plugins.helios-course-hub.site_icon', '');
         // Use card_icon from the course-list page as the default course label icon
         $courseListPage = null;
         foreach ($this->grav['pages']->instances() as $p) {
@@ -147,6 +148,7 @@ class HeliosCourseHubPlugin extends Plugin
         $twig->twig_vars['github_server'] = $githubServer;
         $twig->twig_vars['show_course_label'] = $showCourseLabel;
         $twig->twig_vars['show_site_icon'] = $showSiteIcon;
+        $twig->twig_vars['site_icon'] = $siteIcon;
         $twig->twig_vars['course_label_icon'] = $courseLabelIcon;
         $twig->twig_vars['helios_base_simple'] = $this->themeMissing
             ? 'partials/base.html.twig'

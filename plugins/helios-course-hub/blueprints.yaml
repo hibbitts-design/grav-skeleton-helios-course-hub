@@ -29,6 +29,11 @@ form:
       validate:
         type: bool
 
+    appearance_section:
+      type: section
+      title: 'Appearance'
+      underline: true
+
     show_site_icon:
       type: toggle
       label: 'Show Site Icon'
@@ -41,6 +46,13 @@ form:
       validate:
         type: bool
 
+    site_icon:
+      type: text
+      size: medium
+      label: 'Site Icon'
+      help: 'Tabler icon path for the site icon square (e.g. tabler/book.svg). Only applies when Show Site Icon is enabled. Leave empty to use the default icon.'
+      placeholder: 'tabler/book.svg'
+
     show_course_label:
       type: toggle
       label: 'Show Course Label'
@@ -52,6 +64,11 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+
+    integrations_section:
+      type: section
+      title: 'Integrations'
+      underline: true
 
     github_server:
       type: radio
@@ -67,7 +84,6 @@ form:
       size: long
       label: 'H5P Content Embed Source URL'
       default: 'https://h5p.org/h5p/embed/'
-      help: 'Enter the embed source URL path up to, but not including, the H5P Content ID.'
       description: 'H5P embed source URL path up to, but not including, the Content ID. For example, ''https://h5p.org/h5p/embed/'' or ''https://yourorganization.h5p.com/content/''.'
       validate:
         type: url
