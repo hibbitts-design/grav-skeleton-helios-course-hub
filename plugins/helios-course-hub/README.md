@@ -107,6 +107,8 @@ search:
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
+- Show or hide the site icon square next to the Logo Text in the header
+- Course label with optional icon displayed in the sidebar while browsing a course
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -152,6 +154,8 @@ description: A basic introduction to UI/UX design.
 ---
 ```
 
+The `card_icon` field set on the course-list page also serves as the **default sidebar course label icon** when a course has no `icon` of its own.
+
 The number of cards per row can be set via `cards_per_row` (1–4) in the course list page frontmatter.
 
 Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
@@ -190,6 +194,17 @@ fr:
 ```
 
 To customize the label or add a language, update the relevant block in `languages.yaml`.
+
+## Plugin Settings
+
+The following settings are available in the Admin panel under **Plugins → Helios Course Hub**:
+
+| Setting | Default | Description |
+|---------|---------|-------------|
+| Show Site Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
+| Show Course Label | Enabled | Show or hide the current course label in the sidebar; automatically hidden when the Course Dropdown is visible |
+| Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
+| H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with `[h5p id="..."]`) |
 
 ## Requirements
 
