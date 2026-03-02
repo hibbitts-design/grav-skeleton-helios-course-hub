@@ -1,5 +1,5 @@
 ---
-title: Course Hub Demo
+title: Courses
 cards_per_row: 1
 card_icon: tabler/layout-list.svg
 published: true
@@ -17,4 +17,7 @@ Explore the available example courses below:
 ===
 
 Made possible by the [Grav Premium Helios theme](https://getgrav.org/premium/helios), which directly funds [Grav CMS](https://getgrav.org), the open-source platform it's built on. Want to learn more? Read the full [ReadMe](../readme) for setup instructions, features, and more.
+
+> [!TIP]
+> The sample text on this page can be replaced with your own or deleted entirely to have the Courses homepage solely display available course cards.
 
