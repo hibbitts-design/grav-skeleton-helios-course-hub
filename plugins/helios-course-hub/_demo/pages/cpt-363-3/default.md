@@ -1,6 +1,6 @@
 ---
-icon: tabler/bulb.svg
-description: An introduction to UI/UX design.
+icon: tabler/layout.svg
+description: An introduction to UI/UX design (Section 3).
 published: false
 routable: false
 ---
