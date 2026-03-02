@@ -38,7 +38,7 @@ navigation:
   content_width: 768
   toc_start: 2
   toc_depth: 3
-  toc_position: right
+  toc_position: hidden
   breadcrumbs: false
   prev_next: true
   scroll_spy: true
