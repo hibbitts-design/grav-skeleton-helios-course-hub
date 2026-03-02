@@ -47,7 +47,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Show or hide the site icon square next to the Logo Text in the header
+- Show or hide the site icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Course label with optional icon displayed in the sidebar while browsing a course
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
@@ -145,6 +145,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Setting | Default | Description |
 |---------|---------|-------------|
 | Show Site Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
+| Site Icon | _(empty)_ | Tabler icon path for the site icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Icon is enabled |
 | Show Course Label | Enabled | Show or hide the current course label in the sidebar; automatically hidden when the Course Dropdown is visible |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with [raw]`[h5p id="..."]`[/raw]) |
