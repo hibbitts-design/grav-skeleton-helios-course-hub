@@ -52,8 +52,8 @@ versioning:
   current_version: null
   version_pattern: '/^[a-zA-Z]+-?\d+([.-]\d+)*$/i'
   redirect_unversioned: false
-  show_badge: true
-  show_dropdown: true
+  show_badge: false
+  show_dropdown: false
   labels:
     cpt-363-1: CPT-363-1
     cpt-363-2: CPT-363-2
