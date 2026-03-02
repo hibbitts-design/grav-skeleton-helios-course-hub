@@ -29,6 +29,18 @@ form:
       validate:
         type: bool
 
+    show_site_icon:
+      type: toggle
+      label: 'Show Site Icon'
+      help: 'Show the icon square next to the Logo Text when no logo image is set.'
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     show_course_label:
       type: toggle
       label: 'Show Course Label'

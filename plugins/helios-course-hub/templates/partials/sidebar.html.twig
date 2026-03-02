@@ -1,3 +1,10 @@
+{#
+ # Plugin override of partials/sidebar.html.twig (helios theme)
+ # Changes from theme original:
+ #   1. Site icon wrapped in show_site_icon toggle (search: PLUGIN CHANGE 1)
+ #   2. Course label section added before version switcher (search: PLUGIN ADDITION)
+ #   3. nav_items macro: active branch persisted to localStorage (search: PLUGIN CHANGE 2)
+ #}
 {% set theme_config = config.themes.helios %}
 {% set logo = theme_config.logo %}
 {% set mobile = mobile|default(false) %}
@@ -21,11 +28,13 @@
                 {% endif %}
             {% else %}
                 {# Default logo icon #}
+                {% if show_site_icon != false %}{# PLUGIN CHANGE 1: show_site_icon toggle #}
                 <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary dark:bg-primary-dark text-white">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
                     </svg>
                 </div>
+                {% endif %}
                 <span class="text-lg font-semibold text-gray-900 dark:text-white">
                     {{ logo.text ?: site.title }}
                 </span>
@@ -44,18 +53,23 @@
         {% endif %}
     </div>
 
-    {# Course label #}
+    {# PLUGIN ADDITION: Course label #}
     {% set show_dropdown = theme_config.versioning.enabled and theme_config.versioning.show_dropdown and helios_version_info is defined and helios_version_info.count > 1 %}
     {% if show_course_label and not show_dropdown and helios_version_info is defined %}
         {% set current_version_data = helios_version_info.versions|filter(v => v.is_current)|first %}
         {% if current_version_data %}
         <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-            <p class="text-base font-semibold text-gray-600 dark:text-gray-300">
+            <div class="flex items-center text-base font-semibold text-gray-600 dark:text-gray-300">
+                {% set course_icon = current_version_data.icon ?: course_label_icon %}
+                {% if course_icon %}
+                    <span class="nav-icon flex items-center course-label-icon">{{ svg_icon(course_icon)|raw }}</span>
+                {% endif %}
                 {{ current_version_data.label }}
-            </p>
+            </div>
         </div>
         {% endif %}
     {% endif %}
+    {# END PLUGIN ADDITION #}
 
     {# Version switcher #}
     {% if theme_config.versioning.enabled and theme_config.versioning.show_dropdown and helios_version_info is defined and helios_version_info.count > 1 %}
@@ -187,7 +201,7 @@
                     // Active branches always expand, others use localStorage
                     if (this.isActiveBranch) {
                         this.expanded = true;
-                        localStorage.setItem(this.key, 'true');
+                        localStorage.setItem(this.key, 'true'); // PLUGIN CHANGE 2: persist active branch
                     } else {
                         const saved = localStorage.getItem(this.key);
                         if (saved !== null) {

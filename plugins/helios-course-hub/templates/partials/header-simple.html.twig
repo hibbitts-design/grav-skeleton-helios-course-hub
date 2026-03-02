@@ -1,0 +1,142 @@
+{#
+ # Plugin override of partials/header-simple.html.twig (helios theme)
+ # Changes from theme original:
+ #   1. Site icon wrapped in show_site_icon toggle (search: PLUGIN CHANGE 1)
+ #}
+{% set theme_config = config.themes.helios %}
+{% set appearance = theme_config.appearance %}
+{% set shortcut_key = theme_config.search.shortcut_key|default('k') %}
+
+<header class="sticky top-0 z-20 flex items-center h-16 pl-4 pr-4 sm:pr-6 lg:pr-8 bg-white/50 dark:bg-gray-900/50 backdrop-blur border-b border-gray-200 dark:border-gray-800">
+
+    {# Logo/Home link #}
+    <a href="{{ base_url ?: '/' }}" class="flex items-center gap-3">
+        {% set logo = theme_config.logo %}
+        {% if logo.image %}
+            {% set logo_file = logo.image|first %}
+            {% set logo_dark_file = logo.image_dark|first %}
+            {# Light mode logo #}
+            <img src="{{ url('user://assets/helios/' ~ logo_file.name) }}"
+                 alt="{{ site.title }}"
+                 class="{{ logo.height ?: 'h-8' }} w-auto {{ logo_dark_file ? 'dark:hidden' : '' }}">
+            {# Dark mode logo (if provided) #}
+            {% if logo_dark_file %}
+            <img src="{{ url('user://assets/helios/' ~ logo_dark_file.name) }}"
+                 alt="{{ site.title }}"
+                 class="{{ logo.height ?: 'h-8' }} w-auto hidden dark:block">
+            {% endif %}
+        {% else %}
+            {% if show_site_icon != false %}{# PLUGIN CHANGE 1: show_site_icon toggle #}
+            <div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary dark:bg-primary-dark text-white">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+            </div>
+            {% endif %}
+            <span class="text-lg font-semibold text-gray-900 dark:text-white">
+                {{ logo.text ?: site.title }}
+            </span>
+        {% endif %}
+    </a>
+
+    {# Spacer #}
+    <div class="flex-1"></div>
+
+    {# Header menu #}
+    {% if theme_config.header.menu %}
+    <nav class="hidden lg:flex items-center gap-1 mr-4">
+        {% for item in theme_config.header.menu %}
+        <a href="{{ item.external ? item.route : url(item.route) }}"
+           class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+           {{ item.external ? 'target="_blank" rel="noopener noreferrer"' : '' }}>
+            {{ item.label }}
+            {% if item.external %}
+            <svg class="inline-block w-3 h-3 ml-1 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </nav>
+    {% endif %}
+
+    {# Right side actions #}
+    <div class="flex items-center gap-2 sm:gap-4">
+
+        {# Search trigger #}
+        {% if theme_config.search.enabled %}
+        <button @click="searchOpen = true" data-ys-open
+                class="search-trigger"
+                aria-label="Search">
+            <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <span class="search-placeholder">{{ 'THEME_HELIOS.SEARCH'|t }}</span>
+            {% if theme_config.search.keyboard_shortcut %}
+            <span class="search-kbd">
+                <kbd class="hidden sm:inline">{{ browser.platform == 'macintosh' ? '⌘' : 'Ctrl' }}</kbd>
+                <kbd>{{ shortcut_key|upper }}</kbd>
+            </span>
+            {% endif %}
+        </button>
+        {% endif %}
+
+        {# GitHub link #}
+        {% if theme_config.github.enabled and theme_config.github.repo %}
+        <a href="https://github.com/{{ theme_config.github.repo }}"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="p-2 rounded-lg text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+           aria-label="View on GitHub">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z"/>
+            </svg>
+        </a>
+        {% endif %}
+
+        {# Theme toggle #}
+        {% if appearance.selector %}
+        <div class="theme-toggle" role="radiogroup" aria-label="Theme selection">
+            <div class="theme-toggle-indicator"
+                 :class="{
+                     'translate-x-0': theme === 'light',
+                     'translate-x-7': theme === 'system',
+                     'translate-x-14': theme === 'dark'
+                 }"></div>
+
+            <button @click="theme = 'light'; localStorage.setItem('helios-theme', 'light'); document.documentElement.classList.remove('dark');"
+                    class="theme-toggle-btn"
+                    :class="{ 'theme-toggle-btn-active': theme === 'light' }"
+                    role="radio"
+                    :aria-checked="theme === 'light'"
+                    aria-label="Light mode">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+            </button>
+
+            <button @click="theme = 'system'; localStorage.setItem('helios-theme', 'system'); window.matchMedia('(prefers-color-scheme: dark)').matches ? document.documentElement.classList.add('dark') : document.documentElement.classList.remove('dark');"
+                    class="theme-toggle-btn"
+                    :class="{ 'theme-toggle-btn-active': theme === 'system' }"
+                    role="radio"
+                    :aria-checked="theme === 'system'"
+                    aria-label="System theme">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+            </button>
+
+            <button @click="theme = 'dark'; localStorage.setItem('helios-theme', 'dark'); document.documentElement.classList.add('dark');"
+                    class="theme-toggle-btn"
+                    :class="{ 'theme-toggle-btn-active': theme === 'dark' }"
+                    role="radio"
+                    :aria-checked="theme === 'dark'"
+                    aria-label="Dark mode">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                </svg>
+            </button>
+        </div>
+        {% endif %}
+    </div>
+</header>

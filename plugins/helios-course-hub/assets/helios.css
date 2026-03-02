@@ -184,3 +184,8 @@ footer .edit-page-link svg {
     width: 1.25rem;
     height: 1.25rem;
 }
+
+/* Course label icon spacing */
+.course-label-icon {
+    margin-right: 0.5rem;
+}

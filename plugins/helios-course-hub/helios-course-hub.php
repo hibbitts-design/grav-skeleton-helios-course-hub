@@ -131,9 +131,23 @@ class HeliosCourseHubPlugin extends Plugin
 
         $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
         $showCourseLabel = $this->config->get('plugins.helios-course-hub.show_course_label', true);
+        $showSiteIcon = $this->config->get('plugins.helios-course-hub.show_site_icon', true);
+        // Use card_icon from the course-list page as the default course label icon
+        $courseListPage = null;
+        foreach ($this->grav['pages']->instances() as $p) {
+            if ($p->template() === 'course-list') {
+                $courseListPage = $p;
+                break;
+            }
+        }
+        $courseLabelIcon = ($courseListPage && ($courseListPage->header()->card_icon ?? false))
+            ? $courseListPage->header()->card_icon
+            : '';
         $twig = $this->grav['twig'];
         $twig->twig_vars['github_server'] = $githubServer;
         $twig->twig_vars['show_course_label'] = $showCourseLabel;
+        $twig->twig_vars['show_site_icon'] = $showSiteIcon;
+        $twig->twig_vars['course_label_icon'] = $courseLabelIcon;
         $twig->twig_vars['helios_base_simple'] = $this->themeMissing
             ? 'partials/base.html.twig'
             : 'partials/base-simple.html.twig';
@@ -155,6 +169,20 @@ class HeliosCourseHubPlugin extends Plugin
                 }
                 return $page->published();
             }));
+
+            // Enrich versions with icon from page frontmatter
+            $enrichedVersions = [];
+            foreach ($filteredVersions as $version) {
+                $versionId = is_array($version) ? ($version['id'] ?? null) : ($version->id ?? null);
+                if ($versionId) {
+                    $versionPage = $pages->find('/' . $versionId);
+                    if ($versionPage && ($versionPage->header()->icon ?? false)) {
+                        $version['icon'] = $versionPage->header()->icon;
+                    }
+                }
+                $enrichedVersions[] = $version;
+            }
+            $filteredVersions = $enrichedVersions;
 
             $versionInfo['versions'] = $filteredVersions;
             $versionInfo['count'] = count($filteredVersions);

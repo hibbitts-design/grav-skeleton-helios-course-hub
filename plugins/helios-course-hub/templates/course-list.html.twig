@@ -48,7 +48,7 @@
                 {% include 'partials/doc-card.html.twig' with {
                     title: version.label,
                     link: version_home ? version_home.url : version.url,
-                    icon: version_page.header.icon|default(page.header.card_icon|default('tabler/layout-list.svg')),
+                    icon: version_page.header.icon|default(page.header.card_icon),
                     description: version_page.header.description|default(null)
                 } only %}
             {% endif %}
