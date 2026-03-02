@@ -5,4 +5,4 @@ published: true
 routable: false
 ---
 
-Use the Admin Panel Editor (or page frontmatter) to set the icon, description, and visibility of this course's card on the Courses homepage.
+Use the Admin Panel Editor (or page frontmatter) to set the icon, description, and published status of this course's card on the Courses homepage.
