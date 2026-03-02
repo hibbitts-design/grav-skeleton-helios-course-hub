@@ -50,7 +50,7 @@
         {% set current_version_data = helios_version_info.versions|filter(v => v.is_current)|first %}
         {% if current_version_data %}
         <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-            <p class="text-sm font-semibold text-gray-900 dark:text-white">
+            <p class="text-base font-semibold text-gray-600 dark:text-gray-300">
                 {{ current_version_data.label }}
             </p>
         </div>
