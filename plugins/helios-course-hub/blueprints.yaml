@@ -29,6 +29,18 @@ form:
       validate:
         type: bool
 
+    show_course_label:
+      type: toggle
+      label: 'Show Course Label'
+      help: 'Displays the current course label in the sidebar. Automatically hidden when the Course Dropdown is visible.'
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     github_server:
       type: radio
       label: 'Git Server for Helios GitHub Integration'

@@ -130,8 +130,10 @@ class HeliosCourseHubPlugin extends Plugin
         $assets->addJs("$path/helios.js", ['group' => 'bottom', 'loading' => 'defer']);
 
         $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
+        $showCourseLabel = $this->config->get('plugins.helios-course-hub.show_course_label', true);
         $twig = $this->grav['twig'];
         $twig->twig_vars['github_server'] = $githubServer;
+        $twig->twig_vars['show_course_label'] = $showCourseLabel;
         $twig->twig_vars['helios_base_simple'] = $this->themeMissing
             ? 'partials/base.html.twig'
             : 'partials/base-simple.html.twig';

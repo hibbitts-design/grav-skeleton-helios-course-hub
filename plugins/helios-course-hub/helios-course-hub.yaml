@@ -1,3 +1,4 @@
 enabled: true
+show_course_label: true
 github_server: 'github.com'
 h5pembedrootpath: 'https://h5p.org/h5p/embed/'
