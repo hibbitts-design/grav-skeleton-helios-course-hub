@@ -1,3 +1,7 @@
 enabled: true
-show_course_header: true
+show_course_label: true
+show_site_icon: true
+site_icon: tabler/hexagon.svg
+github_server: github.com
 h5pembedrootpath: 'https://h5p.org/h5p/embed/'
+show_course_header: true
