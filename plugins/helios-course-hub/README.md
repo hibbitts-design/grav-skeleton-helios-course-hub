@@ -109,7 +109,7 @@ search:
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Course label with optional icon automatically displayed in the sidebar when multiple courses are active
-- Configurable single course site logo link targeting the Courses Home Page or first course page
+- Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -171,18 +171,12 @@ This text appears below the course cards.
 
 If no `===` delimiter is present, all content renders above the cards as normal.
 
-> [!NOTE]
-> When **Single Course Site Logo Link** is set to **First Page of Only Listed Course** in plugin settings and only one course is active, the site Logo Text and icon link navigates to the first page of that course rather than the Courses homepage.
-
 ## Course Folder Naming
 
 Course folders must start with one or more letters followed by a number. An optional hyphen can separate letters from the number, and additional version segments (separated by dots or hyphens) are supported.
 
 **Valid:** `cpt-363-1`, `course-1`, `course-section-2`  
 **Invalid:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
-
-> [!NOTE]
-> When multiple courses are active and the Course Dropdown is not showing, a Course Label automatically appears in the sidebar identifying the current course.
 
 ## Course Label Customization
 
