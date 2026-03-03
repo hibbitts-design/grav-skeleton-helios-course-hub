@@ -107,9 +107,9 @@ search:
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Show or hide the site icon square next to the Logo Text in the header, with optional custom Tabler icon
-- Course label with optional icon displayed in the sidebar while browsing a course
-- Logo link automatically targets the first course page when only one course is active
+- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
+- Course label with optional icon automatically displayed in the sidebar when multiple courses are active
+- Configurable single course site logo link targeting the Courses Home Page or first course page
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -172,7 +172,7 @@ This text appears below the course cards.
 If no `===` delimiter is present, all content renders above the cards as normal.
 
 > [!NOTE]
-> When only one course is active, the site logo and name link automatically navigates to the first page of that course rather than the Courses homepage.
+> When **Single Course Site Logo Link** is set to **First Page of Only Listed Course** in plugin settings and only one course is active, the site Logo Text and icon link navigates to the first page of that course rather than the Courses homepage.
 
 ## Course Folder Naming
 
@@ -180,6 +180,9 @@ Course folders must start with one or more letters followed by a number. An opti
 
 **Valid:** `cpt-363-1`, `course-1`, `course-section-2`  
 **Invalid:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
+
+> [!NOTE]
+> When multiple courses are active and the Course Dropdown is not showing, a Course Label automatically appears in the sidebar identifying the current course.
 
 ## Course Label Customization
 
@@ -205,9 +208,9 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| Show Site Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
-| Site Icon | _(empty)_ | Tabler icon path for the site icon square (e.g. `tabler/book.svg`). Leave empty to use the default icon. Only applies when Show Site Icon is enabled |
-| Show Course Label | Enabled | Show or hide the current course label in the sidebar; automatically hidden when the Course Dropdown is visible |
+| Show Site Logo Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
+| Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. `tabler/book.svg`). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
+| Single Course Site Logo Link | Courses Home Page | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with `[h5p id="..."]`) |
 

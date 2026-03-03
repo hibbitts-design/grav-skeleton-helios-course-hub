@@ -47,9 +47,9 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Show or hide the site icon square next to the Logo Text in the header, with optional custom Tabler icon
+- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Course label with optional icon automatically displayed in the sidebar when multiple courses are active
-- Logo link automatically targets the first course page when only one course is active
+- Configurable single course site logo link targeting the Courses Home Page or first course page
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -85,7 +85,7 @@ user/pages/
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
 > [!NOTE]
-> When only one course is active, the site logo and name link automatically navigates to the first page of that course rather than the Courses homepage. When multiple courses are active and the Course Dropdown is not showing, a Course Label automatically appears in the sidebar identifying the current course.
+> When **Single Course Site Logo Link** is set to **First Page of Only Listed Course** and only one course is active, the site Logo Text and icon link navigates to the first page of that course rather than the Courses homepage. When multiple courses are active and the Course Dropdown is not showing, a Course Label automatically appears in the sidebar identifying the current course.
 
 ### Showing and Hiding Courses
 
@@ -148,8 +148,9 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 | Setting | Default | Description |
 |---------|---------|-------------|
-| Show Site Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
-| Site Icon | _(empty)_ | Tabler icon path for the site icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Icon is enabled |
+| Show Site Logo Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
+| Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
+| Single Course Site Logo Link | Courses Home Page | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with [raw]`[h5p id="..."]`[/raw]) |
 
