@@ -84,18 +84,15 @@ user/pages/
 
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
+> [!NOTE]
+> When only one course is active, the site logo and name link automatically navigates to the first page of that course rather than the Courses homepage. When multiple courses are active and the Course Dropdown is not showing, a Course Label automatically appears in the sidebar identifying the current course.
+
 ### Showing and Hiding Courses
 
 In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
 > When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
-
-> [!NOTE]
-> When only one course is active, the site logo and name link automatically navigates to the first page of that course rather than the Courses homepage.
-
-> [!NOTE]
-> When multiple courses are active and the Course Dropdown is not showing, a Course Label automatically appears in the sidebar identifying the current course.
 
 ## Course Folder Naming
 
