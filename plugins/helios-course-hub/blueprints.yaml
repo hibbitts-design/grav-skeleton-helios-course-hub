@@ -29,9 +29,9 @@ form:
       validate:
         type: bool
 
-    appearance_section:
+    header_section:
       type: section
-      title: 'Appearance'
+      title: 'Header'
       underline: true
 
     show_site_icon:
