@@ -49,7 +49,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Show or hide the site icon square next to the Logo Text in the header, with optional custom Tabler icon
-- Course label with optional icon displayed in the sidebar while browsing a course
+- Course label with optional icon automatically displayed in the sidebar when multiple courses are active
 - Logo link automatically targets the first course page when only one course is active
 
 ## Git Sync & Open Editing
@@ -94,6 +94,9 @@ In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`), go to
 
 > [!NOTE]
 > When only one course is active, the site logo and name link automatically navigates to the first page of that course rather than the Courses homepage.
+
+> [!NOTE]
+> When multiple courses are active and the Course Dropdown is not showing, a Course Label automatically appears in the sidebar identifying the current course.
 
 ## Course Folder Naming
 
@@ -151,7 +154,6 @@ The following settings are available in the Admin panel under **Plugins → Heli
 |---------|---------|-------------|
 | Show Site Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
 | Site Icon | _(empty)_ | Tabler icon path for the site icon square (e.g. `tabler/book.svg`). Leave empty to use the default icon. Only applies when Show Site Icon is enabled |
-| Show Course Label | Enabled | Show or hide the current course label in the sidebar; automatically hidden when the Course Dropdown is visible |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with [raw]`[h5p id="..."]`[/raw]) |
 

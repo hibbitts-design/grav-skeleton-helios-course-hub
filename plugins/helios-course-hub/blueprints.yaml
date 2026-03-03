@@ -53,18 +53,6 @@ form:
       help: 'Tabler icon path for the site icon square (e.g. tabler/book.svg). Only applies when Show Site Icon is enabled. Leave empty to use the default icon.'
       placeholder: 'tabler/book.svg'
 
-    show_course_label:
-      type: toggle
-      label: 'Show Course Label'
-      help: 'Displays the current course label in the sidebar. Automatically hidden when the Course Dropdown is visible.'
-      highlight: 1
-      default: 1
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-
     integrations_section:
       type: section
       title: 'Integrations'

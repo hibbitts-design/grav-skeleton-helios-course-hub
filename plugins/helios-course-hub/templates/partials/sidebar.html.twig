@@ -60,7 +60,7 @@
 
     {# PLUGIN ADDITION: Course label #}
     {% set show_dropdown = theme_config.versioning.enabled and theme_config.versioning.show_dropdown and helios_version_info is defined and helios_version_info.count > 1 %}
-    {% if show_course_label and not show_dropdown and helios_version_info is defined %}
+    {% if not show_dropdown and helios_version_info is defined and helios_version_info.count > 1 %}
         {% set current_version_data = helios_version_info.versions|filter(v => v.is_current)|first %}
         {% if current_version_data %}
         <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
