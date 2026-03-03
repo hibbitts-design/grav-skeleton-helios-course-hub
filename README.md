@@ -50,6 +50,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Show or hide the site icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Course label with optional icon displayed in the sidebar while browsing a course
+- Logo link automatically targets the first course page when only one course is active
 
 ## Git Sync & Open Editing
 
@@ -90,6 +91,9 @@ In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`), go to
 
 > [!TIP]
 > When multiple courses are active, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalised, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+
+> [!NOTE]
+> When only one course is active, the site logo and name link automatically navigates to the first page of that course rather than the Courses homepage.
 
 ## Course Folder Naming
 

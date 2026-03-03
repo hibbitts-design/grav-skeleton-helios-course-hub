@@ -4,6 +4,7 @@
  #   1. Site icon wrapped in show_site_icon toggle + custom icon support (search: PLUGIN CHANGE 1)
  #   2. Course label section added before version switcher (search: PLUGIN ADDITION)
  #   3. nav_items macro: active branch persisted to localStorage (search: PLUGIN CHANGE 2)
+ #   4. Logo link uses logo_url to target first course page when single course is active (search: PLUGIN CHANGE 3)
  #}
 {% set theme_config = config.themes.helios %}
 {% set logo = theme_config.logo %}
@@ -12,7 +13,7 @@
 <div class="flex flex-col h-full">
     {# Sidebar header with logo #}
     <div class="flex items-center h-16 px-4 border-b border-gray-200 dark:border-gray-800 shrink-0">
-        <a href="{{ base_url ?: '/' }}" class="flex items-center gap-3" @click="mobileNavOpen = false">
+        <a href="{{ logo_url }}" class="flex items-center gap-3" @click="mobileNavOpen = false">{# PLUGIN CHANGE 3: logo_url links to first course page when single course #}
             {% if logo.image %}
                 {% set logo_file = logo.image|first %}
                 {% set logo_dark_file = logo.image_dark|first %}

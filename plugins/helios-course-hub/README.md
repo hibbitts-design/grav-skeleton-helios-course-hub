@@ -109,6 +109,7 @@ search:
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Show or hide the site icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Course label with optional icon displayed in the sidebar while browsing a course
+- Logo link automatically targets the first course page when only one course is active
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -169,6 +170,9 @@ This text appears below the course cards.
 ```
 
 If no `===` delimiter is present, all content renders above the cards as normal.
+
+> [!NOTE]
+> When only one course is active, the site logo and name link automatically navigates to the first page of that course rather than the Courses homepage.
 
 ## Course Folder Naming
 

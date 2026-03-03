@@ -154,6 +154,9 @@ class HeliosCourseHubPlugin extends Plugin
             ? 'partials/base.html.twig'
             : 'partials/base-simple.html.twig';
 
+        // Default logo URL to site root; overridden below when only one course is active
+        $twig->twig_vars['logo_url'] = $this->grav['base_url'] ?: '/';
+
         // Filter helios_version_info to respect 'visible: false' in course frontmatter.
         // Runs at priority -100 to ensure the theme has already populated this variable.
         if (isset($twig->twig_vars['helios_version_info'])) {
@@ -189,6 +192,21 @@ class HeliosCourseHubPlugin extends Plugin
             $versionInfo['versions'] = $filteredVersions;
             $versionInfo['count'] = count($filteredVersions);
             $twig->twig_vars['helios_version_info'] = $versionInfo;
+
+            // When only one course is active, point the logo link to its first child page
+            if ($versionInfo['count'] === 1) {
+                $singleVersion = $versionInfo['versions'][0] ?? null;
+                $versionId = is_array($singleVersion) ? ($singleVersion['id'] ?? null) : ($singleVersion->id ?? null);
+                if ($versionId) {
+                    $versionPage = $pages->find('/' . $versionId);
+                    if ($versionPage) {
+                        $firstChild = $versionPage->children()->first();
+                        if ($firstChild) {
+                            $twig->twig_vars['logo_url'] = $firstChild->url();
+                        }
+                    }
+                }
+            }
 
             // Build "Course | Page Title | Site Title" browser title when a current version exists
             $page = $this->grav['page'];
