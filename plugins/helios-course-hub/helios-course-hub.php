@@ -191,8 +191,9 @@ class HeliosCourseHubPlugin extends Plugin
             $versionInfo['count'] = count($filteredVersions);
             $twig->twig_vars['helios_version_info'] = $versionInfo;
 
-            // When only one course is active, point the logo link to its first child page
-            if ($versionInfo['count'] === 1) {
+            // When logo_link_target is 'single_course' and only one course is active, point the logo link to its first child page
+            $logoLinkTarget = $this->config->get('plugins.helios-course-hub.logo_link_target', 'courses_list');
+            if ($logoLinkTarget === 'single_course' && $versionInfo['count'] === 1) {
                 $singleVersion = $versionInfo['versions'][0] ?? null;
                 $versionId = is_array($singleVersion) ? ($singleVersion['id'] ?? null) : ($singleVersion->id ?? null);
                 if ($versionId) {
