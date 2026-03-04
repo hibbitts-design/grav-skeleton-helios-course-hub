@@ -40,25 +40,12 @@ To install the plugin manually, see the [Installation](#installation) and [Demo 
 
 ## Demo Content
 
-The `_demo` folder contains a default Helios Course Hub site that can be used as a starting point. It includes two layouts:
+The `_demo` folder contains a default Helios Course Hub site that can be used as a starting point:
 
-**Single-course site** (`_demo/pages/`):
-- `10.home/` – Course home page with weekly content cards
-- `20.essentials/` – Essential course links and resources
-- `30.modules/` – Weekly modules (Welcome + Modules 01–13), each with a header image
-- `40.schedule/` – Course schedule
-- `50.topics/` – Topics index
-- `60.resources/` – Resource list
-- `70.ux-techniques-guide/` – UX techniques reference guide
-- `80.syllabus/` – Course syllabus
-- `contact/` – Contact page
-- `copyright/` – Copyright notice
-
-**Multi-course site** (`_demo/pages/`):
 - `00.courses/` – Courses homepage using the `course-list` template
-- `cpt-363-1/` – First course with the same section structure as the single-course layout
-- `cpt-363-2/` – Second course with the same section structure as the single-course layout
-- `cpt-363-3/` – Third course with the same section structure as the single-course layout
+- `cpt-363-1/` – First course (10.home, 20.essentials, 30.modules, 40.schedule, 50.topics, 60.resources, 70.ux-techniques-guide, 80.syllabus)
+- `cpt-363-2/` – Second course with the same section structure
+- `cpt-363-3/` – Third course with the same section structure
 
 To use the demo content, copy the contents of `_demo/pages/` into your Grav `user/pages/` folder.
 
