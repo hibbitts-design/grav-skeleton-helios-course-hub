@@ -96,6 +96,7 @@ search:
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Course label with optional icon automatically displayed in the sidebar when multiple courses are active, linking to the first page of the current course
+- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
