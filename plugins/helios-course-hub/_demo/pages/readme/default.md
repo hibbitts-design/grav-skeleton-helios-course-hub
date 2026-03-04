@@ -110,7 +110,7 @@ The **Courses** homepage uses the `course-list` template to automatically genera
 - **Icon** from the course root folder frontmatter (`icon` field)
 - **Description** from the course root folder frontmatter (`description` field)
 
-To customize a course card, add `icon` and `description` to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/default.md`):
+To customize a course card, add `icon` and `description` to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
 
 ```yaml
 ---

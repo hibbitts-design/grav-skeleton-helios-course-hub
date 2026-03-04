@@ -133,7 +133,7 @@ The `[topics]` shortcode wraps alphabetically organized content and auto-generat
 
 ## Courses Homepage
 
-The `course-list` page template automatically generates course cards from detected version folders. Each card displays a title, icon and description sourced from the course root folder's markdown file (e.g. `cpt-363-1/default.md`):
+The `course-list` page template automatically generates course cards from detected version folders. Each card displays a title, icon and description sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
 
 ```yaml
 ---
