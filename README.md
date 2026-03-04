@@ -200,6 +200,3 @@ By leveraging his extensive UX design expertise and systems-oriented approach, P
 ## License
 
 MIT – Hibbitts Design
-
-> [!TIP]
-> Want to no longer display this page on your site? Go to **Helios Theme Settings > Appearance**, scroll down to the bottom of the page and delete the **Header Menu** item **ReadMe**.
