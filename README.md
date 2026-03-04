@@ -48,10 +48,10 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Course label with optional icon automatically displayed in the sidebar when multiple courses are active, linking to the first page of the current course
-- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
+- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
+- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 
 ## Git Sync & Open Editing
 
@@ -69,7 +69,7 @@ All course content lives in course folders within `user/pages/`. The skeleton sh
 ```
 user/pages/
 ├── 00.courses/                  # Courses homepage
-├── cpt-363-1/                   # Course 1 (visible by default)
+├── cpt-363-1/                   # Course 1 (published by default)
 │   ├── 10.home/
 │   ├── 20.essentials/
 │   ├── 30.modules/
@@ -78,20 +78,20 @@ user/pages/
 │   ├── 60.resources/
 │   ├── 70.ux-techniques-guide/
 │   └── 80.syllabus/
-├── cpt-363-2/                   # Course 2 (hidden by default)
-├── cpt-363-3/                   # Course 3 (hidden by default)
+├── cpt-363-2/                   # Course 2 (unpublished by default)
+├── cpt-363-3/                   # Course 3 (unpublished by default)
 ├── contact/
 └── readme/
 ```
 
-By default, only `cpt-363-1/` is visible, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Visible** to `Yes` in each course folder's root page. The Course Dropdown appears automatically once more than one course is visible, and hides automatically when only one course is active.
+By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
 ### Showing and Hiding Courses
 
-In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`), go to the **Advanced** tab in the Page Editor, and under **Overrides** set **Visible** to **Yes** to show or **No** to hide the course.
+In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
-> When multiple courses are active, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalised, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+> When multiple courses are active, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
 ## Course Folder Naming
 
