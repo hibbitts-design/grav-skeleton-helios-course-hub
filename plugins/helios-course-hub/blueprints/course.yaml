@@ -1,0 +1,32 @@
+title: Course
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+          fields:
+            content:
+              ordering@: 100
+            header.media_order:
+              ordering@: 101
+            header.icon:
+              type: text
+              label: Icon
+              toggleable: true
+              placeholder: 'tabler/bulb.svg'
+              help: 'Tabler icon path for this course (e.g. tabler/bulb.svg). Used in course cards and the sidebar course label.'
+            header.description:
+              type: textarea
+              label: Description
+              toggleable: true
+              rows: 3
+              placeholder: A short description for this course
+              help: 'Short description shown on the course card on the Courses homepage.'
