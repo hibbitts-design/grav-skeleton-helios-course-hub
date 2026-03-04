@@ -191,6 +191,25 @@ class HeliosCourseHubPlugin extends Plugin
             $versionInfo['count'] = count($filteredVersions);
             $twig->twig_vars['helios_version_info'] = $versionInfo;
 
+            // Set course_label_url to the first child page of the current course version
+            $twig->twig_vars['course_label_url'] = null;
+            foreach ($filteredVersions as $version) {
+                $isCurrent = is_array($version) ? ($version['is_current'] ?? false) : ($version->is_current ?? false);
+                if ($isCurrent) {
+                    $versionId = is_array($version) ? ($version['id'] ?? null) : ($version->id ?? null);
+                    if ($versionId) {
+                        $versionPage = $pages->find('/' . $versionId);
+                        if ($versionPage) {
+                            $firstChild = $versionPage->children()->first();
+                            if ($firstChild) {
+                                $twig->twig_vars['course_label_url'] = $firstChild->url();
+                            }
+                        }
+                    }
+                    break;
+                }
+            }
+
             // When logo_link_target is 'single_course' and only one course is active, point the logo link to its first child page
             $logoLinkTarget = $this->config->get('plugins.helios-course-hub.logo_link_target', 'courses_list');
             if ($logoLinkTarget === 'single_course' && $versionInfo['count'] === 1) {

@@ -5,6 +5,7 @@
  #   2. Course label section added before version switcher (search: PLUGIN ADDITION)
  #   3. nav_items macro: active branch persisted to localStorage (search: PLUGIN CHANGE 2)
  #   4. Logo link uses logo_url to navigate to first page of only listed course (search: PLUGIN CHANGE 3)
+ #   5. Course label links to first page of current course via course_label_url (search: PLUGIN CHANGE 5)
  #}
 {% set theme_config = config.themes.helios %}
 {% set logo = theme_config.logo %}
@@ -63,14 +64,23 @@
     {% if not show_dropdown and helios_version_info is defined and helios_version_info.count > 1 %}
         {% set current_version_data = helios_version_info.versions|filter(v => v.is_current)|first %}
         {% if current_version_data %}
-        <div class="px-4 py-3 border-b border-gray-200 dark:border-gray-800">
-            <div class="flex items-center text-base font-semibold text-gray-600 dark:text-gray-300">
-                {% set course_icon = current_version_data.icon ?: course_label_icon %}
+        <div class="px-4 py-1 border-b border-gray-200 dark:border-gray-800">
+            {# PLUGIN CHANGE 5: course label links to first page of current course when url is available #}
+            {% set course_icon = current_version_data.icon ?: course_label_icon %}
+            {% if course_label_url %}
+            <a href="{{ course_label_url }}" class="course-label-link flex items-center text-base font-semibold rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" @click="mobileNavOpen = false">
+            {% else %}
+            <div class="flex items-center py-1.5 text-base font-semibold">
+            {% endif %}
                 {% if course_icon %}
                     <span class="nav-icon flex items-center course-label-icon">{{ svg_icon(course_icon)|raw }}</span>
                 {% endif %}
                 {{ current_version_data.label }}
+            {% if course_label_url %}
+            </a>
+            {% else %}
             </div>
+            {% endif %}
         </div>
         {% endif %}
     {% endif %}

@@ -185,9 +185,19 @@ footer .edit-page-link svg {
     height: 1.25rem;
 }
 
+/* Course label link: shift rect 3px left (margin-left) with compensating padding-left to keep icon position;
+   extend 4px right to match nav-link hover width; 7px vertical padding between py-1.5 and py-2 */
+.course-label-link {
+    margin-left: -3px;
+    padding-left: 3px;
+    width: calc(100% + 7px);
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
 /* Course label icon spacing */
 .course-label-icon {
-    margin-right: 0.5rem;
+    margin-right: 6px;
 }
 
 /* Site icon (custom Tabler icon in logo square) */
