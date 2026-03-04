@@ -14,6 +14,9 @@ class HeliosCourseHubPlugin extends Plugin
     /** @var string|null Computed "Course | Page Title | Site Title" browser title */
     protected $browserTitle = null;
 
+    /** @var string|null URL of favicon.* found in course root page media */
+    protected $courseFaviconUrl = null;
+
     public static function getSubscribedEvents()
     {
         return [
@@ -204,6 +207,15 @@ class HeliosCourseHubPlugin extends Plugin
                             if ($firstChild) {
                                 $twig->twig_vars['course_label_url'] = $firstChild->url();
                             }
+                            // Check for favicon.* in course root page media (convention-based)
+                            // Strip any Admin-added numeric prefix (e.g. "130_favicon.png" → "favicon.png")
+                            foreach ($versionPage->media()->all() as $filename => $medium) {
+                                $basename = preg_replace('/^\d+_/', '', $filename);
+                                if (strncmp($basename, 'favicon.', 8) === 0) {
+                                    $this->courseFaviconUrl = $medium->url();
+                                    break;
+                                }
+                            }
                         }
                     }
                     break;
@@ -248,15 +260,23 @@ class HeliosCourseHubPlugin extends Plugin
 
     public function onOutputGenerated($event)
     {
-        if ($this->browserTitle === null) {
-            return;
+        if ($this->browserTitle !== null) {
+            $event['output'] = preg_replace(
+                '~<title>[^<]*</title>~',
+                '<title>' . htmlspecialchars($this->browserTitle, ENT_QUOTES, 'UTF-8') . '</title>',
+                $event['output'],
+                1
+            );
         }
 
-        $event['output'] = preg_replace(
-            '~<title>[^<]*</title>~',
-            '<title>' . htmlspecialchars($this->browserTitle, ENT_QUOTES, 'UTF-8') . '</title>',
-            $event['output'],
-            1
-        );
+        if ($this->courseFaviconUrl !== null) {
+            $faviconTag = '<link rel="icon" href="' . htmlspecialchars($this->courseFaviconUrl, ENT_QUOTES, 'UTF-8') . '">';
+            $event['output'] = preg_replace(
+                '~<link rel="icon"[^>]*>~',
+                $faviconTag,
+                $event['output'],
+                1
+            );
+        }
     }
 }
