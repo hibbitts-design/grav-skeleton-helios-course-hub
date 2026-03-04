@@ -1,0 +1,19 @@
+name: Helios Course Hub Site
+version: 1.0.0
+description: "Give your course a modern, open home on the web - requires the Helios Grav Premium theme."
+icon: university
+author:
+ name: HibbittsDesign.org
+ email: hello@hibbittsdesign.org
+ url: https://hibbittsdesign.org
+homepage: https://github.com/hibbitts-design/grav-skeleton-helios-course-hub
+demo: https://demo.hibbittsdesign.org/grav-helios-course-hub/
+docs: https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/main/README.md
+keywords: open, collaborative, flexbible, git, responsive, basic, course, lms
+keywords: helios, course, course hub, education, open, LMS companion, premium theme
+bugs: https://demo.hibbittsdesign.org/grav-helios-course-hub/issues
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.7.0' }
+  - { name: helios-course-hub }
