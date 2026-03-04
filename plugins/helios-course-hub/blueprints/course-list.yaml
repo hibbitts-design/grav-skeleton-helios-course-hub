@@ -19,7 +19,7 @@ form:
               ordering@: 101
             header.description:
               type: textarea
-              label: Description
+              label: Page Description
               toggleable: true
               rows: 3
               placeholder: A short description shown below the page title
@@ -35,7 +35,6 @@ form:
               help: Number of course cards displayed per row.
             header.card_icon:
               type: text
-              label: Default Card Icon
-              default: 'tabler/layout-list.svg'
+              label: Default Course Icon
               help: 'Fallback icon for course cards that do not specify their own icon (e.g. tabler/layout-list.svg).'
               placeholder: 'tabler/layout-list.svg'

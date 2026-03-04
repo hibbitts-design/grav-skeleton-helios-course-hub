@@ -19,13 +19,13 @@ form:
               ordering@: 101
             header.icon:
               type: text
-              label: Icon
+              label: Course Icon
               toggleable: true
               placeholder: 'tabler/bulb.svg'
               help: 'Tabler icon path for this course (e.g. tabler/bulb.svg). Used in course cards and the sidebar course label.'
             header.description:
               type: textarea
-              label: Description
+              label: Course Description
               toggleable: true
               rows: 3
               placeholder: A short description for this course
