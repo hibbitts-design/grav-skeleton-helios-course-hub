@@ -56,7 +56,7 @@ form:
     logo_link_target:
       type: select
       label: 'Single Course Site Logo Link'
-      help: 'Choose where the site Logo Text and icon link navigates when only one course is active.'
+      help: 'Choose where the site Logo Text and icon link navigates when only one course is listed.'
       default: 'courses_list'
       options:
         courses_list: 'Courses Home Page (default)'
