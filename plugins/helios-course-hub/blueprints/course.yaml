@@ -30,3 +30,8 @@ form:
               rows: 3
               placeholder: A short description for this course
               help: 'Short description shown on the course card on the Courses homepage.'
+            header.image:
+              type: pagemediaselect
+              label: Course Card Image
+              toggleable: true
+              help: 'Image from this page''s media folder to display at the top of the course card on the Courses homepage.'
