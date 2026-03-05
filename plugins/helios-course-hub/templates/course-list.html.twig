@@ -35,21 +35,23 @@
     {% if helios_version_info.versions is defined and helios_version_info.versions|length > 0 %}
     {% set colClass = {
         1: 'grid-cols-1',
-        2: 'sm:grid-cols-2',
-        3: 'sm:grid-cols-2 lg:grid-cols-3',
-        4: 'sm:grid-cols-2 lg:grid-cols-4'
+        2: 'sm:grid-cols-2'
     } %}
-    <div class="grid gap-4 mb-8 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }}">
+    <div class="course-card-grid grid gap-4 mb-8 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }}">
         {% for version in helios_version_info.versions %}
             {# Find the version's root page for icon/description; skip non-visible courses #}
             {% set version_page = pages.find('/' ~ version.id) %}
             {% set version_home = version_page ? version_page.children.first() : null %}
             {% if version_page %}
-                {% include 'partials/doc-card.html.twig' with {
+                {# Load optional image from version page frontmatter (image: filename.jpg) #}
+                {% set course_image = version_page.header.image ? version_page.media[version_page.header.image] : null %}
+                {% include 'partials/course-card.html.twig' with {
                     title: version.label,
                     link: version_home ? version_home.url : version.url,
                     icon: version_page.header.icon|default(page.header.card_icon),
-                    description: version_page.header.description|default(null)
+                    description: version_page.header.description|default(null),
+                    image: course_image,
+                    image_layout: page.header.card_image_layout|default('side')
                 } only %}
             {% endif %}
         {% endfor %}

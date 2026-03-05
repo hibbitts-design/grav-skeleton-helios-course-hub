@@ -213,3 +213,60 @@ footer .edit-page-link svg {
     width: 100%;
     height: 100%;
 }
+
+/* TEMP FIX: .doc-card has margin-bottom that causes unequal heights in a CSS grid; remove if theme fixes .doc-grid behaviour for standard grids */
+.course-card-grid .doc-card {
+    margin-bottom: 0;
+    height: 100%;
+}
+
+/* Course card side image layout */
+.course-card-side-layout {
+    display: flex;
+    flex-direction: row;
+}
+
+.course-card-side-image-container {
+    width: 12rem;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.course-card-side-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.doc-card:hover .course-card-side-image-container img {
+    transform: scale(1.05);
+}
+
+.course-card-side-content {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Course card optional top image */
+.course-card-has-image {
+    overflow: hidden;
+    padding: 0;
+}
+
+.course-card-image-container {
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.course-card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.doc-card:hover .course-card-image-container img {
+    transform: scale(1.05);
+}

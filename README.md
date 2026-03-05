@@ -52,6 +52,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 - Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
+- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 
 ## Git Sync & Open Editing
 
@@ -110,20 +111,33 @@ The **Courses** homepage uses the `course-list` template to automatically genera
 - **Title** from the versioning labels in Helios theme settings
 - **Icon** from the course root folder frontmatter (`icon` field)
 - **Description** from the course root folder frontmatter (`description` field)
+- **Image** from the course root folder frontmatter (`image` field, optional)
 
-To customize a course card, add `icon` and `description` to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
+To customize a course card, add fields to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
 
 ```yaml
 ---
 title: CPT-363
 icon: tabler/bulb.svg
 description: A basic introduction to UI/UX design.
+image: banner.jpg
 ---
 ```
 
 The `card_icon` field set on the course-list page also serves as the **default sidebar course label icon** when a course has no `icon` of its own.
 
-The number of cards per row can be set via `cards_per_row` (1–4) in the course list page frontmatter.
+### Course Card Images
+
+To display an image on a course card, upload an image file to the course root page's media folder and set `image` in that page's frontmatter to the filename. Omit the field (or leave it empty) for no image.
+
+The image layout for all cards is controlled by `card_image_layout` in the course-list page frontmatter:
+
+| Value | Description |
+|-------|-------------|
+| `side` | Left thumbnail beside content (default) |
+| `top` | Full-width image above content |
+
+The number of cards per row can be set via `cards_per_row` (1–2) in the course list page frontmatter.
 
 Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
 
