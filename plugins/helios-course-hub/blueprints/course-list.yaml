@@ -30,9 +30,15 @@ form:
               options:
                 1: '1'
                 2: '2'
-                3: '3'
-                4: '4'
               help: Number of course cards displayed per row.
+            header.card_image_layout:
+              type: select
+              label: Card Image Layout
+              default: side
+              options:
+                side: 'Side (left thumbnail beside content)'
+                top: 'Top (full width above content)'
+              help: How course card images are displayed when an image is set.
             header.card_icon:
               type: text
               label: Default Course Icon
