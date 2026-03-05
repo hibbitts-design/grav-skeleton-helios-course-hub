@@ -62,6 +62,23 @@ form:
         courses_list: 'Courses Home Page (default)'
         single_course: 'First Page of Only Listed Course'
 
+    footer_section:
+      type: section
+      title: 'Footer'
+      underline: true
+
+    show_plugin_credits:
+      type: toggle
+      label: 'Show Plugin Credits'
+      help: 'Show the "Built with Grav · Helios · Helios Course Hub" attribution line in the footer.'
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     integrations_section:
       type: section
       title: 'Integrations'

@@ -2,5 +2,6 @@ enabled: true
 show_site_icon: true
 site_icon: ''
 logo_link_target: 'courses_list'
+show_plugin_credits: true
 github_server: 'github.com'
 h5pembedrootpath: 'https://h5p.org/h5p/embed/'
