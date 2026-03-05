@@ -37,7 +37,7 @@
         1: 'grid-cols-1',
         2: 'sm:grid-cols-2'
     } %}
-    <div class="course-card-grid grid gap-4 mb-8 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }}">
+    <div class="course-card-grid grid gap-4 mb-8 {{ colClass[page.header.cards_per_row|default(1)] ?? 'grid-cols-1' }} {{ page.header.cards_per_row|default(1) == 2 ? 'course-card-grid--cols-2' : '' }}">
         {% for version in helios_version_info.versions %}
             {# Find the version's root page for icon/description; skip non-visible courses #}
             {% set version_page = pages.find('/' ~ version.id) %}

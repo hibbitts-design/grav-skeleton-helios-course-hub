@@ -232,6 +232,16 @@ footer .edit-page-link svg {
     overflow: hidden;
 }
 
+/* Adjustments when cards are shown 2 per row (less horizontal space available) */
+@media (min-width: 640px) {
+    .course-card-grid--cols-2 .course-card-side-image-container {
+        width: 10rem;
+    }
+    .course-card-grid--cols-2 .course-card-image-container {
+        aspect-ratio: 5 / 2;
+    }
+}
+
 /* On mobile, stack side layout vertically with a fixed image height (matches top layout) */
 @media (max-width: 639px) {
     .course-card-side-layout {
@@ -277,7 +287,7 @@ footer .edit-page-link svg {
 
 .course-card-image-container {
     width: 100%;
-    height: 10rem;
+    aspect-ratio: 4 / 1;
     overflow: hidden;
 }
 
