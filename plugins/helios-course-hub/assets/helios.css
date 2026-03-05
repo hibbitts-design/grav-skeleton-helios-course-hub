@@ -254,6 +254,15 @@ footer .edit-page-link svg {
     padding: 0;
 }
 
+/* Suppress primary border on hover for image cards — image scale + title color are sufficient hover signals */
+.doc-card.course-card-has-image[href]:hover {
+    border-color: var(--color-gray-200);
+}
+
+.dark .doc-card.course-card-has-image[href]:hover {
+    border-color: var(--color-gray-700);
+}
+
 .course-card-image-container {
     width: 100%;
     height: 10rem;

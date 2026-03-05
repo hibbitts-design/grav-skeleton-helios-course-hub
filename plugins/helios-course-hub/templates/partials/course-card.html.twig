@@ -4,7 +4,7 @@
 {% set linkAttrs = link ? 'href="' ~ link ~ '"' : '' %}
 {% set layout = image ? (image_layout|default('top')) : 'none' %}
 
-<{{ tag }} {{ linkAttrs|raw }} class="doc-card group block rounded-lg border border-gray-200 dark:border-gray-700 {{ link ? 'hover:border-primary dark:hover:border-primary cursor-pointer hover:!no-underline' : '' }} transition-colors {{ image ? 'course-card-has-image' : '' }} {{ layout == 'side' ? 'course-card-side-layout' : '' }}">
+<{{ tag }} {{ linkAttrs|raw }} class="doc-card group block rounded-lg border border-gray-200 dark:border-gray-700 {{ link ? (image ? 'cursor-pointer hover:!no-underline' : 'hover:border-primary dark:hover:border-primary cursor-pointer hover:!no-underline') : '' }} transition-colors {{ image ? 'course-card-has-image' : '' }} {{ layout == 'side' ? 'course-card-side-layout' : '' }}">
     {% if layout == 'top' %}
         <div class="course-card-image-container">
             <img src="{{ image.url }}" alt="{{ title }}">
