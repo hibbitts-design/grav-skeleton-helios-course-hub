@@ -242,7 +242,7 @@ footer .edit-page-link svg {
     }
 }
 
-/* On mobile, stack side layout vertically with a fixed image height (matches top layout) */
+/* On mobile, use a fixed image height for both top and stacked-side layouts */
 @media (max-width: 639px) {
     .course-card-side-layout {
         flex-direction: column;
@@ -250,6 +250,11 @@ footer .edit-page-link svg {
 
     .course-card-side-image-container {
         width: 100%;
+        height: 10rem;
+    }
+
+    .course-card-image-container {
+        aspect-ratio: unset;
         height: 10rem;
     }
 }
