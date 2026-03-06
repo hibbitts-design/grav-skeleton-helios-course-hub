@@ -299,9 +299,8 @@ footer .edit-page-link svg {
     transform: scale(1.05);
 }
 
-/* Bump card description text from text-sm to text-base on course list and chapter pages */
-.course-card-grid .doc-card .text-sm,
-#htmx-article .grid > a > p.text-sm {
-    font-size: var(--text-base);
-    line-height: var(--text-base--line-height);
+/* Scale card description text up to text-base size site-wide */
+.doc-card,
+#htmx-article .grid > a {
+    --text-sm: calc(var(--text-base) * 0.9375);
 }
