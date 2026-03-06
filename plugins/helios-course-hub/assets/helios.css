@@ -238,7 +238,7 @@ footer .edit-page-link svg {
         width: 10rem;
     }
     .course-card-grid--cols-2 .course-card-image-container {
-        aspect-ratio: 5 / 2;
+        aspect-ratio: 2 / 1;
     }
 }
 
