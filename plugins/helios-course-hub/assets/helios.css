@@ -163,14 +163,6 @@
     scroll-margin-top: 4rem;
 }
 
-/* Hide logo icon container - uncomment to use */
-/*
-.flex.items-center.justify-center.w-8.h-8.rounded-lg.bg-primary,
-.flex.items-center.justify-center.w-8.h-8.rounded-lg.bg-primary-dark {
-    display: none;
-}
-*/
-
 /* Increase "Edit this page" link size */
 footer .edit-page-link {
     font-size: 1rem;
@@ -305,4 +297,11 @@ footer .edit-page-link svg {
 
 .doc-card:hover .course-card-image-container img {
     transform: scale(1.05);
+}
+
+/* Bump card description text from text-sm to text-base on course list and chapter pages */
+.course-card-grid .doc-card .text-sm,
+#htmx-article .grid > a > p.text-sm {
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
 }
