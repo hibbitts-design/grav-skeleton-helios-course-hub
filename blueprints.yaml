@@ -1,7 +1,7 @@
 name: Helios Course Hub Site
 version: 1.0.0
-description: "Give your course a modern, open home on the web - requires the Helios Grav Premium theme."
-icon: university
+description: "Give your course a modern, open home on the web - requires the Helios Grav Premium theme and Helios Course Hub plugin."
+icon: player-group
 author:
  name: HibbittsDesign.org
  email: hello@hibbittsdesign.org
