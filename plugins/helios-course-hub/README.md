@@ -12,7 +12,7 @@ Give your course a modern, open home on the web – without building from scratc
 
 Grav Helios Course Hub often works really well when you:
 
-- Want a polished, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
+- Want a visually refined, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
 - Want a fully designed, ready-to-use course site without custom design or coding work
 - Want to support multiple courses from a single installation with automatic course switching
 - Need context-aware search — automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
@@ -97,10 +97,11 @@ search:
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Course label with optional icon automatically displayed in the sidebar when multiple courses are active, linking to the first page of the current course
+- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 - Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
+- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -136,7 +137,7 @@ The `[topics]` shortcode wraps alphabetically organized content and auto-generat
 
 ## Courses Homepage
 
-The `course-list` page template automatically generates course cards from detected version folders. Each card displays a title, icon, description, and optional image sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
+The `course-list` page template automatically generates course cards from detected course folders. Each card displays a title, icon, description, and optional image sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
 
 ```yaml
 ---
@@ -176,10 +177,13 @@ If no `===` delimiter is present, all content renders above the cards as normal.
 
 ## Course Folder Naming
 
-Course folders must start with one or more letters followed by a number. An optional hyphen can separate letters from the number, and additional version segments (separated by dots or hyphens) are supported.
+Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
 
-**Valid:** `cpt-363-1`, `course-1`, `course-section-2`  
-**Invalid:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
+**Valid names:** `cpt-363-1`, `course-1`, `course-section-1`, `course-section-2`
+
+**Invalid names:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
+
+The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
 ## Course Label Customization
 
