@@ -24,7 +24,6 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 - Yours – host it anywhere PHP runs, customize freely, and keep every word you write
 - Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
 - Flat-file simplicity – your content is just Markdown files you own and control
-- Context-aware search – search scope automatically adjusts based on where you are: site-wide from the Courses homepage, narrowed to the current course when browsing within it
 - Support open source – your Grav Premium Helios theme purchase directly supports ongoing development of the open-source Grav CMS
 
 ## Quick Start
@@ -40,7 +39,6 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 
 - Ready-to-use course companion website with the clean and modern Helios theme
 - Support for single or multiple courses from one site
-- Context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
 - Built-in shortcodes for embedding content (iFrames, Google Slides, PDFs, H5P, Embedly)
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection

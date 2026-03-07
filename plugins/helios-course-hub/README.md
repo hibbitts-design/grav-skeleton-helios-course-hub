@@ -1,6 +1,6 @@
 # Grav Helios Course Hub Plugin
 
-Give your course a modern, open home on the web – without building from scratch. Designed for use with the [Grav Premium Helios theme](https://getgrav.org/premium/helios) and the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability.
+Give your course a modern, open home on the web – without building from scratch. Designed for use with the [Grav Premium Helios theme](https://getgrav.org/premium/helios) and the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
 
 ## Screenshots
 
@@ -8,25 +8,29 @@ Give your course a modern, open home on the web – without building from scratc
   <a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/"><img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%"></a>&nbsp;<a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/cpt-363-1/home"><img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%"></a>
 </p>
 
-## Who This Is For
+## When is Grav Helios Course Hub a Good Candidate?
 
-The Helios Course Hub is a **course companion site** – a place to organize and share course content, resources, schedules, and weekly materials alongside your existing LMS (Canvas, Moodle, Brightspace, etc.). It is not a learning management system and does not include enrollment, grade tracking, or student progress features.
+Grav Helios Course Hub often works really well when you:
 
-It is well suited for educators and teams who want full control over their content, structure, and hosting, including:
-- Individual educators wanting a clean, open companion site for one or more courses
-- Teams hosting shared course content, reference guides, or topic indexes
-- Anyone who wants full control over their content, structure, and hosting
+- Want a polished, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
+- Want a fully designed, ready-to-use course site without custom design or coding work
+- Want to support multiple courses from a single installation with automatic course switching
+- Need context-aware search — automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
+- Want flexible editing options — browser-based Admin panel with Markdown by default and an optional visual block editor
+- Need multi-user editing with role-based access rights for team-managed course content
+- Need rich content embedding (H5P, iFrames, Google Slides, PDFs, Embedly) without coding
+- Value keeping content in portable Markdown files with full ownership and hosting control
+- Can optionally extend with custom branding — logos, colours, and styling — when a more distinctive look is needed
 
-## Why the Helios Course Hub
-The Helios Course Hub gives you a modern, open, and fully controlled companion site that works alone or alongside any LMS – a dedicated home for your course content, resources, and schedules that you control completely.
+Other publishing tools might be better candidates when you:
 
-- Ready in minutes – a complete, pre-configured package with demo content included
-- Flexible – host one course or many from a single installation
-- Yours – host it anywhere PHP runs, customize freely, and keep every word you write
-- Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
-- Flat-file simplicity – your content is just Markdown files you own and control
-- Context-aware search – search scope automatically adjusts based on where you are: site-wide from the Courses homepage, narrowed to the current course when browsing within it
-- Support open source – your Grav Premium Helios theme purchase directly supports ongoing development of the open-source Grav CMS
+- Need zero-server, instant publishing directly from GitHub without any hosting setup
+- Require real LMS features such as enrollment, grade tracking, or student progress monitoring
+- Need complex user management, approval workflows, or interactive features (contact forms, booking systems, user accounts)
+- Need a large ecosystem of themes and plugins beyond what Grav currently offers
+- Prefer fully visual drag-and-drop page builders over Markdown-based editing
+
+Still unsure? Grav Helios Course Hub is designed for easy entry — install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is ready. Your content stays in portable Markdown files you own completely. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a Web server, explore [Docsify-This](https://docsify-this.net).
 
 ## Quick Start
 
@@ -85,9 +89,6 @@ search:
 
 ## Features
 
-- Ready-to-use course companion website with the clean and modern Helios theme
-- Support for single or multiple courses from one site
-- Context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
 - Built-in shortcodes for embedding content (iFrames, Google Slides, PDFs, H5P, Embedly)
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
@@ -135,19 +136,31 @@ The `[topics]` shortcode wraps alphabetically organized content and auto-generat
 
 ## Courses Homepage
 
-The `course-list` page template automatically generates course cards from detected version folders. Each card displays a title, icon and description sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
+The `course-list` page template automatically generates course cards from detected version folders. Each card displays a title, icon, description, and optional image sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
 
 ```yaml
 ---
 title: CPT-363
 icon: tabler/bulb.svg
 description: A basic introduction to UI/UX design.
+image: banner.jpg
 ---
 ```
 
 The `card_icon` field set on the course-list page also serves as the **default sidebar course label icon** when a course has no `icon` of its own.
 
-The number of cards per row can be set via `cards_per_row` (1–4) in the course list page frontmatter.
+### Course Card Images
+
+To display an image on a course card, upload an image file to the course root page's media folder and set `image` in that page's frontmatter to the filename. Omit the field (or leave it empty) for no image.
+
+The image layout for all cards is controlled by `card_image_layout` in the course-list page frontmatter:
+
+| Value | Description |
+|-------|-------------|
+| `side` | Left thumbnail beside content (default) |
+| `top` | Full-width image above content |
+
+The number of cards per row can be set via `cards_per_row` (1–2) in the course list page frontmatter.
 
 Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
 
@@ -195,6 +208,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Show Site Logo Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
 | Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. `tabler/book.svg`). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
 | Single Course Site Logo Link | Courses Home Page | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
+| Show Plugin Credits | Enabled | Show or hide the "Built with Grav · Helios · Helios Course Hub" attribution line in the footer |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with `[h5p id="..."]`) |
 
