@@ -12,7 +12,7 @@ Give your course a modern, open home on the web – without building from scratc
 
 Grav Helios Course Hub often works really well when you:
 
-- Want a polished, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
+- Want a visually refined, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
 - Want a fully designed, ready-to-use course site without custom design or coding work
 - Want to support multiple courses from a single installation with automatic course switching
 - Need context-aware search — automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
@@ -30,7 +30,7 @@ Other publishing tools might be better candidates when you:
 - Need a large ecosystem of themes and plugins beyond what Grav currently offers
 - Prefer fully visual drag-and-drop page builders over Markdown-based editing
 
-Still unsure? Grav Helios Course Hub is designed for easy entry — install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is ready. Your content stays in portable Markdown files you own completely. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a web server, explore [Docsify-This](https://docsify-this.net).
+Still unsure? Grav Helios Course Hub is designed for easy entry — install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is ready. Your content stays in portable Markdown files you own completely. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a Web server, explore [Docsify-This](https://docsify-this.net).
 
 ## Quick Start
 
@@ -95,7 +95,7 @@ By default, only `cpt-363-1/` is published, so the Courses homepage shows a sing
 In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
-> When multiple courses are active, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
 ## Course Folder Naming
 
@@ -182,10 +182,13 @@ The following settings are available in the Admin panel under **Plugins → Heli
 ### Shortcodes
 - `[iframe url="..."]` – Responsive iframe embed, 16:9 by default
 - `[iframe url="..." ratio="4:3"]` – Responsive iframe embed at 4:3 ratio
-- `[googleslides url="..."]` – Responsive Google Slides embed
-- `[pdf url="..."]` – PDF viewer via Google Docs
+- `[googleslides url="..."]` – Responsive Google Slides embed, 16:9 by default
+- `[googleslides url="..." ratio="4:3"]` – Responsive Google Slides embed at 4:3 ratio
+- `[pdf url="..."]` – PDF viewer via Google Docs, 16:9 by default
+- `[pdf url="..." ratio="4:3"]` – PDF viewer at 4:3 ratio
 - `[pdf url="..." ratio="portrait"]` – PDF viewer at portrait ratio (letter/A4)
-- `[h5p url="..."]` or `[h5p id="..."]` – H5P interactive content
+- `[h5p url="..."]` – H5P interactive content via full embed URL
+- `[h5p id="..."]` – H5P interactive content via Content ID (requires H5P Content Embed Source URL to be set in plugin settings)
 - `[embedly url="..."]` – Embedly card with dark mode support
 - `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
 

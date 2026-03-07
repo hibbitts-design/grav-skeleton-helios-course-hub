@@ -21,6 +21,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 - Ready in minutes – a complete, pre-configured package with demo content included
 - Flexible – host one course or many from a single installation
+- Context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
 - Yours – host it anywhere PHP runs, customize freely, and keep every word you write
 - Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
 - Flat-file simplicity – your content is just Markdown files you own and control
@@ -33,7 +34,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
 2. **Enter your licenses** – enter your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
 3. **Edit your pages** in `user/pages/cpt-363-1/` – start with `10.home/` and work through the pre-built course sections
-4. **Publish** – works on almost any Web Server, with PHP 7.3.6+, or run locally; no database required
+4. **Publish** – works on almost any Web server, with PHP 7.3.6+, or run locally; no database required
 
 ## Features
 
@@ -51,6 +52,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 - Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
+- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -109,20 +111,33 @@ The **Courses** homepage uses the `course-list` template to automatically genera
 - **Title** from the versioning labels in Helios theme settings
 - **Icon** from the course root folder frontmatter (`icon` field)
 - **Description** from the course root folder frontmatter (`description` field)
+- **Image** from the course root folder frontmatter (`image` field, optional)
 
-To customize a course card, add `icon` and `description` to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
+To customize a course card, add fields to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
 
 ```yaml
 ---
 title: CPT-363
 icon: tabler/bulb.svg
 description: A basic introduction to UI/UX design.
+image: banner.jpg
 ---
 ```
 
 The `card_icon` field set on the course-list page also serves as the **default sidebar course label icon** when a course has no `icon` of its own.
 
-The number of cards per row can be set via `cards_per_row` (1–4) in the course list page frontmatter.
+### Course Card Images
+
+To display an image on a course card, upload an image file to the course root page's media folder and set `image` in that page's frontmatter to the filename. Omit the field (or leave it empty) for no image.
+
+The image layout for all cards is controlled by `card_image_layout` in the course-list page frontmatter:
+
+| Value | Description |
+|-------|-------------|
+| `side` | Left thumbnail beside content (default) |
+| `top` | Full-width image above content |
+
+The number of cards per row can be set via `cards_per_row` (1–2) in the course list page frontmatter.
 
 Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
 
@@ -149,6 +164,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Show Site Logo Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
 | Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
 | Single Course Site Logo Link | Courses Home Page | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
+| Show Plugin Credits | Enabled | Show or hide the "Built with Grav · Helios · Helios Course Hub" attribution line in the footer |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with [raw]`[h5p id="..."]`[/raw]) |
 
@@ -163,10 +179,13 @@ The following settings are available in the Admin panel under **Plugins → Heli
 ### Shortcodes
 - [raw]`[iframe url="..."]`[/raw] – Responsive iframe embed, 16:9 by default
 - [raw]`[iframe url="..." ratio="4:3"]`[/raw] – Responsive iframe embed at 4:3 ratio
-- [raw]`[googleslides url="..."]`[/raw] – Responsive Google Slides embed
-- [raw]`[pdf url="..."]`[/raw] – PDF viewer via Google Docs
+- [raw]`[googleslides url="..."]`[/raw] – Responsive Google Slides embed, 16:9 by default
+- [raw]`[googleslides url="..." ratio="4:3"]`[/raw] – Responsive Google Slides embed at 4:3 ratio
+- [raw]`[pdf url="..."]`[/raw] – PDF viewer via Google Docs, 16:9 by default
+- [raw]`[pdf url="..." ratio="4:3"]`[/raw] – PDF viewer at 4:3 ratio
 - [raw]`[pdf url="..." ratio="portrait"]`[/raw] – PDF viewer at portrait ratio (letter/A4)
-- [raw]`[h5p url="..."]`[/raw] or [raw]`[h5p id="..."]`[/raw] – H5P interactive content
+- [raw]`[h5p url="..."]`[/raw] – H5P interactive content via full embed URL
+- [raw]`[h5p id="..."]`[/raw] – H5P interactive content via Content ID (requires H5P Content Embed Source URL to be set in plugin settings)
 - [raw]`[embedly url="..."]`[/raw] – Embedly card with dark mode support
 - [raw]`[topics]...[/topics]`[/raw] – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
 
