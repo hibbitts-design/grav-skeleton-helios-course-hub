@@ -56,6 +56,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 - Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 - Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
+- Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
 
 ## Git Sync & Open Editing
 
@@ -114,6 +115,7 @@ The **Courses** homepage uses the `course-list` template to automatically genera
 - **Title** from the versioning labels in Helios theme settings
 - **Icon** from the course root folder frontmatter (`icon` field)
 - **Description** from the course root folder frontmatter (`description` field)
+- **Instructor** from the course root folder frontmatter (`instructor` field, optional)
 - **Image** from the course root folder frontmatter (`image` field, optional)
 
 To customize a course card, add fields to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
@@ -123,6 +125,7 @@ To customize a course card, add fields to the frontmatter of the course root fol
 title: CPT-363
 icon: tabler/bulb.svg
 description: A basic introduction to UI/UX design.
+instructor: Jane Smith & John Doe
 image: banner.jpg
 ---
 ```

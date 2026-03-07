@@ -30,6 +30,12 @@ form:
               rows: 3
               placeholder: A short description for this course
               help: 'Short description shown on the course card on the Courses homepage.'
+            header.instructor:
+              type: text
+              label: Course Instructor(s)
+              toggleable: true
+              placeholder: 'e.g. Jane Smith or Jane Smith & John Doe'
+              help: 'Instructor name(s) shown below the description on the course card on the Courses homepage.'
             header.image:
               type: pagemediaselect
               label: Course Card Image

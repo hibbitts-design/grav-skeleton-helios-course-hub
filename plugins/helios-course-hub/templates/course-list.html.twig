@@ -50,6 +50,7 @@
                     link: version_home ? version_home.url : version.url,
                     icon: version_page.header.icon|default(page.header.card_icon),
                     description: version_page.header.description|default(null),
+                    instructor: version_page.header.instructor|default(null),
                     image: course_image,
                     image_layout: page.header.card_image_layout|default('side')
                 } only %}
