@@ -51,7 +51,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Course label with optional icon automatically displayed in the sidebar when multiple courses are active, linking to the first page of the current course
+- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 - Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
