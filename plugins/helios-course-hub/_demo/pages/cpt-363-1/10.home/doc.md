@@ -11,7 +11,7 @@ navigation:
 
 [doc-grid columns=1]
 
-[doc-card title="Important Reminders" icon="tabler/star.svg"]
+[doc-card title="Upcoming Due Dates" icon="tabler/star.svg"]
 
 - [Journey Map](#) assignment [doc-badge label="Tue Jun 12th 11:59pm PDT" color="plain"]
 

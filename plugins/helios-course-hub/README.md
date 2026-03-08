@@ -93,6 +93,7 @@ search:
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
 - Alphabetical topics index with auto-generated A–Z navigation
+- Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
@@ -120,6 +121,8 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 - `[h5p id="..."]` – H5P interactive content via Content ID (requires H5P Content Embed Source URL to be set in plugin settings)
 - `[embedly url="..."]` – Embedly card with dark mode support
 - `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
+- `[announcement]...[/announcement]` – Styled announcement notice (default: Important/purple), supports Markdown content
+- `[announcement title="..." type="..."]...[/announcement]` – With optional custom title and type (`note`, `tip`, `important`, `warning`, `caution`)
 
 ### Topics Shortcode
 
@@ -136,6 +139,26 @@ The `[topics]` shortcode wraps alphabetically organized content and auto-generat
 [Design Thinking](../modules/module-01)
 [/topics]
 ```
+
+### Announcement Shortcode
+
+The `[announcement]` shortcode displays a styled notice using the same visual style as GitHub callouts. Content inside the shortcode supports Markdown — bold text, links, and lists all work as expected.
+
+```markdown
+[announcement]
+Assignment 2 due date extended to **March 14th**. See the [course schedule](#) for details.
+[/announcement]
+```
+
+With an optional custom title and color type:
+
+```markdown
+[announcement title="Class Cancelled" type="warning"]
+Thursday's class is cancelled. See Modules for the recorded lecture.
+[/announcement]
+```
+
+Available types: `note` (blue), `tip` (green), `important` (purple, default), `warning` (amber), `caution` (red).
 
 ## Courses Homepage
 

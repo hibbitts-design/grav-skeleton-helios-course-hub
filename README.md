@@ -47,6 +47,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
 - Alphabetical topics index with auto-generated A–Z navigation
+- Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
@@ -198,6 +199,8 @@ The following settings are available in the Admin panel under **Plugins → Heli
 - `[h5p id="..."]` – H5P interactive content via Content ID (requires H5P Content Embed Source URL to be set in plugin settings)
 - `[embedly url="..."]` – Embedly card with dark mode support
 - `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
+- `[announcement]...[/announcement]` – Styled announcement notice (default: Important/purple), supports Markdown content
+- `[announcement title="..." type="..."]...[/announcement]` – With optional custom title and type (`note`, `tip`, `important`, `warning`, `caution`)
 
 ### Theme Detection
 

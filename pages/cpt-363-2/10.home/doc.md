@@ -5,13 +5,17 @@ navigation:
     toc_position: hidden
 ---
 
+[announcement type="Important"]
+The Project User Research Report assignment due date extended to **Jul 17th**. See the [course schedule](/cpt-363-2/schedule) for that week's details.
+[/announcement]
+
 # What’s Happening This Week
 
 ## How to explore the problem space?
 
 [doc-grid columns=1]
 
-[doc-card title="Important Reminders" icon="tabler/star.svg"]
+[doc-card title="Upcoming Due Dates" icon="tabler/star.svg"]
 
 - [Journey Map](#) assignment [doc-badge label="Tue Jun 12th 11:59pm PDT" color="plain"]
 
