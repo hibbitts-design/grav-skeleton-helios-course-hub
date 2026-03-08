@@ -5,9 +5,8 @@ navigation:
     toc_position: hidden
 ---
 
-[announcement type="Important"]
-The Project User Research Report assignment due date extended to **Jul 17th**. See the [course schedule](/cpt-363-2/schedule) for that week's details.
-[/announcement]
+> [!IMPORTANT]
+> The Project User Research Report assignment due date extended to **Jul 17th**. See the [course schedule](/cpt-363-2/schedule) for that week's details.
 
 # What’s Happening This Week
 

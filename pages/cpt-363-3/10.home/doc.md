@@ -5,6 +5,10 @@ navigation:
     toc_position: hidden
 ---
 
+[announcement title="Class Cancelled" type="warning"]
+Thursday’s class is cancelled. See Modules for available class materials.
+[/announcement]
+
 # What’s Happening This Week
 
 ## How to explore the problem space?

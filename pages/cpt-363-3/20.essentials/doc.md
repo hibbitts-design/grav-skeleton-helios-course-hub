@@ -7,13 +7,16 @@ navigation:
 
 # Essentials
 
-## Course Facilitator
-Some Name  
-[safe-email autolink="true"]somename@somewhere.edu[/safe-email]  
+## Teaching Team
+Leila Hassan
+[safe-email autolink="true"]l.hassan@university.edu[/safe-email]
 
-Online office hours:  
-Mondays 12:00-1:30pm  
-Fridays 12:00-1:00pm  
+James Park
+[safe-email autolink="true"]j.park@university.edu[/safe-email]
+
+Online office hours:
+Mondays 12:00-1:30pm (L. Hassan)
+Fridays 12:00-1:00pm (J. Park)
 
 Online office hours are held via Zoom. Additional appointment times are available on request.
 

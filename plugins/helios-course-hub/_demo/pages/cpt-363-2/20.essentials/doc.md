@@ -8,8 +8,8 @@ navigation:
 # Essentials
 
 ## Course Facilitator
-Some Name  
-[safe-email autolink="true"]somename@somewhere.edu[/safe-email]  
+Kim Martin
+[safe-email autolink="true"]k.martin@university.edu[/safe-email]
 
 Online office hours:  
 Mondays 12:00-1:30pm  
