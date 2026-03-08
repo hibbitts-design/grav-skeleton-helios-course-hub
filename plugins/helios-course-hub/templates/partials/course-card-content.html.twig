@@ -22,3 +22,8 @@
     {{ instructor }}
 </div>
 {% endif %}
+{% if badge_label %}
+{% set badge_color_class = badge_color and badge_color != 'default' ? 'doc-badge-' ~ badge_color : '' %}
+{% set badge_classes = ['doc-badge', badge_color_class]|filter(v => v)|join(' ') %}
+<div class="mt-3"><span class="{{ badge_classes }}">{{ badge_label }}</span></div>
+{% endif %}

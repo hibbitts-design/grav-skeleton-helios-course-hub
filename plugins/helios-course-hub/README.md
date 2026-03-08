@@ -103,6 +103,7 @@ search:
 - Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 - Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 - Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
+- Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -138,7 +139,7 @@ The `[topics]` shortcode wraps alphabetically organized content and auto-generat
 
 ## Courses Homepage
 
-The `course-list` page template automatically generates course cards from detected course folders. Each card displays a title, icon, description, optional instructor, and optional image sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
+The `course-list` page template automatically generates course cards from detected course folders. Each card displays a title, icon, description, optional instructor, optional badge, and optional image sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
 
 ```yaml
 ---
@@ -146,6 +147,8 @@ title: CPT-363
 icon: tabler/bulb.svg
 description: A basic introduction to UI/UX design.
 instructor: Jane Smith & John Doe
+badge_label: Coming Soon
+badge_color: yellow
 image: banner.jpg
 ---
 ```

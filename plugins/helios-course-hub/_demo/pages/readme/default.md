@@ -48,11 +48,13 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Course label with optional icon automatically displayed in the sidebar when multiple courses are active, linking to the first page of the current course
+- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 - Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 - Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
+- Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
+- Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -111,6 +113,8 @@ The **Courses** homepage uses the `course-list` template to automatically genera
 - **Title** from the versioning labels in Helios theme settings
 - **Icon** from the course root folder frontmatter (`icon` field)
 - **Description** from the course root folder frontmatter (`description` field)
+- **Instructor** from the course root folder frontmatter (`instructor` field, optional)
+- **Badge** from the course root folder frontmatter (`badge_label`, `badge_color` fields, optional)
 - **Image** from the course root folder frontmatter (`image` field, optional)
 
 To customize a course card, add fields to the frontmatter of the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
@@ -120,6 +124,9 @@ To customize a course card, add fields to the frontmatter of the course root fol
 title: CPT-363
 icon: tabler/bulb.svg
 description: A basic introduction to UI/UX design.
+instructor: Jane Smith & John Doe
+badge_label: Coming Soon
+badge_color: yellow
 image: banner.jpg
 ---
 ```
