@@ -3,7 +3,7 @@ icon: tabler/layout.svg
 description: 'An introduction to UI/UX design (Section 3).'
 published: false
 routable: false
-instructor: 'Teaching Team: Leila Hassan & James Park'
+instructor: 'Instructor: Kim Martin'
 badge_label: 'New Section'
 badge_color: green
 sitemap:

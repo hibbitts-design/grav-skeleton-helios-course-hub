@@ -1,7 +1,7 @@
 ---
 icon: tabler/pencil.svg
 description: 'An introduction to UI/UX design (Section 2).'
-instructor: 'Instructor: Kim Martin'
+instructor: 'Teaching Team: Leila Hassan & James Park'
 published: false
 routable: false
 sitemap:

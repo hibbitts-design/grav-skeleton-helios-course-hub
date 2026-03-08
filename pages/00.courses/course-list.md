@@ -6,7 +6,7 @@ published: true
 visible: true
 sitemap:
     lastmod: '16-02-2026 15:10'
-card_image_layout: top
+card_image_layout: side
 ---
 
 The **Grav Helios Course Hub** is a ready-to-use companion site for one or more courses, working alongside your existing learning management system (Canvas, Moodle, etc.).
