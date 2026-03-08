@@ -212,6 +212,11 @@ footer .edit-page-link svg {
     height: 100%;
 }
 
+/* Equalise card heights in single-column grids; not applied to 2-column grids to avoid stretching orphaned cards in the last row */
+.course-card-grid:not(.course-card-grid--cols-2) {
+    grid-auto-rows: 1fr;
+}
+
 /* Course card side image layout */
 .course-card-side-layout {
     display: flex;
