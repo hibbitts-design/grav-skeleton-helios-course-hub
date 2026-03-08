@@ -14,11 +14,14 @@
     </header>
 
     {# Split page content above/below course list using === delimiter #}
+    {# Check raw markdown for the delimiter, then split the fully-processed content #}
+    {# (page.content runs the full pipeline including shortcodes; |markdown does not) #}
     {% set raw = page.rawMarkdown() %}
     {% if '===' in raw %}
-        {% set parts = raw|split('===') %}
-        {% set content_above = parts[0]|markdown %}
-        {% set content_below = parts[1]|markdown %}
+        {% set processed = page.content %}
+        {% set parts = processed|split('<p>===</p>') %}
+        {% set content_above = parts[0] %}
+        {% set content_below = parts[1]|default(null) %}
     {% else %}
         {% set content_above = page.content %}
         {% set content_below = null %}
