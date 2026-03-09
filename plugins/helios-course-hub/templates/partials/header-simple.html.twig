@@ -68,6 +68,9 @@
     {# Right side actions #}
     <div class="flex items-center gap-2 sm:gap-4">
 
+        {# Language switcher #}
+        {% include 'partials/langswitcher.html.twig' %}
+
         {# Search trigger #}
         {% if theme_config.search.enabled %}
         <button @click="searchOpen = true" data-ys-open
