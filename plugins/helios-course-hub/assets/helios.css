@@ -304,6 +304,11 @@ footer .edit-page-link svg {
     transform: scale(1.05);
 }
 
+/* Course card description (scoped to course cards only) */
+.course-card-description {
+    text-wrap: pretty;
+}
+
 /* Course card description line-clamp options (scoped to course cards only) */
 .course-card-description--clamp-2 {
     overflow: hidden;
@@ -313,6 +318,26 @@ footer .edit-page-link svg {
 }
 
 .course-card-description--clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+/* Module card description (scoped to modules template only) */
+.module-card-description {
+    text-wrap: pretty;
+}
+
+/* Module card description line-clamp options (scoped to modules template only) */
+.module-card-description--clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.module-card-description--clamp-3 {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;

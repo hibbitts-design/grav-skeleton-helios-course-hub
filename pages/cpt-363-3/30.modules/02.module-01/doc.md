@@ -2,6 +2,7 @@
 title: 'Week 1 (May 9 - 15)'
 published: true
 icon: tabler/hexagons.svg
+description: What is usability and user experience design?
 taxonomy:
     category: docs
 navigation:

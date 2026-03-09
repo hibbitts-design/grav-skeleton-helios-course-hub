@@ -14,7 +14,7 @@
 </div>
 {% if description or content %}
 {% set clamp_class = description and card_description_lines > 0 ? 'course-card-description--clamp-' ~ card_description_lines : '' %}
-<div class="mt-3 text-sm text-gray-600 dark:text-gray-400 {{ clamp_class }}">
+<div class="course-card-description mt-3 text-sm text-gray-600 dark:text-gray-400 {{ clamp_class }}">
     {{ content|raw ?: description }}
 </div>
 {% endif %}

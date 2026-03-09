@@ -1,0 +1,30 @@
+title: Modules
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          type: tab
+          title: PLUGIN_ADMIN.CONTENT
+          fields:
+            content:
+              ordering@: 100
+            header.media_order:
+              ordering@: 101
+            header.description_lines:
+              type: select
+              label: Description Line Limit
+              help: 'Maximum number of lines shown for each module card description before being truncated.'
+              default: 3
+              options:
+                2: '2 lines'
+                3: '3 lines (default)'
+                0: 'No limit'
+              validate:
+                type: int
