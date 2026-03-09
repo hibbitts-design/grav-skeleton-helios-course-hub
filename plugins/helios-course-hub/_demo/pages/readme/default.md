@@ -145,7 +145,9 @@ The image layout for all cards is controlled by `card_image_layout` in the cours
 | `side` | Left thumbnail beside content (default) |
 | `top` | Full-width image above content |
 
-The number of cards per row can be set via `cards_per_row` (1–2) in the course list page frontmatter.
+The number of cards per row can be set via `cards_per_row` (1–2) in the course-list page frontmatter.
+
+The maximum number of description lines shown per card can be set via `card_description_lines` (2, 3, or 0 for no limit; default is 3) in the course-list page frontmatter.
 
 Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
 

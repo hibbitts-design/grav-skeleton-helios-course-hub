@@ -2,7 +2,7 @@
 published: false
 routable: false
 icon: tabler/pencil.svg
-description: 'An introduction to UI/UX design (Section 2).'
+description: 'Adds a Topics page to the core pages shown in Section 1, and includes Instructors on course card and GitHub Markdown alert on Home page.'
 instructor: 'Teaching Team: Leila Hassan & James Park'
 sitemap:
     lastmod: '04-03-2026 17:47'

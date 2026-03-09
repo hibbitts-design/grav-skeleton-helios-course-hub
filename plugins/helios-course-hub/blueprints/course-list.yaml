@@ -39,6 +39,17 @@ form:
                 side: 'Side (left thumbnail beside content)'
                 top: 'Top (full width above content)'
               help: How course card images are displayed when an image is set.
+            header.card_description_lines:
+              type: select
+              label: Description Line Limit
+              help: 'Maximum number of lines shown for each course card description before being truncated.'
+              default: 3
+              options:
+                2: '2 lines'
+                3: '3 lines (default)'
+                0: 'No limit'
+              validate:
+                type: int
             header.card_icon:
               type: text
               label: Default Course Icon

@@ -304,6 +304,21 @@ footer .edit-page-link svg {
     transform: scale(1.05);
 }
 
+/* Course card description line-clamp options (scoped to course cards only) */
+.course-card-description--clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.course-card-description--clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
 /* Scale card description text up to text-base size site-wide */
 .doc-card,
 #htmx-article .grid > a {

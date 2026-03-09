@@ -57,7 +57,8 @@
                     badge_label: version_page.header.badge_label|default(null),
                     badge_color: version_page.header.badge_color|default('default'),
                     image: course_image,
-                    image_layout: page.header.card_image_layout|default('side')
+                    image_layout: page.header.card_image_layout|default('side'),
+                    card_description_lines: page.header.card_description_lines|default(3)
                 } only %}
             {% endif %}
         {% endfor %}
