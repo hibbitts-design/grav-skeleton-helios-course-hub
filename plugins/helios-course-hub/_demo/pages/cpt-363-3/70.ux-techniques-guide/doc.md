@@ -1,9 +1,9 @@
 ---
 title: 'UX Techniques Guide'
+published: true
 navigation:
     prev_next: false
     toc_position: hidden
-published: true
 sitemap:
     lastmod: '05-03-2026 21:58'
 ---

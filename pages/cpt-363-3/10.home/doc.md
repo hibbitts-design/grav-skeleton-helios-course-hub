@@ -1,5 +1,6 @@
 ---
 title: 'Home'
+published: true
 navigation:
     prev_next: false
     toc_position: hidden

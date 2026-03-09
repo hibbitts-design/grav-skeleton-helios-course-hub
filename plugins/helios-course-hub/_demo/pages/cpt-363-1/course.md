@@ -1,8 +1,8 @@
 ---
-icon: tabler/bulb.svg
-description: 'An introduction to UI/UX design (Section 1).'
 published: true
 routable: false
+icon: tabler/bulb.svg
+description: 'An introduction to UI/UX design (Section 1).'
 sitemap:
     lastmod: '04-03-2026 22:22'
 ---

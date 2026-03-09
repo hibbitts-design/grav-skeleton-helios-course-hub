@@ -1,9 +1,9 @@
 ---
+published: false
+routable: false
 icon: tabler/pencil.svg
 description: 'An introduction to UI/UX design (Section 2).'
 instructor: 'Teaching Team: Leila Hassan & James Park'
-published: false
-routable: false
 sitemap:
     lastmod: '04-03-2026 17:47'
 ---

@@ -1,9 +1,9 @@
 ---
 title: Courses
-cards_per_row: '1'
-card_icon: tabler/layout-list.svg
 published: true
 visible: true
+cards_per_row: '1'
+card_icon: tabler/layout-list.svg
 sitemap:
     lastmod: '16-02-2026 15:10'
 card_image_layout: side

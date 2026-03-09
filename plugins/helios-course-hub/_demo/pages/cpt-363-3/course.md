@@ -1,8 +1,8 @@
 ---
-icon: tabler/layout.svg
-description: 'An introduction to UI/UX design (Section 3).'
 published: false
 routable: false
+icon: tabler/layout.svg
+description: 'An introduction to UI/UX design (Section 3).'
 instructor: 'Instructor: Kim Martin'
 badge_label: 'New Section'
 badge_color: green
