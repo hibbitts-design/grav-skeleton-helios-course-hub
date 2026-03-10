@@ -47,7 +47,7 @@ To install the plugin manually, see the [Installation](#installation) and [Demo 
 
 The `_demo` folder contains a default Helios Course Hub site that can be used as a starting point:
 
-- `00.courses/` – Courses homepage (`course-list.md` configures course card layout and display options)
+- `00.courses/` – Courses homepage (`course-list.md` sets list page settings and default course card values)
 - `cpt-363-1/` – First course (course.md sets icon, image, instructor, badge; 10.home, 20.essentials, 30.modules, 40.schedule, 50.topics, 60.resources, 70.ux-techniques-guide, 80.syllabus)
 - `cpt-363-2/` – Second course (same structure as cpt-363-1, including course.md; unpublished by default)
 - `cpt-363-3/` – Third course (same structure as cpt-363-1, including course.md; unpublished by default)
@@ -163,38 +163,20 @@ Available types: `note` (blue), `tip` (green), `important` (purple, default), `w
 
 ## Courses Homepage
 
-The `course-list` page template automatically generates course cards from detected course folders. Each card displays a title, icon, description, optional instructor, optional badge, and optional image sourced from the course root folder's markdown file (e.g. `cpt-363-1/course.md`):
+The `course-list` page template automatically generates course cards from detected course folders.
 
-```yaml
----
-title: CPT-363
-icon: tabler/bulb.svg
-description: A basic introduction to UI/UX design.
-instructor: Jane Smith & John Doe
-badge_label: Coming Soon
-badge_color: yellow
-image: banner.jpg
----
-```
+### Courses List Page (course-list.md)
 
-The `card_icon` field set on the course-list page also serves as the **default sidebar course label icon** when a course has no `icon` of its own.
+The `course-list.md` frontmatter controls the list layout and sets default values for all course cards. These fields can be set in the Admin Panel by opening the Courses homepage.
 
-### Course Card Images
+| Field | Default | Description |
+|-------|---------|-------------|
+| `cards_per_row` | `1` | Number of course cards per row (1–2) |
+| `card_icon` | — | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
+| `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
+| `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
 
-To display an image on a course card, upload an image file to the course root page's media folder and set `image` in that page's frontmatter to the filename. Omit the field (or leave it empty) for no image.
-
-The image layout for all cards is controlled by `card_image_layout` in the course-list page frontmatter:
-
-| Value | Description |
-|-------|-------------|
-| `side` | Left thumbnail beside content (default) |
-| `top` | Full-width image above content |
-
-The number of cards per row can be set via `cards_per_row` (1–2) in the course-list page frontmatter.
-
-The maximum number of description lines shown per card can be set via `card_description_lines` (2, 3, or 0 for no limit; default is 3) in the course-list page frontmatter.
-
-Page content written in the `course-list.md` file appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
+Page content written in `course-list.md` appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
 
 ```markdown
 This text appears above the course cards.
@@ -205,6 +187,32 @@ This text appears below the course cards.
 ```
 
 If no `===` delimiter is present, all content renders above the cards as normal.
+
+### Course Page (course.md)
+
+Each course folder contains a `course.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
+
+| Field | Description |
+|-------|-------------|
+| `icon` | Tabler icon path (e.g. `tabler/bulb.svg`); overrides the `card_icon` default from `course-list.md` |
+| `description` | Course description shown on the card |
+| `instructor` | Optional instructor name(s) shown below the description |
+| `badge_label` | Optional status badge label (e.g. `Coming Soon`, `New`, `Archived`) |
+| `badge_color` | Optional badge colour (`yellow`, `green`, `red`, etc.) |
+| `image` | Optional card image filename (upload to the course's media folder) |
+
+```yaml
+---
+icon: tabler/bulb.svg
+description: A basic introduction to UI/UX design.
+instructor: Jane Smith & John Doe
+badge_label: Coming Soon
+badge_color: yellow
+image: banner.jpg
+---
+```
+
+To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
 
 ## Course Folder Naming
 
