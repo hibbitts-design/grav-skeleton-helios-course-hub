@@ -56,7 +56,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 - Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
 - Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
-- Configurable chapter card description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
+- Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -74,7 +74,9 @@ All course content lives in course folders within `user/pages/`. The skeleton sh
 ```
 user/pages/
 ├── 00.courses/                  # Courses homepage
+│   └── course-list.md           # Configures course card layout and display options
 ├── cpt-363-1/                   # Course 1 (published by default)
+│   ├── course.md                # Course settings (icon, image, instructor, badge)
 │   ├── 10.home/
 │   ├── 20.essentials/
 │   ├── 30.modules/
@@ -83,9 +85,8 @@ user/pages/
 │   ├── 60.resources/
 │   ├── 70.ux-techniques-guide/
 │   └── 80.syllabus/
-├── cpt-363-2/                   # Course 2 (unpublished by default)
-├── cpt-363-3/                   # Course 3 (unpublished by default)
-├── contact/
+├── cpt-363-2/                   # Course 2 (same structure, unpublished by default)
+├── cpt-363-3/                   # Course 3 (same structure, unpublished by default)
 └── readme/
 ```
 
@@ -176,7 +177,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
 | Single Course Site Logo Link | Courses Home Page | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
 | Show Plugin Credits | Enabled | Show or hide the "Built with Grav · Helios · Helios Course Hub" attribution line in the footer |
-| Card Description Lines | 2 lines | Maximum number of lines shown per card description on Chapter template pages; the Modules section uses this template (2, 3, or no limit) |
+| Description Line Limit | 2 lines | Maximum number of lines shown per card description on Chapter template pages; the Modules section uses this template (2, 3, or no limit) |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with [raw]`[h5p id="..."]`[/raw]) |
 

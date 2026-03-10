@@ -77,7 +77,9 @@ All course content lives in course folders within `user/pages/`. The skeleton sh
 ```
 user/pages/
 ├── 00.courses/                  # Courses homepage
+│   └── course-list.md           # Configures course card layout and display options
 ├── cpt-363-1/                   # Course 1 (published by default)
+│   ├── course.md                # Course settings (icon, image, instructor, badge)
 │   ├── 10.home/
 │   ├── 20.essentials/
 │   ├── 30.modules/
@@ -86,9 +88,8 @@ user/pages/
 │   ├── 60.resources/
 │   ├── 70.ux-techniques-guide/
 │   └── 80.syllabus/
-├── cpt-363-2/                   # Course 2 (unpublished by default)
-├── cpt-363-3/                   # Course 3 (unpublished by default)
-├── contact/
+├── cpt-363-2/                   # Course 2 (same structure, unpublished by default)
+├── cpt-363-3/                   # Course 3 (same structure, unpublished by default)
 └── readme/
 ```
 
