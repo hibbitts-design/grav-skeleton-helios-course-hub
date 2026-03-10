@@ -56,7 +56,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 - Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
 - Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
-- Configurable module card description line limit – set `description_lines` in the Modules page frontmatter to control how many lines are shown per module card description (2, 3 default, or no limit)
+- Configurable chapter card description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -162,12 +162,6 @@ This text appears below the course cards.
 
 If no `===` delimiter is present, all content renders above the cards as normal.
 
-## Modules Page
-
-The **Modules** page uses the `modules` template, which displays child module pages as a two-column card grid. Each card shows the module title and, if set, a description or page summary.
-
-The maximum number of description lines shown per module card can be set via `description_lines` (2, 3, or 0 for no limit; default is 3) in the Modules page frontmatter.
-
 ## Included Plugin: Helios Course Hub
 
 Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling.
@@ -182,6 +176,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
 | Single Course Site Logo Link | Courses Home Page | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
 | Show Plugin Credits | Enabled | Show or hide the "Built with Grav · Helios · Helios Course Hub" attribution line in the footer |
+| Card Description Lines | 2 lines | Maximum number of lines shown per card description on Chapter template pages; the Modules section uses this template (2, 3, or no limit) |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with [raw]`[h5p id="..."]`[/raw]) |
 

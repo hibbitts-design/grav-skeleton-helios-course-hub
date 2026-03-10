@@ -132,6 +132,15 @@ class HeliosCourseHubPlugin extends Plugin
         $assets->addCss("$path/helios.css");
         $assets->addJs("$path/helios.js", ['group' => 'bottom', 'loading' => 'defer']);
 
+        // Inject site-wide chapter card description line override when value differs from theme default (2)
+        $chapterDescLines = (int)$this->config->get('plugins.helios-course-hub.chapter_description_lines', 2);
+        if ($chapterDescLines !== 2) {
+            $css = $chapterDescLines === 0
+                ? '#htmx-article p.line-clamp-2 { overflow: visible; display: block; -webkit-line-clamp: unset; }'
+                : '#htmx-article p.line-clamp-2 { -webkit-line-clamp: ' . $chapterDescLines . '; }';
+            $assets->addInlineCSS($css);
+        }
+
         $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
         $showSiteIcon = $this->config->get('plugins.helios-course-hub.show_site_icon', true);
         $siteIcon = $this->config->get('plugins.helios-course-hub.site_icon', '');
