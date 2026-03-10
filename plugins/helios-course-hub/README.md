@@ -37,7 +37,7 @@ Still unsure? Grav Helios Course Hub is designed for easy entry — install the 
 The recommended starting point is the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest), which includes this plugin, demo content, and all required configuration out of the box.
 
 1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
-2. **Enter your licenses** – enter your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
+2. **Enter your licenses** – your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
 
 The skeleton comes pre-configured with demo content in `user/pages/cpt-363-1/` and is ready to run immediately.
 
@@ -89,25 +89,116 @@ search:
 
 ## Features
 
+### Site Identity
+- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
+- Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
+- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
+- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
+
+### Course Cards
+- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
+- Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
+- Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
+
+### Course Content
+- Alphabetical topics index with auto-generated A–Z navigation
+- Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
+- Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
+
+### Embedding & Shortcodes
 - Built-in shortcodes for embedding content (iFrames, Google Slides, PDFs, H5P, Embedly)
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
-- Alphabetical topics index with auto-generated A–Z navigation
-- Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
+
+### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
-- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
-- Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
-- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
-- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
-- Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
-- Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
-- Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
+- Page Table of Contents template (`default-toc`) – set `template: default-toc` in any page's frontmatter to display a right-column Table of Contents alongside the content
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
+
+## Course Folder Naming
+
+Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
+
+**Valid names:** `cpt-363-1`, `course-1`, `course-section-1`, `course-section-2`
+
+**Invalid names:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
+
+The simplest convention is `course-1`, `course-2`, `course-3`, etc.
+
+## Courses Homepage
+
+The `course-list` page template automatically generates course cards from detected course folders.
+
+### Courses List Page
+
+The `course-list.md` frontmatter controls the list layout and sets default values for all course cards. These fields can be set in the Admin Panel by opening the Courses homepage.
+
+| Field | Default | Description |
+|-------|---------|-------------|
+| `cards_per_row` | `1` | Number of course cards per row (1–2) |
+| `card_icon` | — | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
+| `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
+| `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
+
+Page content written in `course-list.md` appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
+
+```markdown
+This text appears above the course cards.
+
+===
+
+This text appears below the course cards.
+```
+
+If no `===` delimiter is present, all content renders above the cards as normal.
+
+### Course Page
+
+Each course folder contains a `course.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
+
+| Field | Description |
+|-------|-------------|
+| `icon` | Tabler icon path (e.g. `tabler/bulb.svg`); overrides the `card_icon` default from `course-list.md` |
+| `description` | Course description shown on the card |
+| `instructor` | Optional instructor name(s) shown below the description |
+| `badge_label` | Optional status badge label (e.g. `Coming Soon`, `New`, `Archived`) |
+| `badge_color` | Optional badge colour (`yellow`, `green`, `red`, etc.) |
+| `image` | Optional card image filename (upload to the course's media folder) |
+
+```yaml
+---
+icon: tabler/bulb.svg
+description: A basic introduction to UI/UX design.
+instructor: Jane Smith & John Doe
+badge_label: Coming Soon
+badge_color: yellow
+image: banner.jpg
+---
+```
+
+To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
+
+## Course Label Customization
+
+The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
+
+```yaml
+en:
+  PLUGIN_HELIOS_COURSE_HUB:
+    COURSE_LABEL: Course
+    COURSE_LATEST_LABEL: default
+
+fr:
+  PLUGIN_HELIOS_COURSE_HUB:
+    COURSE_LABEL: Cours
+    COURSE_LATEST_LABEL: défaut
+```
+
+To customize the label or add a language, update the relevant block in `languages.yaml`.
 
 ## Shortcodes
 
@@ -161,86 +252,8 @@ Thursday's class is cancelled. See Modules for the recorded lecture.
 
 Available types: `note` (blue), `tip` (green), `important` (purple, default), `warning` (amber), `caution` (red).
 
-## Courses Homepage
-
-The `course-list` page template automatically generates course cards from detected course folders.
-
-### Courses List Page (course-list.md)
-
-The `course-list.md` frontmatter controls the list layout and sets default values for all course cards. These fields can be set in the Admin Panel by opening the Courses homepage.
-
-| Field | Default | Description |
-|-------|---------|-------------|
-| `cards_per_row` | `1` | Number of course cards per row (1–2) |
-| `card_icon` | — | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
-| `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
-| `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
-
-Page content written in `course-list.md` appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
-
-```markdown
-This text appears above the course cards.
-
-===
-
-This text appears below the course cards.
-```
-
-If no `===` delimiter is present, all content renders above the cards as normal.
-
-### Course Page (course.md)
-
-Each course folder contains a `course.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
-
-| Field | Description |
-|-------|-------------|
-| `icon` | Tabler icon path (e.g. `tabler/bulb.svg`); overrides the `card_icon` default from `course-list.md` |
-| `description` | Course description shown on the card |
-| `instructor` | Optional instructor name(s) shown below the description |
-| `badge_label` | Optional status badge label (e.g. `Coming Soon`, `New`, `Archived`) |
-| `badge_color` | Optional badge colour (`yellow`, `green`, `red`, etc.) |
-| `image` | Optional card image filename (upload to the course's media folder) |
-
-```yaml
----
-icon: tabler/bulb.svg
-description: A basic introduction to UI/UX design.
-instructor: Jane Smith & John Doe
-badge_label: Coming Soon
-badge_color: yellow
-image: banner.jpg
----
-```
-
-To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
-
-## Course Folder Naming
-
-Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
-
-**Valid names:** `cpt-363-1`, `course-1`, `course-section-1`, `course-section-2`
-
-**Invalid names:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
-
-The simplest convention is `course-1`, `course-2`, `course-3`, etc.
-
-## Course Label Customization
-
-The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
-
-```yaml
-en:
-  PLUGIN_HELIOS_COURSE_HUB:
-    COURSE_LABEL: Course
-    COURSE_LATEST_LABEL: default
-
-fr:
-  PLUGIN_HELIOS_COURSE_HUB:
-    COURSE_LABEL: Cours
-    COURSE_LATEST_LABEL: défaut
-```
-
-To customize the label or add a language, update the relevant block in `languages.yaml`.
+## Templates
+- **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
 
 ## Plugin Settings
 

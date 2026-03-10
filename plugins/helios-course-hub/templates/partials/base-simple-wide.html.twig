@@ -1,0 +1,98 @@
+{#
+ # Base Simple Wide Template
+ # A wider variant of the theme's base-simple.html.twig for pages that need
+ # more horizontal space (e.g. a content column + page ToC side column).
+ # Identical to base-simple.html.twig except the <main> uses max-width: 72rem
+ # instead of max-w-4xl (56rem), since larger max-w-* classes are not
+ # available in the pre-compiled Tailwind build.
+ #
+ # Derived from: user/themes/helios/templates/partials/base-simple.html.twig
+ # Plugin copy — update when the theme's base-simple.html.twig changes.
+ #}
+{% set theme_config = config.themes.helios %}
+{% set appearance = theme_config.appearance %}
+{% set is_htmx = is_htmx_request|default(false) %}
+
+{# For HTMX requests, return only the content partial #}
+{% if is_htmx %}
+    {% include 'partials/htmx-content.html.twig' %}
+{% else %}
+
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: 'en' }}"
+      x-data="{
+          searchOpen: false,
+          theme: localStorage.getItem('helios-theme') || '{{ appearance.theme }}'
+      }"
+      :class="{ 'dark': theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches) }">
+<head>
+    <script>
+        // Prevent FOUC: Apply dark mode immediately before page renders
+        (function() {
+            var theme = localStorage.getItem('helios-theme') || '{{ appearance.theme }}';
+            var isDark = theme === 'dark' || (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+            if (isDark) document.documentElement.classList.add('dark');
+        })();
+    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+    {% endif %}
+
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
+
+    {# Favicon #}
+    {% if theme_config.custom_favicon %}
+        {% set favicon = theme_config.custom_favicon|first %}
+        <link rel="icon" href="{{ url('user://assets/helios/' ~ favicon.name) }}">
+    {% else %}
+        <link rel="icon" type="image/svg+xml" href="{{ url('theme://images/favicon.svg') }}">
+    {% endif %}
+
+    {# CSS Variables for theming #}
+    {% include 'partials/variables.html.twig' %}
+
+    {{ assets.css()|raw }}
+</head>
+
+{% set shortcut_key = theme_config.search.shortcut_key|default('k') %}
+<body class="min-h-screen bg-white dark:bg-gray-950/93 text-gray-900 dark:text-gray-100 {{ theme_config.body_classes }}"
+      @keydown.window="if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === '{{ shortcut_key }}') { event.preventDefault(); searchOpen = true; }"
+      @keydown.window.escape="searchOpen = false">
+
+    {# Skip to content link for accessibility #}
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">
+        Skip to content
+    </a>
+
+    {# Search modal - only use yetisearch-pro if plugin is actually enabled #}
+    {% if theme_config.search.enabled %}
+        {% if theme_config.search.provider == 'yetisearch-pro' and config.plugins['yetisearch-pro'].enabled %}
+            {% include 'partials/yetisearch-pro/modal.html.twig' %}
+        {% else %}
+            {% include 'partials/search-modal.html.twig' %}
+        {% endif %}
+    {% endif %}
+
+    {# Header #}
+    {% include 'partials/header-simple.html.twig' %}
+
+    {# Main content — wider than base-simple: 48rem content + --helios-toc-width + gap-8 (2rem) #}
+    <main id="main-content" class="mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16" style="max-width: calc(48rem + var(--helios-toc-width, 15rem) + 2rem);">
+        {% block content %}{% endblock %}
+    </main>
+
+    {# Footer #}
+    {% include 'partials/footer.html.twig' %}
+
+    {{ assets.js('bottom')|raw }}
+</body>
+</html>
+{% endif %}{# end is_htmx check #}

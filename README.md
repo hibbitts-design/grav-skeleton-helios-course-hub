@@ -1,6 +1,6 @@
-# Grav Helios Course Hub Plugin
+# Grav Helios Course Hub Skeleton
 
-Give your course a modern, open home on the web – without building from scratch. Designed for use with the [Grav Premium Helios theme](https://getgrav.org/premium/helios) and the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
+Give your course a modern, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a ready-to-run companion site for one or more courses, with content you fully control. It includes [Grav CMS](https://getgrav.org), an open-source, flat-file CMS with no database required and a built-in browser-based Admin panel. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
 
 ## Screenshots
 
@@ -34,138 +34,90 @@ Still unsure? Grav Helios Course Hub is designed for easy entry — install the 
 
 ## Quick Start
 
-The recommended starting point is the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest), which includes this plugin, demo content, and all required configuration out of the box.
+The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included. The home page is a **Courses** listing that shows all active courses – by default, just `cpt-363-1/`.
 
 1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
-2. **Enter your licenses** – enter your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
-
-The skeleton comes pre-configured with demo content in `user/pages/cpt-363-1/` and is ready to run immediately.
-
-To install the plugin manually, see the [Installation](#installation) and [Demo Content](#demo-content) sections below.
-
-## Demo Content
-
-The `_demo` folder contains a default Helios Course Hub site that can be used as a starting point:
-
-- `00.courses/` – Courses homepage (`course-list.md` sets list page settings and default course card values)
-- `cpt-363-1/` – First course (course.md sets icon, image, instructor, badge; 10.home, 20.essentials, 30.modules, 40.schedule, 50.topics, 60.resources, 70.ux-techniques-guide, 80.syllabus)
-- `cpt-363-2/` – Second course (same structure as cpt-363-1, including course.md; unpublished by default)
-- `cpt-363-3/` – Third course (same structure as cpt-363-1, including course.md; unpublished by default)
-
-To use the demo content, copy the contents of `_demo/pages/` into your Grav `user/pages/` folder.
-
-## Helios Theme Configuration
-
-If you are not using the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), add the following to `user/config/themes/helios.yaml` to configure course versioning and search:
-
-```yaml
-versioning:
-  version_pattern: '/^[a-zA-Z]+-?\d+([.-]\d+)*$/i'
-  labels:
-    cpt-363-1: CPT-363-1
-    cpt-363-2: CPT-363-2
-    cpt-363-3: CPT-363-3
-search:
-  placeholder: 'Search course...'
-```
-
-If disabling the plugin, manually restore the following Helios theme defaults in `user/config/themes/helios.yaml`:
-
-```yaml
-versioning:
-  version_pattern: '/^v?\d+(\.\d+)*$/'
-  labels:
-    v1: "v1 (Legacy)"
-    v2: "v2 (Stable)"
-    v3: "v3 (Latest)"
-search:
-  placeholder: 'Search documentation...'
-```
-
-## Installation
-
-1. Copy the `helios-course-hub` folder into `user/plugins/`
-2. The plugin is enabled by default via `helios-course-hub.yaml`
+2. **Enter your licenses** – your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
+3. **Edit your pages** in `user/pages/cpt-363-1/` – start with `10.home/` and work through the pre-built course sections
+4. **Publish** – works on almost any Web server, with PHP 7.3.6+, or run locally; no database required
 
 ## Features
 
+### Site Identity
+- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
+- Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
+- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
+- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
+
+### Course Cards
+- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
+- Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
+- Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
+
+### Course Content
+- Alphabetical topics index with auto-generated A–Z navigation
+- Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
+- Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
+
+### Embedding & Shortcodes
 - Built-in shortcodes for embedding content (iFrames, Google Slides, PDFs, H5P, Embedly)
 - Responsive iframe/video containers with 16:9 aspect ratio
 - Embedly card support with automatic dark/light theme detection
-- Alphabetical topics index with auto-generated A–Z navigation
-- Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
+
+### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
-- Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
-- Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
-- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
-- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
-- Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
-- Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
-- Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
+- Page Table of Contents template (`default-toc`) – set `template: default-toc` in any page's frontmatter to display a right-column Table of Contents alongside the content
 
-If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
+## Course Setup
 
-## Shortcodes
+All course content lives in course folders within `user/pages/`. The skeleton ships with three pre-configured course folders and a `00.courses/` homepage that lists all visible courses as cards.
 
-- `[iframe url="..."]` – Responsive iframe embed, 16:9 by default
-- `[iframe url="..." ratio="4:3"]` – Responsive iframe embed at 4:3 ratio
-- `[googleslides url="..."]` – Responsive Google Slides embed, 16:9 by default
-- `[googleslides url="..." ratio="4:3"]` – Responsive Google Slides embed at 4:3 ratio
-- `[pdf url="..."]` – PDF viewer via Google Docs, 16:9 by default
-- `[pdf url="..." ratio="4:3"]` – PDF viewer at 4:3 ratio
-- `[pdf url="..." ratio="portrait"]` – PDF viewer at portrait ratio (letter/A4)
-- `[h5p url="..."]` – H5P interactive content via full embed URL
-- `[h5p id="..."]` – H5P interactive content via Content ID (requires H5P Content Embed Source URL to be set in plugin settings)
-- `[embedly url="..."]` – Embedly card with dark mode support
-- `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
-- `[announcement]...[/announcement]` – Styled announcement notice (default: Important/purple), supports Markdown content
-- `[announcement title="..." type="..."]...[/announcement]` – With optional custom title and type (`note`, `tip`, `important`, `warning`, `caution`)
-
-### Topics Shortcode
-
-The `[topics]` shortcode wraps alphabetically organized content and auto-generates a full A–Z index at the top of the page. Letters with entries are rendered as anchor links; letters without entries are shown as dimmed plain text.
-
-```markdown
-# Topics
-
-[topics]
-## A
-[Agile UX](../modules/module-02)
-## D
-[Design Ethics](../modules/module-02)
-[Design Thinking](../modules/module-01)
-[/topics]
+```
+user/pages/
+├── 00.courses/                  # Courses homepage
+│   └── course-list.md           # Course list settings and default card values
+├── cpt-363-1/                   # Course 1 (published by default)
+│   ├── course.md                # Course settings (icon, image, instructor, badge)
+│   ├── 10.home/
+│   ├── 20.essentials/
+│   ├── 30.modules/
+│   ├── 40.schedule/
+│   ├── 50.topics/
+│   ├── 60.resources/
+│   ├── 70.ux-techniques-guide/
+│   └── 80.syllabus/
+├── cpt-363-2/                   # Course 2 (same structure, unpublished by default)
+├── cpt-363-3/                   # Course 3 (same structure, unpublished by default)
+└── readme/
 ```
 
-### Announcement Shortcode
+By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
-The `[announcement]` shortcode displays a styled notice using the same visual style as GitHub callouts. Content inside the shortcode supports Markdown — bold text, links, and lists all work as expected.
+### Showing and Hiding Courses
 
-```markdown
-[announcement]
-Assignment 2 due date extended to **March 14th**. See the [course schedule](#) for details.
-[/announcement]
-```
+In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
-With an optional custom title and color type:
+> [!TIP]
+> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
-```markdown
-[announcement title="Class Cancelled" type="warning"]
-Thursday's class is cancelled. See Modules for the recorded lecture.
-[/announcement]
-```
+## Course Folder Naming
 
-Available types: `note` (blue), `tip` (green), `important` (purple, default), `warning` (amber), `caution` (red).
+Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
+
+**Valid names:** `cpt-363-1`, `course-1`, `course-section-1`, `course-section-2`
+
+**Invalid names:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
+
+The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
 ## Courses Homepage
 
-The `course-list` page template automatically generates course cards from detected course folders.
+The **Courses** homepage uses the `course-list` template to automatically generate course cards from detected course folders.
 
-### Courses List Page (course-list.md)
+### Courses List Page
 
 The `course-list.md` frontmatter controls the list layout and sets default values for all course cards. These fields can be set in the Admin Panel by opening the Courses homepage.
 
@@ -188,7 +140,7 @@ This text appears below the course cards.
 
 If no `===` delimiter is present, all content renders above the cards as normal.
 
-### Course Page (course.md)
+### Course Page
 
 Each course folder contains a `course.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
 
@@ -214,35 +166,20 @@ image: banner.jpg
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
 
-## Course Folder Naming
+## Git Sync & Open Editing
 
-Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
+The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-plugin-git-sync), which keeps your site content automatically in sync with a GitHub or Codeberg repository. This enables a full open-authoring workflow:
 
-**Valid names:** `cpt-363-1`, `course-1`, `course-section-1`, `course-section-2`
+- Content editors can work directly in the Grav Admin or commit changes via Git
+- The Helios Theme's **"Edit this Page"** option adds a link on each page that takes readers directly to the corresponding source file in your repository for quick edits or contributions
 
-**Invalid names:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
+If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
-The simplest convention is `course-1`, `course-2`, `course-3`, etc.
+## Included Plugin: Helios Course Hub
 
-## Course Label Customization
+Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel. The Course dropdown label can be customized in `languages.yaml` — English and French are included by default.
 
-The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
-
-```yaml
-en:
-  PLUGIN_HELIOS_COURSE_HUB:
-    COURSE_LABEL: Course
-    COURSE_LATEST_LABEL: default
-
-fr:
-  PLUGIN_HELIOS_COURSE_HUB:
-    COURSE_LABEL: Cours
-    COURSE_LATEST_LABEL: défaut
-```
-
-To customize the label or add a language, update the relevant block in `languages.yaml`.
-
-## Plugin Settings
+### Plugin Settings
 
 The following settings are available in the Admin panel under **Plugins → Helios Course Hub**:
 
@@ -255,6 +192,30 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Description Line Limit | 2 lines | Maximum number of lines shown per card description on Chapter template pages; the Modules section uses this template (2, 3, or no limit) |
 | Git Server | `github.com` | Git hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with `[h5p id="..."]`) |
+
+### Templates
+- **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
+
+### Assets
+- **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)
+- **helios.js** – Embedly dark/light theme support with automatic CDN loading
+- **admin.css** – Increased Admin panel font sizes and toolbar icon scaling
+- **admin.js** – Admin panel JavaScript customizations
+
+### Shortcodes
+- `[iframe url="..."]` – Responsive iframe embed, 16:9 by default
+- `[iframe url="..." ratio="4:3"]` – Responsive iframe embed at 4:3 ratio
+- `[googleslides url="..."]` – Responsive Google Slides embed, 16:9 by default
+- `[googleslides url="..." ratio="4:3"]` – Responsive Google Slides embed at 4:3 ratio
+- `[pdf url="..."]` – PDF viewer via Google Docs, 16:9 by default
+- `[pdf url="..." ratio="4:3"]` – PDF viewer at 4:3 ratio
+- `[pdf url="..." ratio="portrait"]` – PDF viewer at portrait ratio (letter/A4)
+- `[h5p url="..."]` – H5P interactive content via full embed URL
+- `[h5p id="..."]` – H5P interactive content via Content ID (requires H5P Content Embed Source URL to be set in plugin settings)
+- `[embedly url="..."]` – Embedly card with dark mode support
+- `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
+- `[announcement]...[/announcement]` – Styled announcement notice (default: Important/purple), supports Markdown content
+- `[announcement title="..." type="..."]...[/announcement]` – With optional custom title and type (`note`, `tip`, `important`, `warning`, `caution`)
 
 ## Requirements
 

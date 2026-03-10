@@ -1,0 +1,55 @@
+{% extends 'partials/base-simple-wide.html.twig' %}
+
+{#
+ # default-toc.html.twig
+ # Variant of the default template that adds a right-column page ToC.
+ # Uses the wide simplified base layout (no docs sidebar) with a flex split:
+ #   content (flex-1) | ToC column (hidden below lg, --helios-toc-width at lg+)
+ # Requires the page-toc plugin to be enabled; hides ToC column if no
+ # headings are found or the plugin is inactive.
+ #}
+
+{% block content %}
+    {#
+     # Capture the ToC partial into a variable so we can check whether
+     # it produced any output before rendering the aside wrapper.
+     # toc.html.twig internally calls toc_items() and renders nothing
+     # when page-toc is disabled or the page has no matching headings.
+     #}
+    {% set toc_output %}{% include 'partials/toc.html.twig' %}{% endset %}
+    {% set has_toc = toc_output|trim is not empty %}
+
+    <div class="flex gap-8">
+
+        {# Main content column #}
+        <div class="flex-1 min-w-0">
+            <header class="mb-8 pb-8 border-b border-gray-200 dark:border-gray-800">
+                <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    {{ page.title }}
+                </h1>
+                {% if page.header.description %}
+                <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
+                    {{ page.header.description }}
+                </p>
+                {% endif %}
+            </header>
+
+            <article class="prose prose-lg dark:prose-invert max-w-none">
+                {{ page.content|raw }}
+            </article>
+        </div>
+
+        {# ToC column – only rendered when there are headings to show.
+           Width uses --helios-toc-width CSS variable (default 240px from variables.html.twig).
+           Inline styles used for width and max-height: these arbitrary/large utility classes
+           are not available in the pre-compiled Tailwind build. #}
+        {% if has_toc %}
+        <aside class="hidden lg:block shrink-0" style="width: var(--helios-toc-width, 15rem);">
+            <div class="sticky top-20 overflow-y-auto" style="max-height: calc(100vh - 5rem);">
+                {{ toc_output|raw }}
+            </div>
+        </aside>
+        {% endif %}
+
+    </div>
+{% endblock %}
