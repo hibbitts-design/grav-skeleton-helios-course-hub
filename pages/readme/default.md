@@ -56,7 +56,6 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 - Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
 - Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
-- Configurable module card description line limit – set `description_lines` in the Modules page frontmatter to control how many lines are shown per module card description (2, 3 default, or no limit)
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -161,12 +160,6 @@ This text appears below the course cards.
 ```
 
 If no `===` delimiter is present, all content renders above the cards as normal.
-
-## Modules Page
-
-The **Modules** page uses the `modules` template, which displays child module pages as a two-column card grid. Each card shows the module title and, if set, a description or page summary.
-
-The maximum number of description lines shown per module card can be set via `description_lines` (2, 3, or 0 for no limit; default is 3) in the Modules page frontmatter.
 
 ## Included Plugin: Helios Course Hub
 
