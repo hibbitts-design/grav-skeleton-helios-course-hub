@@ -87,7 +87,7 @@ form:
 
     chapter_description_lines:
       type: select
-      label: 'Card Description Lines'
+      label: 'Description Line Limit'
       help: 'Maximum lines shown per card description on Chapter template pages. Applies to the Modules section and any Chapter template pages you add.'
       default: 2
       options:
