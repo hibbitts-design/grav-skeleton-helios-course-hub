@@ -23,6 +23,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 - Ready in minutes – a complete, pre-configured package with demo content included
 - Flexible – host one course or many from a single installation
 - Context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
+- Team-ready – multi-user editing with role-based access rights for team-managed course content
 - Yours – host it anywhere PHP runs, customize freely, and keep every word you write
 - Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
 - Flat-file simplicity – your content is just Markdown files you own and control
