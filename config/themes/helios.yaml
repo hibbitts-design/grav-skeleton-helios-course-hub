@@ -70,7 +70,7 @@ github:
   repo: null
   branch: main
   edit_link: true
-  edit_text: 'Edit this page'
+  edit_text: 'View Page Markdown'
   path_prefix: null
 htmx:
   enabled: false

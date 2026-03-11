@@ -102,6 +102,13 @@ form:
       title: 'Integrations'
       underline: true
 
+    github_link_icon:
+      type: text
+      size: medium
+      label: 'Git Link Icon'
+      help: 'Tabler icon path for the "Edit this Page" link icon (e.g. tabler/file-text.svg). Only applies when GitHub Integration is enabled in the Helios theme settings.'
+      placeholder: 'tabler/file-text.svg'
+
     github_server:
       type: radio
       label: 'Git Server for Helios GitHub Integration'

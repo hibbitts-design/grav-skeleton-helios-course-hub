@@ -142,6 +142,7 @@ class HeliosCourseHubPlugin extends Plugin
         }
 
         $githubServer = $this->config->get('plugins.helios-course-hub.github_server', 'github.com');
+        $githubLinkIcon = $this->config->get('plugins.helios-course-hub.github_link_icon', 'tabler/file-text.svg');
         $showSiteIcon = $this->config->get('plugins.helios-course-hub.show_site_icon', true);
         $siteIcon = $this->config->get('plugins.helios-course-hub.site_icon', '');
         $showPluginCredits = $this->config->get('plugins.helios-course-hub.show_plugin_credits', true);
@@ -158,6 +159,7 @@ class HeliosCourseHubPlugin extends Plugin
             : '';
         $twig = $this->grav['twig'];
         $twig->twig_vars['github_server'] = $githubServer;
+        $twig->twig_vars['github_link_icon'] = $githubLinkIcon;
         $twig->twig_vars['show_site_icon'] = $showSiteIcon;
         $twig->twig_vars['site_icon'] = $siteIcon;
         $twig->twig_vars['show_plugin_credits'] = $showPluginCredits;

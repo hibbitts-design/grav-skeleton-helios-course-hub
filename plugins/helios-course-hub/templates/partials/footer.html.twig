@@ -13,13 +13,13 @@
         {% if prefix and file_path starts with prefix %}
             {% set file_path = file_path[prefix|length:] %}
         {% endif %}
-        {% set git_path_prefix = (github_server == 'github.com') ? 'edit' : 'src/branch' %}{# PLUGIN CHANGE 1: github_server supports GitHub and Codeberg #}
+        {% set git_path_prefix = (github_server == 'github.com') ? 'blob' : 'src/branch' %}{# PLUGIN CHANGE 1: github_server supports GitHub and Codeberg #}
         <div class="mb-4 border-gray-200 dark:border-gray-700 text-center">
             <a href="https://{{ github_server }}/{{ theme_config.github.repo }}/{{ git_path_prefix }}/{{ theme_config.github.branch }}/{{ file_path }}"
                target="_blank"
                rel="noopener noreferrer"
                class="edit-page-link inline-flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-primary">
-                {{ svg_icon('tabler/pencil.svg', 'w-4 h-4')|raw }}
+                {{ svg_icon(github_link_icon ?: 'tabler/file-text.svg', 'w-4 h-4')|raw }}
                 {{ theme_config.github.edit_text ?: 'THEME_HELIOS.EDIT_PAGE'|t }}
             </a>
         </div>
