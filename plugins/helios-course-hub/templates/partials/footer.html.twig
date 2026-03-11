@@ -1,12 +1,12 @@
 {#
  # Plugin override of partials/footer.html.twig (helios theme)
  # Changes from theme original:
- #   1. git_path_prefix uses github_server plugin variable to support GitHub and Codeberg (search: PLUGIN CHANGE 1)
+ #   1. git_path_prefix uses github_server plugin variable to support GitHub (blob) and Codeberg (src/branch) view links; icon uses github_link_icon plugin variable (search: PLUGIN CHANGE 1)
  #   2. Footer attribution text includes Helios Course Hub link, toggled by show_plugin_credits (search: PLUGIN CHANGE 2)
  #}
 <footer class="mt-16 py-8 border-t border-gray-200 dark:border-gray-700">
 
-    {# Edit on GitHub/Codeberg link #}
+    {# View on GitHub/Codeberg link #}
         {% if theme_config.github.enabled and theme_config.github.edit_link %}
         {% set file_path = page.filePathClean %}
         {% set prefix = theme_config.github.path_prefix %}
