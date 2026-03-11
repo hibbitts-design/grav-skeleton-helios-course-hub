@@ -14,6 +14,8 @@ It is well suited for educators and teams who want full control over their conte
 - Teams hosting shared course content, reference guides, or topic indexes
 - Anyone who wants full control over their content, structure, and hosting
 
+Content pages are written in Markdown, with optional shortcodes for embedding and other features.
+
 ## Why the Helios Course Hub
 
 The Helios Course Hub gives you a modern, open, and fully controlled companion site that works alone or alongside any LMS – a dedicated home for your course content, resources, and schedules that you control completely.
