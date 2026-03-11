@@ -200,6 +200,15 @@ fr:
 
 To customize the label or add a language, update the relevant block in `languages.yaml`.
 
+## Templates
+- **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
+
+## Assets
+- **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)
+- **helios.js** – Embedly dark/light theme support with automatic CDN loading
+- **admin.css** – Increased Admin panel font sizes and toolbar icon scaling
+- **admin.js** – Admin panel JavaScript customizations
+
 ## Shortcodes
 
 - `[iframe url="..."]` – Responsive iframe embed, 16:9 by default
@@ -215,45 +224,6 @@ To customize the label or add a language, update the relevant block in `language
 - `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
 - `[announcement]...[/announcement]` – Styled announcement notice (default: Important/purple), supports Markdown content
 - `[announcement title="..." type="..."]...[/announcement]` – With optional custom title and type (`note`, `tip`, `important`, `warning`, `caution`)
-
-### Topics Shortcode
-
-The `[topics]` shortcode wraps alphabetically organized content and auto-generates a full A–Z index at the top of the page. Letters with entries are rendered as anchor links; letters without entries are shown as dimmed plain text.
-
-```markdown
-# Topics
-
-[topics]
-## A
-[Agile UX](../modules/module-02)
-## D
-[Design Ethics](../modules/module-02)
-[Design Thinking](../modules/module-01)
-[/topics]
-```
-
-### Announcement Shortcode
-
-The `[announcement]` shortcode displays a styled notice using the same visual style as GitHub callouts. Content inside the shortcode supports Markdown — bold text, links, and lists all work as expected.
-
-```markdown
-[announcement]
-Assignment 2 due date extended to **March 14th**. See the [course schedule](#) for details.
-[/announcement]
-```
-
-With an optional custom title and color type:
-
-```markdown
-[announcement title="Class Cancelled" type="warning"]
-Thursday's class is cancelled. See Modules for the recorded lecture.
-[/announcement]
-```
-
-Available types: `note` (blue), `tip` (green), `important` (purple, default), `warning` (amber), `caution` (red).
-
-## Templates
-- **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
 
 ## Plugin Settings
 

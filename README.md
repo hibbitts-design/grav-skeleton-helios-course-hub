@@ -166,6 +166,24 @@ image: banner.jpg
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
 
+## Course Label Customization
+
+The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
+
+```yaml
+en:
+  PLUGIN_HELIOS_COURSE_HUB:
+    COURSE_LABEL: Course
+    COURSE_LATEST_LABEL: default
+
+fr:
+  PLUGIN_HELIOS_COURSE_HUB:
+    COURSE_LABEL: Cours
+    COURSE_LATEST_LABEL: défaut
+```
+
+To customize the label or add a language, update the relevant block in `languages.yaml`.
+
 ## Git Sync & Open Editing
 
 The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-plugin-git-sync), which keeps your site content automatically in sync with a GitHub or Codeberg repository. This enables a full open-authoring workflow:
@@ -177,7 +195,7 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 
 ## Included Plugin: Helios Course Hub
 
-Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel. The Course dropdown label can be customized in `languages.yaml` — English and French are included by default.
+Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel.
 
 ### Plugin Settings
 

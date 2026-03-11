@@ -12,7 +12,6 @@ The Helios Course Hub is a **course companion site** – a place to organize and
 It is well suited for educators and teams who want full control over their content, structure, and hosting, including:
 - Individual educators wanting a clean, open companion site for one or more courses
 - Teams hosting shared course content, reference guides, or topic indexes
-- Anyone who wants full control over their content, structure, and hosting
 
 Content pages are written in Markdown, with optional shortcodes for embedding and other features.
 
@@ -164,6 +163,24 @@ image: banner.jpg
 ```
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
+
+## Course Label Customization
+
+The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
+
+```yaml
+en:
+  PLUGIN_HELIOS_COURSE_HUB:
+    COURSE_LABEL: Course
+    COURSE_LATEST_LABEL: default
+
+fr:
+  PLUGIN_HELIOS_COURSE_HUB:
+    COURSE_LABEL: Cours
+    COURSE_LATEST_LABEL: défaut
+```
+
+To customize the label or add a language, update the relevant block in `languages.yaml`.
 
 ## Git Sync & Open Editing
 
