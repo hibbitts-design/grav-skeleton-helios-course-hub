@@ -7,7 +7,7 @@ navigation:
 ---
 
 [announcement title="Class Cancelled" type="warning"]
-Thursday’s class is cancelled. See Modules for available class materials.
+Thursday’s class is cancelled. See [Modules](/cpt-363-3/modules) for available class materials.
 [/announcement]
 
 # What’s Happening This Week

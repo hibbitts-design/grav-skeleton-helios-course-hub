@@ -7,7 +7,7 @@ navigation:
 ---
 
 > [!IMPORTANT]
-> The Project User Research Report assignment due date extended to **Jul 17th**. See the [course schedule](/cpt-363-2/schedule) for that week's details.
+> The Project User Research Report assignment due date extended to **Jul 17th**. See the [Schedule](/cpt-363-2/schedule) for that week's details.
 
 # What’s Happening This Week
 
