@@ -13,7 +13,7 @@
         {% if prefix and file_path starts with prefix %}
             {% set file_path = file_path[prefix|length:] %}
         {% endif %}
-        {% set git_path_prefix = (github_server == 'github.com') ? 'blob' : 'src/branch' %}{# PLUGIN CHANGE 1: github_server supports GitHub and Codeberg #}
+        {% set git_path_prefix = (github_server == 'github.com') ? (github_link_mode == 'edit' ? 'edit' : 'blob') : (github_link_mode == 'edit' ? '_edit' : 'src/branch') %}{# PLUGIN CHANGE 1: github_server supports GitHub and Codeberg; github_link_mode supports view/edit #}
         <div class="mb-4 border-gray-200 dark:border-gray-700 text-center">
             <a href="https://{{ github_server }}/{{ theme_config.github.repo }}/{{ git_path_prefix }}/{{ theme_config.github.branch }}/{{ file_path }}"
                target="_blank"

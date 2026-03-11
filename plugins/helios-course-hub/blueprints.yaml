@@ -106,8 +106,17 @@ form:
       type: text
       size: medium
       label: 'Git Link Icon'
-      help: 'Tabler icon path for the "Edit this Page" link icon (e.g. tabler/file-text.svg). Only applies when GitHub Integration is enabled in the Helios theme settings.'
+      help: 'Tabler icon path for the Git link icon (e.g. tabler/file-text.svg). Only applies when GitHub Integration is enabled in the Helios theme settings.'
       placeholder: 'tabler/file-text.svg'
+
+    github_link_mode:
+      type: select
+      label: 'Git Link Mode'
+      help: 'The Helios theme''s "Edit this Page" option defaults to viewing the file. Switch to "Edit file" to restore direct editing. Only applies when GitHub Integration is enabled in the Helios theme settings.'
+      default: 'view'
+      options:
+        view: 'View file (default)'
+        edit: 'Edit file'
 
     github_server:
       type: radio

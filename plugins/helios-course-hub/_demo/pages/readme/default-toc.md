@@ -62,7 +62,7 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 
 ### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
-- Automatic "Edit this Page" link option provided by the Helios Theme (skeleton default: 'View Page Markdown', linking to the Markdown source file on GitHub or Codeberg), with support for both GitHub and Codeberg repositories
+- Automatic "Edit this Page" link option provided by the Helios Theme (skeleton default: 'View Page Markdown', linking to the Markdown source file on GitHub or Codeberg; configurable to link directly to file editing), with support for both GitHub and Codeberg repositories
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Page Table of Contents template (`default-toc`) – set `template: default-toc` in any page's frontmatter to display a right-column Table of Contents alongside the content
@@ -187,7 +187,7 @@ To customize the label or add a language, update the relevant block in `language
 The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-plugin-git-sync), which keeps your site content automatically in sync with a GitHub or Codeberg repository. This enables a full open-authoring workflow:
 
 - Content editors can work directly in the Grav Admin or commit changes via Git
-- The Helios Theme's **"Edit this Page"** option adds a 'View Page Markdown' link on each page, taking readers directly to the Markdown source file in your repository
+- The Helios Theme's **"Edit this Page"** option defaults to a 'View Page Markdown' link on each page, taking readers directly to the Markdown source file in your repository (configurable to link directly to file editing via the Helios Course Hub plugin settings)
 
 ## Included Plugin: Helios Course Hub
 
