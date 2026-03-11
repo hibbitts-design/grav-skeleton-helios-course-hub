@@ -13,7 +13,7 @@ It is well suited for educators and teams who want full control over their conte
 - Individual educators wanting a clean, open companion site for one or more courses
 - Teams hosting shared course content, reference guides, or topic indexes
 
-Content pages are written in Markdown, with optional shortcodes for embedding and other features.
+Content pages are written in Markdown, with optional shortcodes for embedding and other features. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a Web server, explore [Docsify-This](https://docsify-this.net).
 
 ## Why the Helios Course Hub
 
