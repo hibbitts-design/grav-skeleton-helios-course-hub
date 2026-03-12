@@ -54,7 +54,10 @@ versioning:
   redirect_unversioned: false
   show_badge: false
   show_dropdown: false
-  labels: null
+  labels:
+    cpt-363-1: CPT-363-1
+    cpt-363-2: CPT--363-1
+    cpt-363-3: CPT--363-1
 search:
   enabled: true
   provider: simplesearch
@@ -67,7 +70,7 @@ github:
   repo: null
   branch: main
   edit_link: true
-  edit_text: 'View Page Markdown File'
+  edit_text: 'View Page Markdown'
   path_prefix: null
 htmx:
   enabled: false
