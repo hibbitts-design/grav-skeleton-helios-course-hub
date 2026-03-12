@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 routable: false
 icon: tabler/pencil.svg
 description: 'Adds a Topics page to the core pages shown in Section 1, and includes Instructors on course card and GitHub Markdown alert on Home page.'
