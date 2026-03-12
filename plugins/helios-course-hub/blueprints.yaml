@@ -3,7 +3,7 @@ slug: helios-course-hub
 type: plugin
 version: 1.0.0
 description: Requires the Grav Premium Helios theme. Designed for use with the Grav Helios Course Hub skeleton, providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability.
-icon: player-group
+icon: layer-group
 author:
   name: Hibbitts Design
   email: paul@hibbittsdesign.org
