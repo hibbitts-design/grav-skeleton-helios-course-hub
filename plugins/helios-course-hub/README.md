@@ -48,9 +48,9 @@ To install the plugin manually, see the [Installation](#installation) and [Demo 
 The `_demo` folder contains a default Helios Course Hub site that can be used as a starting point:
 
 - `00.courses/` – Courses homepage (`course-list.md` sets list page settings and default course card values)
-- `cpt-363-1/` – First course (course.md sets icon, image, instructor, badge; 10.home, 20.essentials, 30.modules, 40.schedule, 50.topics, 60.resources, 70.ux-techniques-guide, 80.syllabus)
-- `cpt-363-2/` – Second course (same structure as cpt-363-1, including course.md; unpublished by default)
-- `cpt-363-3/` – Third course (same structure as cpt-363-1, including course.md; unpublished by default)
+- `cpt-363-1/` – First course (course-card.md sets icon, image, instructor, badge; 10.home, 20.essentials, 30.modules, 40.schedule, 50.topics, 60.resources, 70.ux-techniques-guide, 80.syllabus)
+- `cpt-363-2/` – Second course (same structure as cpt-363-1, including course-card.md; unpublished by default)
+- `cpt-363-3/` – Third course (same structure as cpt-363-1, including course-card.md; unpublished by default)
 
 To use the demo content, copy the contents of `_demo/pages/` into your Grav `user/pages/` folder.
 
@@ -119,7 +119,16 @@ search:
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
-## Course Folder Naming
+## Course Setup
+
+### Showing and Hiding Courses
+
+In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
+
+> [!TIP]
+> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+
+### Course Folder Names
 
 Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
 
@@ -129,11 +138,11 @@ Course folders must start with one or more letters, followed by a number. An opt
 
 The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
-## Courses Homepage
+### Courses Homepage
 
 The `course-list` page template automatically generates course cards from detected course folders.
 
-### Courses List Page
+#### Courses List Page
 
 The `course-list.md` frontmatter controls the list layout and sets default values for all course cards. These fields can be set in the Admin Panel by opening the Courses homepage.
 
@@ -156,9 +165,9 @@ This text appears below the course cards.
 
 If no `===` delimiter is present, all content renders above the cards as normal.
 
-### Course Page
+#### Course Card Settings
 
-Each course folder contains a `course.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
+Each course folder contains a `course-card.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
 
 | Field | Description |
 |-------|-------------|
@@ -182,7 +191,7 @@ image: banner.jpg
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
 
-## Course Label Customization
+### Course Label Customization
 
 The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
 

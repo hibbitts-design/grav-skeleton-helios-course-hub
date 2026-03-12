@@ -1,4 +1,4 @@
-title: Course
+title: Course Card
 '@extends':
     type: default
     context: blueprints://pages

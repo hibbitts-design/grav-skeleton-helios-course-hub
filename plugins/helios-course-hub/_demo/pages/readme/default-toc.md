@@ -91,7 +91,7 @@ user/pages/
 ├── 00.courses/                  # Courses homepage
 │   └── course-list.md           # Course list settings and default card values
 ├── cpt-363-1/                   # Course 1 (published by default)
-│   ├── course.md                # Course settings (icon, image, instructor, badge)
+│   ├── course-card.md           # Course settings (icon, image, instructor, badge)
 │   ├── 10.home/
 │   ├── 20.essentials/
 │   ├── 30.modules/
@@ -116,7 +116,7 @@ In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and se
 > [!TIP]
 > When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
-## Course Folder Naming
+### Course Folder Names
 
 Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
 
@@ -126,11 +126,11 @@ Course folders must start with one or more letters, followed by a number. An opt
 
 The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
-## Courses Homepage
+### Courses Homepage
 
 The **Courses** homepage uses the `course-list` template to automatically generate course cards from detected course folders.
 
-### Courses List Page
+#### Courses List Page
 
 The `course-list.md` frontmatter controls the list layout and sets default values for all course cards. These fields can be set in the Admin Panel by opening the Courses homepage.
 
@@ -153,9 +153,9 @@ This text appears below the course cards.
 
 If no `===` delimiter is present, all content renders above the cards as normal.
 
-### Course Page
+#### Course Card Settings
 
-Each course folder contains a `course.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
+Each course folder contains a `course-card.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
 
 | Field | Description |
 |-------|-------------|
@@ -179,7 +179,7 @@ image: banner.jpg
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
 
-## Course Label Customization
+### Course Label Customization
 
 The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
 
