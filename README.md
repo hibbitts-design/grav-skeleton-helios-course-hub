@@ -1,7 +1,7 @@
 # Grav Helios Course Hub Skeleton
 
 [![Demo](https://img.shields.io/badge/Demo-HeliosCourseHub-blue.svg?style=flat-square)](https://demo.hibbittsdesign.org/grav-helios-course-hub/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/main/LICENSE)
 
 [![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org)
 
