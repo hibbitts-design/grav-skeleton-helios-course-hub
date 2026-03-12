@@ -28,15 +28,6 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 - Flat-file simplicity – your content is just Markdown files you own and control
 - Support open source – your Grav Premium Helios theme purchase directly supports ongoing development of the open-source Grav CMS
 
-## Quick Start
-
-The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included. The home page is a **Courses** listing that shows all active courses – by default, just `cpt-363-1/`.
-
-1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
-2. **Enter your licenses** – your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
-3. **Edit your pages** in `user/pages/cpt-363-1/` – start with `10.home/` and work through the pre-built course sections
-4. **Publish** – works on almost any Web server, with PHP 7.3.6+, or run locally; no database required
-
 ## Features
 
 ### Site Identity
@@ -69,6 +60,28 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
+## Quick Start
+
+The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included. The home page is a **Courses** listing that shows all active courses – by default, just `cpt-363-1/`.
+
+### Pre-flight Checklist
+1. Confirm your web server meets [Grav's requirements](https://learn.getgrav.org/17/basics/requirements) (PHP 7.3.6 or higher)
+2. Have your web server login credentials ready (username and password)
+
+### Installation Steps
+1. **Download** the ready-to-run [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
+2. **Unzip** the package onto your desktop
+3. **Copy** the entire Grav Helios Course Hub folder to your web server (e.g. into `public_html/` or a subfolder within it)
+4. **Open your browser** and go to your site's URL (e.g. `https://yoursite.com/grav-course-hub`)
+5. **Create your site administrator account** when prompted
+6. **Enter your Helios and SVG Icons license keys** (or import an existing license file), then install and activate the theme
+7. **You're done!** – press the preview icon in the Admin Panel to view your site
+
+See [Course Setup](#course-setup) below to rename folders and edit your pages.
+
+> [!TIP]
+> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** — it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
+
 ## Course Setup
 
 All course content lives in course folders within `user/pages/`. The skeleton ships with three pre-configured course folders and a `00.courses/` homepage that lists all visible courses as cards.
@@ -91,6 +104,8 @@ user/pages/
 ├── cpt-363-3/                   # Course 3 (same structure, unpublished by default)
 └── readme/
 ```
+
+Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation — lower numbers appear first.
 
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
