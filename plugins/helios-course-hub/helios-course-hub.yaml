@@ -7,4 +7,5 @@ chapter_description_lines: 2
 github_server: 'github.com'
 github_link_icon: 'tabler/file-text.svg'
 github_link_mode: 'view'
+show_github_header_icon: true
 h5pembedrootpath: 'https://h5p.org/h5p/embed/'
