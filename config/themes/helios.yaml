@@ -38,7 +38,7 @@ navigation:
   content_width: 768
   toc_start: 2
   toc_depth: 3
-  toc_position: hidden
+  toc_position: right
   breadcrumbs: false
   prev_next: true
   scroll_spy: true
@@ -54,10 +54,7 @@ versioning:
   redirect_unversioned: false
   show_badge: false
   show_dropdown: false
-  labels:
-    cpt-363-1: CPT-363-1
-    cpt-363-2: CPT-363-2
-    cpt-363-3: CPT-363-3
+  labels: null
 search:
   enabled: true
   provider: simplesearch
@@ -70,7 +67,7 @@ github:
   repo: null
   branch: main
   edit_link: true
-  edit_text: 'View Page Markdown'
+  edit_text: 'View Page Markdown File'
   path_prefix: null
 htmx:
   enabled: false
