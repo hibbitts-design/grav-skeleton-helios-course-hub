@@ -56,8 +56,8 @@ versioning:
   show_dropdown: false
   labels:
     cpt-363-1: CPT-363-1
-    cpt-363-2: CPT--363-1
-    cpt-363-3: CPT--363-1
+    cpt-363-2: CPT-363-2
+    cpt-363-3: CPT-363-3
 search:
   enabled: true
   provider: simplesearch
