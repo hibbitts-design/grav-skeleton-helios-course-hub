@@ -15,14 +15,14 @@ navigation:
 
 ## [[svg-icon icon="calendar-week" set="tabler" /]Week 2 (May 16 - 22)](../modules/module-02)
 **What does a holistic user experience design process look like?**  
-[svg-icon icon="pencil" set="tabler" /][Course Reflection Log](https://canvas.sfu.ca/courses/55288/assignments) due Aug 3rd  
+[svg-icon icon="pencil" set="tabler" /][Course Reflection Log](https://canvas-old.sfu.ca/courses/55288/assignments) due Aug 3rd  
 [svg-icon icon="device-desktop" set="tabler" /][The Process of UX Design](https://www.google.ca/slides/about/)   
 [svg-icon icon="book" set="tabler" /][The Evolution of UX Process Methodology](https://uxplanet.org/the-evolution-of-ux-process-methodology-47f52557178b)  
 
 ## [[svg-icon icon="calendar-week" set="tabler" /]Week 3 (May 23 - 29)](../modules/module-03)
 **How to make more strategic design decisions?**   
-[svg-icon icon="pencil" set="tabler" /][Journey Map](https://canvas.sfu.ca/courses/38847/assignments/292821) assignment due Jun 12th  
-[svg-icon icon="folder" set="tabler" /][Informed Consent Materials](https://canvas.sfu.ca/courses/55288/files)  
+[svg-icon icon="pencil" set="tabler" /][Journey Map](https://canvas-old.sfu.ca/courses/38847/assignments/292821) assignment due Jun 12th  
+[svg-icon icon="folder" set="tabler" /][Informed Consent Materials](https://canvas-old.sfu.ca/courses/55288/files)  
 [svg-icon icon="device-desktop" set="tabler" /][Strategic UX Design](https://www.google.ca/slides/about/)   
 [svg-icon icon="book" set="tabler" /][What is a User Journey Map?](https://www.aytech.ca/blog/user-journey-map/)  
 
@@ -40,8 +40,8 @@ navigation:
 
 ## [svg-icon icon="calendar-week" set="tabler" /]Week 6 (Jun 13 - 19)
 **How to conduct a usability inspection?**   
-[svg-icon icon="pencil" set="tabler" /][Usability Inspection](https://canvas.sfu.ca/courses/55288/assignments) assignment due Jun 30th  
-[svg-icon icon="file" set="tabler" /][Usability Inspection Report Template](https://canvas.sfu.ca/courses/55288/files)  
+[svg-icon icon="pencil" set="tabler" /][Usability Inspection](https://canvas-old.sfu.ca/courses/55288/assignments) assignment due Jun 30th  
+[svg-icon icon="file" set="tabler" /][Usability Inspection Report Template](https://canvas-old.sfu.ca/courses/55288/files)  
 [svg-icon icon="device-desktop" set="tabler" /][User Interface Inspections](https://www.google.ca/slides/about/)   
 [svg-icon icon="book" set="tabler" /][An Overview of Expert Heuristic Evaluations](https://www.uxmatters.com/mt/archives/2014/06/an-overview-of-expert-heuristic-evaluations.php)      
 
@@ -52,9 +52,9 @@ navigation:
 
 ## [svg-icon icon="calendar-week" set="tabler" /]Week 8 (Jun 27 - Jul 3)
 **How to understand and communicate people's needs and behaviors?**   
-[svg-icon icon="pencil" set="tabler" /][Project User Research Report](https://canvas.sfu.ca/courses/55288/assignments) due Jul 17th  
-[svg-icon icon="file" set="tabler" /][Team Member Evaluation](https://canvas.sfu.ca/courses/55288/files) for assignment #4 due in class Jul 18th  
-[svg-icon icon="folder" set="tabler" /][Informed Consent Materials](https://canvas.sfu.ca/courses/55288/files)  
+[svg-icon icon="pencil" set="tabler" /][Project User Research Report](https://canvas-old.sfu.ca/courses/55288/assignments) due Jul 17th  
+[svg-icon icon="file" set="tabler" /][Team Member Evaluation](https://canvas-old.sfu.ca/courses/55288/files) for assignment #4 due in class Jul 18th  
+[svg-icon icon="folder" set="tabler" /][Informed Consent Materials](https://canvas-old.sfu.ca/courses/55288/files)  
 [svg-icon icon="device-desktop" set="tabler" /][User Research](https://www.google.ca/slides/about/)   
 [svg-icon icon="book" set="tabler" /][A Five-Step Process For Conducting User Research](http://www.smashingmagazine.com/2013/09/5-step-process-conducting-user-research/)  
 [svg-icon icon="users" set="tabler" /]In-class office hours (tentative)  
@@ -70,9 +70,9 @@ TBD
 
 ## [svg-icon icon="calendar-week" set="tabler" /]Week 11 (Jul 18 - 24)
 **What are the essentials of effective visual communication?**   
-[svg-icon icon="pencil" set="tabler" /][Project Usability Tested Mockups](https://canvas.sfu.ca/courses/55288/assignments) due Jul 31st    
-[svg-icon icon="file" set="tabler" /][Team Member Evaluation](https://canvas.sfu.ca/courses/55288/files) for assignment #5 due in class Aug 1st  
-[svg-icon icon="folder" set="tabler" /][Informed Consent Materials](https://canvas.sfu.ca/courses/55288/files)  
+[svg-icon icon="pencil" set="tabler" /][Project Usability Tested Mockups](https://canvas-old.sfu.ca/courses/55288/assignments) due Jul 31st    
+[svg-icon icon="file" set="tabler" /][Team Member Evaluation](https://canvas-old.sfu.ca/courses/55288/files) for assignment #5 due in class Aug 1st  
+[svg-icon icon="folder" set="tabler" /][Informed Consent Materials](https://canvas-old.sfu.ca/courses/55288/files)  
 [svg-icon icon="device-desktop" set="tabler" /][Visual Design Essentials](https://www.google.ca/slides/about/)   
 [svg-icon icon="book" set="tabler" /][Accessibility for Visual Design](http://www.uxbooth.com/articles/accessibility-visual-design/)  
 

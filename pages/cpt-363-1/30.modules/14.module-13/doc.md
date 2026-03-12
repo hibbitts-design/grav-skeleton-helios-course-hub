@@ -17,4 +17,4 @@ Guest Speaker
 
 ## Summaries and Questions
 
-[Aug 1st Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[Aug 1st Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)

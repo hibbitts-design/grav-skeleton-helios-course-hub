@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[May 23rd Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[May 23rd Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 
@@ -32,7 +32,7 @@ navigation:
 
 ### Assignments
 
-[Journey Map](https://canvas.sfu.ca/courses/55288/assignments)
+[Journey Map](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Required Reading
 

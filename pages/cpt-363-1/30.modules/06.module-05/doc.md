@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[Jun 6th Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[Jun 6th Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 

@@ -34,7 +34,7 @@ navigation:
 ## UX Design Checklists  
 *   [A Checklist for Designing Mobile Input Fields](http://www.nngroup.com/articles/mobile-input-checklist/)  
 *   [Mobile UX Checklist (PDF, by Mobify)](http://downloads.mobify.com.s3.amazonaws.com/ebooks/25-Ways-to-Make-Your-Mobile-E-Commerce-Revenue-Skyrocket-Mobify.pdf)  
-*   [One-Page Touch Interaction Design Checklist (PDF)](https://canvas.sfu.ca/courses/38847/files/folder/Handouts/Touch%20Interaction%20Checklist)
+*   [One-Page Touch Interaction Design Checklist (PDF)](https://canvas-old.sfu.ca/courses/38847/files/folder/Handouts/Touch%20Interaction%20Checklist)
 *   [Usability checklist (Userium)](https://userium.com/)
 *   [UX Project Checklist](http://uxchecklist.github.io/)
 

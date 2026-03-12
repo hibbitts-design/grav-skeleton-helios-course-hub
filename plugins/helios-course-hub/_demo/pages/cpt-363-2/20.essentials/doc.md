@@ -24,8 +24,8 @@ Suggestion, concern or complaint?
 [Anonymous Course Feedback](#)
 
 ## Canvas LMS
-[Calendar](https://canvas.sfu.ca/calendar)  
-[Assignments](https://canvas.sfu.ca/courses/55288/assignments)  
-[Quizzes](https://canvas.sfu.ca/courses/55288/quizzes)  
-[Class Discussions](https://canvas.sfu.ca/courses/55288/discussion_topics)  
-[Syllabus](https://canvas.sfu.ca/courses/55288/syllabus)
+[Calendar](https://canvas-old.sfu.ca/calendar)  
+[Assignments](https://canvas-old.sfu.ca/courses/55288/assignments)  
+[Quizzes](https://canvas-old.sfu.ca/courses/55288/quizzes)  
+[Class Discussions](https://canvas-old.sfu.ca/courses/55288/discussion_topics)  
+[Syllabus](https://canvas-old.sfu.ca/courses/55288/syllabus)

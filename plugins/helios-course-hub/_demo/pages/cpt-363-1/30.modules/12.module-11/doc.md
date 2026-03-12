@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[Jul 18th Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[Jul 18th Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 
@@ -27,8 +27,8 @@ navigation:
 
 ### Assignments
 
-[Usability Tested Mockups](https://canvas.sfu.ca/courses/55288/assignments)  
-[Informed Consent Materials](https://canvas.sfu.ca/courses/55288/files)
+[Usability Tested Mockups](https://canvas-old.sfu.ca/courses/55288/assignments)  
+[Informed Consent Materials](https://canvas-old.sfu.ca/courses/55288/files)
 
 ### Required Reading
 

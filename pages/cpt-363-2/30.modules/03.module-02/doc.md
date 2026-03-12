@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[May 16th Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[May 16th Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 
@@ -31,11 +31,11 @@ navigation:
 
 ### Handouts
 
-[Product Reaction Cards](https://canvas.sfu.ca/courses/55288/files)
+[Product Reaction Cards](https://canvas-old.sfu.ca/courses/55288/files)
 
 ### Assignments
 
-[Course Reflection Log](https://canvas.sfu.ca/courses/55288/assignments)
+[Course Reflection Log](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Recommended Reading
 

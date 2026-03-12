@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[Jun 27 Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[Jun 27 Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 
@@ -27,8 +27,8 @@ navigation:
 
 ### Assignments
 
-[User Research Report](https://canvas.sfu.ca/courses/55288/assignments)  
-[Informed Consent Materials](https://canvas.sfu.ca/courses/55288/files)
+[User Research Report](https://canvas-old.sfu.ca/courses/55288/assignments)  
+[Informed Consent Materials](https://canvas-old.sfu.ca/courses/55288/files)
 
 ### Supplemental Materials
 

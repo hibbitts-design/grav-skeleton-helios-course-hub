@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[May 30th Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[May 30th Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 
@@ -32,8 +32,8 @@ navigation:
 
 ### Handouts
 
-[4-UP BROWSERS + GRID](https://canvas.sfu.ca/courses/55288/files)  
-[4-UP MOBILES + GRID](https://canvas.sfu.ca/courses/55288/files)
+[4-UP BROWSERS + GRID](https://canvas-old.sfu.ca/courses/55288/files)  
+[4-UP MOBILES + GRID](https://canvas-old.sfu.ca/courses/55288/files)
 
 ### Required Reading
 

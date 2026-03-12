@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[May 9th Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[May 9th Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 
@@ -33,7 +33,7 @@ navigation:
 
 ### Handouts
 
-[Course Overview](https://canvas.sfu.ca/courses/55288/files)
+[Course Overview](https://canvas-old.sfu.ca/courses/55288/files)
 
 ### Quick Quiz
 [h5p]https://h5p.org/h5p/embed/213956[/h5p]  

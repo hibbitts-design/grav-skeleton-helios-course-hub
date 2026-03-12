@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[Jun 13th Class One-minute Summaries](https://canvas.sfu.ca/courses/55288/assignments)
+[Jun 13th Class One-minute Summaries](https://canvas-old.sfu.ca/courses/55288/assignments)
 
 ### Presented Slides
 
@@ -33,8 +33,8 @@ navigation:
 
 ### Assignments
 
-[Usability Inspection](https://canvas.sfu.ca/courses/55288/assignments)  
-[Usability Inspection Report Template](https://canvas.sfu.ca/courses/55288/files)
+[Usability Inspection](https://canvas-old.sfu.ca/courses/55288/assignments)  
+[Usability Inspection Report Template](https://canvas-old.sfu.ca/courses/55288/files)
 
 ### Required Reading
 

@@ -17,7 +17,7 @@ navigation:
 
 ### Summaries and Questions
 
-[Jun 20th Class One-minute Summaries](https://canvas.sfu.ca/courses/38847/assignments/292817)
+[Jun 20th Class One-minute Summaries](https://canvas-old.sfu.ca/courses/38847/assignments/292817)
 
 ### Presented Slides
 
@@ -27,7 +27,7 @@ navigation:
 
 ### Handouts
 
-[One-Page Touch Interaction Design Checklist](https://canvas.sfu.ca/courses/55288/files)  
+[One-Page Touch Interaction Design Checklist](https://canvas-old.sfu.ca/courses/55288/files)  
 [Responsive Web Design Sketch Sheets](http://jeremypalford.com/wp-content/uploads/2013/07/JPA-Responsive-Web-Design-Sketch-Sheets.zip)
 
 ### Required Reading
