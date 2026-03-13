@@ -14,14 +14,14 @@
     </header>
 
     {# Split page content above/below course list using === delimiter #}
-    {# Check raw markdown for the delimiter, then split the fully-processed content #}
-    {# (page.content runs the full pipeline including shortcodes; |markdown does not) #}
+    {# Grav treats === as its summary separator and strips it from page.content, #}
+    {# so page.content never contains <p>===</p>. Use page.summary() for content_above #}
+    {# and derive content_below as the remainder of page.content. #}
     {% set raw = page.rawMarkdown() %}
     {% if '===' in raw %}
-        {% set processed = page.content %}
-        {% set parts = processed|split('<p>===</p>') %}
-        {% set content_above = parts[0] %}
-        {% set content_below = parts[1]|default(null) %}
+        {% set content_above = page.summary() %}
+        {% set full = page.content %}
+        {% set content_below = (full starts with content_above) ? (full|slice(content_above|length))|trim : null %}
     {% else %}
         {% set content_above = page.content %}
         {% set content_below = null %}
