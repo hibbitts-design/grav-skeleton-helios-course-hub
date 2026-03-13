@@ -155,7 +155,7 @@ This text appears below the course cards.
 
 If no `===` delimiter is present, all content renders above the cards as normal.
 
-### Course Page
+### Course Card Settings
 
 Each course folder contains a `course-card.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
 
