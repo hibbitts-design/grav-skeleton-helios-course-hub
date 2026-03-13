@@ -2,6 +2,8 @@
 
 Give your course a modern, open home on the web – without building from scratch. Designed for use with the [Grav Premium Helios theme](https://getgrav.org/premium/helios) and the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
 
+Helios Course Hub is the successor to the original [Open Course Hub](https://github.com/hibbitts-design/grav-skeleton-course-hub), bringing the same open-education goals to the premium Helios theme with a plugin-based approach.
+
 ## Screenshots
 
 <p float="left">

@@ -2,6 +2,8 @@
 
 Give your course a modern, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a ready-to-run companion site for one or more courses, with content you fully control. It includes [Grav CMS](https://getgrav.org), an open-source, flat-file CMS with no database required and a built-in browser-based Admin panel. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
 
+Helios Course Hub is the successor to the original [Open Course Hub](https://github.com/hibbitts-design/grav-skeleton-course-hub), bringing the same open-education goals to the premium Helios theme with a plugin-based approach.
+
 ## Screenshots
 
 <p float="left">
@@ -31,15 +33,6 @@ Other publishing tools might be better candidates when you:
 - Prefer fully visual drag-and-drop page builders over Markdown-based editing
 
 Still unsure? Grav Helios Course Hub is designed for easy entry — install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is ready. Your content stays in portable Markdown files you own completely. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a Web server, explore [Docsify-This](https://docsify-this.net).
-
-## Quick Start
-
-The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included. The home page is a **Courses** listing that shows all active courses – by default, just `cpt-363-1/`.
-
-1. **Download and install** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
-2. **Enter your licenses** – your Helios and complimentary SVG Icons license keys (or import an existing license file), then install and activate the theme
-3. **Edit your pages** in `user/pages/cpt-363-1/` – start with `10.home/` and work through the pre-built course sections
-4. **Publish** – works on almost any Web server, with PHP 7.3.6+, or run locally; no database required
 
 ## Features
 
@@ -71,6 +64,28 @@ The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Co
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Page Table of Contents template (`default-toc`) – set `template: default-toc` in any page's frontmatter to display a right-column Table of Contents alongside the content
 
+## Quick Start
+
+The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included. The home page is a **Courses** listing that shows all active courses – by default, just `cpt-363-1/`.
+
+### Pre-flight Checklist
+1. Confirm your web server meets [Grav's requirements](https://learn.getgrav.org/17/basics/requirements) (PHP 7.3.6 or higher)
+2. Have your web server login credentials ready (username and password)
+
+### Installation Steps
+1. **Download** the ready-to-run [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
+2. **Unzip** the package onto your desktop
+3. **Copy** the entire Grav Helios Course Hub folder to your web server (e.g. into `public_html/` or a subfolder within it)
+4. **Open your browser** and go to your site's URL (e.g. `https://yoursite.com/grav-course-hub`)
+5. **Create your site administrator account** when prompted
+6. **Enter your Helios and SVG Icons license keys** (or import an existing license file), then install and activate the theme
+7. **You're done!** – press the preview icon in the Admin Panel to view your site
+
+See [Course Setup](#course-setup) below to rename folders and edit your pages.
+
+> [!TIP]
+> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** — it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
+
 ## Course Setup
 
 All course content lives in course folders within `user/pages/`. The skeleton ships with three pre-configured course folders and a `00.courses/` homepage that lists all visible courses as cards.
@@ -80,7 +95,7 @@ user/pages/
 ├── 00.courses/                  # Courses homepage
 │   └── course-list.md           # Course list settings and default card values
 ├── cpt-363-1/                   # Course 1 (published by default)
-│   ├── course-card.md           # Course settings (icon, image, instructor, badge)
+│   ├── course-card.md                # Course settings (icon, image, instructor, badge)
 │   ├── 10.home/
 │   ├── 20.essentials/
 │   ├── 30.modules/
@@ -94,6 +109,8 @@ user/pages/
 └── readme/
 ```
 
+Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation — lower numbers appear first.
+
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
 ### Showing and Hiding Courses
@@ -103,7 +120,7 @@ In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and se
 > [!TIP]
 > When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
-### Course Folder Names
+## Course Folder Naming
 
 Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
 
@@ -113,11 +130,11 @@ Course folders must start with one or more letters, followed by a number. An opt
 
 The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
-### Courses Homepage
+## Courses Homepage
 
 The **Courses** homepage uses the `course-list` template to automatically generate course cards from detected course folders.
 
-#### Courses List Page
+### Courses List Page
 
 The `course-list.md` frontmatter controls the list layout and sets default values for all course cards. These fields can be set in the Admin Panel by opening the Courses homepage.
 
@@ -140,7 +157,7 @@ This text appears below the course cards.
 
 If no `===` delimiter is present, all content renders above the cards as normal.
 
-#### Course Card Settings
+### Course Page
 
 Each course folder contains a `course-card.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
 
@@ -166,7 +183,7 @@ image: banner.jpg
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
 
-### Course Label Customization
+## Course Label Customization
 
 The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
 
