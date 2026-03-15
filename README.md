@@ -61,6 +61,7 @@ Still unsure? Grav Helios Course Hub is designed for easy entry — install the 
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories — defaults to **View Page Markdown** (linking to the Markdown source file for open reuse and OER access) and optionally configurable to link directly to file editing for course authors and contributors
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
+- Print stylesheet with page break control for images, lists, tables, and headings; absolute link URLs displayed inline; and consistent page margins across browsers
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Page Table of Contents template (`default-toc`) – set `template: default-toc` in any page's frontmatter to display a right-column Table of Contents alongside the content
 
@@ -237,6 +238,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 ### Assets
 - **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)
 - **helios.js** – Embedly dark/light theme support with automatic CDN loading
+- **print.css** – Print stylesheet (hides navigation chrome, resets colors for light and dark themes, controls page breaks, displays absolute link URLs, sets consistent page margins)
 - **admin.css** – Increased Admin panel font sizes and toolbar icon scaling
 - **admin.js** – Admin panel JavaScript customizations
 

@@ -130,6 +130,7 @@ class HeliosCourseHubPlugin extends Plugin
         $path = 'plugin://helios-course-hub/assets';
 
         $assets->addCss("$path/helios.css");
+        $assets->addCss("$path/print.css", ['media' => 'print']);
         $assets->addJs("$path/helios.js", ['group' => 'bottom', 'loading' => 'defer']);
 
         // Inject site-wide chapter card description line override when value differs from theme default (2)
