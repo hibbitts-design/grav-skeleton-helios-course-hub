@@ -350,6 +350,11 @@ footer .edit-page-link svg {
     --text-sm: calc(var(--text-base) * 0.9375);
 }
 
+/* Scale accordion trigger label text up to text-base size */
+.doc-accordion-trigger {
+    --text-sm: var(--text-base);
+}
+
 /* TEMP FIX: .doc-step li marker renders in left padding area alongside circle; remove if theme fixes .doc-step list-style */
 .doc-step {
     list-style: none;
