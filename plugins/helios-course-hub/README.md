@@ -105,6 +105,7 @@ search:
 ### Course Content
 - Alphabetical topics index with auto-generated A–Z navigation
 - Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
+- MarkdownFile shortcode – fetch and render a remote Markdown file inline, with YAML front matter automatically stripped
 - Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
 
 ### Embedding & Shortcodes
@@ -237,6 +238,7 @@ To customize the label or add a language, update the relevant block in `language
 - `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
 - `[announcement]...[/announcement]` – Styled announcement notice (default: Important/purple), supports Markdown content
 - `[announcement title="..." type="..."]...[/announcement]` – With optional custom title and type (`note`, `tip`, `important`, `warning`, `caution`)
+- `[markdownfile url="..."]` – Fetches and renders a remote Markdown file inline, stripping YAML front matter
 
 ## Plugin Settings
 
