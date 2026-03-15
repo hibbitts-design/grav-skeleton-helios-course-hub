@@ -70,4 +70,21 @@
     thead {
         display: table-header-group;
     }
+
+    /* Prevent single orphaned/widowed lines at page breaks */
+    p, li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Prevent code blocks from overflowing page width */
+    pre, code {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    /* Utility class: hide elements from print output */
+    .no-print {
+        display: none !important;
+    }
 }
