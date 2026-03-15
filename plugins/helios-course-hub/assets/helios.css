@@ -349,3 +349,8 @@ footer .edit-page-link svg {
 #htmx-article .grid > a {
     --text-sm: calc(var(--text-base) * 0.9375);
 }
+
+/* TEMP FIX: .doc-step li marker renders in left padding area alongside circle; remove if theme fixes .doc-step list-style */
+.doc-step {
+    list-style: none;
+}

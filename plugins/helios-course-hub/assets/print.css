@@ -18,8 +18,10 @@
     }
 
     /* Reset colors for print — covers both light and dark themes */
-    body, * {
+    body {
         background: white !important;
+    }
+    * {
         color: black !important;
         border-color: #ccc !important;
         box-shadow: none !important;
