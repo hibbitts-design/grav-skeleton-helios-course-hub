@@ -125,13 +125,6 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 
 ## Course Setup
 
-### Showing and Hiding Courses
-
-In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
-
-> [!TIP]
-> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
-
 ### Course Folder Names
 
 Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
@@ -141,6 +134,13 @@ Course folders must start with one or more letters, followed by a number. An opt
 **Invalid names:** `01.course` (starts with a digit), `course` (no number), `1course` (starts with a digit)
 
 The simplest convention is `course-1`, `course-2`, `course-3`, etc.
+
+### Showing and Hiding Courses
+
+In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
+
+> [!TIP]
+> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
 
 ### Courses Homepage
 
