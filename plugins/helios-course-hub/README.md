@@ -1,24 +1,24 @@
 # Grav Helios Course Hub Plugin
 
-Give your course a modern, open home on the web – without building from scratch. Designed for use with the [Grav Premium Helios theme](https://getgrav.org/premium/helios) and the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
-
-Helios Course Hub is the successor to the original [Open Course Hub](https://github.com/hibbitts-design/grav-skeleton-course-hub), bringing the same open-education goals to the premium Helios theme with a plugin-based approach.
+[![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE)
 
 ## Screenshots
 
 <p float="left">
-  <a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1-dark.png">
-      <img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%">
-    </picture>
-  </a>&nbsp;<a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/cpt-363-1/home">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2-dark.png">
-      <img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%">
-    </picture>
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-plugin-helios-course-hub/refs/heads/main/screenshot-1-dark.png">
+    <img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-plugin-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%">
+  </picture>&nbsp;<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-plugin-helios-course-hub/refs/heads/main/screenshot-2-dark.png">
+    <img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-plugin-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%">
+  </picture>
 </p>
+
+> _Example Grav Helios Course Hub website. Explore a [single course](https://demo.hibbittsdesign.org/grav-helios-single-course-hub/) or [multiple course](https://demo.hibbittsdesign.org/grav-helios-course-hub/) demo site._
+
+Give your course a modern, open home on the web – without building from scratch. Designed for use with the [Grav Premium Helios theme](https://getgrav.org/premium/helios) and the pre-configured [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub), providing custom CSS, JavaScript, shortcodes and enhanced Admin Panel readability. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
+
+Helios Course Hub is the successor to the original [Open Course Hub](https://github.com/hibbitts-design/grav-skeleton-course-hub), bringing the same open-education goals to the premium Helios theme with a plugin-based approach.
 
 ## When is Grav Helios Course Hub a Good Candidate?
 
