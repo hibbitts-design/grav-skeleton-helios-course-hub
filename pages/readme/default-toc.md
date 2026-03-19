@@ -201,6 +201,15 @@ fr:
 
 To customize the label or add a language, update the relevant block in `languages.yaml`.
 
+## Browser Tab Title
+
+The browser tab title is automatically formatted based on how many courses are visible:
+
+- **Single course:** `Page Title | Course Label`
+- **Multi-course:** `Page Title | Course Label | Site Title`
+
+In a single-course site you do not need to set a Site Title — the course label serves as the top-level identifier in the browser tab.
+
 ## Git Sync & Open Editing
 
 The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-plugin-git-sync), which keeps your site content automatically in sync with a GitHub or Codeberg repository. This enables a full open-authoring workflow:
