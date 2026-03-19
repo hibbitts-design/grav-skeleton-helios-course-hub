@@ -2,7 +2,8 @@
 ## XX/XX/2026
 
 1. [](#improved)
-    * Include dark-mode screenshots.
+    * Include dark-mode screenshots
+    * Updated ReadMe
 
 # v0.9.2
 ## 03/17/2026
