@@ -5,18 +5,16 @@
 ## Screenshots
 
 <p float="left">
-  <a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/">
-    <picture style="display: block;">
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1-dark.png">
-      <img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%">
-    </picture>
-  </a>&nbsp;<a href="https://demo.hibbittsdesign.org/grav-helios-multi-course-hub/cpt-363-1/home">
-    <picture style="display: block;">
-      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2-dark.png">
-      <img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%">
-    </picture>
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1-dark.png">
+    <img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%">
+  </picture>&nbsp;<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2-dark.png">
+    <img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%">
+  </picture>
 </p>
+
+_Example Grav Helios Course Hub website. Explore a [single course](https://demo.hibbittsdesign.org/grav-helios-single-course-hub/) or [multiple course](https://demo.hibbittsdesign.org/grav-helios-course-hub/) demo site._
 
 Give your course a modern, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a ready-to-run companion site for one or more courses, with content you fully control. It includes [Grav CMS](https://getgrav.org), an open-source, flat-file CMS with no database required and a built-in browser-based Admin panel. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
 
