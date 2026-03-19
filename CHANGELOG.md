@@ -1,3 +1,9 @@
+# v0.9.3
+## XX/XX/2026
+
+1. [](#improved)
+    * Include dark-mode screenshots.
+
 # v0.9.2
 ## 03/17/2026
 
