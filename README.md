@@ -14,7 +14,7 @@
   </picture>
 </p>
 
-_Example Grav Helios Course Hub website. Explore a [single course](https://demo.hibbittsdesign.org/grav-helios-single-course-hub/) or [multiple course](https://demo.hibbittsdesign.org/grav-helios-course-hub/) demo site._
+> _Example Grav Helios Course Hub website. Explore a [single course](https://demo.hibbittsdesign.org/grav-helios-single-course-hub/) or [multiple course](https://demo.hibbittsdesign.org/grav-helios-course-hub/) demo site._
 
 Give your course a modern, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a ready-to-run companion site for one or more courses, with content you fully control. It includes [Grav CMS](https://getgrav.org), an open-source, flat-file CMS with no database required and a built-in browser-based Admin panel. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
 
