@@ -77,7 +77,8 @@ Still unsure? Grav Helios Course Hub is designed for easy entry — install the 
 
 ## Quick Start
 
-The skeleton is a **complete, ready-to-run package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included. The home page is a **Courses** listing that shows all active courses – by default, just `cpt-363-1/`.
+The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included, but requires the separately licensed [Grav Premium Helios theme](https://getgrav.org/premium/helios). The home page is a Courses listing that shows all active courses – by default, just cpt-363-1/.
+
 
 ### Pre-flight Checklist
 1. Confirm your web server meets [Grav's requirements](https://learn.getgrav.org/17/basics/requirements) (PHP 7.3.6 or higher)
