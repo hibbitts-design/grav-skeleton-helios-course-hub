@@ -2,7 +2,7 @@
 
 [![Discord](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Discord%20Chat)](https://chat.getgrav.org) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE)
 
-A Single or Multi-Course Companion Website for the Grav Premium Helios Theme
+## A Single or Multi-Course Companion Website for the Grav Premium Helios Theme
 
 <p float="left">
   <picture>
