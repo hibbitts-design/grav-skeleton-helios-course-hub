@@ -56,7 +56,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 ### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
-- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories — defaults to **View Page Markdown** (linking to the Markdown source file for open reuse and OER access) and optionally configurable to link directly to file editing for course authors and contributors
+- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories – defaults to **View Page Markdown** (linking to the Markdown source file for open reuse and OER access) and optionally configurable to link directly to file editing for course authors and contributors
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Print stylesheet with page break control for images, lists, tables, and headings; absolute link URLs displayed inline; and consistent page margins across browsers
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
@@ -84,7 +84,7 @@ The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugi
 See [Course Setup](#course-setup) below to rename folders and edit your pages.
 
 > [!TIP]
-> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** — it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
+> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** – it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
 
 ## Course Setup
 
@@ -109,7 +109,7 @@ user/pages/
 └── readme/
 ```
 
-Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation — lower numbers appear first.
+Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation – lower numbers appear first.
 
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
@@ -141,7 +141,7 @@ The `course-list.md` frontmatter controls the list layout and sets default value
 | Field | Default | Description |
 |-------|---------|-------------|
 | `cards_per_row` | `1` | Number of course cards per row (1–2) |
-| `card_icon` | — | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
+| `card_icon` | – | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
 | `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
 | `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
 
@@ -208,7 +208,7 @@ The browser tab title is automatically formatted based on how many courses are v
 - **Single course:** `Page Title | Site Title`
 - **Multi-course:** `Page Title | Course Label | Site Title`
 
-For single-course sites, set the Site Title to the course name — it serves as the top-level identifier in the browser tab.
+For single-course sites, set the Site Title to the course name – it serves as the top-level identifier in the browser tab.
 
 ## Git Sync & Open Editing
 
@@ -219,7 +219,7 @@ The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-
 
 ## Included Plugin: Helios Course Hub
 
-Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel. The Course dropdown label can be customized in `languages.yaml` — English and French are included by default.
+Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel. The Course dropdown label can be customized in `languages.yaml` – English and French are included by default.
 
 ### Templates
 - **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).

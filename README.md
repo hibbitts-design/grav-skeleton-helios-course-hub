@@ -27,12 +27,12 @@ Grav Helios Course Hub often works really well when you:
 - Want a visually refined, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
 - Want a fully designed, ready-to-use course site without custom design or coding work
 - Want to support multiple courses from a single installation with automatic course switching
-- Need context-aware search — automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
-- Want flexible editing options — browser-based Admin panel with Markdown by default and an optional visual block editor
+- Need context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
+- Want flexible editing options – browser-based Admin panel with Markdown by default and an optional visual block editor
 - Need multi-user editing with role-based access rights for team-managed course content
 - Need rich content embedding (H5P, iFrames, Google Slides, PDFs, Embedly) without coding
 - Value keeping content in portable Markdown files with full ownership and hosting control
-- Can optionally extend with custom branding — logos, colours, and styling — when a more distinctive look is needed
+- Can optionally extend with custom branding – logos, colours, and styling – when a more distinctive look is needed
 
 Other publishing tools might be better candidates when you:
 
@@ -42,7 +42,7 @@ Other publishing tools might be better candidates when you:
 - Need a large ecosystem of themes and plugins beyond what Grav currently offers
 - Prefer fully visual drag-and-drop page builders over Markdown-based editing
 
-Still unsure? Grav Helios Course Hub is designed for easy entry — install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is ready. Your content stays in portable Markdown files you own completely. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a Web server, explore [Docsify-This](https://docsify-this.net).
+Still unsure? Grav Helios Course Hub is designed for easy entry – install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is ready. Your content stays in portable Markdown files you own completely. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a Web server, explore [Docsify-This](https://docsify-this.net).
 
 ## Features
 
@@ -69,7 +69,7 @@ Still unsure? Grav Helios Course Hub is designed for easy entry — install the 
 
 ### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
-- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories — defaults to **View Page Markdown** (linking to the Markdown source file for open reuse and OER access) and optionally configurable to link directly to file editing for course authors and contributors
+- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories – defaults to **View Page Markdown** (linking to the Markdown source file for open reuse and OER access) and optionally configurable to link directly to file editing for course authors and contributors
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Print stylesheet with page break control for images, lists, tables, and headings; absolute link URLs displayed inline; and consistent page margins across browsers
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
@@ -96,7 +96,7 @@ The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugi
 See [Course Setup](#course-setup) below to rename folders and edit your pages.
 
 > [!TIP]
-> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** — it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
+> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** – it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
 
 ## Course Setup
 
@@ -121,7 +121,7 @@ user/pages/
 └── readme/
 ```
 
-Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation — lower numbers appear first.
+Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation – lower numbers appear first.
 
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
@@ -153,7 +153,7 @@ The `course-list.md` frontmatter controls the list layout and sets default value
 | Field | Default | Description |
 |-------|---------|-------------|
 | `cards_per_row` | `1` | Number of course cards per row (1–2) |
-| `card_icon` | — | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
+| `card_icon` | – | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
 | `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
 | `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
 
@@ -220,7 +220,7 @@ The browser tab title is automatically formatted based on how many courses are v
 - **Single course:** `Page Title | Site Title`
 - **Multi-course:** `Page Title | Course Label | Site Title`
 
-For single-course sites, set the Site Title to the course name — it serves as the top-level identifier in the browser tab.
+For single-course sites, set the Site Title to the course name – it serves as the top-level identifier in the browser tab.
 
 ## Git Sync & Open Editing
 
