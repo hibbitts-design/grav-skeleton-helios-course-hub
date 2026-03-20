@@ -205,10 +205,10 @@ To customize the label or add a language, update the relevant block in `language
 
 The browser tab title is automatically formatted based on how many courses are visible:
 
-- **Single course:** `Page Title | Course Label`
+- **Single course:** `Page Title | Site Title`
 - **Multi-course:** `Page Title | Course Label | Site Title`
 
-In a single-course site you do not need to set a Site Title — the course label serves as the top-level identifier in the browser tab.
+For single-course sites, set the Site Title to the course name — it serves as the top-level identifier in the browser tab.
 
 ## Git Sync & Open Editing
 
