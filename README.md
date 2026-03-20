@@ -16,7 +16,7 @@
 
 > _Example Grav Helios Course Hub website. Explore a [single course](https://demo.hibbittsdesign.org/grav-helios-single-course-hub/cpt-363-1/home) or [multiple course](https://demo.hibbittsdesign.org/grav-helios-course-hub/) demo site._
 
-Give your course a modern, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a companion site for one or more courses built on [Grav CMS](https://getgrav.org) – an open-source, flat-file CMS with no database required and a built-in Admin panel – with content you fully control. Your Helios purchase directly supports Grav's open-source development.
+Give your course a modern, open home on the web, without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a companion site for one or more courses built on [Grav CMS](https://getgrav.org) (an open-source, flat-file CMS with no database required and a built-in Admin panel), with content you fully control. Your Helios purchase directly supports Grav's open-source development.
 
 Helios Course Hub is the successor to the original [Open Course Hub](https://github.com/hibbitts-design/grav-skeleton-course-hub), bringing the same open-education goals to the premium Helios theme with a plugin-based approach.
 
@@ -42,7 +42,7 @@ Other publishing tools might be better candidates when you:
 - Need a large ecosystem of themes and plugins beyond what Grav currently offers
 - Prefer fully visual drag-and-drop page builders over Markdown-based editing
 
-Still unsure? Install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is configured. Your content stays in portable Markdown files you own completely – and those same files work with other tools if your needs change. For zero-setup publishing directly from GitHub or Codeberg without a Web server, [Docsify-This](https://docsify-this.net) is a natural companion.
+Still unsure? Install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is configured. Your content stays in portable Markdown files you own completely, and those same files work with other tools if your needs change. For zero-setup publishing directly from GitHub or Codeberg without a Web server, [Docsify-This](https://docsify-this.net) is a natural companion.
 
 ## Features
 
@@ -52,27 +52,27 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
 - Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
-- Per-course favicon support – upload a `favicon.*` file to a course root page's media to override the site favicon for that course
+- Per-course favicon support: upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 
 ### Course Cards
-- Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
+- Optional course card images: upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
 - Add optional instructor names and status badges (e.g. `Coming Soon`, `Archived`) to course cards via frontmatter
 
 ### Course Content
 - Build an alphabetical topics index with auto-generated A–Z navigation
-- Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
-- MarkdownFile shortcode – fetch and render a remote Markdown file inline, with YAML front matter automatically stripped
+- Announcement shortcode: display a styled notice on any course page, with optional custom title and color type
+- MarkdownFile shortcode: fetch and render a remote Markdown file inline, with YAML front matter automatically stripped
 - Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
 
 ### Embedding & Shortcodes
-- Embed rich content with built-in shortcodes – iFrames, Google Slides, PDFs, H5P, and Embedly cards – with responsive 16:9 layout and automatic dark/light theme detection
+- Embed rich content with built-in shortcodes: iFrames, Google Slides, PDFs, H5P, and Embedly cards – with responsive 16:9 layout and automatic dark/light theme detection
 
 ### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
 - Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories – defaults to **View Page Markdown** (linking to the Markdown source file for open access to course materials) and optionally configurable to link directly to file editing for course authors and contributors
 - Customize CSS and JavaScript via the bundled Helios Course Hub plugin
 - Print stylesheet with page break control for images, lists, tables, and headings; absolute link URLs displayed inline; and consistent page margins across browsers
-- Page Table of Contents template (`default-toc`) – adds a right-column Table of Contents to standalone content-heavy pages; set `template: default-toc` in any page's frontmatter to enable
+- Page Table of Contents template (`default-toc`): adds a right-column Table of Contents to standalone content-heavy pages; set `template: default-toc` in any page's frontmatter to enable
 
 ## Quick Start
 
