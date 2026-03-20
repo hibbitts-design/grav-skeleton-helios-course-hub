@@ -128,7 +128,7 @@ The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
-> When multiple courses are published, the Course Dropdown is useful while building and testing content, but students may find the Courses homepage is sufficient. Once content is finalized, you can hide this dropdown by setting **Show Version Dropdown** to **No** in the Helios Theme settings.
+> If changes don't appear immediately after updating settings or publishing pages, clear the Grav cache via **Admin → Tools → Cache**.
 
 ## Courses Homepage
 
@@ -210,6 +210,9 @@ The browser tab title is automatically formatted based on how many courses are v
 
 For single-course sites, set the Site Title to the course name – it serves as the top-level identifier in the browser tab.
 
+> [!TIP]
+> For single-course sites, also consider setting **Single Course Site Logo Link** to **First Page of Only Listed Course** in the plugin settings — this takes visitors directly into the course rather than a one-card Courses homepage.
+
 ## Git Sync & Open Editing
 
 The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-plugin-git-sync), which keeps your site content automatically in sync with a GitHub or Codeberg repository. This enables a full open-authoring workflow:
@@ -223,6 +226,9 @@ Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admi
 
 ### Templates
 - **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
+
+> [!TIP]
+> The `default-toc` template works especially well for content-heavy pages such as syllabi and resources pages.
 
 ### Assets
 - **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)
@@ -246,6 +252,9 @@ Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admi
 - [raw]`[announcement]...[/announcement]`[/raw] – Styled announcement notice (default: Important/purple), supports Markdown content
 - [raw]`[announcement title="..." type="..."]...[/announcement]`[/raw] – With optional custom title and type (`note`, `tip`, `important`, `warning`, `caution`)
 - [raw]`[markdownfile url="..."]`[/raw] – Fetches and renders a remote Markdown file inline, stripping YAML front matter
+
+> [!TIP]
+> For simple notices, the standard Markdown callout `> [!IMPORTANT]` is a zero-friction alternative to the [raw]`[announcement]`[/raw] shortcode.
 
 ### Plugin Settings
 
