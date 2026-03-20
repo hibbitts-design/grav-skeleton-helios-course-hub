@@ -16,23 +16,23 @@
 
 > _Example Grav Helios Course Hub website. Explore a [single course](https://demo.hibbittsdesign.org/grav-helios-single-course-hub/cpt-363-1/home) or [multiple course](https://demo.hibbittsdesign.org/grav-helios-course-hub/) demo site._
 
-Give your course a modern, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a ready-to-run companion site for one or more courses, with content you fully control. It includes [Grav CMS](https://getgrav.org), an open-source, flat-file CMS with no database required and a built-in browser-based Admin panel. Your Helios theme purchase directly supports ongoing development of the open-source Grav CMS.
+Give your course a modern, open home on the web – without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a companion site for one or more courses built on [Grav CMS](https://getgrav.org) – an open-source, flat-file CMS with no database required and a built-in Admin panel – with content you fully control. Your Helios purchase directly supports Grav's open-source development.
 
 Helios Course Hub is the successor to the original [Open Course Hub](https://github.com/hibbitts-design/grav-skeleton-course-hub), bringing the same open-education goals to the premium Helios theme with a plugin-based approach.
 
 ## When is Grav Helios Course Hub a Good Candidate?
 
-Grav Helios Course Hub often works really well when you:
+Grav Helios Course Hub is a strong fit when you:
 
 - Want a visually refined, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
-- Want a fully designed, ready-to-use course site without custom design or coding work
+- Want a fully designed course site without custom design or coding work
 - Want to support multiple courses from a single installation with automatic course switching
-- Need context-aware search — automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
-- Want flexible editing options — browser-based Admin panel with Markdown by default and an optional visual block editor
+- Need context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
+- Want flexible editing options – browser-based Admin panel with Markdown by default and an optional visual block editor
 - Need multi-user editing with role-based access rights for team-managed course content
 - Need rich content embedding (H5P, iFrames, Google Slides, PDFs, Embedly) without coding
 - Value keeping content in portable Markdown files with full ownership and hosting control
-- Can optionally extend with custom branding — logos, colours, and styling — when a more distinctive look is needed
+- Can optionally extend with custom branding – logos, colours, and styling – when a more distinctive look is needed
 
 Other publishing tools might be better candidates when you:
 
@@ -42,9 +42,11 @@ Other publishing tools might be better candidates when you:
 - Need a large ecosystem of themes and plugins beyond what Grav currently offers
 - Prefer fully visual drag-and-drop page builders over Markdown-based editing
 
-Still unsure? Grav Helios Course Hub is designed for easy entry — install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is ready. Your content stays in portable Markdown files you own completely. For quick, zero-setup publishing directly from a GitHub or Codeberg repository without a Web server, explore [Docsify-This](https://docsify-this.net).
+Still unsure? Install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is configured. Your content stays in portable Markdown files you own completely – and those same files work with other tools if your needs change. For zero-setup publishing directly from GitHub or Codeberg without a Web server, [Docsify-This](https://docsify-this.net) is a natural companion.
 
 ## Features
+
+Helios Course Hub provides a ready-built course site using portable Markdown files you fully control. Highlights include visual course cards, context-aware search, and optional Git Sync for open collaborative authoring.
 
 ### Site Identity
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
@@ -54,39 +56,34 @@ Still unsure? Grav Helios Course Hub is designed for easy entry — install the 
 
 ### Course Cards
 - Optional course card images – upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
-- Optional course instructor(s) – set `instructor` in frontmatter to display instructor name(s) below the description on the course card
-- Optional course badge – set `badge_label` and `badge_color` in frontmatter to display a status badge (e.g. "Coming Soon", "New", "Archived") on the course card
+- Add optional instructor names and status badges (e.g. `Coming Soon`, `Archived`) to course cards via frontmatter
 
 ### Course Content
-- Alphabetical topics index with auto-generated A–Z navigation
+- Build an alphabetical topics index with auto-generated A–Z navigation
 - Announcement shortcode – display a styled notice on any course page, with optional custom title and color type
 - MarkdownFile shortcode – fetch and render a remote Markdown file inline, with YAML front matter automatically stripped
 - Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
 
 ### Embedding & Shortcodes
-- Built-in shortcodes for embedding content (iFrames, Google Slides, PDFs, H5P, Embedly)
-- Responsive iframe/video containers with 16:9 aspect ratio
-- Embedly card support with automatic dark/light theme detection
+- Embed rich content with built-in shortcodes – iFrames, Google Slides, PDFs, H5P, and Embedly cards – with responsive 16:9 layout and automatic dark/light theme detection
 
 ### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
-- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories — defaults to **View Page Markdown** (linking to the Markdown source file for open reuse and OER access) and optionally configurable to link directly to file editing for course authors and contributors
-- Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
+- Automatic "Edit this Page" link option provided by the Helios Theme, with support for both GitHub and Codeberg repositories – defaults to **View Page Markdown** (linking to the Markdown source file for open access to course materials) and optionally configurable to link directly to file editing for course authors and contributors
+- Customize CSS and JavaScript via the bundled Helios Course Hub plugin
 - Print stylesheet with page break control for images, lists, tables, and headings; absolute link URLs displayed inline; and consistent page margins across browsers
-- Admin panel styling customizations (increased font sizes and toolbar icon scaling)
 - Page Table of Contents template (`default-toc`) – adds a right-column Table of Contents to standalone content-heavy pages; set `template: default-toc` in any page's frontmatter to enable
 
 ## Quick Start
 
 The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included, but requires the separately licensed [Grav Premium Helios theme](https://getgrav.org/premium/helios). The home page is a Courses listing that shows all active courses – by default, just cpt-363-1/.
 
-
 ### Pre-flight Checklist
 1. Confirm your web server meets [Grav's requirements](https://learn.getgrav.org/17/basics/requirements) (PHP 7.3.6 or higher)
 2. Have your web server login credentials ready (username and password)
 
 ### Installation Steps
-1. **Download** the ready-to-run [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
+1. **Download** the [Grav Helios Course Hub Skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) package
 2. **Unzip** the package onto your desktop
 3. **Copy** the entire Grav Helios Course Hub folder to your web server (e.g. into `public_html/` or a subfolder within it)
 4. **Open your browser** and go to your site's URL (e.g. `https://yoursite.com/grav-course-hub`)
@@ -94,10 +91,10 @@ The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugi
 6. **Enter your Helios and SVG Icons license keys** (or import an existing license file), then install and activate the theme
 7. **You're done!** – press the preview icon in the Admin Panel to view your site
 
-See [Course Setup](#course-setup) below to rename folders and edit your pages.
+See [Course Setup](#course-setup) to rename folders and edit your pages.
 
 > [!TIP]
-> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** — it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
+> When copying the Grav Helios Course Hub folder to your web server, copy the **entire folder** – it contains hidden files (such as `.htaccess`) that are not selected by default. Omitting these hidden files can cause problems when running Grav.
 
 ## Course Setup
 
@@ -108,7 +105,7 @@ user/pages/
 ├── 00.courses/                  # Courses homepage
 │   └── course-list.md           # Course list settings and default card values
 ├── cpt-363-1/                   # Course 1 (published by default)
-│   ├── course-card.md                # Course settings (icon, image, instructor, badge)
+│   ├── course-card.md           # Course settings (icon, image, instructor, badge)
 │   ├── 10.home/
 │   ├── 20.essentials/
 │   ├── 30.modules/
@@ -122,13 +119,13 @@ user/pages/
 └── readme/
 ```
 
-Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation — lower numbers appear first.
+Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation – lower numbers appear first.
 
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
 ### Showing and Hiding Courses
 
-In the Admin panel, open the course folder's root page (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
+In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
 > [!TIP]
 > If changes don't appear immediately after updating settings or publishing pages, clear the Grav cache via **Admin → Tools → Cache**.
@@ -154,7 +151,7 @@ The `course-list.md` frontmatter controls the list layout and sets default value
 | Field | Default | Description |
 |-------|---------|-------------|
 | `cards_per_row` | `1` | Number of course cards per row (1–2) |
-| `card_icon` | — | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
+| `card_icon` | _(empty)_ | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
 | `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
 | `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
 
@@ -172,7 +169,7 @@ If no `===` delimiter is present, all content renders above the cards as normal.
 
 ### Course Card Settings
 
-Each course folder contains a `course-card.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course's root page.
+Each course folder contains a `course-card.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course root page.
 
 | Field | Description |
 |-------|-------------|
@@ -195,6 +192,9 @@ image: banner.jpg
 ```
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
+
+> [!TIP]
+> Landscape images (roughly 16:9 or 4:3 ratio) work best for course cards. PNG, JPG, and WebP formats are all supported.
 
 ## Course Label Customization
 
@@ -221,10 +221,10 @@ The browser tab title is automatically formatted based on how many courses are v
 - **Single course:** `Page Title | Site Title`
 - **Multi-course:** `Page Title | Course Label | Site Title`
 
-For single-course sites, set the Site Title to the course name — it serves as the top-level identifier in the browser tab.
+For single-course sites, set the Site Title to the course name – it serves as the top-level identifier in the browser tab.
 
 > [!TIP]
-> For single-course sites, also consider setting **Single Course Site Logo Link** to **First Page of Only Listed Course** in the plugin settings — this takes visitors directly into the course rather than a one-card Courses homepage.
+> You can also set **Single Course Site Logo Link** to **First Page of Only Listed Course** in the plugin settings – this takes visitors directly into the course rather than the Courses homepage.
 
 ## Git Sync & Open Editing
 
@@ -252,7 +252,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Description Line Limit | 2 lines | Maximum number of lines shown per card description on Chapter template pages; the Modules section uses this template (2, 3, or no limit) |
 | Show Repository Host Icon Link in Header | Enabled | Show or hide the GitHub or Codeberg icon link to the course repository in the site header |
 | Git Link Icon | `tabler/file-text.svg` | Tabler icon path for the Git link icon shown in the page footer |
-| Git Link Mode | View file | Whether the Git link opens the file for **viewing** (default, for OER access and open reuse) or **editing** (for course authors and contributors with repository access) |
+| Git Link Mode | View file | Whether the Git link opens the file for **viewing** (default, for open access to course materials) or **editing** (for course authors and contributors with repository access) |
 | Repository Host | `github.com` | Repository hosting service for the Helios GitHub Integration (`github.com` or `codeberg.org`) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with `[h5p id="..."]`) |
 
@@ -261,7 +261,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 - **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
 
 > [!TIP]
-> The `default-toc` template is ideal for standalone content-heavy pages that don't use a sidebar — pages like syllabi and resources already display a Table of Contents in their sidebar.
+> The `default-toc` template is ideal for standalone content-heavy pages that don't use a sidebar – pages like syllabi and resources already display a Table of Contents in their sidebar.
 
 ### Assets
 - **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)
