@@ -60,7 +60,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Print stylesheet with page break control for images, lists, tables, and headings; absolute link URLs displayed inline; and consistent page margins across browsers
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Page Table of Contents template (`default-toc`) – set `template: default-toc` in any page's frontmatter to display a right-column Table of Contents alongside the content
+- Page Table of Contents template (`default-toc`) – adds a right-column Table of Contents to standalone content-heavy pages; set `template: default-toc` in any page's frontmatter to enable
 
 If you prefer not to write Markdown directly, the optional [Grav Premium Editor Pro](https://getgrav.org/premium/editor-pro) provides a visual block editor for editing pages.
 
@@ -225,10 +225,11 @@ The skeleton includes the [Git Sync plugin](https://github.com/trilbymedia/grav-
 Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel. The Course dropdown label can be customized in `languages.yaml` – English and French are included by default.
 
 ### Templates
+- **course-list** – Courses homepage template that renders all visible courses as cards. Assigned automatically to the Courses homepage (`/courses`).
 - **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
 
 > [!TIP]
-> The `default-toc` template works especially well for content-heavy pages such as syllabi and resources pages.
+> The `default-toc` template is ideal for standalone content-heavy pages that don't use a sidebar — pages like syllabi and resources already display a Table of Contents in their sidebar.
 
 ### Assets
 - **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)

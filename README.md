@@ -74,7 +74,7 @@ Still unsure? Grav Helios Course Hub is designed for easy entry — install the 
 - Customizable CSS and JavaScript via the bundled Helios Course Hub plugin
 - Print stylesheet with page break control for images, lists, tables, and headings; absolute link URLs displayed inline; and consistent page margins across browsers
 - Admin panel styling customizations (increased font sizes and toolbar icon scaling)
-- Page Table of Contents template (`default-toc`) – set `template: default-toc` in any page's frontmatter to display a right-column Table of Contents alongside the content
+- Page Table of Contents template (`default-toc`) – adds a right-column Table of Contents to standalone content-heavy pages; set `template: default-toc` in any page's frontmatter to enable
 
 ## Quick Start
 
@@ -257,10 +257,11 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with `[h5p id="..."]`) |
 
 ### Templates
+- **course-list** – Courses homepage template that renders all visible courses as cards. Assigned automatically to the Courses homepage (`/courses`).
 - **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
 
 > [!TIP]
-> The `default-toc` template works especially well for content-heavy pages such as syllabi and resources pages.
+> The `default-toc` template is ideal for standalone content-heavy pages that don't use a sidebar — pages like syllabi and resources already display a Table of Contents in their sidebar.
 
 ### Assets
 - **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)
