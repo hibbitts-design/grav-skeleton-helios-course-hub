@@ -48,10 +48,10 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 - Build an alphabetical topics index with auto-generated A–Z navigation
 - Announcement shortcode: display a styled notice on any course page, with optional custom title and color type
 - MarkdownFile shortcode: fetch and render a remote Markdown file inline, with YAML front matter automatically stripped
-- Configurable chapter page description line limit – set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
+- Configurable chapter page description line limit: set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
 
 ### Embedding & Shortcodes
-- Embed rich content with built-in shortcodes: iFrames, Google Slides, PDFs, H5P, and Embedly cards – with responsive 16:9 layout and automatic dark/light theme detection
+- Embed rich content with built-in shortcodes: iFrames, Google Slides, PDFs, H5P, and Embedly cards, with responsive 16:9 layout and automatic dark/light theme detection
 
 ### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
@@ -62,7 +62,7 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 
 ## Quick Start
 
-The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included, but requires the separately licensed [Grav Premium Helios theme](https://getgrav.org/premium/helios). The home page is a Courses listing that shows all active courses – by default, just cpt-363-1/.
+The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included; the [Grav Premium Helios theme](https://getgrav.org/premium/helios) requires a separate license. The home page is a Courses listing that shows all active courses – by default, just cpt-363-1/.
 
 ### Pre-flight Checklist
 1. Confirm your web server meets [Grav's requirements](https://learn.getgrav.org/17/basics/requirements) (PHP 7.3.6 or higher)
