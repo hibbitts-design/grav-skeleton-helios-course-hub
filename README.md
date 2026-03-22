@@ -221,10 +221,7 @@ The browser tab title is automatically formatted based on how many courses are v
 - **Single course:** `Page Title | Site Title`
 - **Multi-course:** `Page Title | Course Label | Site Title`
 
-For single-course sites, set the Site Title to the course name – it serves as the top-level identifier in the browser tab.
-
-> [!TIP]
-> You can also set **Single Course Site Logo Link** to **First Page of Only Listed Course** in the plugin settings – this takes visitors directly into the course rather than the Courses homepage.
+For single-course sites, set the Site Title to the course name – it serves as the top-level identifier in the browser tab. The Courses homepage remains accessible directly at `/courses`.
 
 ## Git Sync & Open Editing
 
@@ -247,7 +244,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 |---------|---------|-------------|
 | Show Site Logo Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
 | Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. `tabler/book.svg`). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
-| Single Course Site Logo Link | Courses Home Page | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
+| Single Course Site Logo Link | First Page of Only Listed Course | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
 | Show Plugin Credits | Enabled | Show or hide the "Built with Grav · Helios · Helios Course Hub" attribution line in the footer |
 | Description Line Limit | 2 lines | Maximum number of lines shown per card description on Chapter template pages; the Modules section uses this template (2, 3, or no limit) |
 | Show Repository Host Icon Link in Header | Enabled | Show or hide the GitHub or Codeberg icon link to the course repository in the site header |
