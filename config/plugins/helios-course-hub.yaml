@@ -1,7 +1,7 @@
 enabled: true
 show_site_icon: true
 site_icon: tabler/hexagon.svg
-logo_link_target: courses_list
+logo_link_target: single_course
 show_plugin_credits: true
 chapter_description_lines: 2
 github_server: github.com
