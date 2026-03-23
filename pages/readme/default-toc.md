@@ -37,7 +37,7 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 ### Site Identity
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
 - Configurable single course site logo link targeting the Courses Home Page or First Page of Only Listed Course
-- Course label with optional icon automatically displayed in the sidebar when multiple courses are published, linking to the first page of the current course
+- Course label (drawn from the Helios Theme `versioning.labels` config) with optional icon automatically displayed in the sidebar below the site name when multiple courses are published, linking to the first page of the current course
 - Per-course favicon support: upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 
 ### Course Cards
@@ -184,6 +184,20 @@ To display a card image, upload an image file to the course root page's media fo
 
 ## Course Label Customization
 
+### Course Names
+
+The course name shown below the site name in the sidebar, in the sidebar course dropdown, and as the middle segment of the browser tab title (`Page | Course Label | Site Title`) comes from the `versioning.labels` setting in the Helios Theme config. These can be edited via **Admin → Themes → Helios → Versioning tab → Version Labels**, or directly in `user/config/themes/helios.yaml`:
+
+```yaml
+versioning:
+  labels:
+    cpt-363-1: CPT-363-1
+    cpt-363-2: CPT-363-2
+    cpt-363-3: CPT-363-3
+```
+
+### Course Dropdown Label
+
 The Course dropdown label and its default fallback can be customized in `languages.yaml`. English and French are included:
 
 ```yaml
@@ -205,7 +219,7 @@ To customize the label or add a language, update the relevant block in `language
 The browser tab title is automatically formatted based on how many courses are visible:
 
 - **Single course:** `Page Title | Site Title`
-- **Multi-course:** `Page Title | Course Label | Site Title`
+- **Multi-course:** `Page Title | Course Label | Site Title` _(Course Label comes from `versioning.labels` in the Helios Theme config)_
 
 For single-course sites, set the Site Title to the course name – it serves as the top-level identifier in the browser tab. The Courses homepage remains accessible directly at `/courses`.
 
