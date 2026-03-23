@@ -107,6 +107,9 @@ user/pages/
 
 Rename the course folders (e.g. `cpt-363-1/` → `comp-101/`) to match your own course codes, either in the Admin Panel or via FTP. The number prefix on each sub-folder (e.g. `10.home/`, `20.essentials/`) controls the page order in the navigation – lower numbers appear first.
 
+> [!TIP]
+> After renaming a course folder, update `versioning.labels` in `user/config/themes/helios.yaml` (or via **Admin → Themes → Helios → Versioning → Version Labels**) to add the new folder name as a key — this sets the course name shown in the sidebar and browser tab title.
+
 By default, only `cpt-363-1/` is published, so the Courses homepage shows a single course card – a clean starting point for a one-course site. To activate additional courses, set **Published** to **Yes** in each course folder's root page. The Course Dropdown appears automatically once more than one course is published, and hides automatically when only one course is active.
 
 ### Course Folder Names
@@ -125,6 +128,10 @@ In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **P
 
 > [!TIP]
 > If changes don't appear immediately after updating settings or publishing pages, clear the Grav cache via **Admin → Tools → Cache**.
+
+### Adding a New Course
+
+To add a course beyond the three included demo folders, create a new folder in `user/pages/` following the naming rules above, copy a `course-card.md` file into it (from one of the existing demo courses), and add the new folder name as a key in `versioning.labels` in `user/config/themes/helios.yaml`. Then set **Published** to **Yes** in the Admin panel to make it visible on the Courses homepage.
 
 ## Courses Homepage
 
