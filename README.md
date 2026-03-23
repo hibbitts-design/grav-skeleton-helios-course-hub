@@ -130,7 +130,7 @@ In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **P
 > [!TIP]
 > If changes don't appear immediately after updating settings or publishing pages, clear the Grav cache via **Admin → Tools → Cache**.
 
-## Course Folder Naming
+### Course Folder Names
 
 Course folders must start with one or more letters, followed by a number. An optional hyphen can separate the letters from the number. Additional version segments (separated by dots or hyphens) are supported.
 
