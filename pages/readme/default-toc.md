@@ -184,6 +184,15 @@ To display a card image, upload an image file to the course root page's media fo
 
 ## Course Label Customization
 
+### Site Name
+
+The site name displayed in the header comes from the **Logo Text** setting in the Helios Theme config. Edit it via **Admin → Themes → Helios → Logo → Logo Text**, or directly in `user/config/themes/helios.yaml`:
+
+```yaml
+logo:
+  text: 'My Course Hub'
+```
+
 ### Course Names
 
 The course name shown below the site name in the sidebar, in the sidebar course dropdown, and as the middle segment of the browser tab title (`Page | Course Label | Site Title`) comes from the `versioning.labels` setting in the Helios Theme config. These can be edited via **Admin → Themes → Helios → Versioning tab → Version Labels**, or directly in `user/config/themes/helios.yaml`:
