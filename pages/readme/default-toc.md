@@ -126,6 +126,8 @@ The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
 In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
 
+Once you have set up your own courses, you can safely delete any unused demo course folders (e.g. `cpt-363-2/`, `cpt-363-3/`) from `user/pages/` via the Admin panel or FTP.
+
 > [!TIP]
 > If changes don't appear immediately after updating settings or publishing pages, clear the Grav cache via **Admin → Tools → Cache**.
 
