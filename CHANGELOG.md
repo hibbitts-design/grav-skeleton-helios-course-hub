@@ -3,7 +3,7 @@
 
 1. [](#improved)
     * Include dark-mode screenshots
-    * Updated ReadMe
+    * Updated ReadMes
     * Updated with latest Helios Course Hub plugin
 
 # v0.9.2
