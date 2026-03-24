@@ -4,7 +4,7 @@
 1. [](#improved)
     * Include dark-mode screenshots
     * Updated ReadMe
-    * Updated Helios Course Hub plugin
+    * Updated with latest Helios Course Hub plugin
 
 # v0.9.2
 ## 03/17/2026
