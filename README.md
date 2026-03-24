@@ -133,7 +133,7 @@ In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **P
 Once you have set up your own courses, you can safely delete any unused demo course folders (e.g. `cpt-363-2/`, `cpt-363-3/`) from `user/pages/` via the Admin panel or FTP.
 
 > [!TIP]
-> If changes don't appear immediately after updating settings or publishing pages, clear the Grav cache via **Admin → Tools → Cache**.
+> If changes don't appear immediately after updating settings or publishing pages, clear the Grav cache via the **Clear Cache** button in the upper-right of the Admin Dashboard.
 
 ### Course Folder Names
 
