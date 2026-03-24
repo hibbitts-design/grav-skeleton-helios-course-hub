@@ -133,7 +133,7 @@ Once you have set up your own courses, you can safely delete any unused demo cou
 
 ### Adding a New Course
 
-To add a course beyond the three included demo folders, create a new folder in `user/pages/` following the naming rules above, copy a `course-card.md` file into it (from one of the existing demo courses), and add the new folder name as a key in `versioning.labels` in `user/config/themes/helios.yaml`. Then set **Published** to **Yes** in the Admin panel to make it visible on the Courses homepage.
+To add a course beyond the three included demo folders, duplicate an existing course folder (e.g. `cpt-363-1/`) via FTP or the Admin panel, rename it following the naming rules above, and add the new folder name as a key in `versioning.labels` in `user/config/themes/helios.yaml`. Then set **Published** to **Yes** in the Admin panel to make it visible on the Courses homepage.
 
 ## Courses Homepage
 
