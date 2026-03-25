@@ -83,7 +83,7 @@ whitelabel:
       notice-text: '#FFFFFF'
       update-bg: '#7A5EBD'
       update-text: '#FFFFFF'
-      critical-bg: '#EF4444'
+      critical-bg: '#DC2626'
       critical-text: '#FFFFFF'
       content-highlight: '#ffffd7'
     name: null
