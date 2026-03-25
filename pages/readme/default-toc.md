@@ -252,7 +252,7 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 
 ## Included Plugin: Helios Course Hub
 
-Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admin panel styling. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel.
+Custom CSS, JavaScript, shortcodes, and Helios-inspired Admin Panel styling with improved readability for the Helios Course Hub skeleton. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel.
 
 ### Templates
 - **course-list** – Courses homepage template that renders all visible courses as cards. Assigned automatically to the Courses homepage (`/courses`).
@@ -265,7 +265,7 @@ Custom CSS, JavaScript and shortcodes for the Helios Course Hub theme, plus Admi
 - **helios.css** – Theme styling (announcement blockquotes, heading typography, Font Awesome spacing, responsive containers)
 - **helios.js** – Embedly dark/light theme support with automatic CDN loading
 - **print.css** – Print stylesheet (hides navigation chrome, resets colors for light and dark themes, controls page breaks, displays absolute link URLs, sets consistent page margins)
-- **admin.css** – Increased Admin panel font sizes and toolbar icon scaling
+- **admin.css** – Helios-inspired Admin Panel styling: increased font sizes, toolbar icon scaling, rounded corners on inputs/buttons/badges/tabs/dropdowns, and button hover transitions (conditionally loaded based on the Helios-inspired Admin Styling setting)
 - **admin.js** – Admin panel JavaScript customizations
 
 ### Shortcodes
@@ -293,6 +293,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 | Setting | Default | Description |
 |---------|---------|-------------|
+| Helios-inspired Admin Styling | Enabled | Apply Helios-inspired styling enhancements to the Admin Panel (rounded corners, transitions, improved typography) |
 | Show Site Logo Icon | Enabled | Show or hide the icon square next to the Logo Text in the header when no logo image is set |
 | Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
 | Single Course Site Logo Link | First Page of Only Listed Course | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
@@ -303,6 +304,8 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Git Link Mode | View file | Whether the Git link opens the file for **viewing** (default, for open access to course materials) or **editing** (for course authors and contributors with repository access) |
 | Repository Host | [raw]`github.com`[/raw] | Repository hosting service for the Helios GitHub Integration ([raw]`github.com`[/raw] or [raw]`codeberg.org`[/raw]) |
 | H5P Content Embed Source URL | `https://h5p.org/h5p/embed/` | Base URL for H5P embeds via Content ID (used with [raw]`[h5p id="..."]`[/raw]) |
+
+> **Note:** The Helios-inspired Admin Panel colour scheme (zinc nav, accessible blue links, muted purple accents) is configured separately in `user/config/plugins/admin.yaml` under `whitelabel.color_scheme` and is independent of the Helios-inspired Admin Styling toggle.
 
 ## Requirements
 

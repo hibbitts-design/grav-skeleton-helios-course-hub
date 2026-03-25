@@ -1,0 +1,101 @@
+enabled: true
+route: /admin
+cache_enabled: true
+theme: grav
+logo_text: null
+body_classes: null
+content_padding: true
+twofa_enabled: true
+sidebar:
+  activate: tab
+  hover_delay: 100
+  size: auto
+dashboard:
+  days_of_stats: 7
+widgets_display:
+  dashboard-maintenance: 'true'
+  dashboard-statistics: 'true'
+  dashboard-notifications: 'true'
+  dashboard-feed: 'true'
+  dashboard-pages: 'true'
+pages:
+  show_parents: both
+  show_modular: true
+  parents_levels: null
+session:
+  timeout: 1800
+edit_mode: normal
+frontend_preview_target: inline
+show_github_msg: true
+admin_icons: line-awesome
+enable_auto_updates_check: true
+notifications:
+  feed: true
+  dashboard: true
+  plugins: true
+  themes: true
+popularity:
+  enabled: true
+  ignore:
+    - '/test*'
+    - /modular
+  history:
+    daily: '30'
+    monthly: '12'
+    visitors: '20'
+whitelabel:
+  quicktray_recompile: false
+  codemirror_theme: paper
+  codemirror_fontsize: md
+  codemirror_md_font: sans
+  logo_custom: {  }
+  logo_login: {  }
+  color_scheme:
+    accents:
+      primary-accent: button
+      secondary-accent: notice
+      tertiary-accent: critical
+    colors:
+      logo-bg: '#18181B'
+      logo-link: '#FFFFFF'
+      nav-bg: '#27272A'
+      nav-text: '#9CA3AF'
+      nav-link: '#F9FAFB'
+      nav-selected-bg: '#18181B'
+      nav-selected-link: '#FFFFFF'
+      nav-hover-bg: '#3F3F46'
+      nav-hover-link: '#FFFFFF'
+      toolbar-bg: '#FFFFFF'
+      toolbar-text: '#1F2937'
+      page-bg: '#F4F4F5'
+      page-text: '#374151'
+      page-link: '#2563EB'
+      content-bg: '#FAFAFA'
+      content-text: '#374151'
+      content-link: '#2563EB'
+      content-link2: '#7A5EBD'
+      content-header: '#111827'
+      content-tabs-bg: '#E5E7EB'
+      content-tabs-text: '#4B5563'
+      button-bg: '#2563EB'
+      button-text: '#FFFFFF'
+      notice-bg: '#059669'
+      notice-text: '#FFFFFF'
+      update-bg: '#7A5EBD'
+      update-text: '#FFFFFF'
+      critical-bg: '#EF4444'
+      critical-text: '#FFFFFF'
+      content-highlight: '#ffffd7'
+    name: null
+  custom_footer: null
+  custom_css: null
+  custom_presets: null
+show_beta_msg: null
+pagemedia:
+  resize_width: 0
+  resize_height: 0
+  res_min_width: 0
+  res_min_height: 0
+  res_max_width: 0
+  res_max_height: 0
+  resize_quality: 0.8
