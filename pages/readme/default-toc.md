@@ -133,7 +133,10 @@ Once you have set up your own courses, you can safely delete any unused demo cou
 
 ### Adding a New Course
 
-To add a course beyond the three included demo folders, duplicate an existing course folder (e.g. `cpt-363-1/`) via FTP or the Admin panel, rename it following the naming rules above, and add the new folder name as a key in `versioning.labels` in `user/config/themes/helios.yaml` (or via **Admin → Themes → Helios → Versioning → Version Labels**). Then set **Published** to **Yes** in the Admin panel to make it visible on the Courses homepage.
+To add a course beyond the three included demo folders, duplicate an existing course folder (e.g. `cpt-363-1/`) via FTP or the Admin panel (when using the Admin panel, click the duplicate icon to open the **Copy Page** dialog — remove the `-copy` suffix from the **Folder Name** field before confirming), then ensure it follows the naming rules above, and add the new folder name as a key in `versioning.labels` in `user/config/themes/helios.yaml` (or via **Admin → Themes → Helios → Versioning → Version Labels**). Then set **Published** to **Yes** in the Admin panel to make it visible on the Courses homepage.
+
+> [!TIP]
+> After duplicating and renaming a course folder, clear the Grav cache via the **Clear Cache** button in the upper-right of the Admin Dashboard if the new course does not appear immediately.
 
 ## Courses Homepage
 
