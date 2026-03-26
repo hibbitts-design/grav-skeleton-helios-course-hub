@@ -160,7 +160,7 @@ log:
     facility: local6
     tag: grav
 debugger:
-  enabled: true
+  enabled: false
   provider: clockwork
   censored: false
   shutdown:
