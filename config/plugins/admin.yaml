@@ -73,7 +73,7 @@ whitelabel:
       content-bg: '#FAFAFA'
       content-text: '#374151'
       content-link: '#2563EB'
-      content-link2: '#7A5EBD'
+      content-link2: '#7845CC'
       content-header: '#111827'
       content-tabs-bg: '#E5E7EB'
       content-tabs-text: '#4B5563'
@@ -81,15 +81,15 @@ whitelabel:
       button-text: '#FFFFFF'
       notice-bg: '#059669'
       notice-text: '#FFFFFF'
-      update-bg: '#7A5EBD'
+      update-bg: '#7845CC'
       update-text: '#FFFFFF'
       critical-bg: '#DC2626'
       critical-text: '#FFFFFF'
       content-highlight: '#ffffd7'
     name: null
   custom_footer: null
-  custom_css: null
-  custom_presets: null
+  custom_css: '#admin-login h1 svg path:first-child { fill: rgba(255, 255, 255, 0.10); }'
+  custom_presets: "- name: Helios\n  accents:\n    primary-accent: button\n    secondary-accent: notice\n    tertiary-accent: critical\n  colors:\n    logo-bg: '#18181B'\n    logo-link: '#FFFFFF'\n    nav-bg: '#27272A'\n    nav-text: '#9CA3AF'\n    nav-link: '#F9FAFB'\n    nav-selected-bg: '#18181B'\n    nav-selected-link: '#FFFFFF'\n    nav-hover-bg: '#3F3F46'\n    nav-hover-link: '#FFFFFF'\n    toolbar-bg: '#FFFFFF'\n    toolbar-text: '#1F2937'\n    page-bg: '#F4F4F5'\n    page-text: '#374151'\n    page-link: '#2563EB'\n    content-bg: '#FAFAFA'\n    content-text: '#374151'\n    content-link: '#2563EB'\n    content-link2: '#7845CC'\n    content-header: '#111827'\n    content-tabs-bg: '#E5E7EB'\n    content-tabs-text: '#4B5563'\n    content-highlight: '#ffffd7'\n    button-bg: '#2563EB'\n    button-text: '#FFFFFF'\n    notice-bg: '#059669'\n    notice-text: '#FFFFFF'\n    update-bg: '#7845CC'\n    update-text: '#FFFFFF'\n    critical-bg: '#DC2626'\n    critical-text: '#FFFFFF'\n"
 show_beta_msg: null
 pagemedia:
   resize_width: 0
