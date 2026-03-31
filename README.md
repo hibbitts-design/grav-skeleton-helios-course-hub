@@ -8,7 +8,7 @@
 
 <p>Try the <a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/">multi-course demo</a> · <a href="https://demo.hibbittsdesign.org/grav-helios-single-course-hub/cpt-363-1/home">single course demo</a></p>
 
-<p>The successor to <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> – built on open-source <a href="https://getgrav.org">Grav CMS</a> with portable Markdown files you fully own and control. Requires the <a href="https://getgrav.org/premium/helios">Grav Premium Helios theme</a>, whose purchase directly supports Grav's open-source development.</p>
+<p>The successor to <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> – built on open-source <a href="https://getgrav.org">Grav CMS</a> with content stored as portable Markdown files. Requires the <a href="https://getgrav.org/premium/helios">Grav Premium Helios theme</a>, whose purchase directly supports Grav's open-source development.</p>
 
 <table>
   <tr>
