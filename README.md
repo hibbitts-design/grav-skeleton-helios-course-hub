@@ -1,6 +1,6 @@
 <div align="center">
 
-# ☀️ Grav Helios Course Hub Skeleton
+# ☀️ Grav Helios Course Hub Skeleton Package
 
 <p><em>Give your courses a modern, open home on the web – with content in portable Markdown files you control.</em></p>
 
