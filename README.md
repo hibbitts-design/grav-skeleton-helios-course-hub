@@ -1,4 +1,4 @@
-# Grav Helios Course Hub Skeleton
+# ☀️ Grav Helios Course Hub Skeleton
 
 [![Grav Discord Chat](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Grav%20Discord%20Chat)](https://chat.getgrav.org) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE)
 
