@@ -1,29 +1,52 @@
+<div align="center">
+
 # ☀️ Grav Helios Course Hub Skeleton
 
-[![Grav Discord Chat](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Grav%20Discord%20Chat)](https://chat.getgrav.org) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE)
+<p><em>Give your courses a modern, open home on the web – with content you keep and control.</em></p>
 
-## A Single or Multi-Course Companion Website for the Grav Premium Helios Theme
+[![Grav Discord Chat](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Grav%20Discord%20Chat)](https://chat.getgrav.org) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/grav-skeleton-helios-course-hub?style=flat-square&label=Release)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) [![PHP](https://img.shields.io/badge/PHP-%3E%3D7.3.6-8892BF?style=flat-square&logo=php&logoColor=white)](https://learn.getgrav.org/17/basics/requirements) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE)
 
-<p float="left">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1-dark.png">
-    <img alt="Grav Helios Course Hub, course list page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="49%">
-  </picture>&nbsp;<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2-dark.png">
-    <img alt="Grav Helios Course Hub, course page" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="49%">
-  </picture>
-  <picture>
-    <img src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-admin-1.png" width="49%">
-  </picture>&nbsp;<picture>
-    <img src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-admin-2.png" width="49%">
-  </picture>
-</p>
+<p>Try the <a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/">multi-course demo</a> · <a href="https://demo.hibbittsdesign.org/grav-helios-single-course-hub/cpt-363-1/home">single course demo</a></p>
 
-> _Example Grav Helios Course Hub website pages and Admin Panel. Explore a [single course](https://demo.hibbittsdesign.org/grav-helios-single-course-hub/cpt-363-1/home) or [multiple course](https://demo.hibbittsdesign.org/grav-helios-course-hub/) demo site._
+<p>The successor to <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> – built on open-source <a href="https://getgrav.org">Grav CMS</a> with portable Markdown files you fully own and control. Requires the <a href="https://getgrav.org/premium/helios">Grav Premium Helios theme</a>, whose purchase directly supports Grav's open-source development.</p>
 
-Give your courses a modern, open home on the web, without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a companion site for one or more courses built on [Grav CMS](https://getgrav.org) (an open-source, flat-file CMS with no database required and a built-in Admin panel), with content you fully control. Your Helios purchase directly supports Grav's open-source development.
+<table>
+  <tr>
+    <td width="49%">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1-dark.png">
+        <img alt="Courses homepage showing two course cards with icons and descriptions" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-1.png" width="100%">
+      </picture>
+    </td>
+    <td width="49%">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2-dark.png">
+        <img alt="Weekly course page with sidebar navigation and module listing" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-2.png" width="100%">
+      </picture>
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Course Hub – Courses screen</sub></td>
+    <td align="center"><sub>Course Hub – Weekly overview screen</sub></td>
+  </tr>
+  <tr><td colspan="2">&nbsp;</td></tr>
+  <tr>
+    <td width="49%">
+      <img alt="Admin Panel pages overview showing course content tree" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-admin-1.png" width="100%">
+    </td>
+    <td width="49%">
+      <img alt="Admin Panel course card editor with icon and description fields" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshot-admin-2.png" width="100%">
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><sub>Admin Panel – Pages overview screen</sub></td>
+    <td align="center"><sub>Admin Panel – Course card edit screen</sub></td>
+  </tr>
+</table>
 
-Helios Course Hub is the successor to the original [Open Course Hub](https://github.com/hibbitts-design/grav-skeleton-course-hub), bringing the same open-education goals to the premium Helios theme with a plugin-based approach.
+</div>
+
+A complete, pre-configured package that gives one or more courses a modern, clean, and organized home on the web – a place to openly share materials and resources that you keep and control. Content is stored as simple Markdown files you can keep locally, with a built-in Admin panel for browser-based editing and no database required. Runs on nearly any web hosting service.
 
 ## When is Grav Helios Course Hub a Good Candidate?
 
