@@ -2,13 +2,13 @@
 
 # ☀️ Grav Helios Course Hub Skeleton
 
-<p><em>Give your courses a modern, open home on the web – with content you keep and control.</em></p>
+<p><em>Give your courses a modern, open home on the web – with content in portable Markdown files you control.</em></p>
 
 [![Grav Discord Chat](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Grav%20Discord%20Chat)](https://chat.getgrav.org) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/grav-skeleton-helios-course-hub?style=flat-square&label=Release)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) [![PHP](https://img.shields.io/badge/PHP-%3E%3D7.3.6-8892BF?style=flat-square&logo=php&logoColor=white)](https://learn.getgrav.org/17/basics/requirements) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE)
 
 <p>Try the <a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/">multi-course demo</a> · <a href="https://demo.hibbittsdesign.org/grav-helios-single-course-hub/cpt-363-1/home">single course demo</a></p>
 
-<p>The successor to <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> – built on open-source <a href="https://getgrav.org">Grav CMS</a> with content stored as portable Markdown files. Requires the <a href="https://getgrav.org/premium/helios">Grav Premium Helios theme</a>, whose purchase directly supports Grav's open-source development.</p>
+<p>The successor to <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> – built on open-source <a href="https://getgrav.org">Grav CMS</a> with a built-in Admin panel and no database required. Requires the <a href="https://getgrav.org/premium/helios">Grav Premium Helios theme</a>, whose purchase directly supports Grav's open-source development.</p>
 
 <table>
   <tr>
