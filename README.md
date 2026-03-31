@@ -28,8 +28,8 @@
     </td>
   </tr>
   <tr>
-    <td align="center"><sub>Course Hub – Courses screen</sub></td>
-    <td align="center"><sub>Course Hub – Weekly overview screen</sub></td>
+    <td align="center">Course Hub – Courses screen</td>
+    <td align="center">Course Hub – Weekly overview screen</td>
   </tr>
   <tr><td colspan="2">&nbsp;</td></tr>
   <tr>
@@ -41,8 +41,8 @@
     </td>
   </tr>
   <tr>
-    <td align="center"><sub>Admin Panel – Pages overview screen</sub></td>
-    <td align="center"><sub>Admin Panel – Course card edit screen</sub></td>
+    <td align="center">Admin Panel – Pages overview screen</td>
+    <td align="center">Admin Panel – Course card edit screen</td>
   </tr>
 </table>
 
