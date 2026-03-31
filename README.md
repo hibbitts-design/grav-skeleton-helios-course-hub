@@ -2,7 +2,7 @@
 
 # ☀️ Grav Helios Course Hub 
 
-### Skeleton Package
+### Ready-to-Run Skeleton Package
 
 <p><em>Give your courses a modern, open home on the web – with content in portable Markdown files you control.</em></p>
 
