@@ -399,19 +399,19 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Open MultiCourse Hub | Helios Course Hub |
 |---|---|
 | `01.home/subsitelist.md` (course list) | `00.courses/` (course catalog) |
-| `02.cpt363-basic/` | `cpt-100/` |
-| `02.cpt363-basic/subsite.md` | `cpt-100/course-card.md` |
-| `02.cpt363-basic/01.home/` (blog template) | `cpt-100/10.home/` (doc template) |
-| `02.cpt363-basic/01.home/module-XX/` (item template) | `cpt-100/20.modules/` |
-| `02.cpt363-basic/02.schedule/` | `cpt-100/30.schedule/` |
-| `02.cpt363-basic/03.resources/` | `cpt-100/40.resources/` |
-| `02.cpt363-basic/10.syllabus/` | `cpt-100/50.syllabus/` |
-| `02.cpt363-basic/sidebar/` | not used |
-| `02.cpt363-basic/footer/` | not used |
-| `02.cpt363-basic/headerimage/` | not used |
-| `02.cpt363-basic/lms-home/` | not used |
+| `02.cpt-200/` | `cpt-200/` |
+| `02.cpt-200/subsite.md` | `cpt-200/course-card.md` |
+| `02.cpt-200/01.home/` (blog template) | `cpt-200/10.home/` (doc template) |
+| `02.cpt-200/01.home/module-XX/` (item template) | `cpt-200/20.modules/` |
+| `02.cpt-200/02.schedule/` | `cpt-200/30.schedule/` |
+| `02.cpt-200/03.resources/` | `cpt-200/40.resources/` |
+| `02.cpt-200/10.syllabus/` | `cpt-200/50.syllabus/` |
+| `02.cpt-200/sidebar/` | not used |
+| `02.cpt-200/footer/` | not used |
+| `02.cpt-200/headerimage/` | not used |
+| `02.cpt-200/lms-home/` | not used |
 
-**Course folder naming:** Remove numeric prefix and standardize to hyphenated course code (`02.cpt363-basic` → `cpt-100`).
+**Course folder naming:** Remove numeric prefix and standardize to hyphenated course code (`02.cpt-200` → `cpt-200`).
 
 **Template changes:**
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
@@ -423,7 +423,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 ```yaml
 # Old: subsite.md
-title: CPT 100
+title: CPT 200
 subsite_list_description: 'Introduction to Computing Science'
 subsite_home: home
 published: true
@@ -431,12 +431,12 @@ published: true
 # New: course-card.md
 icon: tabler/code.svg
 description: 'Introduction to Computing Science'
-image: cpt100-card.jpg
+image: cpt200-card.jpg
 routable: false
 ```
 
 **New file:**
-- `cpt-100/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub.
+- `cpt-200/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub.
 
 > [!NOTE]
 > The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
