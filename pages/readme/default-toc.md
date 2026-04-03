@@ -369,6 +369,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | `02.cpt-200/footer/` | not used |
 | `02.cpt-200/headerimage/` | not used |
 | `02.cpt-200/lms-home/` | not used |
+| `02.cpt-200/favicon/favicon.*` | `cpt-200/favicon.*` (upload to course root media) |
 
 **Course folder naming:** Remove numeric prefix and standardize to hyphenated course code (`02.cpt-200` → `cpt-200`).
 
