@@ -331,11 +331,15 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | `03.resources/` | `cpt-100/40.resources/` |
 | `10.syllabus/` | `cpt-100/50.syllabus/` |
 | `sidebar/` | not used |
+| `footer/` | not used |
+| `headerimage/` | not used |
+| `lms-home/` | not used |
 
 **Template changes:**
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
 - Remove `item` template pages — weekly content moves into the modules doc page
 - Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
+- Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
 
 **Course structure:** Wrap all course pages in a course folder (`cpt-100/`) at the site root, alongside the new `00.courses/` catalog folder.
 
@@ -343,9 +347,8 @@ The following settings are available in the Admin panel under **Plugins → Heli
 - `cpt-100/course-card.md` — course card metadata (icon, description, image)
 - `cpt-100/15.essentials/essentials.md` — key course info, between home and modules
 
-**Removed:**
-- `sidebar/default.md` — sidebar navigation is handled differently in Helios; key content can be moved to `15.essentials/essentials.md`
-- Modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
+> [!NOTE]
+> The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
 
 **What stays the same:** Content within `.md` files requires no changes. Top-level `favicon/` carries over.
 
@@ -362,6 +365,9 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | `02.cpt363-basic/03.resources/` | `cpt-100/40.resources/` |
 | `02.cpt363-basic/10.syllabus/` | `cpt-100/50.syllabus/` |
 | `02.cpt363-basic/sidebar/` | not used |
+| `02.cpt363-basic/footer/` | not used |
+| `02.cpt363-basic/headerimage/` | not used |
+| `02.cpt363-basic/lms-home/` | not used |
 
 **Course folder naming:** Remove numeric prefix and standardize to hyphenated course code (`02.cpt363-basic` → `cpt-100`).
 
@@ -369,6 +375,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
 - Remove `item` template pages — weekly content moves into the modules doc page
 - Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
+- Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
 
 **Course metadata:** Replace `subsite.md` with `course-card.md`. Key fields:
 
@@ -389,9 +396,8 @@ routable: false
 **New file:**
 - `cpt-100/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub.
 
-**Removed:**
-- Per-course `sidebar/` folders — sidebar navigation is handled differently in Helios; key content can be moved to `15.essentials/essentials.md`
-- Modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
+> [!NOTE]
+> The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
 
 **What stays the same:** Content within `.md` files requires no changes. Top-level `favicon/` carries over.
 
