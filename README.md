@@ -376,6 +376,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | `footer/` | not used |
 | `headerimage/` | not used |
 | `lms-home/` | not used |
+| `favicon/` | set via Helios theme settings |
 
 **Template changes:**
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
@@ -392,7 +393,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 > [!NOTE]
 > The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
 
-**What stays the same:** Content within `.md` files requires no changes. Top-level `favicon/` carries over.
+**What stays the same:** Page body content requires no changes — only frontmatter updates are needed.
 
 ### From Grav Open MultiCourse Hub
 
@@ -441,7 +442,7 @@ routable: false
 > [!NOTE]
 > The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
 
-**What stays the same:** Content within `.md` files requires no changes. Top-level `favicon/` carries over.
+**What stays the same:** Page body content requires no changes — only frontmatter updates are needed.
 
 ## Support
 
