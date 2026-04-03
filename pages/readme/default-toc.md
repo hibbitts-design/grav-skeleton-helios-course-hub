@@ -319,6 +319,82 @@ The following settings are available in the Admin panel under **Plugins → Heli
 - Grav CMS >= 1.7.0
 - [Grav Premium Helios Theme](https://getgrav.org/premium/helios) – one license per site ([Standard or Team](https://getgrav.org/premium/license))
 
+## Migrating to Helios Course Hub
+
+### From Grav Open Course Hub (single course)
+
+| Open Course Hub | Helios Course Hub |
+|---|---|
+| `01.home/` (blog template) | `cpt-100/10.home/` (doc template) |
+| `01.home/module-XX/` (item template) | `cpt-100/20.modules/` |
+| `02.schedule/` | `cpt-100/30.schedule/` |
+| `03.resources/` | `cpt-100/40.resources/` |
+| `10.syllabus/` | `cpt-100/50.syllabus/` |
+| `sidebar/` | not used |
+
+**Template changes:**
+- Change `template: blog` and `template: page` to `template: doc` on all course content pages
+- Remove `item` template pages — weekly content moves into the modules doc page
+- Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
+
+**Course structure:** Wrap all course pages in a course folder (`cpt-100/`) at the site root, alongside the new `00.courses/` catalog folder.
+
+**New files:**
+- `cpt-100/course-card.md` — course card metadata (icon, description, image)
+- `cpt-100/15.essentials/essentials.md` — key course info, between home and modules
+
+**Removed:**
+- `sidebar/default.md` — sidebar navigation is handled differently in Helios; key content can be moved to `15.essentials/essentials.md`
+- Modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
+
+**What stays the same:** Content within `.md` files requires no changes. Top-level `favicon/` carries over.
+
+### From Grav Open MultiCourse Hub
+
+| Open MultiCourse Hub | Helios Course Hub |
+|---|---|
+| `01.home/subsitelist.md` (course list) | `00.courses/` (course catalog) |
+| `02.cpt363-basic/` | `cpt-100/` |
+| `02.cpt363-basic/subsite.md` | `cpt-100/course-card.md` |
+| `02.cpt363-basic/01.home/` (blog template) | `cpt-100/10.home/` (doc template) |
+| `02.cpt363-basic/01.home/module-XX/` (item template) | `cpt-100/20.modules/` |
+| `02.cpt363-basic/02.schedule/` | `cpt-100/30.schedule/` |
+| `02.cpt363-basic/03.resources/` | `cpt-100/40.resources/` |
+| `02.cpt363-basic/10.syllabus/` | `cpt-100/50.syllabus/` |
+| `02.cpt363-basic/sidebar/` | not used |
+
+**Course folder naming:** Remove numeric prefix and standardize to hyphenated course code (`02.cpt363-basic` → `cpt-100`).
+
+**Template changes:**
+- Change `template: blog` and `template: page` to `template: doc` on all course content pages
+- Remove `item` template pages — weekly content moves into the modules doc page
+- Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
+
+**Course metadata:** Replace `subsite.md` with `course-card.md`. Key fields:
+
+```yaml
+# Old: subsite.md
+title: CPT 100
+subsite_list_description: 'Introduction to Computing Science'
+subsite_home: home
+published: true
+
+# New: course-card.md
+icon: tabler/code.svg
+description: 'Introduction to Computing Science'
+image: cpt100-card.jpg
+routable: false
+```
+
+**New file:**
+- `cpt-100/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub.
+
+**Removed:**
+- Per-course `sidebar/` folders — sidebar navigation is handled differently in Helios; key content can be moved to `15.essentials/essentials.md`
+- Modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
+
+**What stays the same:** Content within `.md` files requires no changes. Top-level `favicon/` carries over.
+
 ## Support
 
 ### Contact and Support
