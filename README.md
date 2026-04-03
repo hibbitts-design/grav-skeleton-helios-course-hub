@@ -57,7 +57,7 @@ Grav Helios Course Hub is a strong fit when you:
 - Want a visually refined, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
 - Want a fully designed course site without custom design or coding work
 - Want to support multiple courses from a single installation with automatic course switching
-- Need course-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
+- Need course-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it, with results filtered to only published courses
 - Want flexible editing options – browser-based Admin panel with Markdown by default and an optional visual block editor
 - Need multi-user editing with role-based access rights for team-managed course content
 - Need rich content embedding (H5P, iFrames, Google Slides, PDFs, Embedly) without coding
@@ -158,7 +158,7 @@ By default, only `cpt-363-1/` is published, so the Courses homepage shows a sing
 
 ### Showing and Hiding Courses
 
-In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
+In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course. Unpublished courses are also excluded from search results.
 
 Once you have set up your own courses, you can safely delete any unused demo course folders (e.g. `cpt-363-2/`, `cpt-363-3/`) from `user/pages/` via the Admin panel or FTP.
 

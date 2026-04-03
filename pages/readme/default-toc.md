@@ -23,7 +23,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 - Ready in minutes – a complete, pre-configured package with demo content included
 - Flexible – host one course or many from a single installation
-- Context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it
+- Context-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it, with results filtered to only published courses
 - Team-ready – multi-user editing with role-based access rights for team-managed course content
 - Yours – host it anywhere PHP runs, customize freely, and keep every word you write
 - Open by design – optionally enable the built-in Git Sync and "Edit this Page" support
@@ -124,7 +124,7 @@ The simplest convention is `course-1`, `course-2`, `course-3`, etc.
 
 ### Showing and Hiding Courses
 
-In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course.
+In the Admin panel, open the course folder itself (e.g. `cpt-363-2`) and set **Published** to **Yes** to show or **No** to hide the course. Unpublished courses are also excluded from search results.
 
 Once you have set up your own courses, you can safely delete any unused demo course folders (e.g. `cpt-363-2/`, `cpt-363-3/`) from `user/pages/` via the Admin panel or FTP.
 
