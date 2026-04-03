@@ -1,6 +1,8 @@
 ---
 title: ReadMe
 published: true
+simplesearch:
+  process: false
 ---
 
 Give your courses a modern, open home on the web, without building from scratch. This package, combined with the [Grav Premium Helios theme](https://getgrav.org/premium/helios), provides a companion site for one or more courses built on [Grav CMS](https://getgrav.org) (an open-source, flat-file CMS with no database required and a built-in Admin panel), with content you fully control.
