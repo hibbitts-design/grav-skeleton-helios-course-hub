@@ -46,7 +46,7 @@
   </tr>
 </table>
 
-<p align="center"><a href="https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/tree/main/screenshots">View all screenshots</a></p>
+<p align="center"><a href="https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/tree/main/screenshots/screenshots.md">View all screenshots</a></p>
 
 </div>
 
