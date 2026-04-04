@@ -179,6 +179,7 @@ Each course folder contains a `course-card.md` file with frontmatter that contro
 | `badge_label` | Optional status badge label (e.g. `Coming Soon`, `New`, `Archived`) |
 | `badge_color` | Optional badge colour (`yellow`, `green`, `red`, etc.) |
 | `image` | Optional card image filename (upload to the course's media folder) |
+| `show_sidebar_image` | Show the card image in the course sidebar when browsing within this course (default: Yes) |
 
 ```yaml
 ---
@@ -188,6 +189,7 @@ instructor: Jane Smith & John Doe
 badge_label: Coming Soon
 badge_color: yellow
 image: banner.jpg
+show_sidebar_image: true
 ---
 ```
 
