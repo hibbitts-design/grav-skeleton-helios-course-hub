@@ -384,11 +384,11 @@ The following settings are available in the Admin panel under **Plugins → Heli
 - Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
 - Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
 
-**Course structure:** Wrap all course pages in a course folder (`cpt-100/`) at the site root, alongside the new `00.courses/` catalog folder.
+**Course structure:** Wrap all course pages in a course folder (`cpt-100/`) at the site root, alongside the new `00.courses/` catalog folder (see `00.courses/` in the skeleton for an example).
 
 **New files:**
-- `cpt-100/course-card.md` — course card metadata (icon, description, image)
-- `cpt-100/15.essentials/essentials.md` — key course info, between home and modules
+- `cpt-100/course-card.md` — course card metadata (icon, description, image; see `cpt-363-1/course-card.md` in the skeleton for an example)
+- `cpt-100/15.essentials/essentials.md` — key course info, between home and modules (see `cpt-363-1/20.essentials/` in the skeleton for an example)
 
 > [!NOTE]
 > The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
@@ -439,7 +439,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
   ```
   See the included `cpt-363-1/70.ux-techniques-guide/doc.md` for a full example.
 
-**Course metadata:** Replace `subsite.md` with `course-card.md`. Key fields:
+**Course metadata:** Replace `subsite.md` with `course-card.md` (see `cpt-363-1/course-card.md` in the skeleton for an example). Key fields:
 
 ```yaml
 # Old: subsite.md
@@ -456,7 +456,7 @@ routable: false
 ```
 
 **New file:**
-- `cpt-200/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub.
+- `cpt-200/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub (see `cpt-363-1/20.essentials/` in the skeleton for an example).
 
 > [!NOTE]
 > As with the single course migration, `15.essentials/essentials.md` is the recommended home for content previously kept in `sidebar/default.md`.
