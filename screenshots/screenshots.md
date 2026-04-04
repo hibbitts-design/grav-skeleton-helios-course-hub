@@ -2,7 +2,7 @@
 
 ### All Screenshots
 
-*Full screenshot gallery for the [Grav Helios Course Hub](../user/README.md).*
+*Full screenshot gallery for the [Grav Helios Course Hub](../README.md).*
 
 <table>
   <tr>
