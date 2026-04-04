@@ -28,8 +28,8 @@
     </td>
   </tr>
   <tr>
-    <td align="center">Course Hub – Courses screen</td>
-    <td align="center">Course Hub – Courses screen with card images</td>
+    <td align="center">Course Hub – Courses</td>
+    <td align="center">Course Hub – Courses with card images</td>
   </tr>
   <tr><td colspan="2">&nbsp;</td></tr>
   <tr>
@@ -47,8 +47,8 @@
     </td>
   </tr>
   <tr>
-    <td align="center">Course Hub – Weekly overview screen</td>
-    <td align="center">Course Hub – Weekly overview with sidebar image</td>
+    <td align="center">Course Hub – Weekly overview</td>
+    <td align="center">Course Hub – Weekly overview with Sidebar image</td>
   </tr>
   <tr><td colspan="2">&nbsp;</td></tr>
   <tr>
@@ -60,8 +60,8 @@
     </td>
   </tr>
   <tr>
-    <td align="center">Admin Panel – Pages overview screen</td>
-    <td align="center">Admin Panel – Course card edit screen</td>
+    <td align="center">Admin Panel – Pages overview</td>
+    <td align="center">Admin Panel – Course card edit</td>
   </tr>
 </table>
 
