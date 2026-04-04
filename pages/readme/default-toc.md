@@ -338,7 +338,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 **Template changes:**
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
-- Remove `item` template pages — weekly content moves into the modules doc page
+- Remove `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
 - Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
 - Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
 
@@ -363,8 +363,11 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | `02.cpt-200/01.home/` (blog template) | `cpt-200/10.home/` (doc template) |
 | `02.cpt-200/01.home/module-XX/` (item template) | `cpt-200/20.modules/` |
 | `02.cpt-200/02.schedule/` | `cpt-200/30.schedule/` |
-| `02.cpt-200/03.resources/` | `cpt-200/40.resources/` |
-| `02.cpt-200/10.syllabus/` | `cpt-200/50.syllabus/` |
+| `02.cpt-200/03.topics/` | `cpt-200/40.topics/` |
+| `02.cpt-200/04.resources/` | `cpt-200/50.resources/` |
+| `02.cpt-200/05.multi-section-page/` | not used |
+| `02.cpt-200/06.ux-techniques-guide/` | `cpt-200/60.ux-techniques-guide/` |
+| `02.cpt-200/10.syllabus/` | `cpt-200/70.syllabus/` |
 | `02.cpt-200/sidebar/` | not used |
 | `02.cpt-200/footer/` | not used |
 | `02.cpt-200/headerimage/` | not used |
@@ -375,9 +378,24 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 **Template changes:**
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
-- Remove `item` template pages — weekly content moves into the modules doc page
+- Remove `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
 - Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
 - Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
+
+**Markup changes:**
+- **Topics page** — wrap content in [raw]`[topics]...[/topics]`[/raw] shortcode and add to frontmatter:
+  ```yaml
+  navigation:
+      prev_next: false
+      toc_position: hidden
+  ```
+- **UX Techniques Guide page** — replace existing markup with [raw]`[doc-accordion]`[/raw] and [raw]`[doc-accordion-item title="..."]`[/raw] shortcodes, and add to frontmatter:
+  ```yaml
+  navigation:
+      prev_next: false
+      toc_position: hidden
+  ```
+  See the included `cpt-363-1/70.ux-techniques-guide/doc.md` for a full example.
 
 **Course metadata:** Replace `subsite.md` with `course-card.md`. Key fields:
 
@@ -399,7 +417,7 @@ routable: false
 - `cpt-200/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub.
 
 > [!NOTE]
-> The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
+> As with the single course migration, `15.essentials/essentials.md` is the recommended home for content previously kept in `sidebar/default.md`.
 
 **What stays the same:** Page body content requires no changes — only frontmatter updates are needed.
 
