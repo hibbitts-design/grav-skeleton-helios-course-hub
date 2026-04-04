@@ -42,7 +42,7 @@
     <td width="49%">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-4-dark.png">
-        <img alt="Weekly course page with sidebar navigation and course card image banner" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads//screenshotsmain/screenshot-4.png" width="100%">
+        <img alt="Weekly course page with sidebar navigation and course card image banner" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-4.png" width="100%">
       </picture>
     </td>
   </tr>
