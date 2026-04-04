@@ -321,6 +321,8 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 ## Migrating to Helios Course Hub
 
+Before migrating, it is recommended to download and install the Helios Course Hub skeleton and explore the included demo content to get a clear picture of the expected site structure, page templates, and frontmatter conventions.
+
 ### From Grav Open Course Hub (single course)
 
 | Open Course Hub | Helios Course Hub |
@@ -338,7 +340,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 **Template changes:**
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
-- Remove `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
+- Move and rename `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
 - Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
 - Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
 
@@ -351,7 +353,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 > [!NOTE]
 > The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
 
-**What stays the same:** Page body content requires no changes — only frontmatter updates are needed.
+**What stays the same:** Most page body content requires no changes — only frontmatter updates are needed.
 
 ### From Grav Open MultiCourse Hub
 
@@ -378,7 +380,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 **Template changes:**
 - Change `template: blog` and `template: page` to `template: doc` on all course content pages
-- Remove `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
+- Move and rename `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
 - Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
 - Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page doc template
 
@@ -419,7 +421,7 @@ routable: false
 > [!NOTE]
 > As with the single course migration, `15.essentials/essentials.md` is the recommended home for content previously kept in `sidebar/default.md`.
 
-**What stays the same:** Page body content requires no changes — only frontmatter updates are needed.
+**What stays the same:** Most page body content requires no changes — only frontmatter updates are needed.
 
 ## Support
 
