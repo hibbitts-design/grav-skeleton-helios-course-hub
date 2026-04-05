@@ -202,7 +202,7 @@ The `course-list.md` frontmatter controls the list layout and sets default value
 
 | Field | Default | Description |
 |-------|---------|-------------|
-| `cards_per_row` | `1` | Number of course cards per row (1–2) |
+| `cards_per_row` | `1` | Number of course cards per row (1–3) |
 | `card_icon` | _(empty)_ | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
 | `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
 | `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
