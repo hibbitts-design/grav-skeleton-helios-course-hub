@@ -15,16 +15,20 @@
 <table>
   <tr>
     <td width="49%">
+      <a href="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1-dark.png">
         <img alt="Courses homepage showing two course cards with icons and descriptions" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png" width="100%">
       </picture>
+      </a>
     </td>
     <td width="49%">
+      <a href="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-3.png">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-3-dark.png">
         <img alt="Weekly course page with sidebar navigation and module listing" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-3.png" width="100%">
       </picture>
+      </a>
     </td>
   </tr>
   <tr>
@@ -34,10 +38,14 @@
   <tr><td colspan="2">&nbsp;</td></tr>
   <tr>
     <td width="49%">
+      <a href="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-admin-1.png">
       <img alt="Admin Panel pages overview showing course content tree" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-admin-1.png" width="100%">
+      </a>
     </td>
     <td width="49%">
+      <a href="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-admin-2.png">
       <img alt="Admin Panel course card editor with icon and description fields" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-admin-2.png" width="100%">
+      </a>
     </td>
   </tr>
   <tr>
