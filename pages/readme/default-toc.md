@@ -100,7 +100,7 @@ user/pages/
 │   ├── 40.schedule/
 │   ├── 50.topics/
 │   ├── 60.resources/
-│   ├── 70.ux-techniques-guide/
+│   ├── 70.guide/
 │   └── 80.syllabus/
 ├── cpt-363-2/                   # Course 2 (same structure, unpublished by default)
 ├── cpt-363-3/                   # Course 3 (same structure, unpublished by default)
@@ -370,7 +370,7 @@ Before migrating, it is recommended to download and install the Helios Course Hu
 | `02.cpt-200/03.topics/` | `cpt-200/40.topics/` |
 | `02.cpt-200/04.resources/` | `cpt-200/50.resources/` |
 | `02.cpt-200/05.multi-section-page/` | not used |
-| `02.cpt-200/06.ux-techniques-guide/` | `cpt-200/60.ux-techniques-guide/` |
+| `02.cpt-200/06.ux-techniques-guide/` | `cpt-200/60.guide/` |
 | `02.cpt-200/10.syllabus/` | `cpt-200/70.syllabus/` |
 | `02.cpt-200/sidebar/` | not used |
 | `02.cpt-200/footer/` | not used |
@@ -399,7 +399,7 @@ Before migrating, it is recommended to download and install the Helios Course Hu
       prev_next: false
       toc_position: hidden
   ```
-  See the included `cpt-363-1/70.ux-techniques-guide/doc.md` for a full example.
+  See the included `cpt-363-1/70.guide/doc.md` for a full example.
 
 **Course metadata:** Replace `subsite.md` with `course-card.md` (see `cpt-363-1/course-card.md` in the skeleton for an example). Key fields:
 
