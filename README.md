@@ -95,7 +95,7 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 - Per-course favicon support: upload a `favicon.*` file to a course root page's media to override the site favicon for that course
 
 ### Course Cards
-- Optional course card images: upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout
+- Optional course card images: upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout (side automatically switches to top at 3 cards per row)
 - Add optional instructor names and status badges (e.g. `Coming Soon`, `Archived`) to course cards via frontmatter
 
 ### Course Content
@@ -204,7 +204,7 @@ The `course-list.md` frontmatter controls the list layout and sets default value
 |-------|---------|-------------|
 | `cards_per_row` | `1` | Number of course cards per row (1–3) |
 | `card_icon` | _(empty)_ | Default icon for all course cards (Tabler icon path); also used as the sidebar course label icon when a course has no `icon` of its own |
-| `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content) |
+| `card_image_layout` | `side` | Image layout: `side` (left thumbnail) or `top` (full-width above content); side automatically switches to top at 3 cards per row |
 | `card_description_lines` | `3` | Maximum description lines per card (2, 3, or 0 for no limit) |
 
 Page content written in `course-list.md` appears above the course cards by default. To also display content **below** the cards, add `===` on its own line as a delimiter:
