@@ -6,4 +6,4 @@ navigation:
     toc_position: hidden
 ---
 
-[plugin:content-inject](/cpt-363-1/resources)
+[content-inject path="/cpt-363-1/resources" /]

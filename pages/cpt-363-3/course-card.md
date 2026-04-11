@@ -2,7 +2,7 @@
 published: false
 routable: false
 icon: tabler/layout.svg
-description: 'Adds a UX Techniques Guide, course card badge, customizable Announcements shortcode, and Page Inject example demonstrating shared content between courses.'
+description: 'Adds a UX Techniques Guide, course card badge, customizable Announcements shortcode, and Page Inject shortcode example demonstrating shared content between courses.'
 instructor: 'Instructor: Kim Martin'
 badge_label: 'New Section'
 badge_color: green
