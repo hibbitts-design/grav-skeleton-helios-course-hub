@@ -1,5 +1,5 @@
 # v1.0.1
-## XX/XX/2026
+## 04/11/2026
 
 1. [](#improved)
    * Add Page Inject example to cpt-363-3 demonstrating shared content between courses
