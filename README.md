@@ -334,6 +334,8 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 > **Note:** The Helios-inspired Admin Panel colour scheme (zinc nav, accessible blue links, muted purple accents) is pre-configured in this skeleton.
 
+> **Note:** The Helios-inspired Admin Panel enhancements apply to the 1.7 Admin Panel.
+
 ### Templates
 - **course-list** – Courses homepage template that renders all visible courses as cards. Assigned automatically to the Courses homepage (`/courses`).
 - **default-toc** – Content page template with a right-column Table of Contents. Set `template: default-toc` in any page's frontmatter to enable. Requires the page-toc plugin (included).
