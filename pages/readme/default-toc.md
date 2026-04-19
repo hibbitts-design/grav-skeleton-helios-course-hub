@@ -54,6 +54,23 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 
 ### Embedding & Shortcodes
 - Embed rich content with built-in shortcodes: iFrames, Google Slides, PDFs, H5P, and Embedly cards, with responsive 16:9 layout and automatic dark/light theme detection
+- LMS embedding mode: append `?embedded=true` to any page URL to display only the page content — no sidebar, header, or pagination — for use in an LMS iframe; internal links automatically carry the parameter forward
+- TOC position override: append `?toc_position=hidden|left|right` (or `?toc=`) to any page URL to override the Table of Contents position per request, without changing page frontmatter
+
+### LMS Embedding
+
+Append `?embedded=true` to any page URL to display only the page content — no sidebar, header, or pagination. Designed for embedding Helios Course Hub pages in an LMS iframe (Canvas, Moodle, Brightspace, etc.).
+
+- All internal links automatically carry the `?embedded=true` parameter forward, so navigating between pages stays in embedded mode
+- `?chromeless=true` is also supported as an alternative parameter name
+- Works with HTMX navigation — links in dynamically loaded content are also rewritten
+- Combine with `?toc_position=hidden` (or `?toc=hidden`) to also hide the Table of Contents, useful for narrow iframe embeds
+
+**Example iframe:**
+
+```html
+<iframe src="https://yoursite.com/cpt-363-1/home?embedded=true" width="100%" height="600" style="border:none;"></iframe>
+```
 
 ### Authoring & Customization
 - Git Sync plugin included for syncing site content with GitHub, Codeberg, or similar Git hosting service
