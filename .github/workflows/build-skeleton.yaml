@@ -28,17 +28,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: Extract Tag
         run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref }}" >> $GITHUB_ENV
-      - name: Generate Skeleton Packages (Grav 2 Beta)
-        continue-on-error: true
-        uses: getgrav/skeleton-builder@v1
-        with:
-          version: 2.0.0-beta.1
-          admin: ${{ github.event.inputs.admin || false }}
-          exclude: README.md
-          filename_version: false
-      - name: Tag Grav 2 Beta packages
-        run: for f in dist/*.zip; do mv "$f" "${f%.zip}-grav2-beta.zip"; done
-        continue-on-error: true
       - name: Generate Skeleton Packages
         uses: getgrav/skeleton-builder@v1
         with:
@@ -46,6 +35,18 @@ jobs:
           admin: ${{ github.event.inputs.admin || false }}
           exclude: README.md
           filename_version: false
+      - name: Generate Skeleton Package (Grav 2 Beta)
+        continue-on-error: true
+        run: |
+          mkdir -p /tmp/grav2build && cd /tmp/grav2build
+          curl -sL https://github.com/getgrav/grav/releases/download/2.0.0-beta.1/grav-v2.0.0-beta.1.zip -o grav.zip
+          unzip -q grav.zip && rm grav.zip
+          cd grav
+          rm -rf user
+          cp -Rf $GITHUB_WORKSPACE user
+          bin/grav install -q
+          REPO_NAME=$(echo "${GITHUB_REPOSITORY}" | awk -F / '{print $2}')
+          zip -q -x "*.git/*" -x "*.github/workflows/*" -x "*yarn.lock*" -x "*.gitignore*" -x "*.editorconfig*" -x "*.DS_Store*" -x "*hebe.json*" -x "*.dependencies*" -x "*.travis.yml*" -x "README.md" -r "$GITHUB_WORKSPACE/dist/${REPO_NAME}-grav2-beta.zip" .
       - name: Upload packages to release
         uses: svenstaro/upload-release-action@v2
         with:
