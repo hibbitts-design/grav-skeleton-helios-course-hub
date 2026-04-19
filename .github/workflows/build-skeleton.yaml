@@ -46,8 +46,10 @@ jobs:
           cd grav
           rm -rf user
           cp -Rf $GITHUB_WORKSPACE user
-          sudo phpdismod redis
+          sudo phpdismod redis && echo "redis disabled"
+          ls bin/
           bin/grav install
+          sudo chmod -R 777 $GITHUB_WORKSPACE/dist
           REPO_NAME=$(echo "${GITHUB_REPOSITORY}" | awk -F / '{print $2}')
           zip -x "*.git/*" -x "*.github/workflows/*" -x "*yarn.lock*" -x "*.gitignore*" -x "*.editorconfig*" -x "*.DS_Store*" -x "*hebe.json*" -x "*.dependencies*" -x "*.travis.yml*" -x "README.md" -r "$GITHUB_WORKSPACE/dist/${REPO_NAME}-grav2-beta.zip" .
           ls -la $GITHUB_WORKSPACE/dist/
