@@ -44,12 +44,12 @@ jobs:
           unzip -q grav.zip && rm grav.zip
           ls -la
           cd grav
-          echo "=== Grav version before install ===" && head -3 CHANGELOG.md
+          echo "=== Grav version before install ===" && grep -m1 "GRAV_VERSION" system/defines.php
           rm -rf user && mkdir user
           rsync -a --exclude='dist' $GITHUB_WORKSPACE/ user/
           sudo phpdismod redis
           bin/grav install
-          echo "=== Grav version after install ===" && head -3 CHANGELOG.md
+          echo "=== Grav version after install ===" && grep -m1 "GRAV_VERSION" system/defines.php
           sudo chmod -R 777 $GITHUB_WORKSPACE/dist
           REPO_NAME=$(echo "${GITHUB_REPOSITORY}" | awk -F / '{print $2}')
           zip -x "*.git/*" -x "*.github/workflows/*" -x "*yarn.lock*" -x "*.gitignore*" -x "*.editorconfig*" -x "*.DS_Store*" -x "*hebe.json*" -x "*.dependencies*" -x "*.travis.yml*" -x "README.md" -r "$GITHUB_WORKSPACE/dist/${REPO_NAME}-grav2-beta.zip" .
