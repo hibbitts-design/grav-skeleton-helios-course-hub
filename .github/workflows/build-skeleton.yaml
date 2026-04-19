@@ -18,14 +18,11 @@ on:
         required: false
         default: false
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       - name: Extract Tag
         run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref }}" >> $GITHUB_ENV
       - name: Generate Skeleton Packages
@@ -35,25 +32,6 @@ jobs:
           admin: ${{ github.event.inputs.admin || false }}
           exclude: README.md
           filename_version: false
-      - name: Generate Skeleton Package (Grav 2 Beta)
-        run: |
-          set -x
-          php --version
-          mkdir -p /tmp/grav2build && cd /tmp/grav2build
-          curl -L https://github.com/getgrav/grav/releases/download/2.0.0-beta.1/grav-v2.0.0-beta.1.zip -o grav.zip
-          unzip -q grav.zip && rm grav.zip
-          ls -la
-          cd grav
-          echo "=== Grav version before install ===" && grep -m1 "GRAV_VERSION" system/defines.php
-          rm -rf user && mkdir user
-          rsync -a --exclude='dist' $GITHUB_WORKSPACE/ user/
-          sudo phpdismod redis
-          bin/grav install
-          echo "=== Grav version after install ===" && grep -m1 "GRAV_VERSION" system/defines.php
-          sudo chmod -R 777 $GITHUB_WORKSPACE/dist
-          REPO_NAME=$(echo "${GITHUB_REPOSITORY}" | awk -F / '{print $2}')
-          zip -x "*.git/*" -x "*.github/workflows/*" -x "*yarn.lock*" -x "*.gitignore*" -x "*.editorconfig*" -x "*.DS_Store*" -x "*hebe.json*" -x "*.dependencies*" -x "*.travis.yml*" -x "README.md" -r "$GITHUB_WORKSPACE/dist/${REPO_NAME}-grav2-beta.zip" .
-          ls -la $GITHUB_WORKSPACE/dist/
       - name: Upload packages to release
         uses: svenstaro/upload-release-action@v2
         with:
