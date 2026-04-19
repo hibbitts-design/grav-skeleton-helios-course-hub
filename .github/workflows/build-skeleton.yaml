@@ -29,6 +29,7 @@ jobs:
       - name: Extract Tag
         run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref }}" >> $GITHUB_ENV
       - name: Generate Skeleton Packages (Grav 2 Beta)
+        continue-on-error: true
         uses: getgrav/skeleton-builder@v1
         with:
           version: 2.0.0-beta.1
@@ -37,6 +38,7 @@ jobs:
           filename_version: false
       - name: Tag Grav 2 Beta packages
         run: for f in dist/*.zip; do mv "$f" "${f%.zip}-grav2-beta.zip"; done
+        continue-on-error: true
       - name: Generate Skeleton Packages
         uses: getgrav/skeleton-builder@v1
         with:
