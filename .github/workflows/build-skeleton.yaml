@@ -44,8 +44,8 @@ jobs:
           unzip -q grav.zip && rm grav.zip
           ls -la
           cd grav
-          rm -rf user
-          cp -Rf $GITHUB_WORKSPACE user
+          rm -rf user && mkdir user
+          rsync -a --exclude='dist' $GITHUB_WORKSPACE/ user/
           sudo phpdismod redis && echo "redis disabled"
           ls bin/
           bin/grav install
