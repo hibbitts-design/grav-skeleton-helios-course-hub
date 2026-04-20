@@ -118,6 +118,7 @@ Append `?embedded=true` to any page URL to display only the page content — no 
 - `?chromeless=true` is also supported as an alternative parameter name
 - Works with HTMX navigation — links in dynamically loaded content are also rewritten
 - Combine with `?toc_position=hidden` (or `?toc=hidden`) to also hide the Table of Contents, useful for narrow iframe embeds
+- Combine with `?toc_position=left` or `?toc_position=right` to reposition the Table of Contents, useful for working with surrounding LMS navigation elements
 - Combine with `?edit_link=false` (or `?hidegitlink=true`) to hide the "Edit this Page" link on a per-page basis
 
 **Example iframe:**
