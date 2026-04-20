@@ -65,6 +65,7 @@ A complete, pre-configured package that gives one or more courses a modern, clea
 Grav Helios Course Hub is a strong fit when you:
 
 - Want a visually refined, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
+- Need to embed course page content directly into your LMS (Canvas, Moodle, Brightspace), with flexible Table of Contents positioning to fit your LMS layout
 - Want a fully designed course site without custom design or coding work
 - Want to support multiple courses from a single installation with automatic course switching
 - Need course-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it, with results filtered to only published courses
