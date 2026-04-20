@@ -34,7 +34,7 @@ The Helios Course Hub gives you a modern, open, and fully controlled companion s
 
 ## Features
 
-Helios Course Hub provides a ready-built course site using portable Markdown files you fully control. Highlights include visual course cards, context-aware search, and optional Git Sync for open collaborative authoring.
+Helios Course Hub provides a ready-built course site using portable Markdown files you fully control. Highlights include visual course cards, course-aware search, and optional Git Sync for open collaborative authoring.
 
 ### Site Identity
 - Show or hide the site logo icon square next to the Logo Text in the header, with optional custom Tabler icon
@@ -278,7 +278,7 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 
 ## Included Plugin: Helios Course Hub
 
-Custom CSS, JavaScript, shortcodes, and Helios-inspired Admin Panel styling with improved readability for the Helios Course Hub skeleton. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel.
+Custom CSS, JavaScript, shortcodes, and Helios-inspired Admin Panel styling with improved readability for the Helios Course Hub skeleton. If the Helios theme is not installed, the plugin automatically falls back to the Quark or Quark2 theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel.
 
 ### Templates
 - **course-list** – Courses homepage template that renders all visible courses as cards. Assigned automatically to the Courses homepage (`/courses`).

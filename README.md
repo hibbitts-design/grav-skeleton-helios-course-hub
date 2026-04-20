@@ -330,7 +330,7 @@ If you prefer not to write Markdown directly, the optional [Grav Premium Editor 
 
 ## Included Plugin: Helios Course Hub
 
-Custom CSS, JavaScript, shortcodes, and Helios-inspired Admin Panel styling with improved readability for the Helios Course Hub skeleton. If the Helios theme is not installed, the plugin automatically falls back to the Quark theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel.
+Custom CSS, JavaScript, shortcodes, and Helios-inspired Admin Panel styling with improved readability for the Helios Course Hub skeleton. If the Helios theme is not installed, the plugin automatically falls back to the Quark or Quark2 theme so the frontend site remains viewable, redirecting to the License Manager page in the Admin panel.
 
 ### Plugin Settings
 
