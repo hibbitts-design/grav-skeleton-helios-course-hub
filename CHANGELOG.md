@@ -1,3 +1,10 @@
+# v1.0.5
+## 04/20/2026
+
+1. [](#improved)
+    * Updated ReadMes
+    * Updated with latest Helios Course Hub plugin
+
 # v1.0.4
 ## 04/19/2026
 
