@@ -87,7 +87,7 @@ Append `?embedded=true` to any page URL to display only the page content — no 
 The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included; the [Grav Premium Helios theme](https://getgrav.org/premium/helios) requires a separate license. The home page is a Courses listing that shows all active courses – by default, just cpt-363-1/.
 
 ### Pre-flight Checklist
-1. Confirm your web server meets [Grav's requirements](https://learn.getgrav.org/17/basics/requirements) (PHP 7.3.6 or higher)
+1. Confirm your web server meets [Grav's requirements](https://learn.getgrav.org/17/basics/requirements) (PHP 8.0 or higher)
 2. Have your web server login credentials ready (username and password)
 
 ### Installation Steps
@@ -337,7 +337,7 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 ## Requirements
 
-- PHP >= 7.3.6
+- PHP >= 8.0
 - Grav CMS >= 1.7.0
 - [Grav Premium Helios Theme](https://getgrav.org/premium/helios) – one license per site ([Standard or Team](https://getgrav.org/premium/license))
 
