@@ -1,6 +1,6 @@
 enabled: true
 admin_styling_enhancements: true
-admin_font_size: larger
+admin_font_size: large
 show_site_icon: true
 site_icon: tabler/hexagon.svg
 logo_link_target: single_course
