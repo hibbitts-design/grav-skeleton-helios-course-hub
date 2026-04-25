@@ -3,6 +3,10 @@ git:
         url: https://github.com/getgrav/grav-plugin-admin
         path: user/plugins/admin
         branch: master
+    codesh:
+        url: https://github.com/trilbymedia/grav-plugin-codesh
+        path: user/plugins/codesh
+        branch: main
     email:
         url: https://github.com/getgrav/grav-plugin-email
         path: user/plugins/email
@@ -47,9 +51,29 @@ git:
         url: https://github.com/getgrav/grav-plugin-page-inject
         path: user/plugins/page-inject
         branch: master
+    page-toc:
+        url: https://github.com/trilbymedia/grav-plugin-page-toc
+        path: user/plugins/page-toc
+        branch: master
     problems:
         url: https://github.com/getgrav/grav-plugin-problems
         path: user/plugins/problems
+        branch: master
+    shortcode-core:
+        url: https://github.com/getgrav/grav-plugin-shortcode-core
+        path: user/plugins/shortcode-core
+        branch: master
+    simplesearch:
+        url: https://github.com/getgrav/grav-plugin-simplesearch
+        path: user/plugins/simplesearch
+        branch: master
+    sitemap:
+        url: https://github.com/getgrav/grav-plugin-sitemap
+        path: user/plugins/sitemap
+        branch: master
+    youtube:
+        url: https://github.com/getgrav/grav-plugin-youtube
+        path: user/plugins/youtube
         branch: master
     quark:
         url: https://github.com/getgrav/grav-theme-quark
