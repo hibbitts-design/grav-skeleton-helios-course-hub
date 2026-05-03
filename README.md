@@ -372,13 +372,17 @@ The following settings are available in the Admin panel under **Plugins → Heli
 ### Shortcodes
 - `[iframe url="..."]` – Responsive iframe embed, 16:9 by default
 - `[iframe url="..." ratio="4:3"]` – Responsive iframe embed at 4:3 ratio
+- `[iframe url="..." title="..."]` – Responsive iframe embed with accessible title (recommended for accessibility)
 - `[googleslides url="..."]` – Responsive Google Slides embed, 16:9 by default
 - `[googleslides url="..." ratio="4:3"]` – Responsive Google Slides embed at 4:3 ratio
+- `[googleslides url="..." title="..."]` – Responsive Google Slides embed with accessible title (recommended for accessibility)
 - `[pdf url="..."]` – PDF viewer via Google Docs, 16:9 by default
 - `[pdf url="..." ratio="4:3"]` – PDF viewer at 4:3 ratio
 - `[pdf url="..." ratio="portrait"]` – PDF viewer at portrait ratio (letter/A4)
+- `[pdf url="..." title="..."]` – PDF viewer with accessible title (recommended for accessibility)
 - `[h5p url="..."]` – H5P interactive content via full embed URL
 - `[h5p id="..."]` – H5P interactive content via Content ID (requires H5P Content Embed Source URL to be set in plugin settings)
+- `[h5p url="..." title="..."]` – H5P embed with accessible title (recommended for accessibility)
 - `[embedly url="..."]` – Embedly card with dark mode support
 - `[topics]...[/topics]` – Alphabetical topics index with auto-generated A–Z navigation, linked letters, and styled letter section labels
 - `[announcement]...[/announcement]` – Styled announcement notice (default: Important/purple), supports Markdown content
