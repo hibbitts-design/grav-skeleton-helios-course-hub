@@ -2,7 +2,7 @@
 ## XX/XX/2026
 
 1. [](#improved)
-    * Updated ReadMe (GitHub)
+    * Updated ReadMes
 
 # v1.0.8
 ## 05/04/2026
