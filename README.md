@@ -83,7 +83,7 @@ Other publishing tools might be better candidates when you:
 - Need a large ecosystem of themes and plugins beyond what Grav currently offers
 - Prefer fully visual drag-and-drop page builders over Markdown-based editing
 
-Still unsure? Install the skeleton package on almost any Web server, replace the demo content with your own, and your course site is configured. Your content stays in portable Markdown files you own completely, and those same files work with other tools if your needs change. For zero-setup publishing directly from GitHub or Codeberg without a Web server, [Docsify-This](https://docsify-this.net) is a natural companion.
+Still unsure? Install the skeleton package on almost any Web server, add your [Grav Premium Helios theme](https://getgrav.org/premium/helios) license, replace the demo content with your own, and your course site is configured. Your content stays in portable Markdown files you own completely, and those same files work with other tools if your needs change. For zero-setup publishing directly from GitHub or Codeberg without a Web server, [Docsify-This](https://docsify-this.net) is a natural companion.
 
 ## Features
 
