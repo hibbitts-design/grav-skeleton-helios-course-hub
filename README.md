@@ -137,6 +137,8 @@ Append `?embedded=true` to any page URL to display only the page content — no 
 
 ## Quick Start
 
+Helios Course Hub is best suited for authors and educators comfortable with web hosting and folder-based content structure. An online Admin panel is included for browser-based editing – no code editor required.
+
 The skeleton is a **complete package** – Grav CMS, the Helios Course Hub plugin, and demo content are all included; the [Grav Premium Helios theme](https://getgrav.org/premium/helios) requires a separate license. The home page is a Courses listing that shows all active courses – by default, just cpt-363-1/.
 
 ### Pre-flight Checklist
