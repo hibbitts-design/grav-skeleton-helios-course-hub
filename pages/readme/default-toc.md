@@ -51,6 +51,7 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 - Announcement shortcode: display a styled notice on any course page, with optional custom title and color type
 - MarkdownFile shortcode: fetch and render a remote Markdown file inline, with YAML front matter automatically stripped
 - Configurable chapter page description line limit: set the maximum number of lines shown per card description on Chapter template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
+- Chapter page child grouping: organize cards on a chapter page into labeled sections by adding `group: "Label"` to a `doc` child page's frontmatter; pages without a group appear first with no heading
 
 ### Embedding & Shortcodes
 - Embed rich content with built-in shortcodes: iFrames, Google Slides, PDFs, H5P, and Embedly cards, with responsive 16:9 layout and automatic dark/light theme detection
