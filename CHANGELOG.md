@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Updated ReadMes
+    * Updated with latest Helios Course Hub plugin
 
 # v1.0.8
 ## 05/04/2026
