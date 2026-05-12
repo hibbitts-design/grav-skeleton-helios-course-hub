@@ -98,6 +98,7 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 ### Course Cards
 - Optional course card images: upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout (side automatically switches to top at 3 cards per row)
 - Add optional instructor names and status badges (e.g. `Coming Soon`, `Archived`) to course cards via frontmatter
+- Course card grouping: organize cards on the Courses homepage into labeled sections by adding `group: "Label"` to a course's root page frontmatter; courses without a group appear first with no heading
 
 ### Course Content
 - Build an alphabetical topics index with auto-generated A–Z navigation
@@ -256,6 +257,7 @@ Each course folder contains a `course-card.md` file with frontmatter that contro
 | `badge_color` | Optional badge colour (`yellow`, `green`, `red`, etc.) |
 | `image` | Optional card image filename (upload to the course's media folder) |
 | `show_sidebar_image` | Show the card image in the course sidebar when browsing within this course (default: Yes) |
+| `group` | Optional group label for organizing course cards on the Courses homepage into labeled sections; courses without a group appear first with no heading |
 
 ```yaml
 ---
@@ -266,6 +268,7 @@ badge_label: Coming Soon
 badge_color: yellow
 image: banner.jpg
 show_sidebar_image: true
+group: Current Courses
 ---
 ```
 
