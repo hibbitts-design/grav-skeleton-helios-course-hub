@@ -1,3 +1,9 @@
+# v1.0.10
+## 05/12/2026
+
+1. [](#new)
+    * Add notebook favicon matching site icon
+
 # v1.0.9
 ## 05/12/2026
 
