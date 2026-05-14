@@ -29,7 +29,12 @@ header:
       route: /readme
       label: ReadMe
       external: '0'
-custom_favicon: {  }
+custom_favicon:
+  favicon.svg:
+    name: favicon.svg
+    type: image/svg+xml
+    size: 534
+    path: user/assets/helios/favicon.svg
 sidebar:
   powered_by: '0'
 navigation:
@@ -39,6 +44,7 @@ navigation:
   toc_start: 2
   toc_depth: 3
   toc_position: right
+  content_when_toc_hidden: full
   breadcrumbs: false
   prev_next: true
   scroll_spy: true
@@ -66,13 +72,13 @@ search:
   placeholder: 'Search course...'
   min_chars: 2
 github:
-  enabled: false
-  repo: null
+  enabled: true
+  repo: hibbitts-design/grav-skeleton-helios-course-hub
   branch: main
   edit_link: true
   edit_text: 'View Page Markdown'
-  path_prefix: null
+  path_prefix: user/
 htmx:
-  enabled: false
+  enabled: true
 body_classes: null
 append_site_title: true
