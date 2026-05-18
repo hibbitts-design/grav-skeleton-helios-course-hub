@@ -1,8 +1,14 @@
+# v1.1.0
+## 05/12/2026
+
+1. [](#new)
+    * Updated with latest Helios Course Hub plugin
+
 # v1.0.10
 ## 05/12/2026
 
 1. [](#new)
-    * Add notebook favicon matching site icon
+    * Add hexagon favicon matching site icon
 
 # v1.0.9
 ## 05/12/2026
