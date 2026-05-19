@@ -66,7 +66,7 @@ A complete, pre-configured package that gives one or more courses a modern, clea
 - **Single or multi-course** – share a direct link so students land straight on their course homepage; add more courses and a full, browsable course list is automatically available as the homepage.
 - **Portable by design** – your content is plain Markdown files on your server; no database, portable to any tool or host if your needs change
 - **Course-aware search** – search automatically scopes to the current course when browsing within it, and spans all courses from the Courses homepage; results are always relevant
-- **Open authoring built in** – Git Sync and "Edit this Page" links are included from the start; by default, "Edit this Page" links to the Markdown source for open access to course materials, putting reuse and remix one click away for anyone who visits
+- **Open authoring built in** – Content is plain Markdown, so "Edit this Page" links go directly to human-readable source anyone can copy and adapt – no special tools required. Git Sync and open repository access are included from the start.
 - **No build pipeline, no local toolchain** – edit in the browser-based Admin panel or via Git; changes go live immediately, no deploy step required
 - **A complete starting point** – pre-built course structure (weekly modules, topics index, resources, syllabus), demo content, and all configuration included; replace the content and you're done
 
