@@ -63,7 +63,7 @@ A complete, pre-configured package that gives one or more courses a modern, clea
 ## What Sets It Apart
 
 - **LMS embedding without LTI** – embed any page directly into Canvas, Moodle, or Brightspace with a URL parameter; no LTI setup, no plugin, no IT negotiation required
-- **Multi-course by design** – run one course or many from a single installation; multi-course support isn't an add-on, it's the default
+- **Single or multi-course** – students go directly to their course; add more and a full, browsable course list appears automatically.
 - **Portable by design** – your content is plain Markdown files on your server; no database, portable to any tool or host if your needs change
 - **Course-aware search** – search automatically scopes to the current course when browsing within it, and spans all courses from the Courses homepage; results are always relevant
 - **Open authoring built in** – Git Sync and "Edit this Page" links are included from the start; by default, "Edit this Page" links to the Markdown source for open access to course materials, putting reuse and remix one click away for anyone who visits
