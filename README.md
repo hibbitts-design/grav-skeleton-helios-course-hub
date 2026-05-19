@@ -60,19 +60,24 @@
 
 A complete, pre-configured package that gives one or more courses a modern, clean, and organized home on the web – a place to openly share materials and resources that you keep and control. Content is stored as simple Markdown files you can keep locally, with a built-in Admin panel for browser-based editing and no database required. Runs on nearly any web hosting service.
 
+## What Sets It Apart
+
+- **LMS embedding without LTI** – embed any page directly into Canvas, Moodle, or Brightspace with a URL parameter; no LTI setup, no plugin, no IT negotiation required
+- **Multi-course by design** – run one course or many from a single installation; multi-course support isn't an add-on, it's the default
+- **Portable by design** – your content is plain Markdown files on your server; no database, portable to any tool or host if your needs change
+- **Course-aware search** – search automatically scopes to the current course when browsing within it, and spans all courses from the Courses homepage; results are always relevant
+- **Open authoring built in** – Git Sync and "Edit this Page" links are included from the start; by default, "Edit this Page" links to the Markdown source for open access to course materials, putting reuse and remix one click away for anyone who visits
+- **No build pipeline, no local toolchain** – edit in the browser-based Admin panel or via Git; changes go live immediately, no deploy step required
+- **A complete starting point** – pre-built course structure (weekly modules, topics index, resources, syllabus), demo content, and all configuration included; replace the content and you're done
+
 ## When is Grav Helios Course Hub a Good Candidate?
 
 Grav Helios Course Hub is a strong fit when you:
 
 - Want a visually refined, permanent companion site for one or more courses alongside your existing LMS and have access to a Web server
-- Need to embed course page content directly into your LMS (Canvas, Moodle, Brightspace), with flexible Table of Contents positioning to fit your LMS layout
 - Want a fully designed course site without custom design or coding work
-- Want to support multiple courses from a single installation with automatic course switching
-- Need course-aware search – automatically scoped to all courses from the Courses homepage, or narrowed to the current course when browsing within it, with results filtered to only published courses
-- Want flexible editing options – browser-based Admin panel with Markdown by default and an optional visual block editor
 - Need multi-user editing with role-based access rights for team-managed course content
 - Need rich content embedding (H5P, iFrames, Google Slides, PDFs, Embedly) without coding
-- Value keeping content in portable Markdown files with full ownership and hosting control
 - Can optionally extend with custom branding – logos, colours, and styling – when a more distinctive look is needed
 
 Other publishing tools might be better candidates when you:
