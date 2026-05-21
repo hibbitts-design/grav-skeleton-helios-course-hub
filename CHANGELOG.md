@@ -4,6 +4,9 @@
 1. [](#improved)
     * Updated with latest Helios Course Hub plugin
 
+1. [](#bugfix)
+    * Fix redundant alt text on course card images
+
 # v1.1.0
 ## 05/12/2026
 
