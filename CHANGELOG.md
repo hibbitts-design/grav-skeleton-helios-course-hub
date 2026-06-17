@@ -1,3 +1,9 @@
+# v1.1.3
+## 06/17/2026
+
+1. [](#improved)
+    * Updated with latest Helios Course Hub plugin
+
 # v1.1.2
 ## 06/15/2026
 
