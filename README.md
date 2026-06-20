@@ -175,7 +175,7 @@ user/pages/
 ├── 00.courses/                  # Courses homepage
 │   └── course-list.md           # Course list settings and default card values
 ├── cpt-363-1/                   # Course 1 (published by default)
-│   ├── course-card.md           # Course settings (icon, image, instructor, badge)
+│   ├── course.md           # Course settings (icon, image, instructor, badge)
 │   ├── 10.home/
 │   ├── 20.essentials/
 │   ├── 30.modules/
@@ -251,7 +251,7 @@ If no `===` delimiter is present, all content renders above the cards as normal.
 
 ### Course Card Settings
 
-Each course folder contains a `course-card.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course root page.
+Each course folder contains a `course.md` file with frontmatter that controls the course card display. These fields can be set in the Admin Panel by opening the course root page.
 
 | Field | Description |
 |-------|-------------|
@@ -436,7 +436,7 @@ Before migrating, it is recommended to [download and install the Helios Course H
 **Course structure:** Wrap all course pages in a course folder (`cpt-100/`) at the site root, alongside the new `00.courses/` catalog folder (see `00.courses/` in the skeleton for an example).
 
 **New files:**
-- `cpt-100/course-card.md` — course card metadata (icon, description, image; see `cpt-363-1/course-card.md` in the skeleton for an example)
+- `cpt-100/course.md` — course card metadata (icon, description, image; see `cpt-363-1/course.md` in the skeleton for an example)
 - `cpt-100/15.essentials/essentials.md` — key course info, between home and modules (see `cpt-363-1/20.essentials/` in the skeleton for an example)
 
 > [!NOTE]
@@ -450,7 +450,7 @@ Before migrating, it is recommended to [download and install the Helios Course H
 |---|---|
 | `01.home/subsitelist.md` (course list) | `00.courses/` (course catalog) |
 | `02.cpt-200/` | `cpt-200/` |
-| `02.cpt-200/subsite.md` | `cpt-200/course-card.md` |
+| `02.cpt-200/subsite.md` | `cpt-200/course.md` |
 | `02.cpt-200/01.home/` (blog template) | `cpt-200/10.home/` (doc template) |
 | `02.cpt-200/01.home/module-XX/` (item template) | `cpt-200/20.modules/` |
 | `02.cpt-200/02.schedule/` | `cpt-200/30.schedule/` |
@@ -488,7 +488,7 @@ Before migrating, it is recommended to [download and install the Helios Course H
   ```
   See the included `cpt-363-1/70.guide/doc.md` for a full example.
 
-**Course metadata:** Replace `subsite.md` with `course-card.md` (see `cpt-363-1/course-card.md` in the skeleton for an example). Key fields:
+**Course metadata:** Replace `subsite.md` with `course.md` (see `cpt-363-1/course.md` in the skeleton for an example). Key fields:
 
 ```yaml
 # Old: subsite.md
@@ -497,7 +497,7 @@ subsite_list_description: 'Introduction to Computing Science'
 subsite_home: home
 published: true
 
-# New: course-card.md
+# New: course.md
 icon: tabler/code.svg
 description: 'Introduction to Computing Science'
 image: cpt200-card.jpg
