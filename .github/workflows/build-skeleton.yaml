@@ -1,5 +1,4 @@
 name: Build Skeleton
-
 on:
   release:
     types: [ published ]
@@ -17,14 +16,15 @@ on:
         description: 'Create also a package with Admin'
         required: false
         default: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Extract Tag
-        run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref }}" >> $GITHUB_ENV
+        run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref_name }}" >> $GITHUB_ENV
       - name: Generate Skeleton Packages
         uses: getgrav/skeleton-builder@v1
         with:
