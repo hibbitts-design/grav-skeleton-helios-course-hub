@@ -28,7 +28,7 @@ jobs:
       - name: Generate Skeleton Packages
         uses: getgrav/skeleton-builder@v1
         with:
-          version: ${{ github.event.inputs.version || 'latest' }}
+          version: ${{ github.event.inputs.version || '1.7.53' }}
           admin: ${{ github.event.inputs.admin || false }}
           exclude: README.md
           filename_version: false
