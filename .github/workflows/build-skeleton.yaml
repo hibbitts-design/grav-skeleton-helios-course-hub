@@ -26,7 +26,7 @@ jobs:
       # 1. Build latest (2.0) FIRST, using the fork (PHP 8.3) since
       #    Grav 1.8+ requires it. Plain/unversioned filename for now.
       - name: Generate Skeleton Packages (latest / 2.0)
-        uses: paulhibbitts/skeleton-builder@main
+        uses: paulhibbitts/skeleton-builder@v1
         with:
           version: 'latest'
           admin: ${{ github.event.inputs.admin || false }}
@@ -39,7 +39,7 @@ jobs:
         run: |
           cd dist
           for f in *.zip; do
-            mv "$f" "${f%.zip}-2.zip"
+            sudo mv "$f" "${f%.zip}-2.zip"
           done
 
       # 3. Build the pinned 1.7.53 version LAST, using the original
