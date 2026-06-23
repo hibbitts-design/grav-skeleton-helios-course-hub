@@ -33,14 +33,18 @@ jobs:
           exclude: README.md
           filename_version: false
 
-      # 2. Rename the 2.0 output in place, adding a "-2" suffix,
-      #    so it doesn't collide with the 1.7.53 build's plain filename.
-      - name: Tag 2.0 build output with -2 suffix
+      # 2. Rename the 2.0 output with a "-2" suffix, then move it
+      #    OUT of dist/ entirely -- the next build step needs to
+      #    create dist/ fresh, and will fail if it already exists.
+      - name: Stash renamed 2.0 build output
         run: |
+          mkdir -p dist-2
           cd dist
           for f in *.zip; do
-            sudo mv "$f" "${f%.zip}-2.zip"
+            sudo mv "$f" "../dist-2/${f%.zip}-2.zip"
           done
+          cd ..
+          sudo rmdir dist
 
       # 3. Build the pinned 1.7.53 version LAST, using the original
       #    upstream action (PHP 7.4, proven stable for this version).
@@ -52,6 +56,11 @@ jobs:
           admin: ${{ github.event.inputs.admin || false }}
           exclude: README.md
           filename_version: false
+
+      # 4. Move the stashed 2.0 files back into dist/ alongside
+      #    the freshly built 1.7.53 files.
+      - name: Merge package outputs
+        run: sudo mv dist-2/*.zip dist/
 
       - name: Upload packages to release
         uses: svenstaro/upload-release-action@v2
