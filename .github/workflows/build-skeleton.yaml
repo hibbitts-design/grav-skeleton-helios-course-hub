@@ -28,7 +28,7 @@ jobs:
       - name: Generate Skeleton Packages (latest / 2.0)
         uses: paulhibbitts/skeleton-builder@main
         with:
-          version: 'latest'
+          version: '2.0.0'
           admin: ${{ github.event.inputs.admin || false }}
           exclude: README.md
           filename_version: false
