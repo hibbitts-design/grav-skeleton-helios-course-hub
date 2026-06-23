@@ -23,6 +23,13 @@ jobs:
       - name: Extract Tag
         run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref_name }}" >> $GITHUB_ENV
 
+      # Swap in the 2.0-specific dependencies (admin2 + api instead of
+      # classic admin) before the 2.0 build runs, backing up the original.
+      - name: Swap in 2.0 dependencies
+        run: |
+          cp .dependencies .dependencies.bak
+          cp .dependencies-2.0 .dependencies
+
       # 1. Build latest (2.0) FIRST, using the fork (PHP 8.3) since
       #    Grav 1.8+ requires it. Plain/unversioned filename for now.
       - name: Generate Skeleton Packages (latest / 2.0)
@@ -30,8 +37,13 @@ jobs:
         with:
           version: '2.0.0'
           admin: ${{ github.event.inputs.admin || false }}
-          exclude: README.md
+          exclude: README.md .dependencies-2.0 .dependencies.bak
           filename_version: false
+
+      # Restore the original (1.7.x-compatible) dependencies before
+      # the next build step runs.
+      - name: Restore original dependencies
+        run: mv .dependencies.bak .dependencies
 
       # 2. Rename the 2.0 output by inserting "2-" right after the
       #    "grav-" prefix, then move it OUT of dist/ entirely -- the
@@ -56,7 +68,7 @@ jobs:
         with:
           version: '1.7.53'
           admin: ${{ github.event.inputs.admin || false }}
-          exclude: README.md *dist-2/*
+          exclude: README.md *dist-2/* .dependencies-2.0
           filename_version: false
 
       # 4. Upload the 2.0 (-2 prefixed) packages FIRST.
