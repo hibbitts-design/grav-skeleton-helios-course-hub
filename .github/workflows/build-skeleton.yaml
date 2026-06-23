@@ -26,7 +26,7 @@ jobs:
       # 1. Build latest (2.0) FIRST, using the fork (PHP 8.3) since
       #    Grav 1.8+ requires it. Plain/unversioned filename for now.
       - name: Generate Skeleton Packages (latest / 2.0)
-        uses: paulhibbitts/skeleton-builder@v1
+        uses: paulhibbitts/skeleton-builder@main
         with:
           version: 'latest'
           admin: ${{ github.event.inputs.admin || false }}
