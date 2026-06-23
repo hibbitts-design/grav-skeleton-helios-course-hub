@@ -8,10 +8,6 @@ on:
         description: 'Target tag for re-upload'
         required: true
         default: ''
-      version:
-        description: 'Which Grav release to use'
-        required: true
-        default: 'latest'
       admin:
         description: 'Create also a package with Admin'
         required: false
@@ -22,16 +18,39 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+
       - name: Extract Tag
         run: echo "SKELETON_VERSION=${{ github.event.inputs.tag || github.ref_name }}" >> $GITHUB_ENV
-      - name: Generate Skeleton Packages
-        uses: getgrav/skeleton-builder@v1
+
+      # 1. Build latest (2.0) FIRST, with the plain/unversioned filename.
+      - name: Generate Skeleton Packages (latest / 2.0)
+        uses: paulhibbitts/skeleton-builder@v1
         with:
-          version: ${{ github.event.inputs.version || '1.7.53' }}
+          version: 'latest'
           admin: ${{ github.event.inputs.admin || false }}
           exclude: README.md
           filename_version: false
+
+      # 2. Rename the 2.0 output in place, adding a "-2" suffix,
+      #    so it doesn't collide with the 1.7.53 build's plain filename.
+      - name: Tag 2.0 build output with -2 suffix
+        run: |
+          cd dist
+          for f in *.zip; do
+            mv "$f" "${f%.zip}-2.zip"
+          done
+
+      # 3. Build the pinned 1.7.53 version LAST, keeping the plain/
+      #    unversioned filename (matches your existing convention).
+      - name: Generate Skeleton Packages (1.7.53)
+        uses: getgrav/skeleton-builder@v1
+        with:
+          version: '1.7.53'
+          admin: ${{ github.event.inputs.admin || false }}
+          exclude: README.md
+          filename_version: false
+
       - name: Upload packages to release
         uses: svenstaro/upload-release-action@v2
         with:
