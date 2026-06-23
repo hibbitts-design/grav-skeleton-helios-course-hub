@@ -33,15 +33,17 @@ jobs:
           exclude: README.md
           filename_version: false
 
-      # 2. Rename the 2.0 output with a "-2" suffix, then move it
-      #    OUT of dist/ entirely -- the next build step needs to
-      #    create dist/ fresh, and will fail if it already exists.
+      # 2. Rename the 2.0 output by inserting "2-" right after the
+      #    "grav-" prefix, then move it OUT of dist/ entirely -- the
+      #    next build step needs to create dist/ fresh, and will
+      #    fail if it already exists.
       - name: Stash renamed 2.0 build output
         run: |
           mkdir -p dist-2
           cd dist
           for f in *.zip; do
-            sudo mv "$f" "../dist-2/${f%.zip}-2.zip"
+            newname=$(echo "$f" | sed 's/^grav-/grav-2-/')
+            sudo mv "$f" "../dist-2/$newname"
           done
           cd ..
           sudo rmdir dist
@@ -57,16 +59,23 @@ jobs:
           exclude: README.md
           filename_version: false
 
-      # 4. Move the stashed 2.0 files back into dist/ alongside
-      #    the freshly built 1.7.53 files.
-      - name: Merge package outputs
-        run: sudo mv dist-2/*.zip dist/
-
-      - name: Upload packages to release
+      # 4. Upload the 1.7.53 (plain-named) packages FIRST, so they
+      #    appear first in the release asset list.
+      - name: Upload 1.7.53 packages to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ env.SKELETON_VERSION }}
           file: dist/*.zip
+          overwrite: true
+          file_glob: true
+
+      # 5. Upload the 2.0 (-2 suffixed) packages SECOND.
+      - name: Upload 2.0 packages to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ env.SKELETON_VERSION }}
+          file: dist-2/*.zip
           overwrite: true
           file_glob: true
