@@ -56,7 +56,7 @@ jobs:
         with:
           version: '1.7.53'
           admin: ${{ github.event.inputs.admin || false }}
-          exclude: README.md
+          exclude: README.md dist-2
           filename_version: false
 
       # 4. Upload the 2.0 (-2 prefixed) packages FIRST.
