@@ -2,11 +2,11 @@ git:
     admin2:
         url: https://github.com/getgrav/grav-plugin-admin2
         path: user/plugins/admin2
-        branch: develop
+        branch: main
     api:
         url: https://github.com/getgrav/grav-plugin-api
         path: user/plugins/api
-        branch: develop
+        branch: main
     codesh:
         url: https://github.com/trilbymedia/grav-plugin-codesh
         path: user/plugins/codesh
