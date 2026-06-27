@@ -1,3 +1,10 @@
+# v1.2.1
+## 06/27/2026
+
+1. [](#improved)
+    * Update example pages
+    * Updated with latest Helios Course Hub plugin
+
 # v1.2.0
 ## 06/22/2026
 
