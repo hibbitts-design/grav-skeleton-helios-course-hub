@@ -40,7 +40,7 @@ sidebar:
 navigation:
   sidebar_width: 285
   toc_width: 240
-  content_width: 768
+  content_width: 800
   toc_start: 2
   toc_depth: 3
   toc_position: right
