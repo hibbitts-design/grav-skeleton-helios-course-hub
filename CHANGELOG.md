@@ -1,3 +1,12 @@
+# v1.2.3
+## 06/30/2026
+
+1. [](#improved)
+    * Updated with latest Helios Course Hub plugin
+
+1. [](#bugfix)
+    * Updated Content Width for Helios theme config to minimum allowed 800
+
 # v1.2.2
 ## 06/28/2026
 
