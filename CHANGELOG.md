@@ -1,4 +1,10 @@
 # v1.2.3
+## XX/XX/2026
+
+1. [](#improved)
+    * Updated Content Width for Helios theme config to 900
+
+# v1.2.3
 ## 06/30/2026
 
 1. [](#improved)
