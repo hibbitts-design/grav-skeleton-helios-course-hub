@@ -56,7 +56,7 @@ versioning:
   versions: null
   default_version: null
   current_version: null
-  version_pattern: '/^[a-zA-Z]+-?\d+([.-]\d+)*$/i'
+  version_pattern: '/^[a-zA-Z][a-zA-Z0-9]*(-[a-zA-Z][a-zA-Z0-9]*)*-?\d+([.-]\d+)*$/i'
   redirect_unversioned: false
   show_badge: false
   show_dropdown: false
