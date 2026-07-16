@@ -4,6 +4,9 @@
 1. [](#improved)
     * Updated Content Width for Helios theme config to 900
 
+1. [](#bugfix)
+    * Fix version_pattern regex to match multi-word slugs as documented in README
+
 # v1.2.3
 ## 06/30/2026
 
