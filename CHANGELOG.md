@@ -1,5 +1,8 @@
-# v1.2.4
-## XX/XX/2026
+# v1.3.0
+## 07/272026
+
+1. [](#new)
+    * Update default skeleton download to Grav 2.0
 
 1. [](#improved)
     * Updated Content Width for Helios theme config to 900
