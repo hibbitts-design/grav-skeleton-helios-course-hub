@@ -1,5 +1,5 @@
 # v1.3.0
-## 07/272026
+## 07/27/2026
 
 1. [](#new)
     * Update default skeleton download to Grav 2.0
