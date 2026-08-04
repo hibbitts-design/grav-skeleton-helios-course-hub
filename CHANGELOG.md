@@ -1,8 +1,9 @@
 # v1.3.2
-## XX/XX/2026
+## 08/04/2026
 
 1. [](#improved)
     * Updated ReadMes
+    * Set default theme to Quark2 for Grav 2.0 build
 
 # v1.3.1
 ## 08/01/2026
