@@ -34,7 +34,7 @@ git:
     github-markdown-alerts:
         url: https://github.com/trilbymedia/grav-plugin-github-markdown-alerts
         path: user/plugins/github-markdown-alerts
-        branch: main
+        branch: master
     git-sync:
         url: https://github.com/trilbymedia/grav-plugin-git-sync
         path: user/plugins/git-sync
