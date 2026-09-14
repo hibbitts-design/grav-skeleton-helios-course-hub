@@ -34,7 +34,7 @@ git:
     git-sync:
         url: https://github.com/trilbymedia/grav-plugin-git-sync
         path: user/plugins/git-sync
-        branch: main
+        branch: master
     helios-course-hub:
         url: https://github.com/hibbitts-design/grav-plugin-helios-course-hub
         path: user/plugins/helios-course-hub
