@@ -1,3 +1,9 @@
+# v1.3.5
+## XX/XX/2026
+
+1. [](#improved)
+    * Update dependencies
+
 # v1.3.4
 ## 09/14/2026
 
