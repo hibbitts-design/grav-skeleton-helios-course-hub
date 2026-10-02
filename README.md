@@ -496,15 +496,19 @@ Before migrating, it is recommended to [download and install the Helios Course H
 # Old: subsite.md
 title: CPT 200
 subsite_list_description: 'Introduction to Computing Science'
+instructor: 'Instructor: Jane Smith'
 subsite_home: home
 published: true
 
 # New: course.md
 icon: tabler/code.svg
 description: 'Introduction to Computing Science'
+instructor: 'Instructor: Jane Smith'
 image: cpt200-card.jpg
 routable: false
 ```
+
+**Course card fields:** `subsite_list_description` becomes `description`, and `instructor` (available in MultiCourse Hub with Bootstrap4 Open Matter 5.2.3 and later) carries over unchanged.
 
 **New file:**
 - `cpt-200/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub (see `cpt-363-1/20.essentials/` in the skeleton for an example).
