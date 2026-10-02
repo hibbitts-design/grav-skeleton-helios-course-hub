@@ -3,6 +3,7 @@
 
 1. [](#improved)
     * Update dependencies
+    * Add course card field mappings to the MultiCourse Hub migration guide
 
 # v1.3.4
 ## 09/14/2026
