@@ -25,16 +25,16 @@ Is this your first online course? If so, you might find these articles of help:
 
 [doc-steps]
 [doc-step]
-Review the [Course Syllabus](/syllabus) and note key dates.
+Review the [Course Syllabus](../../syllabus) and note key dates.
 [/doc-step]
 [doc-step]
-Look at this week's [Module](/modules) before our first class.
+Look at this week's [Module](../../modules) before our first class.
 [/doc-step]
 [doc-step]
-Explore the weekly [Schedule](/schedule) to see upcoming topics and readings.
+Explore the weekly [Schedule](../../schedule) to see upcoming topics and readings.
 [/doc-step]
 [doc-step]
-Bookmark the [UX Techniques Guide](/ux-techniques-guide) for quick reference throughout the course.
+Bookmark the [UX Techniques Guide](../../guide) for quick reference throughout the course.
 [/doc-step]
 [/doc-steps]
 
