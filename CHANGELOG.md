@@ -4,6 +4,8 @@
 1. [](#improved)
     * Update dependencies
     * Add course card field mappings to the MultiCourse Hub migration guide
+1. [](#bugfix)
+    * Demo Welcome page links now work in multi-course sites, with the Guide link using the page's address
 
 # v1.3.4
 ## 09/14/2026
