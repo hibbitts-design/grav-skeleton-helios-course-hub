@@ -1,5 +1,5 @@
 # v1.3.5
-## XX/XX/2026
+## 10/08/2026
 
 1. [](#improved)
     * Update dependencies
