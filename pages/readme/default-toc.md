@@ -358,79 +358,89 @@ Before migrating, it is recommended to download and install the Helios Course Hu
 
 ### From Grav Open Course Hub (single course)
 
+Open Course Hub 4.8 and later organises a course by modules, laid out the same way as in Helios Course Hub, so the Modules folder copies across almost as it is. For a course organised by weekly units (as in earlier versions), also see Courses organised by weekly units below.
+
 | Open Course Hub | Helios Course Hub |
 |---|---|
-| `01.home/` (blog template) | `cpt-100/10.home/` (course-page template) |
-| `01.home/module-XX/` (item template) | `cpt-100/20.modules/` |
-| `02.schedule/` | `cpt-100/30.schedule/` |
-| `03.resources/` | `cpt-100/40.resources/` |
-| `10.syllabus/` | `cpt-100/50.syllabus/` |
-| `sidebar/` | not used |
-| `footer/` | not used |
-| `headerimage/` | not used |
-| `lms-home/` | not used |
+| `01.home/` | `cpt-100/10.home/` |
+| – | `cpt-100/20.essentials/` (new, see below) |
+| `03.modules/` | `cpt-100/30.modules/` (copied as it is) |
+| `04.blog/` | no equivalent (see Course blog below) |
+| `05.schedule/` | `cpt-100/40.schedule/` |
+| `06.topics/` | `cpt-100/50.topics/` |
+| `07.resources/` | `cpt-100/60.resources/` |
+| `08.multi-section-page/` | not used |
+| `09.ux-techniques-guide/` | `cpt-100/70.guide/` |
+| `10.syllabus/` | `cpt-100/80.syllabus/` |
+| `20.readme/` | not used |
+| `sidebar/`, `footer/`, `headerimage/`, `lms-home/` | not used |
 | `favicon/` | set via Helios theme settings |
 
-**Template changes:**
-- Change `template: blog` and `template: page` to `template: course-page` on all course content pages
-- Move and rename `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
-- Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
-- Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page course-page template
+**Modules:** copy the whole `03.modules/` folder to `cpt-100/30.modules/` – the module folders and their `module.md` and `course-page.md` files keep their names. Then add to the Modules page (`module.md`):
+
+```yaml
+taxonomy:
+    category: docs
+navigation:
+    toc_position: hidden
+```
+
+and to each module page (`course-page.md`):
+
+```yaml
+taxonomy:
+    category: docs
+```
+
+The `header_image` fields on module pages aren't used by Helios Course Hub and can be removed.
+
+**Other pages:** rename `page.md` to `course-page.md` on the Home, Schedule, Topics, Resources and Syllabus pages, and add to each:
+
+```yaml
+navigation:
+    prev_next: false
+    toc_position: hidden
+```
+
+Open Course Hub-only settings such as `visible`, `hide_page_title` and `body_classes` can be removed.
+
+**Course blog:** Helios Course Hub has no blog, so blog posts move across as ordinary `course-page.md` pages (for example, under Resources), without tags, archives or RSS.
 
 **Course structure:** Wrap all course pages in a course folder (`cpt-100/`) at the site root, alongside the new `00.courses/` catalog folder (see `00.courses/` in the skeleton for an example).
 
 **New files:**
-- `cpt-100/course.md` — course card metadata (icon, description, image; see `cpt-363-1/course.md` in the skeleton for an example)
-- `cpt-100/15.essentials/essentials.md` — key course info, between home and modules (see `cpt-363-1/20.essentials/` in the skeleton for an example)
+- `cpt-100/course.md` – course card metadata (icon, description, image; see `cpt-363-1/course.md` in the skeleton for an example)
+- `cpt-100/20.essentials/course-page.md` – key course info, between Home and Modules (see `cpt-363-1/20.essentials/` in the skeleton for an example)
 
 > [!NOTE]
-> The new `15.essentials/essentials.md` page is the recommended home for content previously kept in `sidebar/default.md` — such as office hours, contact details, and key course links.
+> The new Essentials page is the recommended home for content previously kept in `sidebar/default.md` – such as office hours, contact details, and key course links.
 
-**What stays the same:** Most page body content requires no changes — only frontmatter updates are needed.
+**What stays the same:** Most page body content, including module pages, the [raw]`[topics]`[/raw] shortcode, the course content shortcodes, and GitHub-style alerts, requires no changes – only frontmatter updates are needed.
 
 ### From Grav Open MultiCourse Hub
+
+Each course moves in the same way as a single Open Course Hub course, inside its own course folder. A course organised by modules (such as CPT363-1 and CPT363-2 in the demo) copies its Modules folder across; a course organised by weekly units (such as CPT363-3) also follows Courses organised by weekly units below. Page folder numbers vary from course to course, so match pages by name.
 
 | Open MultiCourse Hub | Helios Course Hub |
 |---|---|
 | `01.home/subsitelist.md` (course list) | `00.courses/` (course catalog) |
 | `02.cpt-200/` | `cpt-200/` |
 | `02.cpt-200/subsite.md` | `cpt-200/course.md` |
-| `02.cpt-200/01.home/` (blog template) | `cpt-200/10.home/` (course-page template) |
-| `02.cpt-200/01.home/module-XX/` (item template) | `cpt-200/20.modules/` |
-| `02.cpt-200/02.schedule/` | `cpt-200/30.schedule/` |
-| `02.cpt-200/03.topics/` | `cpt-200/40.topics/` |
-| `02.cpt-200/04.resources/` | `cpt-200/50.resources/` |
-| `02.cpt-200/05.multi-section-page/` | not used |
-| `02.cpt-200/06.ux-techniques-guide/` | `cpt-200/60.guide/` |
-| `02.cpt-200/10.syllabus/` | `cpt-200/70.syllabus/` |
-| `02.cpt-200/sidebar/` | not used |
-| `02.cpt-200/footer/` | not used |
-| `02.cpt-200/headerimage/` | not used |
-| `02.cpt-200/lms-home/` | not used |
+| `02.cpt-200/01.home/` | `cpt-200/10.home/` |
+| `02.cpt-200/03.modules/` | `cpt-200/30.modules/` (copied as it is) |
+| `02.cpt-200/04.blog/` | no equivalent (see Course blog above) |
+| `02.cpt-200/05.schedule/` | `cpt-200/40.schedule/` |
+| `02.cpt-200/06.topics/` | `cpt-200/50.topics/` |
+| `02.cpt-200/07.resources/` | `cpt-200/60.resources/` |
+| `02.cpt-200/08.multi-section-page/` | not used |
+| `02.cpt-200/09.ux-techniques-guide/` | `cpt-200/70.guide/` |
+| `02.cpt-200/10.syllabus/` | `cpt-200/80.syllabus/` |
+| `02.cpt-200/sidebar/`, `footer/`, `headerimage/`, `lms-home/` | not used |
 | `02.cpt-200/favicon/favicon.*` | `cpt-200/favicon.*` (upload to course root media) |
 
 **Course folder naming:** Remove numeric prefix and standardize to hyphenated course code (`02.cpt-200` → `cpt-200`).
 
-**Template changes:**
-- Change `template: blog` and `template: page` to `template: course-page` on all course content pages
-- Move and rename `item` template pages — weekly content moves into sub-folders under the modules chapter page (see `cpt-363-1/30.modules/` in the skeleton for an example)
-- Add `taxonomy: category: docs` to all sub-folder pages (e.g. individual module pages)
-- Remove modular home page blocks (`01._reminders/`, `02._preparations/`) — replaced by the home page course-page template
-
-**Markup changes:**
-- **Topics page** — wrap content in [raw]`[topics]...[/topics]`[/raw] shortcode and add to frontmatter:
-  ```yaml
-  navigation:
-      prev_next: false
-      toc_position: hidden
-  ```
-- **UX Techniques Guide page** — replace existing markup with [raw]`[doc-accordion]`[/raw] and [raw]`[doc-accordion-item title="..."]`[/raw] shortcodes, and add to frontmatter:
-  ```yaml
-  navigation:
-      prev_next: false
-      toc_position: hidden
-  ```
-  See the included `cpt-363-1/70.guide/course-page.md` for a full example.
+**Modules and other pages:** the same frontmatter changes as for a single course (see above).
 
 **Course metadata:** Replace `subsite.md` with `course.md` (see `cpt-363-1/course.md` in the skeleton for an example). Key fields:
 
@@ -453,12 +463,30 @@ routable: false
 **Course card fields:** `subsite_list_description` becomes `description`, and `instructor` (available in MultiCourse Hub with Bootstrap4 Open Matter 5.2.3 and later) carries over unchanged.
 
 **New file:**
-- `cpt-200/15.essentials/essentials.md` — key course info, between home and modules; no equivalent in MultiCourse Hub (see `cpt-363-1/20.essentials/` in the skeleton for an example).
+- `cpt-200/20.essentials/course-page.md` – key course info, between Home and Modules; no equivalent in MultiCourse Hub (see `cpt-363-1/20.essentials/` in the skeleton for an example).
 
 > [!NOTE]
-> As with the single course migration, `15.essentials/essentials.md` is the recommended home for content previously kept in `sidebar/default.md`.
+> As with the single course migration, the Essentials page is the recommended home for content previously kept in `sidebar/default.md`.
 
-**What stays the same:** Most page body content requires no changes — only frontmatter updates are needed.
+### UX Techniques Guide page
+
+In both, replace the guide's accordion markup with [raw]`[doc-accordion]`[/raw] and [raw]`[doc-accordion-item title="..."]`[/raw] shortcodes, rename it to `course-page.md`, and add to frontmatter:
+
+```yaml
+navigation:
+    prev_next: false
+    toc_position: hidden
+```
+
+See the included `cpt-363-1/70.guide/course-page.md` for a full example.
+
+### Courses organised by weekly units
+
+For a course whose weeks are listed on a Weekly Units page (`weekly-units/`, or the Home page in Open Course Hub versions before 4.8):
+
+- Create a Modules page at `cpt-100/30.modules/module.md` (see `cpt-363-1/30.modules/` in the skeleton for an example)
+- Move each week folder into it, renaming `item.md` to `course-page.md` and adding `taxonomy: category: docs`
+- In versions before 4.8, remove the modular home page blocks (`01._reminders/`, `02._preparations/`) – replaced by the Home page
 
 ## Bring Your Canvas (or Other LMS) Content With You
 
