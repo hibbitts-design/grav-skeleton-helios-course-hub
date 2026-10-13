@@ -1,3 +1,9 @@
+# v1.3.6
+## XX/XX/2026
+
+1. [](#improved)
+    * README and Read Me page: the migration guide is updated for Open Course Hub 4.8 and Open MultiCourse Hub 2.8, where modules copy across as they are
+
 # v1.3.5
 ## 10/08/2026
 
