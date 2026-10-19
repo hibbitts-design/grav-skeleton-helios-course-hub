@@ -3,6 +3,8 @@
 
 1. [](#improved)
     * README and Read Me page: sharing a single course's link or making it the site's homepage, and why `course.md` stays non-routable
+    * Read Me page: the Group setting for courses and course pages
+    * README and Read Me page: the Creative Commons license settings
 
 # v1.3.6
 ## 10/15/2026
