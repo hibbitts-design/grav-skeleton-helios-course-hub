@@ -277,7 +277,7 @@ Each course folder contains a `course.md` file with frontmatter that controls th
 | `badge_label` | Optional status badge label (e.g. `Coming Soon`, `New`, `Archived`) |
 | `badge_color` | Optional badge colour (`yellow`, `green`, `red`, etc.) |
 | `image` | Optional card image filename (upload to the course's media folder) |
-| `show_sidebar_image` | Show the card image in the course sidebar when browsing within this course (default: Yes) |
+| `show_sidebar_image` | Show the card image in the course sidebar when browsing within this course (default: No) |
 | `group` | Optional group label for organizing course cards on the Courses homepage into labeled sections; courses without a group appear first with no heading |
 
 ```yaml
@@ -294,6 +294,8 @@ group: Current Courses
 ```
 
 To display a card image, upload an image file to the course root page's media folder and set `image` in the frontmatter to the filename. Omit the field (or leave it empty) for no image.
+
+In a single-course site, with the course's pages directly in `user/pages`, put `course.md` and its image at the top of `user/pages` instead (edit it directly, as Admin doesn't list files at the top of `user/pages`). Its `image` and `show_sidebar_image` settings then show the image in the sidebar, in the same way.
 
 > [!TIP]
 > Landscape images (roughly 16:9 or 4:3 ratio) work best for course cards. PNG, JPG, and WebP formats are all supported.
