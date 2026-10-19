@@ -45,7 +45,7 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 ### Course Cards
 - Optional course card images: upload an image to a course root page's media and set `image` in frontmatter to display it on the course card, with a choice of side thumbnail or full-width top layout (side automatically switches to top at 3 cards per row)
 - Add optional instructor names and status badges (e.g. `Coming Soon`, `Archived`) to course cards via frontmatter
-- Course card grouping: organize cards on the Courses homepage into labeled sections by adding `group: "Label"` to a course's root page frontmatter; courses without a group appear first with no heading
+- Course card grouping: organize cards on the Courses homepage into labeled sections by adding `group: "Label"` to a course's root page frontmatter (or its Group setting); courses without a group appear first with no heading
 
 ### Course Content
 - Build an alphabetical topics index with auto-generated A–Z navigation
@@ -53,7 +53,7 @@ Helios Course Hub provides a ready-built course site using portable Markdown fil
 - Excerpt shortcode: render multi-paragraph quoted passages with a subtle grey border — for long excerpts where the default bold accent border would be visually heavy; for short pull quotes use standard Markdown `> text`
 - MarkdownFile shortcode: fetch and render a remote Markdown file inline, with YAML front matter automatically stripped
 - Configurable module page description line limit: set the maximum number of lines shown per card description on Module template pages (the Modules section uses this template) site-wide via the Helios Course Hub plugin settings (2 default, 3, or no limit)
-- Module page child grouping: organize cards on a module page into labeled sections by adding `group: "Label"` to a `course-page` child page's frontmatter; pages without a group appear first with no heading
+- Module page child grouping: organize cards on a module page into labeled sections by adding `group: "Label"` to a `course-page` child page's frontmatter (or its Group setting); pages without a group appear first with no heading
 
 ### Embedding & Shortcodes
 - Embed rich content with built-in shortcodes: iFrames, Google Slides, PDFs, H5P, and Embedly cards, with responsive 16:9 layout and automatic dark/light theme detection
