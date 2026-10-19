@@ -1,5 +1,5 @@
 # v1.3.7
-## XX/XX/2026
+## 10/19/2026
 
 1. [](#improved)
     * README and Read Me page: sharing a single course's link or making it the site's homepage, and why `course.md` stays non-routable
