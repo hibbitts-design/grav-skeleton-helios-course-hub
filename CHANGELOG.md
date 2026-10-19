@@ -1,3 +1,11 @@
+# v1.3.8
+## 10/19/2026
+
+1. [](#improved)
+    * README and Read Me page: the course image in single-course sites, and Show Card Image in Course Sidebar is off by default
+1. [](#bugfix)
+    * Grav 2 package: the Git Sync plugin comes from its master branch, as in the Grav 1.7 package
+
 # v1.3.7
 ## 10/19/2026
 
