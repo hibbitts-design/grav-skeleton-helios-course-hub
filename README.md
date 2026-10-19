@@ -223,6 +223,21 @@ To add a course beyond the three included demo folders, copy an existing course 
 > [!TIP]
 > After duplicating and renaming a course folder, clear the Grav cache via the **Clear Cache** button in the Admin panel if the new course does not appear immediately.
 
+### Making a Course the Homepage
+
+To have a single course open as the site's homepage instead of the Courses homepage, set the Home Page to a page inside that course, such as its Home page:
+
+```yaml
+# user/config/system.yaml
+home:
+  alias: /cpt-363-1/home
+```
+
+Keep `routable: false` in the course's `course.md`. It holds only the course card settings, so a visit to the course address (e.g. `/cpt-363-1`) goes on to the course's first page instead of showing `course.md` itself.
+
+> [!TIP]
+> The **Home Page** list in **Admin → Configuration → System** leaves out non-routable pages and the pages inside them, so a course's pages are not listed there. Either edit `system.yaml` directly, or set `routable: true` in `course.md`, choose the Home Page and save, then set it back to `routable: false` – the Home Page setting stays.
+
 ## Courses Homepage
 
 The **Courses** homepage uses the `course-list` template to automatically generate course cards from detected course folders.
