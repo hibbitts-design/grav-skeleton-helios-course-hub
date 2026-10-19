@@ -353,6 +353,10 @@ The following settings are available in the Admin panel under **Plugins → Heli
 | Site Logo Icon | _(empty)_ | Tabler icon path for the site logo icon square (e.g. [raw]`tabler/book.svg`[/raw]). Leave empty to use the default icon. Only applies when Show Site Logo Icon is enabled |
 | Single Course Site Logo Link | First Page of Only Listed Course | Choose where the site Logo Text and icon link navigates: **Courses Home Page** or **First Page of Only Listed Course** (navigates to the first page of the course when only one course is active) |
 | Show Plugin Credits | Enabled | Show or hide the "Built with Grav · Helios · Helios Course Hub" attribution line in the footer |
+| Display CC License | Disabled | Show a Creative Commons license in the footer of every page (not on embedded pages); a page can hide it with `hide_cc_license: true` |
+| CC License Type | CC Attribution | The license: CC BY, BY-SA, BY-ND, BY-NC, BY-NC-SA or BY-NC-ND (4.0) |
+| Display Only CC License Icon | Disabled | Show just the license badge, without its sentence |
+| Additional CC License Text | – | Text added after the license sentence, e.g. "except where otherwise noted." |
 | Description Line Limit | 2 lines | Maximum number of lines shown per card description on Module template pages; the Modules section uses this template (2, 3, or no limit) |
 | Show Repository Host Icon Link in Header | Enabled | Show or hide the GitHub or Codeberg icon link to the course repository in the site header |
 | Git Link Icon | [raw]`tabler/file-text.svg`[/raw] | Tabler icon path for the Git link icon shown in the page footer |
