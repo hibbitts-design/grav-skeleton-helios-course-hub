@@ -1,3 +1,9 @@
+# v1.3.9
+## 10/XX/2026
+
+1. [](#bugfix)
+    * The Welcome module pages of the first two example courses no longer link to the UX Techniques Guide, which isn't published in those courses
+
 # v1.3.8
 ## 10/19/2026
 
