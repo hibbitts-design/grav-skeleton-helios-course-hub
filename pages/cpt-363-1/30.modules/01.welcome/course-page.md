@@ -33,9 +33,6 @@ Look at this week's [Module](../../modules) before our first class.
 [doc-step]
 Explore the weekly [Schedule](../../schedule) to see upcoming topics and readings.
 [/doc-step]
-[doc-step]
-Bookmark the [UX Techniques Guide](../../guide) for quick reference throughout the course.
-[/doc-step]
 [/doc-steps]
 
 ### Introductory Reading
