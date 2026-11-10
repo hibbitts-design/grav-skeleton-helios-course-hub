@@ -238,6 +238,17 @@ home:
 > [!TIP]
 > Admin's **Home Page** list doesn't show a course's pages, because `course.md` is non-routable. Edit `system.yaml` directly, or briefly set `routable: true` in `course.md` to choose the page in Admin – then set it back to `false`, so the course address doesn't show `course.md` itself.
 
+### Give a Course Its Own Address
+
+Want a course to open at its own address, such as `cpt363.example.edu`? Point a second domain or subdomain at this site's folder (your web host's control panel can do this), then create `user/env/<that address>/config/system.yaml` with:
+
+```yaml
+home:
+  alias: '/cpt-363-1/home'
+```
+
+The site's main address still opens as before, and both addresses share the same pages. A `site.yaml` beside it can also give that address its own description and share image – see Grav's [Environment Configuration](https://learn.getgrav.org/2/advanced/environment-config).
+
 ## Courses Homepage
 
 The **Courses** homepage uses the `course-list` template to automatically generate course cards from detected course folders.
