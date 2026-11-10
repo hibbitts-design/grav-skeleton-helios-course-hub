@@ -1,3 +1,9 @@
+# v1.3.10
+## XX/XX/2026
+
+1. [](#improved)
+    * README and Read Me page: how to give a course its own address (such as a subdomain), with Grav's environment configuration
+
 # v1.3.9
 ## 10/23/2026
 
