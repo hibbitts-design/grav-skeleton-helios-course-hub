@@ -27,8 +27,8 @@ navigation:
 
 ### Supplemental Materials
 
-[Rocket Surgery Made Easy by Steve Krug: Usability Demo](https://www.youtube.com/watch?v=QckIzHC99Xc)  
-[youtube]https://www.youtube.com/watch?v=QckIzHC99Xc[/youtube]
+[Usability Testing, by AmberlightUX](https://www.youtube.com/watch?v=BrVnBdW6_rE)  
+[youtube]https://www.youtube.com/watch?v=BrVnBdW6_rE[/youtube]
 
 ### Required Reading
 

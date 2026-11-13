@@ -1,3 +1,9 @@
+# v1.3.11
+## XX/XX/2026
+
+1. [](#bugfix)
+    * Module 3 and Module 5 videos, which are no longer on YouTube, are now Nielsen Norman Group's Customer Journey Mapping 101 and AmberlightUX's Usability Testing
+
 # v1.3.10
 ## 11/12/2026
 

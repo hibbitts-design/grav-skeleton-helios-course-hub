@@ -27,8 +27,8 @@ navigation:
 
 ### Supplemental Materials
 
-[Customer Journey Mapping](https://www.youtube.com/watch?v=a40QYgO-_aM)  
-[youtube]https://www.youtube.com/watch?v=a40QYgO-_aM[/youtube]
+[Customer Journey Mapping 101](https://www.youtube.com/watch?v=2W13ext26kQ)  
+[youtube]https://www.youtube.com/watch?v=2W13ext26kQ[/youtube]
 
 ### Assignments
 
