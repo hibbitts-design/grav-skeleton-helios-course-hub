@@ -1,6 +1,8 @@
 # v1.3.11
 ## XX/XX/2026
 
+1. [](#improved)
+    * New course images for the three example courses – photos of a real design session by Hugo Rocha on Unsplash, as in Open Course Space
 1. [](#bugfix)
     * Module 3 and Module 5 videos, which are no longer on YouTube, are now Nielsen Norman Group's Customer Journey Mapping 101 and AmberlightUX's Usability Testing
 
