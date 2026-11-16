@@ -1,8 +1,11 @@
 # v1.3.11
-## XX/XX/2026
+## 11/16/2026
 
 1. [](#improved)
+    * Named Helios Course Hub (was Helios Course Hub Site); description and README tagline match Open Course Space
+    * New screenshots, with the new course images
     * New course images for the three example courses – photos of a real design session by Hugo Rocha on Unsplash, as in Open Course Space
+    * README: Helios's own components, code blocks and search work alongside the plugin
 1. [](#bugfix)
     * Module 3 and Module 5 videos, which are no longer on YouTube, are now Nielsen Norman Group's Customer Journey Mapping 101 and AmberlightUX's Usability Testing
 
