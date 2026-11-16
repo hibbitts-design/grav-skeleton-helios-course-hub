@@ -10,7 +10,7 @@
 
 <p>Try the <a href="https://demo.hibbittsdesign.org/grav-helios-course-hub/">multi-course demo</a> · <a href="https://demo.hibbittsdesign.org/grav-helios-course-hub-single/cpt-363-1/home">single course demo</a></p>
 
-<p>The Grav Premium successor to <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a> – a free, open-source plugin that transforms the <a href="https://getgrav.org/premium/helios">Helios theme</a> into a multi-course companion site, built on <a href="https://getgrav.org">Grav CMS</a> with Markdown file-based content, a built-in Admin panel, and no database required. Purchasing the Helios theme also directly supports Grav's open-source development.</p>
+<p>The Grav Premium Helios step up from <a href="https://github.com/hibbitts-design/grav-skeleton-open-course-space">Open Course Space</a> (and successor to <a href="https://github.com/hibbitts-design/grav-skeleton-course-hub">Open Course Hub</a>) – a free, open-source plugin that transforms the <a href="https://getgrav.org/premium/helios">Helios theme</a> into a multi-course companion site, built on <a href="https://getgrav.org">Grav CMS</a> with Markdown file-based content, a built-in Admin panel, and no database required. Purchasing the Helios theme also directly supports Grav's open-source development.</p>
 
 <table>
   <tr>
