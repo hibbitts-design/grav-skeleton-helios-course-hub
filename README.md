@@ -4,7 +4,7 @@
 
 ### Ready-to-Run Skeleton Package
 
-<p><em>Give your courses a modern, open home on the web – with content in portable Markdown files you control.</em></p>
+<p><em>An open home for one course or many – with modules at the centre, all in portable Markdown files you control.</em></p>
 
 [![Grav Discord Chat](https://img.shields.io/discord/501836936584101899.svg?logo=discord&colorB=728ADA&label=Grav%20Discord%20Chat)](https://chat.getgrav.org) [![Latest Release](https://img.shields.io/github/v/release/hibbitts-design/grav-skeleton-helios-course-hub?style=flat-square&label=Release)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/blob/master/LICENSE) [![PHP](https://img.shields.io/badge/PHP-%3E%3D7.3.6-8892BF?style=flat-square&logo=php&logoColor=white)](https://learn.getgrav.org/17/basics/requirements)
 
@@ -18,7 +18,7 @@
       <a href="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1-dark.png">
-        <img alt="Courses homepage showing two course cards with icons and descriptions" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png" width="100%">
+        <img alt="Courses homepage showing three course cards with icons and descriptions" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png" width="100%">
       </picture>
       </a>
     </td>

@@ -10,7 +10,7 @@
       <a href="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1-dark.png">
-        <img alt="Courses homepage showing two course cards with icons and descriptions" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png" width="100%">
+        <img alt="Courses homepage showing three course cards with icons and descriptions" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-1.png" width="100%">
       </picture>
       </a>
     </td>
@@ -18,7 +18,7 @@
       <a href="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-2.png">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-2-dark.png">
-        <img alt="Courses homepage showing two course cards with images" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-2.png" width="100%">
+        <img alt="Courses homepage showing course cards with images" src="https://raw.githubusercontent.com/hibbitts-design/grav-skeleton-helios-course-hub/refs/heads/main/screenshots/screenshot-2.png" width="100%">
       </picture>
       </a>
     </td>
