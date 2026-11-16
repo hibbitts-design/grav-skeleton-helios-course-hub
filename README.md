@@ -70,6 +70,7 @@ A complete, pre-configured package that gives one or more courses a modern, clea
 - **No build pipeline, no local toolchain** – edit in the browser-based Admin panel or via Git; changes go live immediately, no deploy step required
 - **A complete starting point** – pre-built course structure (weekly modules, topics index, resources, syllabus), demo content, and all configuration included; replace the content and you're done
 - **Bring your Canvas (or other LMS) content with you** – the companion [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (Beta) turns a Common Cartridge (.imscc) export into a Course Hub starting point in minutes: modules, pages, learning objectives, embedded video, course image, license, and syllabus all carried across.
+- **Everything Helios offers, too** – Helios's own components (cards and grids, tabs, steps, file trees, collapsible details, tooltips, keyboard keys, buttons and badges), Codesh code blocks, ⌘K search and dark mode work on every page, alongside the open education features
 
 ## When is Grav Helios Course Hub a Good Candidate?
 
