@@ -447,6 +447,8 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 Before migrating, it is recommended to [download and install the Helios Course Hub skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) and explore the included demo content to get a clear picture of the expected site structure, page templates, and frontmatter conventions.
 
+Since Helios Course Hub plugin v1.3.27, a course's own pages (Home, Essentials, Schedule, Resources and the like) and its Modules page hide Previous/Next and the table of contents unless they set them, so the `navigation` lines below are only needed with older versions, or to show them on a page. `taxonomy: category: docs` is optional too – it only gives a page a small boost in search results.
+
 ### From Grav Open Course Space
 
 [Grav Open Course Space](https://github.com/hibbitts-design/grav-skeleton-open-course-space) is the free starting point for Helios Course Hub: it already keeps each course in its own folder with a `course.md`, and organises courses by modules laid out the same way, so most of a course copies across with frontmatter changes only. A course organised by weekly units (such as CPT363-3 in its demo) also follows [Courses organised by weekly units](#courses-organised-by-weekly-units). Page folder numbers vary from course to course, so match pages by name.
