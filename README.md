@@ -447,6 +447,75 @@ The following settings are available in the Admin panel under **Plugins → Heli
 
 Before migrating, it is recommended to [download and install the Helios Course Hub skeleton](https://github.com/hibbitts-design/grav-skeleton-helios-course-hub/releases/latest) and explore the included demo content to get a clear picture of the expected site structure, page templates, and frontmatter conventions.
 
+### From Grav Open Course Space
+
+[Grav Open Course Space](https://github.com/hibbitts-design/grav-skeleton-open-course-space) is the free starting point for Helios Course Hub: it already keeps each course in its own folder with a `course.md`, and organises courses by modules laid out the same way, so most of a course copies across with frontmatter changes only. A course organised by weekly units (such as CPT363-3 in its demo) also follows [Courses organised by weekly units](#courses-organised-by-weekly-units). Page folder numbers vary from course to course, so match pages by name.
+
+| Open Course Space | Helios Course Hub |
+|---|---|
+| `00.courses/course-list.md` (Courses page) | `00.courses/course-list.md` (course catalog – keep the skeleton's version) |
+| `01.cpt363-basic/` | `cpt-363-1/` |
+| `01.cpt363-basic/course.md` | `cpt-363-1/course.md` (see Course metadata below) |
+| `01.cpt363-basic/01.home/` | `cpt-363-1/10.home/` |
+| – | `cpt-363-1/20.essentials/` (new, see below) |
+| `01.cpt363-basic/02.modules/` | `cpt-363-1/30.modules/` (copied as it is) |
+| `04.blog/` (a course's own blog) | no equivalent (see **Course blog** in the Open Course Hub section below) |
+| `05.schedule/` | `cpt-363-1/40.schedule/` |
+| `06.topics/` | `cpt-363-1/50.topics/` |
+| `07.resources/` | `cpt-363-1/60.resources/` |
+| `09.ux-techniques-guide/` | `cpt-363-1/70.guide/` (see [UX Techniques Guide page](#ux-techniques-guide-page)) |
+| `10.syllabus/` | `cpt-363-1/80.syllabus/` |
+| `headerimage/` (the course's header image) | an image in the course folder, set as `image` in `course.md` |
+| `sidebar/` | `cpt-363-1/20.essentials/` (see below) |
+| `footer/`, `lms-home/`, `lms-schedule/`, `20.readme/`, `08.multi-section-page/` and other extra page types | not used |
+| `favicon/` | `cpt-363-1/favicon.*` (upload to course root media) |
+| `15.blog/`, `16.about-the-courses/`, `20.readme/` (site pages) | no equivalent for the blog; other pages become ordinary pages |
+
+**Course folder naming:** remove the numeric prefix and use the course code (`01.cpt363-basic` → `cpt-363-1`).
+
+**Modules:** copy the whole Modules folder (`02.modules/` or `03.modules/`) to `cpt-363-1/30.modules/` – the module folders and their `module.md` and `course-page.md` files keep their names. Add the same frontmatter as for an Open Course Hub course (see below): `taxonomy: category: docs` on the Modules page and each module page, and `navigation: toc_position: hidden` on the Modules page. A module's `description` and `learning_objectives` carry over; its `header_image` fields aren't used by Helios Course Hub and can be removed. Modules hidden with `visible: false` (as Modules 6–13 are in the demo) keep that setting – check that they show the way you want in the module list.
+
+**Home page:** the Home page's reminders and preparations are separate parts (`01._reminders/`, `02._preparations/`) added with `[plugin:page-inject]`. Move their text into the Home page itself (see `cpt-363-1/10.home/` in the skeleton for an example), then remove the parts and the `page-inject` lines. Remove `visible` and `hide_page_title`, and add:
+
+```yaml
+navigation:
+    prev_next: false
+    toc_position: hidden
+```
+
+**Other pages:** Schedule, Topics, Resources and Syllabus are already `course-page.md` pages – add the same `navigation` lines to each.
+
+**Course metadata:** keep `course.md`, and change its fields (see `cpt-363-1/course.md` in the skeleton for an example). Key fields:
+
+```yaml
+# Old: Open Course Space course.md
+title: CPT363-1
+description: 'This is a basic example course, organised by modules…'
+instructor: 'Instructor: Some Name'
+course_home: home
+navbar_bg_color: '#a67c3d'
+hide_from_menu: true
+page-inject:
+    processed_content: true
+
+# New: Helios Course Hub course.md
+icon: tabler/bulb.svg
+description: 'This is a basic example course, organised by modules…'
+instructor: 'Instructor: Some Name'
+image: hugo-rocha-problem-statement-unsplash.jpg
+routable: false
+```
+
+**Course card fields:** `description` and `instructor` carry over unchanged. The course's header image (from `headerimage/`) makes a good card `image` – copy it into the course folder. `course_home`, `navbar_bg_color`, `hide_from_menu` and `page-inject` aren't used: a course's colours come from the Helios theme settings.
+
+**New file:**
+- `cpt-363-1/20.essentials/course-page.md` – key course info, between Home and Modules (see `cpt-363-1/20.essentials/` in the skeleton for an example).
+
+> [!NOTE]
+> The Essentials page is the recommended home for the course sidebar's content (`sidebar/default.md`) – such as the course facilitator, office hours and LMS links.
+
+**What stays the same:** most page body content, including module pages and the course content shortcodes, requires no changes – only frontmatter updates are needed.
+
 ### From Grav Open Course Hub (single course)
 
 Open Course Hub 4.8 and later organises a course by modules, laid out the same way as in Helios Course Hub, so the Modules folder copies across almost as it is. For a course organised by weekly units (as in earlier versions), also see [Courses organised by weekly units](#courses-organised-by-weekly-units) below.
