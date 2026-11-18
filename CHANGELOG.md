@@ -1,5 +1,5 @@
 # v1.3.12
-## XX/XX/2026
+## 11/18/2026
 
 1. [](#improved)
     * README: moving courses from Grav Open Course Space, first in Migrating to Helios Course Hub
