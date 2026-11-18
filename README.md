@@ -451,7 +451,7 @@ Since Helios Course Hub plugin v1.3.27, a course's own pages (Home, Essentials, 
 
 ### From Grav Open Course Space
 
-[Grav Open Course Space](https://github.com/hibbitts-design/grav-skeleton-open-course-space) is the free starting point for Helios Course Hub: it already keeps each course in its own folder with a `course.md`, and organises courses by modules laid out the same way, so most of a course copies across with frontmatter changes only. A course organised by weekly units (such as CPT363-3 in its demo) also follows [Courses organised by weekly units](#courses-organised-by-weekly-units). Page folder numbers vary from course to course, so match pages by name.
+[Grav Open Course Space](https://github.com/hibbitts-design/grav-skeleton-open-course-space) is the free starting point for Helios Course Hub: it already keeps each course in its own folder with a `course.md`, and organises courses by modules laid out the same way, so most of a course copies across as it is – the changes are its folder names, its Home page, `course.md` and a new Essentials page. A course organised by weekly units (such as CPT363-3 in its demo) also follows [Courses organised by weekly units](#courses-organised-by-weekly-units). Page folder numbers vary from course to course, so match pages by name.
 
 | Open Course Space | Helios Course Hub |
 |---|---|
@@ -475,17 +475,14 @@ Since Helios Course Hub plugin v1.3.27, a course's own pages (Home, Essentials, 
 
 **Course folder naming:** remove the numeric prefix and use the course code (`01.cpt363-basic` → `cpt-363-1`).
 
-**Modules:** copy the whole Modules folder (`02.modules/` or `03.modules/`) to `cpt-363-1/30.modules/` – the module folders and their `module.md` and `course-page.md` files keep their names. Add the same frontmatter as for an Open Course Hub course (see below): `taxonomy: category: docs` on the Modules page and each module page, and `navigation: toc_position: hidden` on the Modules page. A module's `description` and `learning_objectives` carry over; its `header_image` fields aren't used by Helios Course Hub and can be removed. Modules hidden with `visible: false` (as Modules 6–13 are in the demo) keep that setting – check that they show the way you want in the module list.
+**Modules:** copy the whole Modules folder (`02.modules/` or `03.modules/`) to `cpt-363-1/30.modules/` as it is – the module folders and their `module.md` and `course-page.md` files keep their names, and need no changes. A module's `description` and `learning_objectives` carry over; its `header_image` fields aren't used by Helios Course Hub and can be removed. Modules hidden with `visible: false` (as Modules 6–13 are in the demo) keep that setting – check that they show the way you want in the module list.
 
-**Home page:** the Home page's reminders and preparations are separate parts (`01._reminders/`, `02._preparations/`) added with `[plugin:page-inject]`. Move their text into the Home page itself (see `cpt-363-1/10.home/` in the skeleton for an example), then remove the parts and the `page-inject` lines. Remove `visible` and `hide_page_title`, and add:
+**Home page:** the Home page's reminders and preparations are separate parts (`01._reminders/`, `02._preparations/`) added with `[plugin:page-inject]`. Move their text into the Home page itself (see `cpt-363-1/10.home/` in the skeleton for an example), then remove the parts and the `page-inject` lines, and the `visible` and `hide_page_title` settings.
 
-```yaml
-navigation:
-    prev_next: false
-    toc_position: hidden
-```
+**Other pages:** Schedule, Topics, Resources and Syllabus are already `course-page.md` pages, and copy across as they are.
 
-**Other pages:** Schedule, Topics, Resources and Syllabus are already `course-page.md` pages – add the same `navigation` lines to each.
+> [!NOTE]
+> With a Helios Course Hub plugin before v1.3.27, also add the frontmatter listed for an Open Course Hub course below (`taxonomy` on modules, `navigation` on the other pages).
 
 **Course metadata:** keep `course.md`, and change its fields (see `cpt-363-1/course.md` in the skeleton for an example). Key fields:
 
@@ -516,7 +513,7 @@ routable: false
 > [!NOTE]
 > The Essentials page is the recommended home for the course sidebar's content (`sidebar/default.md`) – such as the course facilitator, office hours and LMS links.
 
-**What stays the same:** most page body content, including module pages and the course content shortcodes, requires no changes – only frontmatter updates are needed.
+**What stays the same:** apart from the Home page, page body content – including module pages and the course content shortcodes – needs no changes.
 
 ### From Grav Open Course Hub (single course)
 
