@@ -69,7 +69,7 @@ A complete, pre-configured package that gives one or more courses a modern, clea
 - **Open authoring built in** – Content is plain Markdown, so "Edit this Page" links go directly to human-readable source anyone can copy and adapt – no special tools required. Git Sync and open repository access are included from the start.
 - **No build pipeline, no local toolchain** – edit in the browser-based Admin panel or via Git; changes go live immediately, no deploy step required
 - **A complete starting point** – pre-built course structure (weekly modules, topics index, resources, syllabus), demo content, and all configuration included; replace the content and you're done
-- **Bring your Canvas (or other LMS) content with you** – the companion [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (Beta) turns a Common Cartridge (.imscc) export into a Course Hub starting point in minutes: modules, pages, learning objectives, embedded video, course image, license, and syllabus all carried across.
+- **Bring your Canvas (or other LMS) content with you** – the companion [Common Cartridge Converter](https://grav-common-cartridge-converter.hibbittsdesign.org/) (Beta) turns a Common Cartridge (.imscc) export into a Course Hub starting point in minutes: modules, pages, learning objectives, embedded video, course image, license, and syllabus all carried across.
 - **Everything Helios offers, too** – Helios's own components (cards and grids, tabs, steps, file trees, collapsible details, tooltips, keyboard keys, buttons and badges), Codesh code blocks, ⌘K search and dark mode work on every page, alongside the open education features
 
 ## When is Grav Helios Course Hub a Good Candidate?
@@ -649,7 +649,7 @@ For a course whose weeks are listed on a Weekly Units page (`weekly-units/`, or 
 
 ## Bring Your Canvas (or Other LMS) Content With You
 
-The companion [Common Cartridge Converter](https://common-cartridge-converter.hibbittsdesign.org/) (Beta) turns a Common Cartridge (.imscc) export – from Canvas, Moodle, Brightspace, or Blackboard – into a Course Hub starting point in minutes: modules, pages, learning objectives, embedded video, course image, license, and syllabus all carried across. Upload your export and browse the resulting Markdown files directly – no Grav or Helios installation needed to see what carries over.
+The companion [Common Cartridge Converter](https://grav-common-cartridge-converter.hibbittsdesign.org/) (Beta) turns a Common Cartridge (.imscc) export – from Canvas, Moodle, Brightspace, or Blackboard – into a Course Hub starting point in minutes: modules, pages, learning objectives, embedded video, course image, license, and syllabus all carried across. Upload your export and browse the resulting Markdown files directly – no Grav or Helios installation needed to see what carries over.
 
 ## Support
 
